@@ -43,3 +43,6 @@ Run tests appropriate to the actual change, not blanket repetitive tests. Link t
 
 ## Enforcement boundary
 This is a required agent procedure, not automatic background tracking. No Git hook/CI integration has been installed. If automation is added later, it should check relevant documentation accompanies code changes; a changed Markdown file alone is not proof of semantic consistency. Always perform the impact review.
+
+## Current artifact policy — CHG-011
+Update the single Jb-Service working tree. Git history replaces source ZIP snapshots; do not create an archive or separate version folder after routine changes. Rebuild dist/ when application changes require it. Keep generated output ignored in Git and publish only dist/ contents to static hosting. Historical archive records describe past work, not a current archive requirement.

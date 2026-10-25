@@ -1,6 +1,6 @@
 # V0.6.1 separate service and equipment pages
 
-CHG-010 ·26 October2026 · Local source review; no Git repository or deployment created. Earlier archives and acceptance evidence are preserved.
+CHG-010 ·26 October2026 · Website source review. Git/GitHub is now configured; CHG-011 removes obsolete ZIP snapshots and uses Git history. Historical acceptance evidence is retained; this cleanup does not deploy.
 
 ## Implemented routes
 
@@ -27,6 +27,6 @@ R03–R12 source branding/home/About/leadership/services/equipment/certificate p
 
 Browser visual/hover/scroll/keyboard/touch and client redirect execution remain NOT RUN because no authorised browser-control tool is available. Static/HTTP checks do not prove these behaviours. Original production-site redirects, real email/upload/CAPTCHA and deployment remain separate release tasks.
 
-Source/spec hashes: checkpoint.json. JBAEL-v0.6.1-source.zip includes code/public/config/specs; excludes original requirements, dependencies, build output and review intermediates. Previous source archives remain intact.
+Source/spec hashes: checkpoint.json; Git records source history. CHG-011 removes all eight generated source ZIPs. dist/ is the ignored, replaceable static build output used for publishing. Original requirement inputs remain untouched.
 
 V0.6.1: search only on the two catalogue indexes; nested pages have no sidebar, sibling/related cards or duplicate parent-list actions. Breadcrumbs and own child cards remain. All178 nested pages were inspected in generated HTML for A32. Existing26 unit-test results belong to V0.6, not rerun for this presentation-only removal.

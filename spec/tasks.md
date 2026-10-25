@@ -92,3 +92,6 @@ T35–T37 implementation and command verification complete for review:188 pages,
 
 ## CHG-010 V0.6.1
 - [x] T38 Simplify both catalogue detail templates, retain search only on indexes, remove redundant cross-navigation and verify (R36; A32).
+
+## CHG-011 Repository cleanup
+- [x] T39 Remove generated source archives, enforce ignores and document source/build/hosting boundaries (R37; A33).

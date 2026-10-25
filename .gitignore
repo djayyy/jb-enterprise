@@ -7,3 +7,6 @@ dist/
 .env.*
 !.env.example
 .DS_Store
+
+# Generated source backups: use Git history instead
+/JBAEL-*-source.zip

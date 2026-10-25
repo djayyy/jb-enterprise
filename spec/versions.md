@@ -1,5 +1,8 @@
 # Versions and change control
 
+## Current policy — CHG-011,26 October2026
+One working folder, Git history and one replaceable dist/ build output. The eight historical JBAEL source ZIPs were removed at the user’s request; do not create replacements. Historical entries below retain their original evidence but archive-preservation statements are superseded. GitHub origin is configured; this cleanup does not push or deploy.
+
 ## Release stages
 V0.1: first complete review with supplied content, shared design and form UI; disconnected services disclosed.
 V0.2: feedback, mobile/image refinement, catalogue/search and verified content.

@@ -2,6 +2,12 @@
 
 Record one entry per logical change, newest first. IDs CHG-001, CHG-002, etc. are stable. Preserve historical records; clarify mistakes with a dated correction. This log starts with specification workflow integration; earlier package/organisation history remains in [versions.md](versions.md).
 
+## CHG-011 — 2026-10-26 — Remove redundant source backups
+- R37/T39/A33. Delete eight generated project-root JBAEL-*-source.zip snapshots; ignore future matching files. dist/ was already ignored and remains the static publish output. Use one working folder plus Git history.
+- Files: .gitignore, agents/README; requirements/tasks/acceptance, versions/workflow/decisions/architecture, index/status/checkpoint and this log; eight source ZIP deletions.
+- No application source, public asset, original requirement, dependency or hosting configuration changed. Design/sources/navigation audit and earlier plans remain historical and need no behaviour updates. Earlier archive-preservation instructions are superseded.
+- Validation PASS A33: eight ZIPs absent, ignore checks pass, dist/ untracked, existing188-page build contains no ZIPs, application/config/assets unchanged, Markdown links valid. Removed119618228 bytes. No build/test rerun required for backup deletion/docs; no commit, push, deployment or history rewrite performed.
+
 ## CHG-010 — 2026-10-26 — Simplify catalogue pages
 - R36/T38/A32: search only on All Services/All Equipment. Removed nested-page search, sidebar, sibling/related cards and duplicate parent-list links; retained breadcrumbs, own children, source context and enquiries. Full-width child grid and bounded leaf prose.
 - Code: CatalogPage.astro, v06.css; Layout/privacy/package/lock version0.6.1. Removed unused sidebar styles and sibling computation. No route/data/asset/runtime logic changes.

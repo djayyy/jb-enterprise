@@ -20,6 +20,14 @@ npm run preview
 
 The preview server remains running only while its terminal session is active. No production website has been deployed or changed.
 
+## Build and publish
+
+Keep one working project folder. Run `npm run build` to recreate `dist/` with the latest website. Publish the **contents of `dist/`** to a static web server. The serving machine does not need source ZIPs, `src/`, `spec/`, `requirement/`, `node_modules/`, or Node.js for this static build.
+
+For hosting that builds from Git: use `npm ci`, build command `npm run build`, and output directory `dist`. Source/config/package files belong in Git; `dist/`, dependencies, reference inputs and generated source ZIPs are ignored. Ignoring `dist/` prevents committing generated files; it does **not** prevent the hosting build from publishing them. Only deploy `dist/`, not the entire repository folder.
+
+Git keeps revision history. Do not create separate backup ZIPs or version folders. These instructions describe packaging; forms remain disconnected as documented below.
+
 ## Checks
 
 ```sh
@@ -66,4 +74,4 @@ All pages intentionally use `noindex,nofollow` for review. Do not treat this bui
 
 Read [agents.md](agents.md) and [spec/README.md](spec/README.md) before every change. Follow the mandatory spec workflow and record each logical code change in [spec/change-log.md](spec/change-log.md). Current scope and verification are in [spec/implementation-status.md](spec/implementation-status.md).
 
-V0.6.1 details: [spec/v06-plan.md](spec/v06-plan.md). Whole-site audit: [spec/navigation-audit.md](spec/navigation-audit.md). Current review preview: http://127.0.0.1:4322/.188-page build,36-file check0 diagnostics,45287 local references and376 HTTP checks pass. Actual browser visual/click-through acceptance is pending; command checks do not prove screen geometry or pointer behaviour. Earlier source archives remain preserved; current archive is JBAEL-v0.6.1-source.zip.
+V0.6.1 details: [spec/v06-plan.md](spec/v06-plan.md). Whole-site audit: [spec/navigation-audit.md](spec/navigation-audit.md). Current review preview: http://127.0.0.1:4322/.188-page build,36-file check0 diagnostics,45287 local references and376 HTTP checks pass. Actual browser visual/click-through acceptance is pending; command checks do not prove screen geometry or pointer behaviour. Source history is kept in Git. Generated source ZIPs have been removed and must not be recreated for routine updates.

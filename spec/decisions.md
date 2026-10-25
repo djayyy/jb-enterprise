@@ -76,3 +76,5 @@ D38 Use inspected supplied photographs as representative backgrounds. Reuse rele
 D39 Whitelist legacy preview query/fragment destinations in a small client bridge. Internal links always use canonical paths. Production redirects from the old jbepower.com site remain a separate release task.
 
 D40 — CHG-010: apply the same simplification to both catalogues. Keep search on each all-items index only; remove sidebars, sibling/related lists and duplicate parent-list actions from all nested pages. Retain breadcrumbs and each parent page’s own child cards, which are necessary to navigate the hierarchy. Use the freed width for three-column desktop cards, reflowing to two/one columns.
+
+D41 — CHG-011: supersede D16/D22 archive policy now that the project has Git and a GitHub origin. Delete only the eight generated project-root JBAEL-*-source.zip files. Preserve supplied input archives under requirement/. Ignore future source ZIPs and retain the existing dist/ ignore. The static host serves dist/ contents; Git-based hosting builds them from tracked source. No history rewrite or automatic push/deployment.

@@ -64,3 +64,5 @@ R35 CONFIRMED: each catalogue node has a relevant supplied background image plus
 CHG-009 coverage: R33–R35 implemented for static review; all13 services,100 source scopes,12 equipment groups and47 parts retained. Category navigation now opens a page; the earlier R22 no-scroll-reset rule applies to local search/hover previews, not deliberate navigation to a different URL. Actual browser acceptance is pending.
 
 R36 CONFIRMED (CHG-010): search appears only on All Services and All Equipment indexes. Category, service, component and part pages contain their own content/children, without related/sibling lists, all-items sidebars or duplicate parent-list actions. Breadcrumbs and shared header/footer navigation remain.
+
+R37 CONFIRMED (CHG-011): maintain one working project folder and rebuild the same dist/ output. Remove generated source ZIP snapshots and do not create new snapshots/version folders. Git retains source history; dist/ and generated source ZIPs remain ignored. Original requirement inputs are preserved.

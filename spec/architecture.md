@@ -66,3 +66,6 @@ Canonical anchors provide navigation without JavaScript. Small scripts add hover
 
 ## V0.6.1 — CHG-010
 CatalogPage no longer imports/renders CatalogSearch or computes sibling lists. CatalogSearch is used only by CatalogIndex. Removed sidebar/related markup and unused CSS; no data-tree, URL, dependency, backend or form-contract change.188 static routes retained. No new runtime logic.
+
+## Build and publishing boundary — CHG-011
+astro.config.mjs declares output:static. npm run build creates/replaces dist/ (HTML, CSS, browser JavaScript and copied public assets). For a static web server, deploy the contents of dist/ as its document root; source/spec/reference files, node_modules and source ZIPs are not runtime requirements. Node/npm and installed dependencies are required only on the build machine. For Git-based hosting, commit source/config/package files, run npm ci and npm run build, and select dist as output. .gitignore excludes dist/ from Git; it does not prevent publishing that directory. No hosting configuration changed.
