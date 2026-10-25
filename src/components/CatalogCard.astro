@@ -1,0 +1,50 @@
+---
+import images from "../data/image-metadata.json";
+interface Props {
+  node: {
+    url: string;
+    title: string;
+    summary: string;
+    image: string;
+    level: string;
+    kind: string;
+    categoryTitle: string;
+  };
+}
+const { node } = Astro.props;
+const size = (images as Record<string, { width: number; height: number }>)[
+  node.image
+];
+---
+
+<a
+  class="catalog-card"
+  href={node.url}
+  data-catalog-card
+  data-search={`${node.title} ${node.summary} ${node.categoryTitle}`.toLowerCase()}
+>
+  <div class="catalog-card-art">
+    <img
+      src={`/images/${node.image}.webp`}
+      width={size.width}
+      height={size.height}
+      alt=""
+      loading="lazy"
+    />
+    <span class="catalog-card-kind">
+      {node.level === "category"
+        ? "Category"
+        : node.kind === "services"
+          ? "Engineering service"
+          : "Equipment & parts"}
+    </span>
+  </div>
+  <div class="catalog-card-copy">
+    <h3>{node.title}</h3>
+    <p>{node.summary}</p>
+    <span class="catalog-card-action">
+      View {node.level === "category" ? "category" : "details"}
+      <span aria-hidden="true">↗</span>
+    </span>
+  </div>
+</a>

@@ -1,0 +1,137 @@
+---
+import { certifications } from "../data/company";
+import Icon from "./Icon.astro";
+const { full = false } = Astro.props;
+---
+
+<section class="section certification-section" id="quality">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">QUALITY · ENVIRONMENT · HEALTH & SAFETY</p>
+        <h2>Industry Certifications</h2>
+      </div>
+      {!full && (
+        <a href="/certifications/" class="text-link">
+          View all certifications <Icon name="arrow" />
+        </a>
+      )}
+    </div>
+    <div class="certificate-grid">
+      {certifications.map((c) => (
+        <article class="certificate-card" id={c.id}>
+          <a
+            class="certificate-preview"
+            href={`/images/${c.id}.webp`}
+            data-certificate={c.id}
+            aria-label={`Enlarge ${c.standard} certificate`}
+          >
+            <img
+              src={`/images/${c.id}.webp`}
+              width="745"
+              height="1053"
+              loading="lazy"
+              alt={`Supplied certificate of registration for JB Advanced Engineering Limited — ${c.standard}`}
+            />
+            <span>
+              View certificate <Icon name="plus" size={17} />
+            </span>
+          </a>
+          <div class="certificate-copy">
+            <p class="eyebrow">{c.standard}</p>
+            <h3>{c.title}</h3>
+            {full && <p>{c.text}</p>}
+            <a
+              href={`/images/${c.id}.webp`}
+              download={`${c.id}-certificate.webp`}
+              class="text-link"
+            >
+              Download certificate <Icon name="download" size={16} />
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+    <p class="source-note">
+      Certificate copies from the supplied company documents. Shown for design
+      review; issuer verification remains pending.
+    </p>
+  </div>
+</section>
+<dialog class="certificate-dialog" aria-labelledby="certificate-dialog-title">
+  <div class="dialog-bar">
+    <h2 id="certificate-dialog-title">Certificate</h2>
+    <button type="button" data-close-certificate aria-label="Close certificate">
+      Close ×
+    </button>
+  </div>
+  <div class="certificate-scroll">
+    <img
+      data-enlarged-certificate
+      src="/images/iso-9001.webp"
+      width="745"
+      height="1053"
+      alt=""
+    />
+  </div>
+  <a
+    data-certificate-download
+    class="text-link"
+    href="/images/iso-9001.webp"
+    download
+  >
+    Download original image ↓
+  </a>
+</dialog>
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>(
+    ".certificate-dialog",
+  )!;
+  let opener: HTMLElement | null = null;
+  document
+    .querySelectorAll<HTMLAnchorElement>("[data-certificate]")
+    .forEach((link) =>
+      link.addEventListener("click", (event) => {
+        if (
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey ||
+          event.button !== 0
+        )
+          return;
+        event.preventDefault();
+        opener = link;
+        const img = dialog.querySelector<HTMLImageElement>(
+          "[data-enlarged-certificate]",
+        )!;
+        img.src = link.href;
+        img.alt = link.querySelector("img")!.alt;
+        dialog.querySelector("#certificate-dialog-title")!.textContent = link
+          .closest("article")!
+          .querySelector(".eyebrow")!.textContent;
+        dialog.querySelector<HTMLAnchorElement>(
+          "[data-certificate-download]",
+        )!.href = link.href;
+        dialog.showModal();
+      }),
+    );
+  dialog
+    .querySelector("[data-close-certificate]")!
+    .addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (e) => {
+    if (e.target === dialog) {
+      const r = dialog.getBoundingClientRect();
+      if (
+        e.clientX < r.left ||
+        e.clientX > r.right ||
+        e.clientY < r.top ||
+        e.clientY > r.bottom
+      )
+        dialog.close();
+    }
+  });
+  dialog.addEventListener("close", () =>
+    opener?.focus({ preventScroll: true }),
+  );
+</script>

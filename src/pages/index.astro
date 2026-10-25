@@ -1,0 +1,125 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroSlider from "../components/HeroSlider.astro";
+import CertificateGallery from "../components/CertificateGallery.astro";
+import Icon from "../components/Icon.astro";
+import CTA from "../components/CTA.astro";
+import CatalogCard from "../components/CatalogCard.astro";
+import { catalog } from "../data/catalog";
+import { company, industries, coreCapabilities } from "../data/company";
+---
+
+<Layout
+  title="Turbine, Generator & Boiler Engineering"
+  description={company.introduction}
+>
+  <HeroSlider />
+  <section class="section" id="welcome">
+    <div class="container welcome-grid">
+      <div>
+        <p class="eyebrow">POWERING PRECISION, ENGINEERING THE FUTURE</p>
+        <h2>{company.welcome}</h2>
+        <p class="lead">{company.introduction}</p>
+        <p>{company.coverage}</p>
+        <a class="text-link" href="/about/">
+          About JBAEL <Icon name="arrow" />
+        </a>
+      </div>
+      <aside class="why-panel">
+        <Icon name="gear" size={34} />
+        <h3>Why JBAEL?</h3>
+        <p>{company.why}</p>
+        <p>{company.whyMore}</p>
+        <a href="/about/#what-we-do" class="text-link">
+          What We Do <Icon name="arrow" />
+        </a>
+      </aside>
+    </div>
+  </section>
+  <section class="section pale" id="industries">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">POWER GENERATION</p>
+          <h2>Industries Served</h2>
+        </div>
+        <p>
+          JBAEL provides specialized engineering support across power generation
+          sectors worldwide.
+        </p>
+      </div>
+      <div class="industry-cards">
+        {industries.map((item, i) => (
+          <a href={item.url} class="industry-card">
+            <img
+              src={`/images/${item.image}.webp`}
+              alt=""
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div>
+              <h3>
+                {item.title}
+                <Icon name="diagonal" />
+              </h3>
+              <p>{item.text}</p>
+              <span class="industry-action">
+                {i < 2 ? "Explore services" : "Contact Us"}{" "}
+                <Icon name="arrow" size={17} />
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section" id="capabilities">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">WHAT WE DO</p>
+          <h2>Core Engineering Services</h2>
+        </div>
+        <a href="/services/" class="text-link">
+          Browse by power plant <Icon name="arrow" />
+        </a>
+      </div>
+      <div class="catalog-grid" data-home-services>
+        {coreCapabilities.map((c) => {
+          const url = c.anchor
+            ? catalog.legacy.detailHashes[`/services/${c.slug}/#${c.anchor}`]
+            : `/services/${c.slug}/`;
+          const node = catalog.servicePages.find((n) => n.url === url)!;
+          return (
+            <CatalogCard node={{ ...node, title: c.title, summary: c.text }} />
+          );
+        })}
+      </div>
+    </div>
+  </section>
+  <section class="section pale" id="equipment-supply">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EQUIPMENT SUPPLY</p>
+          <h2>Equipment & Parts</h2>
+        </div>
+        <a class="text-link" href="/equipment/">
+          View all equipment <Icon name="arrow" />
+        </a>
+      </div>
+      <div class="catalog-grid">
+        {catalog.equipmentCategories.map((node) => (
+          <CatalogCard node={node} />
+        ))}
+      </div>
+    </div>
+  </section>
+  <CertificateGallery />
+  <CTA
+    title="Request a Quote"
+    text="At JB Advanced Engineering Limited, we are committed to meeting our customers’ needs with readiness, reliability, and excellence."
+    label="Request a Quote"
+  />
+</Layout>

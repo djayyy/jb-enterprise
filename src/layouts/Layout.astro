@@ -1,0 +1,209 @@
+---
+import "../styles/global.css";
+import Icon from "../components/Icon.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+import "../styles/v02.css";
+import "../styles/v03.css";
+import "../styles/v05.css";
+import "../styles/v06.css";
+import NavigationDropdown from "../components/NavigationDropdown.astro";
+const {
+  title = "JB Advanced Engineering Limited",
+  description = "Integrated engineering, refurbishment and lifecycle support for critical power generation assets.",
+} = Astro.props;
+const path = Astro.url.pathname.replace(/\/?$/, "/");
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#102d3c" />
+    <link rel="icon" href="/images/jbael-logo.png" />
+    <title>{title} | JBAEL</title>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">
+      Skip to content
+    </a>
+    <div class="utility">
+      <div class="container utility-inner">
+        <div class="utility-phones">
+          <a href="tel:+919136020760">+91 9136020760</a>
+          <span>|</span>
+          <a href="tel:+919898320831">+91 9898320831</a>
+          <span>|</span>
+          <a href="tel:+919106459242">+91 9106459242</a>
+        </div>
+        <div class="utility-emails">
+          <a href="mailto:info@jbepower.com">info@jbepower.com</a>
+          <span>|</span>
+          <a href="mailto:sales@jbepower.com">sales@jbepower.com</a>
+        </div>
+        <SocialLinks />
+      </div>
+    </div>
+    <header class="header">
+      <div class="container header-inner">
+        <a
+          href="/"
+          class="brand"
+          aria-label="JB Advanced Engineering Limited home"
+        >
+          <img src="/images/jbael-logo.png" width="51" height="51" alt="" />
+          <span>
+            JB ADVANCED<small>ENGINEERING LIMITED</small>
+            <em>Powering precision, Engineering the future</em>
+          </span>
+        </a>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="main-nav" aria-label="Main navigation">
+          <a href="/" aria-current={path === "/" ? "page" : undefined}>
+            Home
+          </a>
+          <a
+            href="/about/"
+            aria-current={path.startsWith("/about/") ? "page" : undefined}
+          >
+            About
+          </a>
+          <NavigationDropdown
+            kind="services"
+            active={path.startsWith("/services/")}
+          />
+          <NavigationDropdown
+            kind="equipment"
+            active={path.startsWith("/equipment/")}
+          />
+          <a
+            href="/contact/"
+            aria-current={path.startsWith("/contact/") ? "page" : undefined}
+          >
+            Contact
+          </a>
+          <a class="button small" href="/request-a-quote/">
+            Request a quote <Icon name="diagonal" size={17} />
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <a href="/" class="brand footer-brand">
+              <img src="/images/jbael-logo.png" width="48" height="48" alt="" />
+              <span>
+                JB ADVANCED<small>ENGINEERING LIMITED</small>
+                <em>Powering precision, Engineering the future</em>
+              </span>
+            </a>
+            <p>Powering precision, Engineering the future.</p>
+            <SocialLinks />
+            <p class="social-note">Additional social profile links pending.</p>
+          </div>
+          <div>
+            <h3>Explore</h3>
+            <a href="/services/">Engineering services</a>
+            <a href="/equipment/">Equipment supply</a>
+            <a href="/about/">About JBAEL</a>
+            <a href="/careers/">Careers</a>
+          </div>
+          <div>
+            <h3>Resources</h3>
+            <a href="/certifications/">Industry Certifications</a>
+            <a
+              href="/downloads/jbael-brochure.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Company brochure ↗
+            </a>
+            <a href="/privacy/">Privacy & preview information</a>
+          </div>
+          <div>
+            <h3>Let’s talk engineering</h3>
+            <a href="mailto:sales@jbepower.com">sales@jbepower.com</a>
+            <a href="tel:+919898320831">+91 98983 20831</a>
+            <a class="footer-contact" href="/contact/">
+              Contact our team <Icon name="arrow" size={16} />
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>
+            © {new Date().getFullYear()} JB Advanced Engineering Limited
+          </span>
+          <span>V0.6.1 · Design review · Enquiries not connected</span>
+          <a href="#main">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      import { settleTarget } from "../lib/scroll-target";
+      if (
+        !["/services/", "/equipment/"].includes(
+          location.pathname.replace(/\/?$/, "/"),
+        )
+      ) {
+        const followHash = () => {
+          try {
+            const id = decodeURIComponent(location.hash.slice(1));
+            if (id) settleTarget(id);
+          } catch {
+            /* Ignore malformed external fragments. */
+          }
+        };
+        followHash();
+        window.addEventListener("hashchange", followHash);
+      }
+      const toggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
+      const nav = document.querySelector<HTMLElement>("#main-nav");
+      const close = () => {
+        toggle?.setAttribute("aria-expanded", "false");
+        nav?.classList.remove("is-open");
+        document
+          .querySelectorAll<HTMLDetailsElement>("[data-nav-dropdown]")
+          .forEach((d) => (d.open = false));
+      };
+      toggle?.addEventListener("click", () => {
+        const open = toggle.getAttribute("aria-expanded") !== "true";
+        toggle.setAttribute("aria-expanded", String(open));
+        nav?.classList.toggle("is-open", open);
+      });
+      document.addEventListener("keydown", (e) => {
+        if (
+          e.key === "Escape" &&
+          toggle?.getAttribute("aria-expanded") === "true"
+        ) {
+          close();
+          toggle.focus();
+        }
+      });
+      nav?.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", (e) => {
+          if (
+            !e.ctrlKey &&
+            !e.metaKey &&
+            !e.shiftKey &&
+            !e.altKey &&
+            e.button === 0
+          )
+            close();
+        }),
+      );
+    </script>
+  </body>
+</html>

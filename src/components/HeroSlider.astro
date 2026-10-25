@@ -1,0 +1,170 @@
+---
+import Icon from "./Icon.astro";
+const slides = [
+  {
+    title: "Turbine, Generator, Boiler",
+    text: "Powering precision, Engineering the future",
+    image: "hero-turbine",
+    width: 1725,
+    height: 912,
+    url: "/services/thermal/",
+    label: "Turbine, Generator, Boiler",
+    alt: "Turbine rotor inside an industrial workshop — supplied reference image",
+  },
+  {
+    title: "OEM & Non-OEM Turbine Generator Expertise",
+    text: "Rotor Refurbishment, Rewinding, Balancing & Lifecycle Engineering",
+    image: "hero-oem",
+    width: 1536,
+    height: 1024,
+    url: "/services/specialist/",
+    label: "OEM & Non-OEM Expertise",
+    alt: "Turbine blade assembly — supplied OEM expertise reference image",
+  },
+  {
+    title: "Retrofitting & Modernization Engineering",
+    text: "Powering precision, Engineering the future",
+    image: "hero-modernisation",
+    width: 1536,
+    height: 1024,
+    url: "/services/refurbishment/",
+    label: "Retrofitting & Modernization",
+    alt: "Power plant control room — supplied modernization reference image",
+  },
+];
+---
+
+<section
+  class="hero-showcase"
+  aria-roledescription="carousel"
+  aria-label="JBAEL engineering capabilities"
+  data-carousel
+>
+  <div class="hero-stage">
+    <div class="hero-artwork">
+      {slides.map((s, i) => (
+        <img
+          src={`/images/${s.image}.webp`}
+          width={s.width}
+          height={s.height}
+          alt={s.alt}
+          data-slide-image={i}
+          class:list={["hero-photo", { "is-active": i === 0 }]}
+          aria-hidden={i !== 0 ? "true" : "false"}
+          fetchpriority={i === 0 ? "high" : "auto"}
+        />
+      ))}
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-caption">
+      <h1 id="hero-title">{slides[0].title}</h1>
+      <p id="hero-description">{slides[0].text}</p>
+    </div>
+    <div class="hero-actions">
+      <a class="button" data-hero-service href={slides[0].url}>
+        Explore Services <Icon name="arrow" />
+      </a>
+      <a class="button hero-contact" href="/contact/">
+        Contact Us <Icon name="diagonal" />
+      </a>
+    </div>
+    <button
+      type="button"
+      class="hero-arrow hero-previous"
+      data-previous
+      aria-label="Previous capability"
+    >
+      <Icon name="arrow" />
+    </button>
+    <button
+      type="button"
+      class="hero-arrow hero-next"
+      data-next
+      aria-label="Next capability"
+    >
+      <Icon name="arrow" />
+    </button>
+    <div class="hero-pagination" aria-label="Choose an engineering capability">
+      {slides.map((s, i) => (
+        <button
+          type="button"
+          data-slide={i}
+          data-title={s.title}
+          data-description={s.text}
+          data-url={s.url}
+          aria-label={`Show ${s.title}`}
+          title={s.label}
+          aria-pressed={i === 0 ? "true" : "false"}
+          aria-controls="hero-title hero-description"
+        >
+          <span aria-hidden="true"></span>
+        </button>
+      ))}
+    </div>
+  </div>
+  <p class="sr-only" aria-live="polite" data-slide-status>
+    {slides[0].title}
+  </p>
+</section>
+<script>
+  const root = document.querySelector<HTMLElement>("[data-carousel]")!;
+  const selectors = [
+    ...root.querySelectorAll<HTMLButtonElement>("[data-slide]"),
+  ];
+  const photos = [...root.querySelectorAll<HTMLElement>("[data-slide-image]")];
+  // Reserve exactly the available first-screen height without guessing header size.
+  const updateChrome = () => {
+    const height = [".utility", ".header"].reduce(
+      (sum, selector) =>
+        sum +
+        (document.querySelector(selector)?.getBoundingClientRect().height || 0),
+      0,
+    );
+    root.style.setProperty("--site-top-height", `${height}px`);
+  };
+  const chromeObserver = new ResizeObserver(updateChrome);
+  [".utility", ".header"].forEach((selector) => {
+    const element = document.querySelector(selector);
+    if (element) chromeObserver.observe(element);
+  });
+  updateChrome();
+  let current = 0;
+  function show(index: number) {
+    current = (index + selectors.length) % selectors.length;
+    const s = selectors[current];
+    root.querySelector("#hero-title")!.textContent = s.dataset.title!;
+    root.querySelector("#hero-description")!.textContent =
+      s.dataset.description!;
+    root.querySelector<HTMLAnchorElement>("[data-hero-service]")!.href =
+      s.dataset.url!;
+    photos.forEach((p, i) => {
+      p.classList.toggle("is-active", i === current);
+      p.setAttribute("aria-hidden", String(i !== current));
+    });
+    selectors.forEach((b, i) =>
+      b.setAttribute("aria-pressed", String(i === current)),
+    );
+    root.querySelector("[data-slide-status]")!.textContent = s.dataset.title!;
+  }
+  selectors.forEach((b, i) => {
+    b.addEventListener("click", () => show(i));
+    b.addEventListener("keydown", (e) => {
+      if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(e.key)) return;
+      e.preventDefault();
+      show(
+        e.key === "Home"
+          ? 0
+          : e.key === "End"
+            ? selectors.length - 1
+            : current + (e.key === "ArrowRight" ? 1 : -1),
+      );
+      selectors[current].focus({ preventScroll: true });
+    });
+  });
+  root
+    .querySelector("[data-next]")!
+    .addEventListener("click", () => show(current + 1));
+  root
+    .querySelector("[data-previous]")!
+    .addEventListener("click", () => show(current - 1));
+</script>

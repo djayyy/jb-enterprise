@@ -1,0 +1,364 @@
+---
+import { catalog } from "../data/catalog";
+interface Props {
+  kind: "services" | "equipment";
+  active: boolean;
+}
+const { kind, active } = Astro.props;
+const label = kind === "services" ? "Services" : "Equipment Supply";
+const groups = (
+  kind === "services" ? catalog.serviceCategories : catalog.equipmentCategories
+).map((g) => ({
+  title: g.title,
+  url: g.url,
+  items: g.children.map((item) => ({
+    title: item.title,
+    url: item.url,
+    image: item.image,
+    children: item.children.map((c) => ({ title: c.title, url: c.url })),
+  })),
+}));
+---
+
+<details
+  class:list={["nav-dropdown", { "is-current": active }]}
+  data-nav-dropdown
+>
+  <summary>
+    {label}
+    <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+      <path
+        d="m2 4 4 4 4-4"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+      />
+    </svg>
+  </summary>
+  <div class="mega-menu">
+    <div class="mega-heading">
+      <span>{label}</span>
+      <a href={kind === "services" ? "/services/" : "/equipment/"}>
+        View all {kind === "services" ? "services" : "equipment"}{" "}
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div class="menu-browser">
+      <div class="menu-categories" aria-label={`${label} categories`}>
+        {groups.map((g, gi) => (
+          <div class="menu-category-row">
+            <a
+              href={g.url}
+              data-menu-category={gi}
+              aria-expanded={gi === 0 ? "true" : "false"}
+              aria-controls={`menu-${kind}-group-${gi}`}
+            >
+              {g.title}
+            </a>
+            <button
+              type="button"
+              data-menu-category-toggle={gi}
+              aria-label={`Show ${g.title} menu`}
+              aria-expanded={gi === 0 ? "true" : "false"}
+              aria-controls={`menu-${kind}-group-${gi}`}
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+        ))}
+      </div>
+      {groups.map((g, gi) => (
+        <section
+          class="menu-category-panel"
+          id={`menu-${kind}-group-${gi}`}
+          data-menu-group-panel={gi}
+          hidden={gi !== 0}
+        >
+          <h2 class="menu-category-heading">
+            <a href={g.url}>
+              {g.title}
+              <span aria-hidden="true"> ↗</span>
+            </a>
+          </h2>
+          <ul class="menu-item-list">
+            {g.items.map((item, ii) => (
+              <li class="menu-item-row" data-menu-item={`${gi}-${ii}`}>
+                <a
+                  href={item.url}
+                  data-menu-item-link
+                  aria-expanded={ii === 0 ? "true" : "false"}
+                  aria-controls={`menu-${kind}-scope-${gi}-${ii}`}
+                >
+                  {item.title}
+                </a>
+                <button
+                  type="button"
+                  class="menu-item-toggle"
+                  aria-label={`Show ${item.title} breakdown`}
+                  aria-expanded={ii === 0 ? "true" : "false"}
+                  aria-controls={`menu-${kind}-scope-${gi}-${ii}`}
+                >
+                  <span aria-hidden="true">›</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+          {g.items.map((item, ii) => (
+            <div
+              class="menu-scope-panel"
+              style={`--menu-photo: url(/images/${item.image}.webp)`}
+              id={`menu-${kind}-scope-${gi}-${ii}`}
+              data-menu-scope={`${gi}-${ii}`}
+              hidden={ii !== 0}
+            >
+              <h3>
+                <a href={item.url}>
+                  {item.title} <span aria-hidden="true">↗</span>
+                </a>
+              </h3>
+              <p class="menu-scope-label">
+                {kind === "services" ? "Service scope" : "Parts & components"}
+              </p>
+              <ul>
+                {item.children.map((c) => (
+                  <li>
+                    <a href={c.url}>
+                      {c.title}
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </section>
+      ))}
+    </div>
+  </div>
+</details>
+<noscript>
+  <style>
+    .menu-categories,
+    .menu-item-toggle {
+      display: none !important;
+    }
+    .menu-browser,
+    .menu-category-panel,
+    .menu-category-panel[hidden],
+    .menu-scope-panel[hidden] {
+      display: block !important;
+    }
+    .menu-category-panel,
+    .menu-item-list,
+    .menu-scope-panel {
+      overflow: visible !important;
+    }
+    .mega-menu {
+      overflow: auto !important;
+    }
+  </style>
+</noscript>
+<script>
+  const dropdowns = [
+    ...document.querySelectorAll<HTMLDetailsElement>("[data-nav-dropdown]"),
+  ];
+  const desktop = matchMedia("(min-width:1001px) and (hover:hover)");
+  const closers = new Map<HTMLDetailsElement, () => void>();
+  dropdowns.forEach((d) => {
+    const summary = d.querySelector("summary")!;
+    const categoryButtons = [
+      ...d.querySelectorAll<HTMLAnchorElement>("[data-menu-category]"),
+    ];
+    const groupPanels = [
+      ...d.querySelectorAll<HTMLElement>("[data-menu-group-panel]"),
+    ];
+    let closeTimer: ReturnType<typeof setTimeout> | undefined;
+    const cancelClose = () => {
+      clearTimeout(closeTimer);
+    };
+    const close = () => {
+      cancelClose();
+      d.open = false;
+    };
+    closers.set(d, close);
+    const open = () => {
+      cancelClose();
+      dropdowns.forEach((other) => {
+        if (other !== d) closers.get(other)?.();
+      });
+      d.open = true;
+    };
+    const showGroup = (id: string) => {
+      categoryButtons.forEach((b) =>
+        b.setAttribute("aria-expanded", String(b.dataset.menuCategory === id)),
+      );
+      d.querySelectorAll<HTMLElement>("[data-menu-category-toggle]").forEach(
+        (b) =>
+          b.setAttribute(
+            "aria-expanded",
+            String(b.dataset.menuCategoryToggle === id),
+          ),
+      );
+      groupPanels.forEach((p) => (p.hidden = p.dataset.menuGroupPanel !== id));
+    };
+    const showItem = (row: HTMLElement) => {
+      const panel = row.closest<HTMLElement>("[data-menu-group-panel]")!;
+      const id = row.dataset.menuItem!;
+      panel
+        .querySelectorAll<HTMLElement>("[data-menu-scope]")
+        .forEach((p) => (p.hidden = p.dataset.menuScope !== id));
+      panel.querySelectorAll<HTMLElement>("[data-menu-item]").forEach((r) => {
+        r.querySelectorAll("[aria-expanded]").forEach((c) =>
+          c.setAttribute("aria-expanded", String(r === row)),
+        );
+      });
+    };
+    summary.addEventListener("click", (e) => {
+      if (desktop.matches && e.detail > 0) {
+        e.preventDefault();
+        open();
+      }
+    });
+    d.addEventListener("toggle", () => {
+      if (d.open)
+        dropdowns.forEach((other) => {
+          if (other !== d) closers.get(other)?.();
+        });
+    });
+    d.addEventListener("pointerenter", () => {
+      if (desktop.matches) open();
+    });
+    d.addEventListener("pointerleave", () => {
+      cancelClose();
+      if (desktop.matches)
+        closeTimer = setTimeout(() => {
+          if (!d.matches(":hover") && !d.contains(document.activeElement))
+            close();
+        }, 400);
+    });
+    d.addEventListener("focusin", cancelClose);
+    d.addEventListener("focusout", () =>
+      queueMicrotask(() => {
+        if (!d.contains(document.activeElement)) close();
+      }),
+    );
+    categoryButtons.forEach((button, index) => {
+      const select = () => showGroup(button.dataset.menuCategory!);
+      button
+        .closest(".menu-category-row")!
+        .addEventListener("pointerenter", () => {
+          if (desktop.matches) select();
+        });
+      button.addEventListener("focus", select);
+      button.addEventListener("click", select);
+      button.addEventListener("keydown", (e) => {
+        if (["ArrowDown", "ArrowUp", "Home", "End"].includes(e.key)) {
+          e.preventDefault();
+          const next =
+            e.key === "Home"
+              ? 0
+              : e.key === "End"
+                ? categoryButtons.length - 1
+                : (index +
+                    (e.key === "ArrowDown" ? 1 : -1) +
+                    categoryButtons.length) %
+                  categoryButtons.length;
+          categoryButtons[next].focus();
+        } else if (e.key === "ArrowRight") {
+          e.preventDefault();
+          groupPanels
+            .find((p) => !p.hidden)
+            ?.querySelector<HTMLAnchorElement>("[data-menu-item-link]")
+            ?.focus();
+        }
+      });
+    });
+    d.querySelectorAll<HTMLButtonElement>(
+      "[data-menu-category-toggle]",
+    ).forEach((button) =>
+      button.addEventListener("click", () => {
+        showGroup(button.dataset.menuCategoryToggle!);
+        if (!desktop.matches)
+          groupPanels
+            .find((p) => !p.hidden)
+            ?.querySelector<HTMLAnchorElement>("[data-menu-item-link]")
+            ?.focus();
+      }),
+    );
+    groupPanels.forEach((panel) => {
+      const rows = [...panel.querySelectorAll<HTMLElement>("[data-menu-item]")];
+      rows.forEach((row, index) => {
+        row.addEventListener("pointerenter", () => {
+          if (desktop.matches) showItem(row);
+        });
+        row.addEventListener("focusin", () => showItem(row));
+        row.querySelector("button")!.addEventListener("click", () => {
+          showItem(row);
+          if (!desktop.matches)
+            panel
+              .querySelector<HTMLElement>("[data-menu-scope]:not([hidden]) a")
+              ?.focus();
+        });
+        row.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight") {
+            e.preventDefault();
+            panel
+              .querySelector<HTMLElement>("[data-menu-scope]:not([hidden]) a")
+              ?.focus();
+          } else if (e.key === "ArrowLeft") {
+            e.preventDefault();
+            categoryButtons
+              .find((b) => b.getAttribute("aria-expanded") === "true")
+              ?.focus();
+          } else if (["ArrowDown", "ArrowUp"].includes(e.key)) {
+            e.preventDefault();
+            rows[
+              (index + (e.key === "ArrowDown" ? 1 : -1) + rows.length) %
+                rows.length
+            ]
+              .querySelector<HTMLAnchorElement>("a")!
+              .focus();
+          }
+        });
+      });
+      panel
+        .querySelectorAll<HTMLElement>("[data-menu-scope]")
+        .forEach((scope) =>
+          scope.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft") {
+              e.preventDefault();
+              rows
+                .find((r) => r.dataset.menuItem === scope.dataset.menuScope)
+                ?.querySelector<HTMLAnchorElement>("a")
+                ?.focus();
+            }
+          }),
+        );
+    });
+    d.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        e.stopPropagation();
+        close();
+        summary.focus();
+      }
+    });
+    d.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", (e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0)
+          return;
+        close();
+        document.querySelector("#main-nav")?.classList.remove("is-open");
+        document
+          .querySelector(".menu-toggle")
+          ?.setAttribute("aria-expanded", "false");
+      }),
+    );
+  });
+  document.addEventListener("click", (e) =>
+    dropdowns.forEach((d) => {
+      if (!d.contains(e.target as Node)) closers.get(d)?.();
+    }),
+  );
+  desktop.addEventListener("change", () => closers.forEach((close) => close()));
+</script>

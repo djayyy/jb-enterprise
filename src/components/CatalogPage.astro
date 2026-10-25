@@ -1,0 +1,120 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CatalogCard from "./CatalogCard.astro";
+import LegacyCatalogLinks from "./LegacyCatalogLinks.astro";
+import CTA from "./CTA.astro";
+import { catalog } from "../data/catalog";
+import images from "../data/image-metadata.json";
+type Node = (typeof catalog.allPages)[number];
+interface Props {
+  node: Node;
+}
+const { node } = Astro.props;
+const size = (images as Record<string, { width: number; height: number }>)[
+  node.image
+];
+const sectionTitle =
+  node.level === "category"
+    ? node.kind === "services"
+      ? "Services available"
+      : "Component groups"
+    : node.kind === "services"
+      ? "Service scope"
+      : "Parts & components";
+---
+
+<Layout
+  title={`${node.title} · ${node.parentTitle}`}
+  description={node.summary}
+>
+  <section
+    class="catalog-hero"
+    data-catalog-page={node.level}
+    data-catalog-kind={node.kind}
+  >
+    <img
+      src={`/images/${node.image}.webp`}
+      width={size.width}
+      height={size.height}
+      alt=""
+      fetchpriority="high"
+    />
+    <div class="catalog-hero-shade"></div>
+    <div class="container catalog-hero-copy">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        {node.breadcrumbs.map((b) => (
+          <>
+            <a href={b.url}>{b.title}</a>
+            <span aria-hidden="true">/</span>
+          </>
+        ))}
+        <span aria-current="page">{node.title}</span>
+      </nav>
+      <p class="eyebrow">
+        {node.kind === "services" ? "ENGINEERING SERVICES" : "EQUIPMENT SUPPLY"}
+      </p>
+      <h1>{node.title}</h1>
+      <p>{node.summary}</p>
+      <a class="button" href={node.quoteUrl}>
+        Enquire about{" "}
+        {node.kind === "services" ? "this service" : "these parts"}
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+  <section
+    class="section"
+    id={node.kind === "services" ? "service-detail" : "equipment-detail"}
+  >
+    <div class="container">
+      <div
+        class:list={[
+          "catalog-detail-content",
+          { "is-leaf": node.children.length === 0 },
+        ]}
+      >
+        {node.children.length > 0 ? (
+          <>
+            <h2>{sectionTitle}</h2>
+            <p>
+              Explore the scope below and select the service or component
+              relevant to your requirement.
+            </p>
+            <div class="catalog-grid">
+              {node.children.map((child) => (
+                <CatalogCard node={child} />
+              ))}
+            </div>
+          </>
+        ) : (
+          <>
+            <p class="eyebrow">{node.categoryTitle}</p>
+            <h2>{node.title}</h2>
+            <p class="lead">{node.summary}</p>
+            <div class="catalog-context">
+              <h3>About {node.parentTitle}</h3>
+              <p>{node.parentSummary}</p>
+            </div>
+            <div class="catalog-enquiry-note">
+              <h3>Discuss your requirement</h3>
+              <p>
+                Include the equipment make and model, component reference or
+                drawing, site location and the work or quantity required in your
+                enquiry.
+              </p>
+              <a class="button dark" href={node.quoteUrl}>
+                Enquire about this requirement <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  </section>
+  <CTA
+    title="Tell us about your requirement"
+    text="Share your equipment details and the service or component you need."
+    href={node.quoteUrl}
+  />
+  {node.kind === "services" && node.level === "item" && <LegacyCatalogLinks />}
+</Layout>

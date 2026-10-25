@@ -1,0 +1,166 @@
+{
+  "catalog-switchgear": {
+    "width": 1280,
+    "height": 720
+  },
+  "catalog-welding": {
+    "width": 496,
+    "height": 752
+  },
+  "catalog-scanning": {
+    "width": 1000,
+    "height": 1000
+  },
+  "catalog-blading": {
+    "width": 310,
+    "height": 171
+  },
+  "catalog-lubrication": {
+    "width": 1280,
+    "height": 960
+  },
+  "rotor": {
+    "width": 1365,
+    "height": 768
+  },
+  "catalog-transformer": {
+    "width": 1333,
+    "height": 1000
+  },
+  "iso-45001": {
+    "width": 745,
+    "height": 1053
+  },
+  "gas-plant": {
+    "width": 1422,
+    "height": 1200
+  },
+  "catalog-test-instruments": {
+    "width": 1400,
+    "height": 646
+  },
+  "inspection": {
+    "width": 1280,
+    "height": 720
+  },
+  "hero-oem": {
+    "width": 1536,
+    "height": 1024
+  },
+  "catalog-casing": {
+    "width": 647,
+    "height": 257
+  },
+  "hero-modernisation": {
+    "width": 1536,
+    "height": 1024
+  },
+  "generator-work": {
+    "width": 1104,
+    "height": 720
+  },
+  "catalog-rotor": {
+    "width": 906,
+    "height": 530
+  },
+  "stator": {
+    "width": 766,
+    "height": 578
+  },
+  "catalog-pipework": {
+    "width": 563,
+    "height": 1000
+  },
+  "catalog-machining": {
+    "width": 502,
+    "height": 424
+  },
+  "catalog-cooling": {
+    "width": 1333,
+    "height": 1000
+  },
+  "catalog-retaining-ring": {
+    "width": 1264,
+    "height": 900
+  },
+  "catalog-busduct": {
+    "width": 750,
+    "height": 1000
+  },
+  "catalog-diaphragm": {
+    "width": 602,
+    "height": 264
+  },
+  "catalog-turbine-assembly": {
+    "width": 750,
+    "height": 1000
+  },
+  "catalog-fastener": {
+    "width": 1333,
+    "height": 1000
+  },
+  "catalog-windings": {
+    "width": 750,
+    "height": 1000
+  },
+  "nuclear-plant": {
+    "width": 1800,
+    "height": 964
+  },
+  "catalog-refurbishment": {
+    "width": 715,
+    "height": 329
+  },
+  "turbine": {
+    "width": 1448,
+    "height": 1086
+  },
+  "catalog-balancing": {
+    "width": 1400,
+    "height": 645
+  },
+  "iso-9001": {
+    "width": 745,
+    "height": 1053
+  },
+  "hero-turbine": {
+    "width": 1725,
+    "height": 912
+  },
+  "iso-14001": {
+    "width": 745,
+    "height": 1053
+  },
+  "catalog-rotor-testing": {
+    "width": 462,
+    "height": 1000
+  },
+  "thermal-plant": {
+    "width": 1722,
+    "height": 1146
+  },
+  "generator-hero": {
+    "width": 1280,
+    "height": 720
+  },
+  "catalog-rewinding": {
+    "width": 631,
+    "height": 631
+  },
+  "workshop": {
+    "width": 1800,
+    "height": 831
+  },
+  "catalog-bearing": {
+    "width": 750,
+    "height": 1000
+  },
+  "hydro-plant": {
+    "width": 1229,
+    "height": 822
+  },
+  "catalog-controls": {
+    "width": 1400,
+    "height": 788
+  }
+}

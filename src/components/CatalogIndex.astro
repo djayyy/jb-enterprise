@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CatalogCard from "./CatalogCard.astro";
+import CatalogSearch from "./CatalogSearch.astro";
+import LegacyCatalogLinks from "./LegacyCatalogLinks.astro";
+import { catalog } from "../data/catalog";
+interface Props {
+  kind: "services" | "equipment";
+}
+const { kind } = Astro.props;
+const groups =
+  kind === "services" ? catalog.serviceCategories : catalog.equipmentCategories;
+const title = kind === "services" ? "All Services" : "All Equipment & Parts";
+---
+
+<Layout
+  title={title}
+  description={
+    kind === "services"
+      ? "Browse thermal, hydro and specialist engineering services. Each service has its own page and detailed scope."
+      : "Browse thermal, hydro and auxiliary equipment. Open a component group to explore its individual parts."
+  }
+>
+  <section class="catalog-index-intro">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span aria-current="page">{title}</span>
+      </nav>
+      <p class="eyebrow">
+        {kind === "services" ? "ENGINEERING SERVICES" : "EQUIPMENT SUPPLY"}
+      </p>
+      <h1>{title}</h1>
+      <p>
+        Choose a category or open an individual{" "}
+        {kind === "services" ? "service" : "component group"} below.
+      </p>
+      <nav class="catalog-category-links" aria-label="Browse categories">
+        {groups.map((g) => (
+          <a href={g.url}>
+            {g.title}
+            <span aria-hidden="true">↗</span>
+          </a>
+        ))}
+      </nav>
+    </div>
+  </section>
+  <section class="section catalog-listing">
+    <div class="container">
+      <CatalogSearch
+        label={kind === "services" ? "Find a service" : "Find equipment"}
+      />
+      {groups.map((g) => (
+        <section class="catalog-group" data-catalog-group>
+          <div class="catalog-group-heading">
+            <div>
+              <p class="eyebrow">
+                {g.children.length}{" "}
+                {kind === "services" ? "SERVICES" : "COMPONENT GROUPS"}
+              </p>
+              <h2>
+                <a href={g.url}>{g.title}</a>
+              </h2>
+            </div>
+            <a class="text-link" href={g.url}>
+              Explore category <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="catalog-grid">
+            {g.children.map((node) => (
+              <CatalogCard node={node} />
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </section>
+  <LegacyCatalogLinks />
+</Layout>

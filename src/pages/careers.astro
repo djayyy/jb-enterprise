@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import EnquiryForm from "../components/EnquiryForm.astro";
+---
+
+<Layout
+  title="Careers & future opportunities"
+  description="Explore future opportunities in engineering, field services and business operations at JBAEL."
+>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span>Careers</span>
+      </div>
+      <p class="eyebrow">BUILD YOUR NEXT CHAPTER</p>
+      <h1>Career Opportunities</h1>
+      <p class="description">
+        Technical curiosity. Careful execution. A commitment to getting the
+        details right.
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container form-layout">
+      <aside class="form-aside">
+        <p class="eyebrow">FUTURE OPPORTUNITIES</p>
+        <h2>Bring your expertise.</h2>
+        <p>
+          This page is for expressions of interest in future opportunities. It
+          is not an advertisement for a specific vacancy.
+        </p>
+        <p>
+          Tell us about your experience and the area you would like to work in.
+          Verified openings and their requirements can be published here when
+          available.
+        </p>
+        <div class="panel">
+          <h3>Engineering. Operations. Service.</h3>
+          <p>
+            Explore our capabilities to understand the kind of equipment and
+            engineering work JBAEL supports.
+          </p>
+          <a href="/services/">Explore our services →</a>
+        </div>
+      </aside>
+      <div>
+        <EnquiryForm kind="career" />
+      </div>
+    </div>
+  </section>
+</Layout>

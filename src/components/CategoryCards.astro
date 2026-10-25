@@ -1,0 +1,51 @@
+---
+import Icon from "./Icon.astro";
+interface Category {
+  name: string;
+  title: string;
+  image: string;
+  sub: string;
+  label: string;
+}
+interface Props {
+  categories: Category[];
+  kind: "service" | "equipment";
+  controls: string;
+}
+const { categories, kind, controls } = Astro.props;
+---
+
+<div
+  class="category-cards"
+  aria-label={
+    kind === "service" ? "Service categories" : "Equipment categories"
+  }
+>
+  {categories.map((c, i) => (
+    <button
+      type="button"
+      class="category-card"
+      {...(kind === "service"
+        ? { "data-family": c.name }
+        : { "data-equipment-group": c.name })}
+      aria-pressed={i === 0 ? "true" : "false"}
+      aria-controls={controls}
+    >
+      <img
+        src={`/images/${c.image}.webp`}
+        width="800"
+        height="450"
+        alt=""
+        loading="lazy"
+      />
+      <span class="category-card-body">
+        <strong>{c.title}</strong>
+        <span class="category-summary">{c.sub}</span>
+        <span class="category-action">
+          {c.label}
+          <Icon name="arrow" size={18} />
+        </span>
+      </span>
+    </button>
+  ))}
+</div>

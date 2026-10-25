@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+import EnquiryForm from "../components/EnquiryForm.astro";
+---
+
+<Layout
+  title="Contact our team"
+  description="Contact JB Advanced Engineering Limited for power plant services, equipment supply and technical enquiries."
+>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span>Contact</span>
+      </div>
+      <p class="eyebrow">LET’S TALK ENGINEERING</p>
+      <h1>Contact Us</h1>
+      <p class="description">
+        A technical question, a component requirement or a project ahead. Start
+        a conversation with our team.
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container form-layout">
+      <aside class="form-aside">
+        <h2>Here to help.</h2>
+        <a href="mailto:info@jbepower.com">info@jbepower.com</a>
+        <a href="mailto:sales@jbepower.com">sales@jbepower.com</a>
+        <a href="tel:+919136020760">+91 91360 20760</a>
+        <a href="tel:+919898320831">+91 98983 20831</a>
+        <a href="tel:+919106459242">+91 91064 59242</a>
+        <div class="office">
+          <h3>Central office · Vadodara</h3>
+          <p>
+            A 204, Sahyog Atrium, Behind Jagadish Foods, Haribhakti Extension,
+            Diwalipura, Vadodara, Gujarat 390007.
+          </p>
+        </div>
+        <div class="office">
+          <h3>Mumbai office</h3>
+          <p>
+            523, Bonanza-A Wing, Sahar Plaza, JB Nagar Metro, Andheri East,
+            Mumbai 400059.
+          </p>
+        </div>
+        <div class="office">
+          <h3>Administrative office</h3>
+          <p>
+            Block No. 143 and 144, Tundav, Tal. Savli, Vadodara, Gujarat 391775.
+          </p>
+        </div>
+        <p class="review-label">
+          Review note: contact details follow the supplied raw-data document and
+          need final company verification.
+        </p>
+      </aside>
+      <div>
+        <EnquiryForm kind="contact" />
+      </div>
+    </div>
+  </section>
+</Layout>

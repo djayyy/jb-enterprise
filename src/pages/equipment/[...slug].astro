@@ -1,0 +1,13 @@
+---
+import CatalogPage from "../../components/CatalogPage.astro";
+import { catalog } from "../../data/catalog";
+export function getStaticPaths() {
+  return catalog.equipmentPages.map((node) => ({
+    params: { slug: node.slug },
+    props: { node },
+  }));
+}
+const { node } = Astro.props;
+---
+
+<CatalogPage node={node} />

@@ -1,0 +1,68 @@
+---
+const { label = "Search this list" } = Astro.props;
+---
+
+<label class="catalog-search">
+  <span>{label}</span>
+  <input
+    type="search"
+    maxlength="150"
+    data-catalog-search
+    placeholder="Type a service or component name…"
+  />
+</label>
+<div class="catalog-empty" data-catalog-empty hidden>
+  <h3>No matching entries</h3>
+  <p>Try another name or clear the search to see the full list.</p>
+  <button type="button" class="button outline" data-catalog-clear>
+    Clear search
+  </button>
+</div>
+<p class="sr-only" role="status" data-catalog-count></p>
+<script>
+  const input = document.querySelector<HTMLInputElement>(
+    "[data-catalog-search]",
+  );
+  if (input) {
+    const cards = [
+      ...document.querySelectorAll<HTMLElement>("[data-catalog-card]"),
+    ];
+    const groups = [
+      ...document.querySelectorAll<HTMLElement>("[data-catalog-group]"),
+    ];
+    const render = (write = false) => {
+      const q = input.value.trim().toLowerCase();
+      cards.forEach((c) => (c.hidden = !(c.dataset.search || "").includes(q)));
+      groups.forEach(
+        (g) =>
+          (g.hidden = ![
+            ...g.querySelectorAll<HTMLElement>("[data-catalog-card]"),
+          ].some((c) => !c.hidden)),
+      );
+      const count = cards.filter((c) => !c.hidden).length;
+      document.querySelector<HTMLElement>("[data-catalog-empty]")!.hidden =
+        count !== 0;
+      document.querySelector("[data-catalog-count]")!.textContent =
+        `${count} entries available`;
+      if (write) {
+        const url = new URL(location.href);
+        if (q) url.searchParams.set("q", input.value);
+        else url.searchParams.delete("q");
+        history.replaceState(null, "", url);
+      }
+    };
+    input.value = (new URLSearchParams(location.search).get("q") || "").slice(
+      0,
+      150,
+    );
+    render();
+    input.addEventListener("input", () => render(true));
+    document
+      .querySelector("[data-catalog-clear]")
+      ?.addEventListener("click", () => {
+        input.value = "";
+        render(true);
+        input.focus({ preventScroll: true });
+      });
+  }
+</script>

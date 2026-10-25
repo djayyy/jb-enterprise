@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import EnquiryForm from "../components/EnquiryForm.astro";
+---
+
+<Layout
+  title="Request a quote"
+  description="Share equipment details, project requirements and technical scope with JBAEL."
+>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span>Request a quote</span>
+      </div>
+      <p class="eyebrow">LET’S DEFINE THE REQUIREMENT</p>
+      <h1>Request a Quote</h1>
+      <p class="description">
+        A clear technical brief helps us understand the equipment, the challenge
+        and the scope of work.
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container form-layout">
+      <aside class="form-aside">
+        <p class="eyebrow">REQUEST A QUOTE</p>
+        <h2>
+          Tell us what
+          <br />
+          you need.
+        </h2>
+        <p>
+          Include the equipment type, make or model, work required, site and
+          preferred timeline. Supporting drawings or specifications help add
+          context.
+        </p>
+        <div class="panel">
+          <h3>Need to discuss it first?</h3>
+          <p>Use the contact page for general questions and office details.</p>
+          <a href="/contact/" class="text-link">
+            Contact our team →
+          </a>
+        </div>
+      </aside>
+      <div>
+        <EnquiryForm kind="quote" />
+      </div>
+    </div>
+  </section>
+</Layout>

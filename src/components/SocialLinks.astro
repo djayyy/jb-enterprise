@@ -1,0 +1,39 @@
+---
+// S1 header shows these five platforms. Only LinkedIn has a URL in supplied S4.
+const channels = [
+  {
+    name: "LinkedIn",
+    mark: "in",
+    url: "https://www.linkedin.com/company/jbenterpriseindia/",
+  },
+  { name: "X / Twitter", mark: "𝕏" },
+  { name: "YouTube", mark: "▶" },
+  { name: "Facebook", mark: "f" },
+  { name: "Instagram", mark: "◎" },
+];
+---
+
+<div class="social-links" aria-label="Social media">
+  {channels.map((s) =>
+    s.url ? (
+      <a
+        href={s.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${s.name} (opens in a new tab)`}
+        title={s.name}
+      >
+        {s.mark}
+      </a>
+    ) : (
+      <button
+        type="button"
+        disabled
+        aria-label={`${s.name} — profile link pending`}
+        title={`${s.name}: official profile URL not supplied`}
+      >
+        {s.mark}
+      </button>
+    ),
+  )}
+</div>

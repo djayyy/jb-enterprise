@@ -1,0 +1,233 @@
+---
+import Icon from "./Icon.astro";
+const { kind = "contact" } = Astro.props;
+const career = kind === "career",
+  quote = kind === "quote";
+---
+
+<div class="preview-note" id="preview-note">
+  <strong>Interactive preview.</strong> You can check the fields and select
+  files on your device. Nothing is sent, uploaded or saved by this form.
+</div>
+<noscript>
+  <p class="preview-note">
+    Enable JavaScript to check this form. It will not submit an enquiry.
+  </p>
+</noscript>
+<form
+  class="enquiry-form"
+  data-kind={kind}
+  method="dialog"
+  aria-describedby="preview-note"
+>
+  <div class="form-grid">
+    <div class="field">
+      <label for="first-name">First name *</label>
+      <input
+        id="first-name"
+        name="firstName"
+        autocomplete="given-name"
+        required
+        maxlength="80"
+      />
+    </div>
+    <div class="field">
+      <label for="last-name">Last name *</label>
+      <input
+        id="last-name"
+        name="lastName"
+        autocomplete="family-name"
+        required
+        maxlength="80"
+      />
+    </div>
+    <div class="field">
+      <label for="email">Email address *</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        required
+        maxlength="254"
+      />
+    </div>
+    <div class="field">
+      <label for="phone">
+        Phone <span>(optional)</span>
+      </label>
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        autocomplete="tel"
+        maxlength="40"
+      />
+    </div>
+    {!career && (
+      <div class="field">
+        <label for="company">Company {quote ? "*" : "(optional)"}</label>
+        <input
+          id="company"
+          name="company"
+          autocomplete="organization"
+          required={quote}
+          maxlength="160"
+        />
+      </div>
+    )}
+    {!career && (
+      <div class="field">
+        <label for="location">
+          Project location {quote ? "*" : "(optional)"}
+        </label>
+        <input id="location" name="location" required={quote} maxlength="160" />
+      </div>
+    )}
+    {quote && (
+      <>
+        <div class="field">
+          <label for="designation">Designation (optional)</label>
+          <input
+            id="designation"
+            name="designation"
+            autocomplete="organization-title"
+            maxlength="100"
+          />
+        </div>
+        <div class="field">
+          <label for="gst">GST number (optional)</label>
+          <input id="gst" name="gst" maxlength="30" />
+        </div>
+      </>
+    )}
+    {career && (
+      <>
+        <div class="field">
+          <label for="interest">Area of interest *</label>
+          <select id="interest" name="interest" required>
+            <option value="">Choose an area</option>
+            <option>Mechanical engineering</option>
+            <option>Electrical engineering</option>
+            <option>Control & instrumentation</option>
+            <option>Field service & commissioning</option>
+            <option>Quality & inspection</option>
+            <option>Business & operations</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="experience">Experience (optional)</label>
+          <input
+            id="experience"
+            name="experience"
+            maxlength="100"
+            placeholder="For example, 5 years in field service"
+          />
+        </div>
+      </>
+    )}
+    {!career && (
+      <div class="field wide">
+        <label for="need">Service or equipment of interest (optional)</label>
+        <input
+          id="need"
+          name="need"
+          maxlength="200"
+          placeholder="For example, generator refurbishment"
+        />
+      </div>
+    )}
+    <div class="field wide">
+      <label for="message">
+        {career
+          ? "Tell us about your experience *"
+          : "Tell us about your requirement *"}
+      </label>
+      <textarea
+        id="message"
+        name="message"
+        required
+        maxlength="5000"
+        placeholder={
+          career
+            ? "Your skills, interests and the work you would like to do."
+            : "Equipment type, work required, site location and preferred timeline."
+        }
+      ></textarea>
+    </div>
+    <div class="field wide">
+      <label for="attachments">
+        {career ? "Resume *" : "Supporting files (optional)"}
+      </label>
+      <input
+        id="attachments"
+        type="file"
+        accept={career ? ".pdf,.docx" : ".pdf,.docx,.jpg,.jpeg,.png"}
+        multiple={!career}
+        required={career}
+        aria-describedby="file-help file-error"
+      />
+      <small id="file-help">
+        {career
+          ? "PDF or DOCX. Preview limit: 5 MB."
+          : "PDF, DOCX, JPG or PNG. Preview limit: 2 GB combined, up to 10 files."}{" "}
+        File selection only — no upload.
+      </small>
+      <small id="file-error" role="alert"></small>
+      <small id="file-list" aria-live="polite"></small>
+    </div>
+  </div>
+  <p class="form-privacy">
+    * Required fields. Read our{" "}
+    <a href="/privacy/">privacy and preview information</a>.
+  </p>
+  <div class="form-actions">
+    <button class="button" type="submit">
+      Check {career ? "application" : "enquiry"} preview{" "}
+      <Icon name="arrow" size={17} />
+    </button>
+    <p>No message will be sent.</p>
+  </div>
+  <div
+    class="form-message"
+    role="status"
+    id="form-message"
+    hidden
+    tabindex="-1"
+  ></div>
+</form>
+<script>
+  import { validateAttachments, enquiryContext } from "../lib/forms.mjs";
+  const form = document.querySelector<HTMLFormElement>(".enquiry-form")!;
+  const kind = form.dataset.kind || "contact";
+  const attachments = form.querySelector<HTMLInputElement>("#attachments")!;
+  const output = form.querySelector<HTMLElement>("#form-message")!;
+  const need = form.querySelector<HTMLInputElement>("#need");
+  if (need) need.value = enquiryContext(location.search);
+  function filesValid() {
+    const files = Array.from(attachments.files || []);
+    const error = validateAttachments(files, kind);
+    attachments.setCustomValidity(error);
+    document.querySelector("#file-error")!.textContent = error;
+    document.querySelector("#file-list")!.textContent = files
+      .map((f) => `${f.name} (${(f.size / 1_000_000).toFixed(2)} MB)`)
+      .join(" · ");
+    return !error;
+  }
+  attachments.addEventListener("change", () => {
+    filesValid();
+    output.hidden = true;
+  });
+  form.addEventListener("input", () => {
+    output.hidden = true;
+  });
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!filesValid() || !form.reportValidity()) return;
+    output.textContent =
+      "The required fields pass the preview checks. Nothing has been sent, uploaded or saved. Live enquiries will be enabled in a later version.";
+    output.hidden = false;
+    output.focus();
+  });
+</script>

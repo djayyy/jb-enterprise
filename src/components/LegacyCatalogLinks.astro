@@ -1,0 +1,27 @@
+---
+import { catalog } from "../data/catalog";
+---
+
+<script
+  type="application/json"
+  data-catalog-legacy
+  set:html={JSON.stringify(catalog.legacy).replaceAll("<", "\\u003c")}
+></script>
+<script>
+  import { legacyCatalogDestination } from "../lib/catalog-tree.mjs";
+  const element = document.querySelector("[data-catalog-legacy]");
+  if (element) {
+    const map = JSON.parse(element.textContent || "{}");
+    const follow = () => {
+      const target = legacyCatalogDestination(
+        location.pathname,
+        location.search,
+        location.hash,
+        map,
+      );
+      if (target && target !== location.pathname) location.replace(target);
+    };
+    follow();
+    window.addEventListener("hashchange", follow);
+  }
+</script>
