@@ -2,6 +2,14 @@
 
 Record one entry per logical change, newest first. IDs CHG-001, CHG-002, etc. are stable. Preserve historical records; clarify mistakes with a dated correction. This log starts with specification workflow integration; earlier package/organisation history remains in [versions.md](versions.md).
 
+## CHG-012 — 2026-10-26 — Mobile layout audit
+- R38/T40–T41/A34–A35; [audit](mobile-audit.md). Separate mobile/tablet and desktop presentation files with shared content. Removed obsolete caption hide and vertical action rules; flow-based mobile banner with horizontal actions, flexible image area and independent pagination.
+- Repaired inherited card padding, form/control sizing and long-text wrapping, mobile footer/dialog presentation, header-nav style leakage and dynamic header/menu bounds. Touch scope panels move directly under the selected item; desktop panes restored on resize. Outside tap/focus/resize closes the mobile menu; child keyboard events avoid double handling.
+- Code: Layout, NavigationDropdown, global/v05/v06 CSS; new responsive/mobile.css and desktop.css. No business data, route, image, dependency or form-contract change. No duplicate site/content, user-agent detection or ZIP backup.
+- Specs: requirements/Design/architecture/decisions/tasks/acceptance, new mobile-audit, versions/index/status, README/agents and checkpoint updated. sources/workflow unchanged (no new evidence/assets, same Git-only workflow). Prior route audit retained as historical evidence; current navigation checks rerun and recorded in mobile-audit. Older plans remain historical.
+- Validation:36-file check0 diagnostics;26 tests;188-page build;45287 references;562 destinations/855 semantic checks;376 HTTP requests plus404;164 static generated-CSS cascade assertions at13 widths. Browser rendering/hover/touch/focus/scroll/resize/text zoom NOT RUN: no authorised browser tool available. Static checks do not establish geometry or full WCAG compliance.
+- Same working folder, package0.6.1; source state CHG-012. No commit, push, deployment or archive creation. Original requirement inputs unchanged.
+
 ## CHG-011 — 2026-10-26 — Remove redundant source backups
 - R37/T39/A33. Delete eight generated project-root JBAEL-*-source.zip snapshots; ignore future matching files. dist/ was already ignored and remains the static publish output. Use one working folder plus Git history.
 - Files: .gitignore, agents/README; requirements/tasks/acceptance, versions/workflow/decisions/architecture, index/status/checkpoint and this log; eight source ZIP deletions.

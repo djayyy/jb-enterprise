@@ -95,3 +95,9 @@ T35–T37 implementation and command verification complete for review:188 pages,
 
 ## CHG-011 Repository cleanup
 - [x] T39 Remove generated source archives, enforce ignores and document source/build/hosting boundaries (R37; A33).
+
+## CHG-012 Responsive presentation
+- [x] T40 Separate mobile/desktop layout rules and repair banner visibility/actions (R38; A34).
+- [x] T41 Audit shared mobile templates/navigation/forms and record regression evidence/limits (R20,R38; A35).
+
+T40–T41 code/static audit complete. A34/A35 command evidence passes; actual browser viewport/touch/keyboard acceptance remains NOT RUN. Full findings and remaining review matrix: mobile-audit.md.

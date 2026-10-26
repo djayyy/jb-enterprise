@@ -19,6 +19,7 @@ Baseline: 2026-10-25 | Release: V0.6.1 local review; browser acceptance pending 
 | [sources.md](sources.md) | Source inventory and limits of prior inspection |
 | [versions.md](versions.md) | Versioning, review and launch workflow |
 | [implementation-status.md](implementation-status.md) | Current routes, coverage, deferrals and verification |
+| [mobile-audit.md](mobile-audit.md) | Current mobile findings, presentation ownership, static checks and browser review limits |
 | [navigation-audit.md](navigation-audit.md) | Whole-site findings, route inventory, evidence and limits |
 | [checkpoint.json](checkpoint.json) | SHA-256 of tested implementation files |
 | [workflow.md](workflow.md) | Mandatory before/after code-change procedure |
@@ -35,3 +36,5 @@ Status labels: CONFIRMED = user decision; DOCUMENTED = supplied source; PROPOSED
 Every coding task follows [workflow.md](workflow.md) under [agents.md](../agents.md). Record every logical change in [change-log.md](change-log.md), update affected specs in the same change set, and preserve requirement/task/acceptance traceability. These instructions do not install automatic file monitoring.
 
 Current artifact policy (CHG-011): one working tree with Git history; no source ZIP snapshots. dist/ is ignored in Git and rebuilt for static publishing. See versions.md and the project README.
+
+Current refinement: CHG-012 mobile/desktop presentation separation; see mobile-audit.md. Package0.6.1 and188 routes remain; browser acceptance pending.

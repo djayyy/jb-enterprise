@@ -69,9 +69,13 @@ All pages intentionally use `noindex,nofollow` for review. Do not treat this bui
 - `src/components/Catalog*.astro`: shared index, page, card and search templates.
 - `src/pages/`: page content and routes.
 - `src/components/EnquiryForm.astro`, `src/lib/forms.mjs`: disconnected form UI and metadata checks.
+- `src/styles/responsive/mobile.css`: mobile/tablet layout rules up to1000px.
+- `src/styles/responsive/desktop.css`: desktop layout rules above1000px. Content and Astro templates are shared.
 - `src/layouts/Layout.astro`, `src/styles/global.css`, `src/styles/v02.css`, `src/styles/v03.css`, `src/styles/v05.css`, `src/styles/v06.css`: shared design and source-aligned responsive layouts.
 - `public/`: deployable images, fonts/licenses and brochure only.
 
 Read [agents.md](agents.md) and [spec/README.md](spec/README.md) before every change. Follow the mandatory spec workflow and record each logical code change in [spec/change-log.md](spec/change-log.md). Current scope and verification are in [spec/implementation-status.md](spec/implementation-status.md).
 
 V0.6.1 details: [spec/v06-plan.md](spec/v06-plan.md). Whole-site audit: [spec/navigation-audit.md](spec/navigation-audit.md). Current review preview: http://127.0.0.1:4322/.188-page build,36-file check0 diagnostics,45287 local references and376 HTTP checks pass. Actual browser visual/click-through acceptance is pending; command checks do not prove screen geometry or pointer behaviour. Source history is kept in Git. Generated source ZIPs have been removed and must not be recreated for routine updates.
+
+Mobile refinement CHG-012: [audit and remaining browser checks](spec/mobile-audit.md). All three banner titles remain visible; mobile action buttons are horizontal. Separate responsive presentation files handle the two layouts. Current build/typecheck,26 tests,376 HTTP requests and164 static CSS-cascade checks pass. Actual phone rendering/touch acceptance remains pending.

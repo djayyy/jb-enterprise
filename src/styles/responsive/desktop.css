@@ -1,0 +1,60 @@
+/* Desktop presentation. Shared content/components remain in the base styles. */
+@media (min-width: 1001px) {
+  .hero-stage {
+    height: clamp(340px, calc(100svh - var(--site-top-height, 138px)), 850px);
+  }
+  .hero-caption {
+    position: absolute;
+    top: 30px;
+    right: max(6%, calc((100vw - 1200px) / 2));
+    max-width: min(650px, 70%);
+    padding: 18px 24px;
+    background: #fffffff0;
+    border-left: 4px solid var(--orange);
+    box-shadow: 0 4px 24px #0d27361a;
+  }
+  .hero-stage > .hero-actions {
+    position: absolute;
+    bottom: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    width: max-content;
+    max-width: calc(100% - 32px);
+    margin: 0;
+  }
+  .hero-stage > .hero-actions {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media (min-width: 1001px) {
+  /* The trigger extends to the panel edge: no dead pointer gap. */
+  #main-nav {
+    height: 100%;
+  }
+  .nav-dropdown,
+  .nav-dropdown > summary {
+    height: 100%;
+  }
+  .menu-browser {
+    height: clamp(280px, 58vh, 500px);
+    max-height: calc(100dvh - 210px);
+  }
+  .menu-categories,
+  .menu-item-list,
+  .menu-scope-panel {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1100px) {
+  #main-nav {
+    gap: 16px;
+  }
+  .menu-browser {
+    grid-template-columns: 185px minmax(0, 1fr);
+  }
+}

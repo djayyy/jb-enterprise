@@ -66,3 +66,5 @@ CHG-009 coverage: R33–R35 implemented for static review; all13 services,100 so
 R36 CONFIRMED (CHG-010): search appears only on All Services and All Equipment indexes. Category, service, component and part pages contain their own content/children, without related/sibling lists, all-items sidebars or duplicate parent-list actions. Breadcrumbs and shared header/footer navigation remain.
 
 R37 CONFIRMED (CHG-011): maintain one working project folder and rebuild the same dist/ output. Remove generated source ZIP snapshots and do not create new snapshots/version folders. Git retains source history; dist/ and generated source ZIPs remain ignored. Original requirement inputs are preserved.
+
+R38 CONFIRMED (CHG-012): maintain separate mobile/tablet and desktop presentation code with shared source content; audit and fix narrow-screen irregularities. All three homepage banner titles remain visible; Explore Services and Contact Us stay side by side. Review touch navigation, cards, forms, certificates and footer at320–1000px; preserve desktop behaviour.

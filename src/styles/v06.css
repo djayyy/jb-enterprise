@@ -322,50 +322,7 @@
 .catalog-empty[hidden] {
   display: none;
 }
-@media (max-width: 1000px) {
-  .catalog-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .menu-category-row > button {
-    width: 44px;
-    min-height: 44px;
-  }
-}
-@media (max-width: 600px) {
-  .catalog-grid {
-    grid-template-columns: 1fr;
-  }
-  .catalog-group-heading {
-    display: block;
-  }
-  .catalog-group-heading > a {
-    margin-top: 16px;
-  }
-  .catalog-category-links {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .catalog-category-links > a {
-    justify-content: space-between;
-  }
-  .catalog-hero .breadcrumbs {
-    margin-bottom: 24px;
-    font-size: 10px;
-  }
-  .catalog-hero-copy {
-    padding-bottom: 32px;
-  }
-  .catalog-hero-copy > p:not(.eyebrow) {
-    font-size: 15px;
-  }
-  .catalog-hero .button {
-    font-size: 12px;
-    gap: 12px;
-  }
-  .catalog-card-copy {
-    padding: 130px 20px 22px;
-  }
-}
+
 @media (prefers-reduced-motion: reduce) {
   .catalog-card-art img {
     transition: none;

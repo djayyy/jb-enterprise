@@ -54,3 +54,6 @@ CHG-009; R33–R35/T35–T37/A29–A31.188 static pages; all source scopes/parts
 
 ## V0.6.1 — Catalogue simplification,26 October2026
 CHG-010; R36/T38/A32. Index-only search for both catalogues; sidebar/related content and duplicate parent-list actions removed. Own child cards expand into the available width; breadcrumbs retained.36-file check0 diagnostics,188-page build,45287 local references and376 HTTP checks pass. Browser visual acceptance NOT RUN; prior26 unit-test results are V0.6 evidence. Preview http://127.0.0.1:4322/. JBAEL-v0.6.1-source.zip/checkpoint.json preserve this state; previous versions remain. No deployment or live integration.
+
+## CHG-012 — Mobile presentation refinement,26 October2026
+Same working project and dist/ output, package0.6.1 retained. Separate responsive/mobile.css and desktop.css; corrected caption/actions, narrow card/form/control styles and mobile navigation handling.36-file check0 diagnostics,26 tests,188-page build,45287 references,376 HTTP checks and164 static cascade assertions pass. Actual browser review remains NOT RUN; see mobile-audit.md. Git history is the revision mechanism; no source ZIP, copied version folder, commit/push or deployment created.

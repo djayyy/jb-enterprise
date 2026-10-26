@@ -6,6 +6,8 @@ import "../styles/v02.css";
 import "../styles/v03.css";
 import "../styles/v05.css";
 import "../styles/v06.css";
+import "../styles/responsive/desktop.css";
+import "../styles/responsive/mobile.css";
 import NavigationDropdown from "../components/NavigationDropdown.astro";
 const {
   title = "JB Advanced Engineering Limited",
@@ -171,6 +173,15 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
       }
       const toggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
       const nav = document.querySelector<HTMLElement>("#main-nav");
+      const header = document.querySelector<HTMLElement>(".header")!;
+      const compact = matchMedia("(max-width:1000px)");
+      const measureHeader = () =>
+        header.style.setProperty(
+          "--header-height",
+          `${header.getBoundingClientRect().height}px`,
+        );
+      new ResizeObserver(measureHeader).observe(header);
+      measureHeader();
       const close = () => {
         toggle?.setAttribute("aria-expanded", "false");
         nav?.classList.remove("is-open");
@@ -182,6 +193,22 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
         const open = toggle.getAttribute("aria-expanded") !== "true";
         toggle.setAttribute("aria-expanded", String(open));
         nav?.classList.toggle("is-open", open);
+        if (!open) close();
+      });
+      document.addEventListener("pointerdown", (event) => {
+        if (compact.matches && !header.contains(event.target as Node)) close();
+      });
+      header.addEventListener("focusout", () =>
+        queueMicrotask(() => {
+          if (compact.matches && !header.contains(document.activeElement))
+            close();
+        }),
+      );
+      compact.addEventListener("change", () => {
+        const restoreFocus =
+          compact.matches && nav?.contains(document.activeElement);
+        close();
+        if (restoreFocus) toggle?.focus({ preventScroll: true });
       });
       document.addEventListener("keydown", (e) => {
         if (

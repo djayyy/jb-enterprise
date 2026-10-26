@@ -8,7 +8,6 @@ html {
 }
 .hero-stage {
   position: relative;
-  height: clamp(340px, calc(100svh - var(--site-top-height, 138px)), 850px);
   overflow: hidden;
   border-bottom: 3px solid var(--orange);
 }
@@ -49,13 +48,11 @@ html {
   background: linear-gradient(0deg, #071b29b3, transparent 34%);
 }
 .hero-caption {
-  position: absolute;
-  top: 30px;
-  right: max(6%, calc((100vw - 1200px) / 2));
-  max-width: min(650px, 70%);
-  padding: 18px 24px;
-  background: #fffffff0;
+  display: block;
+  text-align: left;
+  letter-spacing: 0;
   border-left: 4px solid var(--orange);
+  background: #fffffff0;
   box-shadow: 0 4px 24px #0d27361a;
 }
 .hero-caption h1 {
@@ -70,18 +67,6 @@ html {
   font-size: 14px;
   line-height: 1.5;
   margin: 10px 0 0;
-}
-.hero-stage > .hero-actions {
-  position: absolute;
-  bottom: 72px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  width: max-content;
-  max-width: calc(100% - 32px);
-  margin: 0;
 }
 .hero-contact {
   background: #ffffffed;
@@ -364,141 +349,7 @@ html {
 .menu-scope-panel {
   min-height: 0;
 }
-@media (min-width: 1001px) {
-  /* The trigger extends to the panel edge: no dead pointer gap. */
-  #main-nav {
-    height: 100%;
-  }
-  .nav-dropdown,
-  .nav-dropdown > summary {
-    height: 100%;
-  }
-  .menu-browser {
-    height: clamp(280px, 58vh, 500px);
-    max-height: calc(100dvh - 210px);
-  }
-  .menu-categories,
-  .menu-item-list,
-  .menu-scope-panel {
-    overflow-y: auto;
-    overscroll-behavior: contain;
-  }
-}
-@media (max-width: 1100px) {
-  #main-nav {
-    gap: 16px;
-  }
-  .menu-browser {
-    grid-template-columns: 185px minmax(0, 1fr);
-  }
-}
-@media (max-width: 1000px) {
-  #main-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 12px 24px 24px;
-    max-height: calc(100dvh - 95px);
-    overflow: auto;
-    background: white;
-    box-shadow: 0 15px 28px #102d3c24;
-    border-bottom: 1px solid #e0e8eb;
-  }
-  #main-nav > a:not(.button) {
-    padding: 14px 0;
-  }
-  .nav-dropdown > summary {
-    padding: 14px 0;
-    justify-content: space-between;
-  }
-  .nav-dropdown.is-current > summary::after {
-    bottom: 7px;
-  }
-  .mega-menu {
-    position: static;
-    transform: none;
-    width: 100%;
-    margin: 0 0 12px;
-    box-shadow: none;
-  }
-  .mega-heading {
-    padding: 15px 12px;
-    gap: 10px;
-  }
-  .mega-heading > span {
-    font-size: 17px;
-  }
-  .mega-heading > a {
-    font-size: 11px;
-  }
-  .menu-browser {
-    display: block;
-  }
-  .menu-categories {
-    padding: 8px;
-  }
-  .menu-categories > button {
-    padding: 12px;
-  }
-  .menu-category-panel {
-    display: block;
-  }
-  .menu-category-heading {
-    padding: 15px 12px;
-  }
-  .menu-item-list {
-    padding: 6px;
-    border-right: 0;
-  }
-  .menu-item-toggle {
-    width: 44px;
-    min-height: 44px;
-  }
-  .menu-scope-panel {
-    padding: 18px;
-  }
-}
-@media (max-width: 650px) {
-  .hero-stage {
-    min-height: 340px;
-  }
-  .hero-caption {
-    top: 18px;
-    right: 18px;
-    left: 18px;
-    max-width: none;
-    padding: 14px 16px;
-  }
-  .hero-caption h1 {
-    font-size: clamp(22px, 5.6vw, 30px);
-    letter-spacing: -0.4px;
-  }
-  .hero-caption p {
-    font-size: 12px;
-    margin-top: 7px;
-  }
-  .hero-stage > .hero-actions {
-    bottom: 68px;
-    gap: 9px;
-  }
-  .hero-actions .button {
-    padding: 12px 13px;
-    font-size: 11px;
-    gap: 8px;
-  }
-  .hero-arrow {
-    width: 44px;
-    height: 44px;
-    top: 55%;
-  }
-  .hero-previous {
-    left: 12px;
-  }
-  .hero-next {
-    right: 12px;
-  }
-}
+
 #service-workspace,
 #equipment-workspace,
 #service-detail,

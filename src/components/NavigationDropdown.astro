@@ -163,6 +163,7 @@ const groups = (
     ...document.querySelectorAll<HTMLDetailsElement>("[data-nav-dropdown]"),
   ];
   const desktop = matchMedia("(min-width:1001px) and (hover:hover)");
+  const compact = matchMedia("(max-width:1000px)");
   const closers = new Map<HTMLDetailsElement, () => void>();
   dropdowns.forEach((d) => {
     const summary = d.querySelector("summary")!;
@@ -287,6 +288,21 @@ const groups = (
     );
     groupPanels.forEach((panel) => {
       const rows = [...panel.querySelectorAll<HTMLElement>("[data-menu-item]")];
+      const scopes = [
+        ...panel.querySelectorAll<HTMLElement>("[data-menu-scope]"),
+      ];
+      // Keep each touch breakdown directly after its trigger. Reuse the same
+      // nodes/IDs rather than duplicate the complete catalogue for mobile.
+      const placeScopes = () => {
+        scopes.forEach((scope) => {
+          const row = rows.find(
+            (r) => r.dataset.menuItem === scope.dataset.menuScope,
+          )!;
+          (compact.matches ? row : panel).append(scope);
+        });
+      };
+      placeScopes();
+      compact.addEventListener("change", placeScopes);
       rows.forEach((row, index) => {
         row.addEventListener("pointerenter", () => {
           if (desktop.matches) showItem(row);
@@ -300,6 +316,7 @@ const groups = (
               ?.focus();
         });
         row.addEventListener("keydown", (e) => {
+          if ((e.target as HTMLElement).closest("[data-menu-scope]")) return;
           if (e.key === "ArrowRight") {
             e.preventDefault();
             panel
@@ -327,6 +344,7 @@ const groups = (
           scope.addEventListener("keydown", (e) => {
             if (e.key === "ArrowLeft") {
               e.preventDefault();
+              e.stopPropagation();
               rows
                 .find((r) => r.dataset.menuItem === scope.dataset.menuScope)
                 ?.querySelector<HTMLAnchorElement>("a")

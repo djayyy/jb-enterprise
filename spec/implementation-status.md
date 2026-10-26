@@ -30,3 +30,7 @@ Browser visual/hover/scroll/keyboard/touch and client redirect execution remain 
 Source/spec hashes: checkpoint.json; Git records source history. CHG-011 removes all eight generated source ZIPs. dist/ is the ignored, replaceable static build output used for publishing. Original requirement inputs remain untouched.
 
 V0.6.1: search only on the two catalogue indexes; nested pages have no sidebar, sibling/related cards or duplicate parent-list actions. Breadcrumbs and own child cards remain. All178 nested pages were inspected in generated HTML for A32. Existing26 unit-test results belong to V0.6, not rerun for this presentation-only removal.
+
+## Current CHG-012 responsive refinement
+Mobile/tablet and desktop presentation are maintained separately with shared content. Banner titles are restored, mobile hero actions stay horizontal, content can grow without absolute text/button collision, touch breakdowns appear under their own items, and narrow cards/forms/footer/certificate controls are refined. Complete source findings: mobile-audit.md.
+Current evidence:36-file check0 diagnostics,26 tests,188-page build,45287 references,376 HTTP checks and164 static CSS-cascade assertions at13 widths. Actual browser visual/interaction checks remain NOT RUN. No new source ZIP, route, business content, asset or live integration.
