@@ -101,3 +101,9 @@ T35–T37 implementation and command verification complete for review:188 pages,
 - [x] T41 Audit shared mobile templates/navigation/forms and record regression evidence/limits (R20,R38; A35).
 
 T40–T41 code/static audit complete. A34/A35 command evidence passes; actual browser viewport/touch/keyboard acceptance remains NOT RUN. Full findings and remaining review matrix: mobile-audit.md.
+
+## CHG-013 Touch menus and swipe carousel
+- [x] T42 Repair mobile disclosure/dismissal and add event regressions (R39; A36).
+- [x] T43 Add bidirectional banner swipe/drag with safe gesture handling and regressions (R39; A37).
+
+T42–T43 implemented and event-fixture/build verification complete.41 tests,38-file check0 diagnostics,188-page build and376 HTTP checks pass. A36/A37 actual touch/drag browser acceptance remains NOT RUN; see mobile-audit.md.

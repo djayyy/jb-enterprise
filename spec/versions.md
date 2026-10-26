@@ -57,3 +57,6 @@ CHG-010; R36/T38/A32. Index-only search for both catalogues; sidebar/related con
 
 ## CHG-012 — Mobile presentation refinement,26 October2026
 Same working project and dist/ output, package0.6.1 retained. Separate responsive/mobile.css and desktop.css; corrected caption/actions, narrow card/form/control styles and mobile navigation handling.36-file check0 diagnostics,26 tests,188-page build,45287 references,376 HTTP checks and164 static cascade assertions pass. Actual browser review remains NOT RUN; see mobile-audit.md. Git history is the revision mechanism; no source ZIP, copied version folder, commit/push or deployment created.
+
+## CHG-013 — Stable mobile disclosures and swipe banners,26 October2026
+Same working tree, package0.6.1 and188 pages. Touch-safe disclosure/dismissal; swipe/mouse drag alongside arrows/dots; cancellable image travel and reduced-motion support.38-file check0 diagnostics,41 tests,45475 references,376 HTTP checks and164 static CSS-cascade checks pass. Actual browser interaction acceptance NOT RUN. No new ZIP, commit, push or deployment.

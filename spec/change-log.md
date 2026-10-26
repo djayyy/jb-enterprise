@@ -2,6 +2,14 @@
 
 Record one entry per logical change, newest first. IDs CHG-001, CHG-002, etc. are stable. Preserve historical records; clarify mistakes with a dated correction. This log starts with specification workflow integration; earlier package/organisation history remains in [versions.md](versions.md).
 
+## CHG-013 — 2026-10-26 — Stable mobile menus and swipe banners
+- R39/T42–T43/A36–A37. Removed mobile header/dropdown blur dismissal, touch auto-focus and focus-driven selection. Synchronous summary toggling replaces asynchronous native-toggle coordination; compact category/item arrows expand/collapse in place, initially collapsed. Desktop hover/keyboard retained.
+- Added shared swipe recognizer with horizontal intent/capture, touch/mouse/pen support, bounded threshold, cancellation and control exclusions. HeroSlider uses live image offsets, cancellable directional/snap-back animation, wraparound and synchronized text/CTA/dots. Native vertical pan/pinch and reduced motion retained; no autoplay.
+- Files: NavigationDropdown, Layout, HeroSlider, v05.css; new menu-interaction.mjs/swipe.mjs and menu/swipe/hero-controller tests. No route, business data, asset, dependency or form contract change.
+- Specs: requirements/Design/tasks/acceptance, architecture/decisions, mobile audit, versions/status/index, README/agents and checkpoint updated. Source inventory/workflow unchanged (same supplied content, Git-only workflow). Previous plans/navigation audit remain historical; current route checks rerun.
+- Validation:38-file check0 diagnostics;41 tests including15 new event/controller regressions;188-page build;45475 references;562 destinations/855 semantic checks;376 HTTP checks plus404;164 static CSS checks at13 widths. Actual browser touch/drag/focus/scroll/animation acceptance NOT RUN; no browser tool available. No live reproduction or rendered-test claim.
+- Same working folder/package0.6.1. No archive, commit, push or deployment.
+
 ## CHG-012 — 2026-10-26 — Mobile layout audit
 - R38/T40–T41/A34–A35; [audit](mobile-audit.md). Separate mobile/tablet and desktop presentation files with shared content. Removed obsolete caption hide and vertical action rules; flow-based mobile banner with horizontal actions, flexible image area and independent pagination.
 - Repaired inherited card padding, form/control sizing and long-text wrapping, mobile footer/dialog presentation, header-nav style leakage and dynamic header/menu bounds. Touch scope panels move directly under the selected item; desktop panes restored on resize. Outside tap/focus/resize closes the mobile menu; child keyboard events avoid double handling.

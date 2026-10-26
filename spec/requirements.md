@@ -68,3 +68,5 @@ R36 CONFIRMED (CHG-010): search appears only on All Services and All Equipment i
 R37 CONFIRMED (CHG-011): maintain one working project folder and rebuild the same dist/ output. Remove generated source ZIP snapshots and do not create new snapshots/version folders. Git retains source history; dist/ and generated source ZIPs remain ignored. Original requirement inputs are preserved.
 
 R38 CONFIRMED (CHG-012): maintain separate mobile/tablet and desktop presentation code with shared source content; audit and fix narrow-screen irregularities. All three homepage banner titles remain visible; Explore Services and Contact Us stay side by side. Review touch navigation, cards, forms, certificates and footer at320–1000px; preserve desktop behaviour.
+
+R39 CONFIRMED (CHG-013): mobile Services/Equipment disclosures remain open during tapping/scrolling/focus loss; close only through explicit dismissal/navigation. Add horizontal touch swipe and mouse/pen drag between all three hero banners alongside existing arrows/dots; preserve vertical scrolling, pinch zoom, links and reduced motion.

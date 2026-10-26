@@ -48,6 +48,7 @@ const slides = [
           width={s.width}
           height={s.height}
           alt={s.alt}
+          draggable="false"
           data-slide-image={i}
           class:list={["hero-photo", { "is-active": i === 0 }]}
           aria-hidden={i !== 0 ? "true" : "false"}
@@ -107,7 +108,10 @@ const slides = [
   </p>
 </section>
 <script>
+  import { bindSwipe } from "../lib/swipe.mjs";
   const root = document.querySelector<HTMLElement>("[data-carousel]")!;
+  const stage = root.querySelector<HTMLElement>(".hero-stage")!;
+  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   const selectors = [
     ...root.querySelectorAll<HTMLButtonElement>("[data-slide]"),
   ];
@@ -129,7 +133,76 @@ const slides = [
   });
   updateChrome();
   let current = 0;
-  function show(index: number) {
+  let animations: Animation[] = [];
+  let revision = 0;
+  let dragOffset = 0;
+  const wrap = (index: number) => (index + photos.length) % photos.length;
+  function clearMotion() {
+    revision++;
+    animations.forEach((animation) => animation.cancel());
+    animations = [];
+    stage.classList.remove("is-dragging", "is-changing");
+    photos.forEach((photo) => {
+      photo.classList.remove("is-swipe-preview");
+      photo.style.removeProperty("transform");
+    });
+  }
+  function animatePair(
+    outgoing: HTMLElement,
+    incoming: HTMLElement,
+    direction: number,
+    offset: number,
+    returnToStart = false,
+  ) {
+    if (reducedMotion.matches || typeof incoming.animate !== "function") {
+      clearMotion();
+      return;
+    }
+    const width = stage.clientWidth;
+    const token = revision;
+    stage.classList.add("is-changing");
+    outgoing.classList.add("is-swipe-preview");
+    incoming.classList.add("is-swipe-preview");
+    const options: KeyframeAnimationOptions = {
+      duration: returnToStart ? 220 : 380,
+      easing: "cubic-bezier(.2,.7,.2,1)",
+      fill: "both",
+    };
+    animations = [
+      outgoing.animate(
+        [
+          { transform: `translateX(${offset}px)` },
+          {
+            transform: `translateX(${returnToStart ? 0 : -direction * width}px)`,
+          },
+        ],
+        options,
+      ),
+      incoming.animate(
+        [
+          { transform: `translateX(${offset + direction * width}px)` },
+          {
+            transform: `translateX(${returnToStart ? direction * width : 0}px)`,
+          },
+        ],
+        options,
+      ),
+    ];
+    Promise.all(animations.map((animation) => animation.finished))
+      .then(() => {
+        if (revision === token) clearMotion();
+      })
+      .catch(() => {
+        /* A newer arrow, dot or drag cancels the old transition. */
+      });
+  }
+  function show(
+    index: number,
+    direction = index < current ? -1 : 1,
+    offset = 0,
+  ) {
+    const previous = current;
+    clearMotion();
     current = (index + selectors.length) % selectors.length;
     const s = selectors[current];
     root.querySelector("#hero-title")!.textContent = s.dataset.title!;
@@ -145,7 +218,57 @@ const slides = [
       b.setAttribute("aria-pressed", String(i === current)),
     );
     root.querySelector("[data-slide-status]")!.textContent = s.dataset.title!;
+    if (previous !== current)
+      animatePair(photos[previous], photos[current], direction, offset);
   }
+  const cancelSwipe = bindSwipe(stage, {
+    onStart: () => {
+      clearMotion();
+      dragOffset = 0;
+      stage.classList.add("is-dragging");
+    },
+    onMove: (offset: number) => {
+      dragOffset = offset;
+      if (reducedMotion.matches) return;
+      const direction = offset < 0 ? 1 : -1;
+      const neighbour = wrap(current + direction);
+      photos.forEach((photo, i) => {
+        photo.classList.toggle("is-swipe-preview", i === neighbour);
+        photo.style.transform = `translateX(${i === current ? offset : offset + direction * stage.clientWidth}px)`;
+      });
+    },
+    onEnd: (direction: number, offset: number) => {
+      if (direction) show(current + direction, direction, offset);
+      else returnDrag();
+    },
+    onCancel: () => returnDrag(),
+  });
+  function returnDrag() {
+    const offset = dragOffset;
+    const direction = offset < 0 ? 1 : -1;
+    clearMotion();
+    if (offset)
+      animatePair(
+        photos[current],
+        photos[wrap(current + direction)],
+        direction,
+        offset,
+        true,
+      );
+    dragOffset = 0;
+  }
+  window.addEventListener("resize", () => {
+    cancelSwipe();
+    clearMotion();
+  });
+  window.addEventListener("blur", () => {
+    cancelSwipe();
+    clearMotion();
+  });
+  reducedMotion.addEventListener("change", () => {
+    cancelSwipe();
+    clearMotion();
+  });
   selectors.forEach((b, i) => {
     b.addEventListener("click", () => show(i));
     b.addEventListener("keydown", (e) => {

@@ -159,6 +159,10 @@ const groups = (
   </style>
 </noscript>
 <script>
+  import {
+    bindDropdownTrigger,
+    bindMenuFocusDismissal,
+  } from "../lib/menu-interaction.mjs";
   const dropdowns = [
     ...document.querySelectorAll<HTMLDetailsElement>("[data-nav-dropdown]"),
   ];
@@ -189,7 +193,7 @@ const groups = (
       });
       d.open = true;
     };
-    const showGroup = (id: string) => {
+    const showGroup = (id: string | null) => {
       categoryButtons.forEach((b) =>
         b.setAttribute("aria-expanded", String(b.dataset.menuCategory === id)),
       );
@@ -202,29 +206,22 @@ const groups = (
       );
       groupPanels.forEach((p) => (p.hidden = p.dataset.menuGroupPanel !== id));
     };
-    const showItem = (row: HTMLElement) => {
+    const showItem = (row: HTMLElement, expanded = true) => {
       const panel = row.closest<HTMLElement>("[data-menu-group-panel]")!;
       const id = row.dataset.menuItem!;
       panel
         .querySelectorAll<HTMLElement>("[data-menu-scope]")
-        .forEach((p) => (p.hidden = p.dataset.menuScope !== id));
+        .forEach((p) => (p.hidden = !expanded || p.dataset.menuScope !== id));
       panel.querySelectorAll<HTMLElement>("[data-menu-item]").forEach((r) => {
         r.querySelectorAll("[aria-expanded]").forEach((c) =>
-          c.setAttribute("aria-expanded", String(r === row)),
+          c.setAttribute("aria-expanded", String(expanded && r === row)),
         );
       });
     };
-    summary.addEventListener("click", (e) => {
-      if (desktop.matches && e.detail > 0) {
-        e.preventDefault();
-        open();
-      }
-    });
-    d.addEventListener("toggle", () => {
-      if (d.open)
-        dropdowns.forEach((other) => {
-          if (other !== d) closers.get(other)?.();
-        });
+    bindDropdownTrigger(summary, d, {
+      hoverMode: () => desktop.matches,
+      open,
+      close,
     });
     d.addEventListener("pointerenter", () => {
       if (desktop.matches) open();
@@ -238,10 +235,10 @@ const groups = (
         }, 400);
     });
     d.addEventListener("focusin", cancelClose);
-    d.addEventListener("focusout", () =>
-      queueMicrotask(() => {
-        if (!d.contains(document.activeElement)) close();
-      }),
+    bindMenuFocusDismissal(d, () => desktop.matches, close);
+    if (compact.matches) showGroup(null);
+    compact.addEventListener("change", () =>
+      showGroup(compact.matches ? null : "0"),
     );
     categoryButtons.forEach((button, index) => {
       const select = () => showGroup(button.dataset.menuCategory!);
@@ -250,7 +247,9 @@ const groups = (
         .addEventListener("pointerenter", () => {
           if (desktop.matches) select();
         });
-      button.addEventListener("focus", select);
+      button.addEventListener("focus", () => {
+        if (desktop.matches) select();
+      });
       button.addEventListener("click", select);
       button.addEventListener("keydown", (e) => {
         if (["ArrowDown", "ArrowUp", "Home", "End"].includes(e.key)) {
@@ -264,8 +263,10 @@ const groups = (
                     (e.key === "ArrowDown" ? 1 : -1) +
                     categoryButtons.length) %
                   categoryButtons.length;
+          showGroup(categoryButtons[next].dataset.menuCategory!);
           categoryButtons[next].focus();
         } else if (e.key === "ArrowRight") {
+          select();
           e.preventDefault();
           groupPanels
             .find((p) => !p.hidden)
@@ -278,12 +279,12 @@ const groups = (
       "[data-menu-category-toggle]",
     ).forEach((button) =>
       button.addEventListener("click", () => {
-        showGroup(button.dataset.menuCategoryToggle!);
-        if (!desktop.matches)
-          groupPanels
-            .find((p) => !p.hidden)
-            ?.querySelector<HTMLAnchorElement>("[data-menu-item-link]")
-            ?.focus();
+        const expanded = button.getAttribute("aria-expanded") === "true";
+        showGroup(
+          compact.matches && expanded
+            ? null
+            : button.dataset.menuCategoryToggle!,
+        );
       }),
     );
     groupPanels.forEach((panel) => {
@@ -299,6 +300,12 @@ const groups = (
             (r) => r.dataset.menuItem === scope.dataset.menuScope,
           )!;
           (compact.matches ? row : panel).append(scope);
+          scope.hidden = compact.matches || row !== rows[0];
+          row
+            .querySelectorAll("[aria-expanded]")
+            .forEach((control) =>
+              control.setAttribute("aria-expanded", String(!scope.hidden)),
+            );
         });
       };
       placeScopes();
@@ -307,18 +314,20 @@ const groups = (
         row.addEventListener("pointerenter", () => {
           if (desktop.matches) showItem(row);
         });
-        row.addEventListener("focusin", () => showItem(row));
+        row.addEventListener("focusin", () => {
+          if (desktop.matches) showItem(row);
+        });
         row.querySelector("button")!.addEventListener("click", () => {
-          showItem(row);
-          if (!desktop.matches)
-            panel
-              .querySelector<HTMLElement>("[data-menu-scope]:not([hidden]) a")
-              ?.focus();
+          const expanded =
+            row.querySelector("button")!.getAttribute("aria-expanded") ===
+            "true";
+          showItem(row, !compact.matches || !expanded);
         });
         row.addEventListener("keydown", (e) => {
           if ((e.target as HTMLElement).closest("[data-menu-scope]")) return;
           if (e.key === "ArrowRight") {
             e.preventDefault();
+            showItem(row);
             panel
               .querySelector<HTMLElement>("[data-menu-scope]:not([hidden]) a")
               ?.focus();

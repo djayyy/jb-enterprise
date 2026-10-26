@@ -34,3 +34,7 @@ V0.6.1: search only on the two catalogue indexes; nested pages have no sidebar, 
 ## Current CHG-012 responsive refinement
 Mobile/tablet and desktop presentation are maintained separately with shared content. Banner titles are restored, mobile hero actions stay horizontal, content can grow without absolute text/button collision, touch breakdowns appear under their own items, and narrow cards/forms/footer/certificate controls are refined. Complete source findings: mobile-audit.md.
 Current evidence:36-file check0 diagnostics,26 tests,188-page build,45287 references,376 HTTP checks and164 static CSS-cascade assertions at13 widths. Actual browser visual/interaction checks remain NOT RUN. No new source ZIP, route, business content, asset or live integration.
+
+## Current CHG-013 interaction repair
+Mobile Services/Equipment now ignore blur dismissal and expand/collapse without automatic focus jumps; summary switching is synchronous. Banner supports touch swipe and mouse/pen drag in both layouts, preserving vertical page scrolling and native links/controls. Arrows/dots/keyboard remain.
+Latest verification:38-file check0 diagnostics,41 tests,188-page build,45475 local references,376 HTTP checks and164 static CSS fixtures. Actual browser acceptance remains NOT RUN; see mobile-audit.md. No route/content/assets/dependencies/live integration changed.

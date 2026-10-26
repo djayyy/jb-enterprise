@@ -198,12 +198,6 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
       document.addEventListener("pointerdown", (event) => {
         if (compact.matches && !header.contains(event.target as Node)) close();
       });
-      header.addEventListener("focusout", () =>
-        queueMicrotask(() => {
-          if (compact.matches && !header.contains(document.activeElement))
-            close();
-        }),
-      );
       compact.addEventListener("change", () => {
         const restoreFocus =
           compact.matches && nav?.contains(document.activeElement);

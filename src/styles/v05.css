@@ -8,6 +8,9 @@ html {
 }
 .hero-stage {
   position: relative;
+  touch-action: pan-y pinch-zoom;
+  cursor: grab;
+  user-select: none;
   overflow: hidden;
   border-bottom: 3px solid var(--orange);
 }
@@ -32,6 +35,22 @@ html {
 .hero-photo.is-active {
   opacity: 1;
   animation: hero-reveal 4s ease-out both;
+}
+.hero-stage.is-dragging {
+  cursor: grabbing;
+}
+.hero-stage.is-dragging .hero-photo,
+.hero-stage.is-changing .hero-photo {
+  animation: none;
+  transition: none;
+}
+.hero-photo.is-swipe-preview {
+  opacity: 1;
+}
+.hero-stage a,
+.hero-stage button {
+  touch-action: manipulation;
+  cursor: pointer;
 }
 @keyframes hero-reveal {
   from {

@@ -38,3 +38,5 @@ Every coding task follows [workflow.md](workflow.md) under [agents.md](../agents
 Current artifact policy (CHG-011): one working tree with Git history; no source ZIP snapshots. dist/ is ignored in Git and rebuilt for static publishing. See versions.md and the project README.
 
 Current refinement: CHG-012 mobile/desktop presentation separation; see mobile-audit.md. Package0.6.1 and188 routes remain; browser acceptance pending.
+
+Current interaction follow-up: CHG-013 mobile menu dismissal/toggle repair and banner swipe/drag; current evidence and limitations are in mobile-audit.md and acceptance.md.
