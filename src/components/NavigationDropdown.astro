@@ -36,21 +36,14 @@ const groups = (
     </svg>
   </summary>
   <div class="mega-menu">
-    <div class="mega-heading">
-      <span>{label}</span>
-      <a href={kind === "services" ? "/services/" : "/equipment/"}>
-        View all {kind === "services" ? "services" : "equipment"}{" "}
-        <span aria-hidden="true">→</span>
-      </a>
-    </div>
     <div class="menu-browser">
       <div class="menu-categories" aria-label={`${label} categories`}>
         {groups.map((g, gi) => (
-          <div class="menu-category-row">
+          <div class="menu-category-row" data-menu-category-row={gi}>
             <a
               href={g.url}
               data-menu-category={gi}
-              aria-expanded={gi === 0 ? "true" : "false"}
+              aria-expanded="false"
               aria-controls={`menu-${kind}-group-${gi}`}
             >
               {g.title}
@@ -59,7 +52,7 @@ const groups = (
               type="button"
               data-menu-category-toggle={gi}
               aria-label={`Show ${g.title} menu`}
-              aria-expanded={gi === 0 ? "true" : "false"}
+              aria-expanded="false"
               aria-controls={`menu-${kind}-group-${gi}`}
             >
               <span aria-hidden="true">›</span>
@@ -72,7 +65,7 @@ const groups = (
           class="menu-category-panel"
           id={`menu-${kind}-group-${gi}`}
           data-menu-group-panel={gi}
-          hidden={gi !== 0}
+          hidden
         >
           <h2 class="menu-category-heading">
             <a href={g.url}>
@@ -86,7 +79,7 @@ const groups = (
                 <a
                   href={item.url}
                   data-menu-item-link
-                  aria-expanded={ii === 0 ? "true" : "false"}
+                  aria-expanded="false"
                   aria-controls={`menu-${kind}-scope-${gi}-${ii}`}
                 >
                   {item.title}
@@ -95,7 +88,7 @@ const groups = (
                   type="button"
                   class="menu-item-toggle"
                   aria-label={`Show ${item.title} breakdown`}
-                  aria-expanded={ii === 0 ? "true" : "false"}
+                  aria-expanded="false"
                   aria-controls={`menu-${kind}-scope-${gi}-${ii}`}
                 >
                   <span aria-hidden="true">›</span>
@@ -109,16 +102,22 @@ const groups = (
               style={`--menu-photo: url(/images/${item.image}.webp)`}
               id={`menu-${kind}-scope-${gi}-${ii}`}
               data-menu-scope={`${gi}-${ii}`}
-              hidden={ii !== 0}
+              hidden
             >
-              <h3>
-                <a href={item.url}>
-                  {item.title} <span aria-hidden="true">↗</span>
-                </a>
-              </h3>
-              <p class="menu-scope-label">
-                {kind === "services" ? "Service scope" : "Parts & components"}
-              </p>
+              <div class="menu-scope-heading">
+                <p class="menu-parent-context">
+                  <a href={g.url}>{g.title}</a>
+                  <span aria-hidden="true"> ›</span>
+                </p>
+                <h3>
+                  <a href={item.url}>
+                    {item.title} <span aria-hidden="true">↗</span>
+                  </a>
+                </h3>
+                <p class="menu-scope-label">
+                  {kind === "services" ? "Service scope" : "Parts & components"}
+                </p>
+              </div>
               <ul>
                 {item.children.map((c) => (
                   <li>
@@ -144,6 +143,7 @@ const groups = (
     }
     .menu-browser,
     .menu-category-panel,
+    .menu-category-heading,
     .menu-category-panel[hidden],
     .menu-scope-panel[hidden] {
       display: block !important;
@@ -152,9 +152,13 @@ const groups = (
     .menu-item-list,
     .menu-scope-panel {
       overflow: visible !important;
+      position: static !important;
+      width: auto !important;
+      max-height: none !important;
     }
     .mega-menu {
       overflow: auto !important;
+      max-height: calc(100dvh - 150px);
     }
   </style>
 </noscript>
@@ -162,7 +166,9 @@ const groups = (
   import {
     bindDropdownTrigger,
     bindMenuFocusDismissal,
+    bindHoverPreview,
   } from "../lib/menu-interaction.mjs";
+  import { positionMenu, clearMenuPosition } from "../lib/menu-position.mjs";
   const dropdowns = [
     ...document.querySelectorAll<HTMLDetailsElement>("[data-nav-dropdown]"),
   ];
@@ -177,13 +183,34 @@ const groups = (
     const groupPanels = [
       ...d.querySelectorAll<HTMLElement>("[data-menu-group-panel]"),
     ];
+    const browser = d.querySelector<HTMLElement>(".menu-browser")!;
+    const categoryRows = [
+      ...d.querySelectorAll<HTMLElement>("[data-menu-category-row]"),
+    ];
+    const menu = d.querySelector<HTMLElement>(".mega-menu")!;
+    const position = () => {
+      if (compact.matches || !d.open) return;
+      positionMenu({
+        root: menu,
+        summary,
+        groups: groupPanels,
+        categoryRows,
+        viewportWidth: document.documentElement.clientWidth,
+        viewportHeight: window.innerHeight,
+      });
+    };
+    const previewCancels: Array<() => void> = [];
+    const cancelPreviews = () => previewCancels.forEach((cancel) => cancel());
+    let activeGroup: string | null = null;
     let closeTimer: ReturnType<typeof setTimeout> | undefined;
     const cancelClose = () => {
       clearTimeout(closeTimer);
     };
     const close = () => {
       cancelClose();
+      cancelPreviews();
       d.open = false;
+      showGroup(null);
     };
     closers.set(d, close);
     const open = () => {
@@ -191,9 +218,14 @@ const groups = (
       dropdowns.forEach((other) => {
         if (other !== d) closers.get(other)?.();
       });
+      if (!d.open) showGroup(null);
       d.open = true;
+      position();
     };
     const showGroup = (id: string | null) => {
+      cancelPreviews();
+      const changed = activeGroup !== id;
+      activeGroup = id;
       categoryButtons.forEach((b) =>
         b.setAttribute("aria-expanded", String(b.dataset.menuCategory === id)),
       );
@@ -204,9 +236,17 @@ const groups = (
             String(b.dataset.menuCategoryToggle === id),
           ),
       );
-      groupPanels.forEach((p) => (p.hidden = p.dataset.menuGroupPanel !== id));
+      groupPanels.forEach((p) => {
+        p.hidden = p.dataset.menuGroupPanel !== id;
+        if (changed || id === null) {
+          const first = p.querySelector<HTMLElement>("[data-menu-item]");
+          if (first) showItem(first, false);
+        }
+      });
+      position();
     };
     const showItem = (row: HTMLElement, expanded = true) => {
+      cancelPreviews();
       const panel = row.closest<HTMLElement>("[data-menu-group-panel]")!;
       const id = row.dataset.menuItem!;
       panel
@@ -217,14 +257,15 @@ const groups = (
           c.setAttribute("aria-expanded", String(expanded && r === row)),
         );
       });
+      position();
     };
     bindDropdownTrigger(summary, d, {
       hoverMode: () => desktop.matches,
       open,
       close,
     });
-    d.addEventListener("pointerenter", () => {
-      if (desktop.matches) open();
+    d.addEventListener("pointerenter", (e) => {
+      if (desktop.matches && e.pointerType !== "touch") open();
     });
     d.addEventListener("pointerleave", () => {
       cancelClose();
@@ -236,17 +277,16 @@ const groups = (
     });
     d.addEventListener("focusin", cancelClose);
     bindMenuFocusDismissal(d, () => desktop.matches, close);
-    if (compact.matches) showGroup(null);
-    compact.addEventListener("change", () =>
-      showGroup(compact.matches ? null : "0"),
-    );
+
     categoryButtons.forEach((button, index) => {
       const select = () => showGroup(button.dataset.menuCategory!);
-      button
-        .closest(".menu-category-row")!
-        .addEventListener("pointerenter", () => {
-          if (desktop.matches) select();
-        });
+      previewCancels.push(
+        bindHoverPreview(
+          button.closest(".menu-category-row")!,
+          () => desktop.matches && d.open,
+          select,
+        ),
+      );
       button.addEventListener("focus", () => {
         if (desktop.matches) select();
       });
@@ -289,31 +329,14 @@ const groups = (
     );
     groupPanels.forEach((panel) => {
       const rows = [...panel.querySelectorAll<HTMLElement>("[data-menu-item]")];
-      const scopes = [
-        ...panel.querySelectorAll<HTMLElement>("[data-menu-scope]"),
-      ];
-      // Keep each touch breakdown directly after its trigger. Reuse the same
-      // nodes/IDs rather than duplicate the complete catalogue for mobile.
-      const placeScopes = () => {
-        scopes.forEach((scope) => {
-          const row = rows.find(
-            (r) => r.dataset.menuItem === scope.dataset.menuScope,
-          )!;
-          (compact.matches ? row : panel).append(scope);
-          scope.hidden = compact.matches || row !== rows[0];
-          row
-            .querySelectorAll("[aria-expanded]")
-            .forEach((control) =>
-              control.setAttribute("aria-expanded", String(!scope.hidden)),
-            );
-        });
-      };
-      placeScopes();
-      compact.addEventListener("change", placeScopes);
       rows.forEach((row, index) => {
-        row.addEventListener("pointerenter", () => {
-          if (desktop.matches) showItem(row);
-        });
+        previewCancels.push(
+          bindHoverPreview(
+            row,
+            () => desktop.matches && d.open && !panel.hidden,
+            () => showItem(row),
+          ),
+        );
         row.addEventListener("focusin", () => {
           if (desktop.matches) showItem(row);
         });
@@ -329,7 +352,9 @@ const groups = (
             e.preventDefault();
             showItem(row);
             panel
-              .querySelector<HTMLElement>("[data-menu-scope]:not([hidden]) a")
+              .querySelector<HTMLElement>(
+                "[data-menu-scope]:not([hidden]) li a",
+              )
               ?.focus();
           } else if (e.key === "ArrowLeft") {
             e.preventDefault();
@@ -362,6 +387,34 @@ const groups = (
           }),
         );
     });
+    // Reuse the exact same groups/scopes in both layouts; keep every child
+    // immediately within its own parent on touch screens, then restore columns.
+    const placePanels = () => {
+      cancelPreviews();
+      clearMenuPosition(menu, groupPanels);
+      groupPanels.forEach((panel, gi) => {
+        (compact.matches ? categoryRows[gi] : browser).append(panel);
+        const rows = [
+          ...panel.querySelectorAll<HTMLElement>("[data-menu-item]"),
+        ];
+        const scopes = [
+          ...panel.querySelectorAll<HTMLElement>("[data-menu-scope]"),
+        ];
+        scopes.forEach((scope) => {
+          const row = rows.find(
+            (r) => r.dataset.menuItem === scope.dataset.menuScope,
+          )!;
+          (compact.matches ? row : panel).append(scope);
+        });
+        if (rows[0]) showItem(rows[0], false);
+      });
+      showGroup(null);
+    };
+    placePanels();
+    compact.addEventListener("change", placePanels);
+    window.addEventListener("resize", position);
+    document.addEventListener("navigationlayout", position);
+    document.addEventListener("scroll", position, true);
     d.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         e.preventDefault();

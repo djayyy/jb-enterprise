@@ -70,3 +70,15 @@ R37 CONFIRMED (CHG-011): maintain one working project folder and rebuild the sam
 R38 CONFIRMED (CHG-012): maintain separate mobile/tablet and desktop presentation code with shared source content; audit and fix narrow-screen irregularities. All three homepage banner titles remain visible; Explore Services and Contact Us stay side by side. Review touch navigation, cards, forms, certificates and footer at320–1000px; preserve desktop behaviour.
 
 R39 CONFIRMED (CHG-013): mobile Services/Equipment disclosures remain open during tapping/scrolling/focus loss; close only through explicit dismissal/navigation. Add horizontal touch swipe and mouse/pen drag between all three hero banners alongside existing arrows/dots; preserve vertical scrolling, pinch zoom, links and reduced motion.
+
+R40 CONFIRMED (CHG-014): Services and Equipment share a connected category → item → scope/part menu. The open parent path uses consistent navy/white highlighting with an orange edge; component panels name their parent category/item. Desktop hover intent and contiguous panels protect pointer travel. Mobile children expand directly below their parent at both levels, with explicit chevrons, native destination links, no focus/scroll jumps and unchanged dismissal rules.
+
+R41 CONFIRMED (CHG-015): neither Services nor Equipment preselects Thermal or any other category/item. Opening/reopening or changing layout starts with categories only. Each intentional category interaction reveals its immediate items; only an item interaction reveals its scopes/parts. Changing category clears descendant choices.
+
+R42 CONFIRMED (CHG-016): desktop Services/Equipment menus are compact lists directly below their own header labels, with content-sized heights and no reserved unopened columns. Each child panel appears adjacent to its parent row; prefer rightward cascading and keep the entire branch inside the viewport. Mobile retains nested disclosure.
+
+R43 CONFIRMED (CHG-017): shift desktop Home–Contact navigation left and always open child dropdowns to the right. Remove View all services/equipment rows from dropdowns on every device; catalogue index routes remain available elsewhere. Preserve sequential opening and mobile nesting.
+
+R44 CONFIRMED (CHG-018): move Home–Contact only a small margin left within the original single-row desktop header. Do not align the links against the logo or create a second navigation row. Retain rightward-only, list-only dropdowns and mobile nesting.
+
+R45 CONFIRMED (CHG-019): align the Equipment Supply root list vertically beneath its header label, with a further modest leftward adjustment to Home–Contact. Preserve the single-row header, logo clearance, rightward child panels, list-only roots and mobile behaviour.

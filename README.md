@@ -81,3 +81,13 @@ V0.6.1 details: [spec/v06-plan.md](spec/v06-plan.md). Whole-site audit: [spec/na
 Mobile refinement CHG-012: [audit and remaining browser checks](spec/mobile-audit.md). All three banner titles remain visible; mobile action buttons are horizontal. Separate responsive presentation files handle the two layouts. Current build/typecheck,26 tests,376 HTTP requests and164 static CSS-cascade checks pass. Actual phone rendering/touch acceptance remains pending.
 
 CHG-013: mobile dropdowns use explicit tap toggles without focus-loss dismissal. Banner images support left/right touch swipe and mouse/pen drag, plus arrows/dots; vertical scrolling and reduced motion are preserved. Current41 event/controller tests,38-file check,188-page build and376 HTTP checks pass. Actual browser interaction review remains pending.
+
+CHG-014: Services and Equipment menus share clear parent-path highlighting and category context. Desktop hover previews use a short intent delay; mobile groups and components expand directly below their parent.45 tests pass; actual browser visual/touch review remains pending.
+
+CHG-016: desktop Services/Equipment menus start as compact lists under their header labels, with adjacent child flyouts and screen-edge handling. Mobile keeps nested disclosures.51 tests pass; actual browser visual review remains pending.
+
+CHG-017: desktop navigation shifts left and child dropdowns always open right. Dropdown roots contain only category choices; index pages remain linked elsewhere. Smaller desktops use a separate navigation row.51 tests pass; actual browser review pending.
+
+CHG-018 restores a balanced single-row desktop header with only a small leftward navigation margin. Rightward/list-only dropdowns remain. See spec/acceptance.md for current checks and pending browser verification.
+
+CHG-019 keeps Equipment Supply’s root list directly beneath its label, using measured header spacing and rightward panel fitting. Browser visual acceptance remains pending; evidence is recorded in spec/acceptance.md.

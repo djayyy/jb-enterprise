@@ -40,3 +40,15 @@ Current artifact policy (CHG-011): one working tree with Git history; no source 
 Current refinement: CHG-012 mobile/desktop presentation separation; see mobile-audit.md. Package0.6.1 and188 routes remain; browser acceptance pending.
 
 Current interaction follow-up: CHG-013 mobile menu dismissal/toggle repair and banner swipe/drag; current evidence and limitations are in mobile-audit.md and acceptance.md.
+
+Current menu hierarchy: CHG-014 / R40 / T44–T45 / A38–A39. Connected desktop panes and nested mobile branches implemented; see Design.md, mobile-audit.md and acceptance.md for verification and browser limits.
+
+Current follow-up: CHG-015 / R41 / T46 / A40 — neither menu opens a default category or item; each level appears after interaction with its parent. See acceptance.md for current checks.
+
+Current alignment correction: CHG-016 / R42 / T47 / A41 — compact desktop flyouts beneath their own header labels, without reserved blank columns; mobile positioning cleanup verified by fixture. Actual browser review pending.
+
+Current correction: CHG-017 / R43 / T48 / A42 — navigation shifted left; all child flyouts open right; dropdown View all rows removed. See Design.md and acceptance.md for responsive details/evidence.
+
+Current header correction: CHG-018 / R44 / T49 / A43 — original single-row alignment restored with only a modest leftward margin for Home–Contact. Rightward/list-only menus retained; see acceptance.md for evidence and browser limits.
+
+Current alignment: CHG-019 / R45 / T50 / A44 — root lists remain vertically aligned beneath their triggers; measured header spacing and fitted child widths replace independent root shifting. See acceptance.md for current evidence and browser limits.

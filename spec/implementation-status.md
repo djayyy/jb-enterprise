@@ -38,3 +38,16 @@ Current evidence:36-file check0 diagnostics,26 tests,188-page build,45287 refere
 ## Current CHG-013 interaction repair
 Mobile Services/Equipment now ignore blur dismissal and expand/collapse without automatic focus jumps; summary switching is synchronous. Banner supports touch swipe and mouse/pen drag in both layouts, preserving vertical page scrolling and native links/controls. Arrows/dots/keyboard remain.
 Latest verification:38-file check0 diagnostics,41 tests,188-page build,45475 local references,376 HTTP checks and164 static CSS fixtures. Actual browser acceptance remains NOT RUN; see mobile-audit.md. No route/content/assets/dependencies/live integration changed.
+
+## CHG-014 current menu refinement
+Both catalogues now share navy/white parent-path highlighting, explicit scope ancestry, cancellable hover intent and nested mobile category/item disclosure.45 tests,38-file check0 diagnostics,188-page build,50175 references,376 HTTP checks plus404 and284 static CSS checks pass. Actual browser/mobile visual/interaction acceptance remains NOT RUN. Existing business content, banner, routes and disconnected integrations retained.
+
+CHG-015: sequential menu disclosure replaces default Thermal/first-item opening.46 tests,38-file check0 diagnostics,188-page build and50175 references pass; generated initial menu state verified on every page. Actual browser acceptance remains pending.
+
+CHG-016: compact trigger-anchored desktop menus replace the oversized fixed-height container. Panels cascade right where the full branch fits, otherwise left; mobile remains nested.51 tests,39-file check0 diagnostics,188-page build,50175 references,376 HTTP checks plus404 and316 static CSS assertions pass. Actual browser visual/pointer/touch acceptance remains pending.
+
+CHG-017: rightward-only flyouts, left-aligned desktop navigation and list-only dropdown roots implemented.51 tests;39-file check0 diagnostics;188-page build;49799 references;376 HTTP checks plus404;352 CSS checks pass. Actual browser verification pending.
+
+CHG-018: restored the original centred, single-row desktop header with right-aligned navigation and only a12–28px margin before Quote. Retains rightward/list-only menus.51 tests,188-page build,49799 references and381 static CSS checks pass; rendered browser acceptance remains pending.
+
+CHG-019: root dropdowns stay beneath their header labels; measured header spacing moves Home–Contact farther left only within logo clearance, while child widths adapt to remaining space.54 tests,39-file check0 diagnostics,188-page build,49987 local references and381 static CSS checks pass. Rendered browser fit/legibility remains pending.

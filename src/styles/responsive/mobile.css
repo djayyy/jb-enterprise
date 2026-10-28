@@ -29,27 +29,32 @@
     margin: 0 0 12px;
     box-shadow: none;
   }
-  .mega-heading {
-    padding: 15px 12px;
-    gap: 10px;
-  }
-  .mega-heading > span {
-    font-size: 17px;
-  }
-  .mega-heading > a {
-    font-size: 11px;
-  }
   .menu-browser {
     display: block;
   }
   .menu-categories {
     padding: 8px;
   }
-  .menu-categories > button {
-    padding: 12px;
+  .menu-category-row {
+    flex-wrap: wrap;
+    margin-bottom: 4px;
   }
-  .menu-category-panel {
+  .menu-category-row > a {
+    flex-basis: calc(100% - 44px);
+  }
+  .menu-category-row > .menu-category-panel {
+    flex: 0 0 100%;
+    width: 100%;
     display: block;
+    padding: 4px 0 4px 8px;
+    border-left: 1px solid #d6e1e8;
+  }
+  .menu-category-row > .menu-category-panel[hidden] {
+    display: none;
+  }
+  /* The category row already names this branch in the compact layout. */
+  .menu-category-heading {
+    display: none;
   }
   .menu-category-heading {
     padding: 15px 12px;
@@ -63,7 +68,13 @@
     min-height: 44px;
   }
   .menu-scope-panel {
-    padding: 18px;
+    padding: 0;
+  }
+  .menu-scope-heading {
+    padding: 12px;
+  }
+  .menu-scope-panel ul {
+    padding: 0 12px 8px;
   }
 }
 @media (max-width: 1000px) {
@@ -256,15 +267,8 @@
     width: 100%;
     border-top: 1px solid #dce5ea;
   }
-  .mega-heading {
-    flex-wrap: wrap;
-  }
-  .mega-heading > a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-  }
-  .menu-item-toggle[aria-expanded="true"] > span {
+  .menu-item-toggle[aria-expanded="true"] > span,
+  [data-menu-category-toggle][aria-expanded="true"] > span {
     transform: rotate(90deg);
   }
   .form-layout {

@@ -58,3 +58,8 @@ Latest user request and screenshot text extractions (26 October2026,12:24:31AM a
 Visually inspected contact sheets of all supplied Electrical(21), C&I(9), Testings(18),3D Scaning(4), Rewamping(5), Turbine(23) and Generator(47) images.24 selected images were copied to public/images/catalog-*.webp, maximum1400×1000 with preserved aspect ratio. Exact original filenames are recorded in src/data/assets.json. New dimension metadata covers all public WebPs. Boiler/pressure photos and other missing exact subject images use representative source imagery; no claim that each image depicts the exact named part or a JBAEL-owned facility.
 
 Service/equipment source arrays and original requirement inputs are unchanged. Leaf titles are source entries; short descriptions derive only their parent/category relationship. Additional prose asks visitors for equipment/reference/site/quantity details without inventing capabilities, specifications or service guarantees. Asset rights and company technical approval remain open.
+
+## CHG-014 navigation feedback
+User feedback on26 October2026 and screenshots titled8:52:27PM,9:01:48PM and9:02:17PM inform hierarchy clarity. Text was retrieved; image materialization failed, so exact pixels/colours were not inspected. The user approved the subsequent textual/flow-diagram plan. Implementation uses original JBAEL styling and unchanged catalogue business data/images; no competitor image, copy or technical claim imported.
+
+CHG-016: visually inspected user screenshot Screenshot2026-10-26 at11.14.56PM.png in the preceding turn. It shows a large centred white Services panel with only three category rows at the far left and empty remaining width/height. No competitor/source business content or asset changes; this is user UI feedback.

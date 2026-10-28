@@ -24,3 +24,22 @@ export function bindDropdownTrigger(
     else open();
   });
 }
+
+/** Ignore passing pointer travel; only a sustained hover previews a branch. */
+export function bindHoverPreview(element, enabled, preview, delay = 180) {
+  let timer;
+  const cancel = () => {
+    clearTimeout(timer);
+    timer = undefined;
+  };
+  element.addEventListener("pointerenter", (event) => {
+    cancel();
+    if (!enabled() || event.pointerType === "touch") return;
+    timer = setTimeout(() => {
+      timer = undefined;
+      if (enabled()) preview();
+    }, delay);
+  });
+  element.addEventListener("pointerleave", cancel);
+  return cancel;
+}

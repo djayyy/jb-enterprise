@@ -2,6 +2,47 @@
 
 Record one entry per logical change, newest first. IDs CHG-001, CHG-002, etc. are stable. Preserve historical records; clarify mistakes with a dated correction. This log starts with specification workflow integration; earlier package/organisation history remains in [versions.md](versions.md).
 
+## CHG-019 — 2026-10-28 — Equipment root aligned beneath its label
+- R45/T50/A44. The previous geometry shifted the root left whenever660px was unavailable. Keep the root at the header trigger; measure Home–Contact spacing against logo clearance, increasing the quote gap as needed without a second row. Scale rightward panel widths when full preferred widths cannot fit. Preserve list-only roots, sequential opening, mobile nesting and routes.
+- Code: menu-position.mjs, Layout.astro, NavigationDropdown.astro and desktop.css; regression updates in menu-position.test.mjs/menu-hierarchy.test.mjs. Header measures at load/fonts-ready/resize and clears spacing on mobile; open panels reposition after the header update. Existing uncommitted work retained.
+- Specs: requirements/Design/architecture/decisions/tasks/acceptance, mobile audit/status/versions/index, README/agents and checkpoint. Sources, navigation audit, historical plans and workflow unchanged: no new external facts, assets, destinations, package/dependency, form, banner, storage or deployment change.
+- Validation PASS:54 tests;39-file check0 diagnostics;188-page build;49987 local references;381 CSS assertions; formatting/diff checks; preview4322 HTTP200. Logs .review/equipment-alignment/. Tests cover anchoring on constrained widths, independent child disclosure, bounded header spacing, resize/repeated measurement and mobile reset.
+- CHG-018 margin and CHG-017 minimum-width/root-clamp results superseded. Actual rendered header fit, narrow-panel legibility, pointer/touch and zoom NOT RUN; no supported browser controller available. Package0.6.1 retained; no archive, commit, push or deployment.
+
+## CHG-018 — 2026-10-27 — Small header margin instead of full left alignment
+- R44/T49/A43. User clarifies a slight left shift, not a left-aligned or second-row navigation. Restore shared centred container, one desktop row and right-aligned navigation; add12–28px before Quote, with tighter spacing at1001–1100px. Rightward-only/list-only menu logic and mobile nesting preserved.
+- Implementation: src/styles/responsive/desktop.css only. Existing uncommitted CHG-014–017 work preserved. No new permanent tests for this reversible CSS adjustment.
+- Specs updated: requirements/Design/decisions/tasks/acceptance/architecture, mobile audit/status/versions/index, README/agents and checkpoint. Sources, navigation audit, historical plans and workflow unchanged: no factual data, destinations, assets, controller, package, integrations or storage policy changed.
+- Validation:51 tests,188-page build,49799 local references,381 static CSS assertions, CSS format and git diff whitespace checks PASS. Evidence .review/header-margin/. CHG-017 header evidence is historical and superseded; typecheck/HTTP/list-only audit not rerun for CSS-only change.
+- Rendered header fit, hover paths, zoom/touch NOT RUN because no browser controller available. Same package0.6.1; no ZIP/commit/push/deployment.
+
+## CHG-017 — 2026-10-26 — Rightward menus and left-aligned navigation
+- R43/T48/A42. Remove leftward fallback and reversed arrows. Shift Home–Contact left beside the brand, with Quote at the far right; at1001–1360px use a left-aligned second row. Child panels always open right, with readable bounded widths and emergency branch-start clamping. Remove View all/header strips from dropdown roots on every device and reset inherited legacy padding.
+- Code: NavigationDropdown, menu-position, desktop/mobile/v05 CSS and position/controller tests. Prior CHG-014–016 work preserved; no business data, route, asset, dependency, form or banner change.
+- Specs: requirements/Design/tasks/acceptance, architecture/decisions, mobile audit/status/versions/index, README/agents and checkpoint. Sources/workflow/historical plans remain unchanged: no new external facts/assets, file policy or route contract.
+- Validation:51 tests;39-file check0 diagnostics;188-page build;49799 references;562 destinations/855 semantic checks;376 HTTP checks plus404;352 static CSS checks; all376 dropdowns verified without index links/heading strip, catalogue indexes retained. Actual browser rendering/pointer/touch NOT RUN; no browser tool available.
+- Same working folder/package0.6.1; no ZIP/commit/push/deployment. Logs .review/rightward-menus/.
+
+## CHG-016 — 2026-10-26 — Compact anchored desktop flyouts
+- R42/T47/A41. Replace centred1180px/fixed-height menu with compact250–272px root below its own Services/Equipment summary. Reveal independently sized category/scope panels beside the parent row; reserve the full branch before choosing right/left direction, clamp vertical position below the header and scroll long lists. No unopened column or equal-height reservation. Mobile retains nested flow with desktop inline placement cleared.
+- Code: NavigationDropdown, responsive/desktop.css; new menu-position.mjs and geometry tests; expanded controller fixture. No business data, route, image, package/dependency, form or hero changes. Prior uncommitted CHG-014/015 work preserved.
+- Specs: requirements/Design/tasks/acceptance, architecture/decisions, sources/mobile-audit, versions/status/index, README/agents and checkpoint. Workflow and historical plans/navigation-audit remain unchanged because storage/routing contracts and their historical evidence remain valid.
+- Validation:51 tests;39-file check0 diagnostics;188-page build;50175 references;562 destinations/855 semantic checks;376 HTTP checks plus404;316 static CSS checks. Actual browser visual/hover/scroll/focus/touch NOT RUN; no browser tool exposed. Geometry fixtures and CSS checks are not rendered evidence.
+- Same package0.6.1 and working folder; no ZIP, commit, push or deployment. Logs .review/flyouts/.
+
+## CHG-015 — 2026-10-26 — Open menu branches sequentially
+- R41/T46/A40. Remove default Thermal/first-item expansion from both menus' initial HTML and controller. Category interaction opens only its item list; item interaction opens scopes/parts. Reopening, layout changes and parent switching clear descendant choices. Preserve prior uncommitted CHG-014 work.
+- Files: NavigationDropdown and menu-hierarchy tests; requirements/Design/tasks/acceptance, architecture/decisions, status/index/versions, agents and checkpoint. Sources, mobile audit, historical plans, README and workflow remain unchanged: no new assets/content/layout, route or working-folder policy; current interaction evidence is here and in acceptance.md.
+- Validation:46 tests;38-file check0 diagnostics;188-page build;50175 local references;5828 initial hidden panels and11656 collapsed controls verified across all188 pages. Prior CSS/HTTP counts are CHG-014 evidence, not rerun for this no-layout/no-route refinement. Browser execution NOT RUN; no browser tool available.
+- Same package0.6.1 and working folder; no ZIP, commit, push or deployment. Logs .review/sequential-menus/.
+
+## CHG-014 — 2026-10-26 — Connected service/equipment hierarchy
+- R40/T44–T45/A38–A39. One navy/white open-path treatment, neutral inactive panes, orange connecting edges, explicit category context and readable supplied image backgrounds. Desktop retains contiguous columns with180ms cancellable hover intent and400ms exit grace. Mobile nests groups and scopes under their own parent, with independent native links/disclosure buttons and no forced focus/scroll.
+- Code: NavigationDropdown, menu-interaction, shared v05/v06 and responsive mobile/desktop CSS; new menu-hierarchy controller tests. Keyboard enters actual child destinations, and no-JS fallback keeps category headings. Both catalogues share the same template/content.
+- Specs: requirements/Design/tasks/acceptance, architecture/decisions/mobile-audit, sources, versions/status/index, README/agents and checkpoint updated. Existing workflow and historical version plans/navigation audit remain unchanged because file policy, route contracts and prior evidence are retained. No business data, route, image, package/dependency or form changes.
+- Validation:45 tests;38-file check0 diagnostics;188-page build;50175 local references;562 destinations/855 semantic checks;376 HTTP requests plus404;284 static CSS checks. Three solid text/surface pairs exceed4.5:1. Actual browser geometry/diagonal hover/touch/scroll/focus/zoom NOT RUN; no browser tool available. User sample image pixels were unavailable; no sample-match claim.
+- Same folder/package0.6.1, no ZIP/commit/push/deployment. Logs .review/menus/; current source/spec hashes in checkpoint.json.
+
 ## CHG-013 — 2026-10-26 — Stable mobile menus and swipe banners
 - R39/T42–T43/A36–A37. Removed mobile header/dropdown blur dismissal, touch auto-focus and focus-driven selection. Synchronous summary toggling replaces asynchronous native-toggle coordination; compact category/item arrows expand/collapse in place, initially collapsed. Desktop hover/keyboard retained.
 - Added shared swipe recognizer with horizontal intent/capture, touch/mouse/pen support, bounded threshold, cancellation and control exclusions. HeroSlider uses live image offsets, cancellable directional/snap-back animation, wraparound and synchronized text/CTA/dots. Native vertical pan/pinch and reduced motion retained; no autoplay.

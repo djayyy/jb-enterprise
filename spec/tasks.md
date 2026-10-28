@@ -107,3 +107,24 @@ T40–T41 code/static audit complete. A34/A35 command evidence passes; actual br
 - [x] T43 Add bidirectional banner swipe/drag with safe gesture handling and regressions (R39; A37).
 
 T42–T43 implemented and event-fixture/build verification complete.41 tests,38-file check0 diagnostics,188-page build and376 HTTP checks pass. A36/A37 actual touch/drag browser acceptance remains NOT RUN; see mobile-audit.md.
+
+## CHG-014 Connected catalogue menus
+- [x] T44 Implement shared hierarchy styling, desktop hover intent and nested mobile groups (R40; A38).
+- [x] T45 Verify branch state, responsive reparenting, links and regression behaviour; record browser limits (R40; A39).
+
+T44–T45 implementation and command/fixture verification complete. Actual browser visual/touch/diagonal pointer acceptance remains NOT RUN; see A38/A39 evidence.
+
+## CHG-015 Sequential menu disclosure
+- [x] T46 Remove default branches and verify category → item → scope sequencing in both menus on desktop/mobile (R41; A40).
+
+## CHG-016 Compact flyout alignment
+- [x] T47 Replace oversized desktop menu with anchored cascading panels; verify placement math, state and responsive cleanup (R42; A41).
+
+## CHG-017 Rightward-only dropdowns
+- [x] T48 Shift navigation left, remove dropdown index rows and replace direction flipping with rightward placement; verify layouts and links (R43; A42).
+
+## CHG-018 Modest desktop navigation shift
+- [x] T49 Restore single-row balanced header alignment, apply a small leftward link offset and verify responsive CSS/build (R44; A43).
+
+## CHG-019 Vertical equipment dropdown alignment
+- [x] T50 Anchor the root beneath its label, fit navigation spacing to available logo clearance and verify rightward placement/responsive cleanup (R45; A44).

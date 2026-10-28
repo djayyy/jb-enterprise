@@ -1,38 +1,4 @@
 /* Shared page hierarchy for services and equipment. */
-.menu-category-row {
-  display: flex;
-  align-items: stretch;
-  border-left: 3px solid transparent;
-}
-.menu-category-row:has(> a[aria-expanded="true"]) {
-  background: #ffffff12;
-  border-left-color: var(--orange);
-}
-.menu-category-row > a {
-  flex: 1;
-  padding: 17px 10px 17px 14px;
-  color: #e0ebf1;
-  font-size: 13px;
-  line-height: 1.45;
-  font-weight: 600;
-}
-.menu-category-row > a:hover {
-  color: #fff;
-}
-.menu-category-row > button {
-  width: 36px;
-  flex: none;
-  border: 0;
-  color: #fff;
-  background: transparent;
-  font-size: 23px;
-  cursor: pointer;
-}
-.menu-scope-panel {
-  background-image: linear-gradient(#f6f9fbeb, #f6f9fbf5), var(--menu-photo);
-  background-size: cover;
-  background-position: center;
-}
 .catalog-index-intro {
   padding: 35px 0 38px;
   background: #eef4f7;

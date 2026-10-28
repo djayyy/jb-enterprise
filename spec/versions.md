@@ -60,3 +60,15 @@ Same working project and dist/ output, package0.6.1 retained. Separate responsiv
 
 ## CHG-013 — Stable mobile disclosures and swipe banners,26 October2026
 Same working tree, package0.6.1 and188 pages. Touch-safe disclosure/dismissal; swipe/mouse drag alongside arrows/dots; cancellable image travel and reduced-motion support.38-file check0 diagnostics,41 tests,45475 references,376 HTTP checks and164 static CSS-cascade checks pass. Actual browser interaction acceptance NOT RUN. No new ZIP, commit, push or deployment.
+
+CHG-014 —26 October2026: connected Services/Equipment menus implemented in the same V0.6.1 working folder.45 tests and188-page build pass; actual browser acceptance pending. No ZIP, copied version folder, commit, push or deployment created in this task.
+
+CHG-015 —26 October2026: sequential menus in the same V0.6.1 working folder;46 tests and188-page build pass. Browser verification pending. No archive, commit, push or deployment.
+
+CHG-016 —26 October2026: compact desktop dropdown/flyout correction in the same V0.6.1 working folder.51 tests and188-page build pass; browser acceptance pending. No archive, commit, push or deployment.
+
+CHG-017 —26 October2026: rightward-only/list-only menu refinement in the same V0.6.1 folder.51 tests and188-page build pass; browser acceptance pending. No archive, commit, push or deployment.
+
+CHG-018 —27 October2026: modest header-margin correction in the same V0.6.1 folder.51 tests,188-page build and381 static CSS checks pass; browser verification pending. No archive, commit, push or deployment.
+
+CHG-019 —28 October2026: vertical Equipment dropdown alignment in the same V0.6.1 working folder;54 tests,39-file check0 diagnostics,188-page build and381 static CSS checks pass. Browser acceptance pending. No archive, commit, push or deployment.

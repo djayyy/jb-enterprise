@@ -155,6 +155,7 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
     </footer>
     <script>
       import { settleTarget } from "../lib/scroll-target";
+      import { alignHeaderNavigation } from "../lib/menu-position.mjs";
       if (
         !["/services/", "/equipment/"].includes(
           location.pathname.replace(/\/?$/, "/"),
@@ -175,6 +176,19 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
       const nav = document.querySelector<HTMLElement>("#main-nav");
       const header = document.querySelector<HTMLElement>(".header")!;
       const compact = matchMedia("(max-width:1000px)");
+      const alignNavigation = () => {
+        alignHeaderNavigation({
+          nav,
+          brand: header.querySelector(".brand"),
+          viewportWidth: document.documentElement.clientWidth,
+          compact: compact.matches,
+        });
+        document.dispatchEvent(new Event("navigationlayout"));
+      };
+      alignNavigation();
+      window.addEventListener("resize", alignNavigation);
+      compact.addEventListener("change", alignNavigation);
+      document.fonts.ready.then(alignNavigation);
       const measureHeader = () =>
         header.style.setProperty(
           "--header-height",

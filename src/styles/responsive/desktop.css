@@ -31,6 +31,25 @@
   }
 }
 @media (min-width: 1001px) {
+  .header .header-inner {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 22px;
+  }
+  #main-nav {
+    flex: 1;
+    min-width: 0;
+    justify-content: flex-end;
+    gap: 22px;
+  }
+  #main-nav > a,
+  #main-nav > .nav-dropdown {
+    flex-shrink: 0;
+  }
+  #main-nav > .button {
+    /* Initial gap; header measurement caps it to available logo clearance. */
+    margin-left: 56px;
+  }
   /* The trigger extends to the panel edge: no dead pointer gap. */
   #main-nav {
     height: 100%;
@@ -39,22 +58,78 @@
   .nav-dropdown > summary {
     height: 100%;
   }
-  .menu-browser {
-    height: clamp(280px, 58vh, 500px);
-    max-height: calc(100dvh - 210px);
+  .nav-dropdown {
+    position: relative;
   }
-  .menu-categories,
-  .menu-item-list,
-  .menu-scope-panel {
+  .mega-menu {
+    left: 0;
+    top: 100%;
+    transform: none;
+    width: 272px;
+    max-width: calc(100vw - 24px);
+    height: auto;
+    overflow: visible;
+  }
+  .menu-browser {
+    display: block;
+    height: auto;
+    max-height: none;
+  }
+  .menu-categories {
+    padding: 6px;
+    border-right: 0;
+    max-height: calc(var(--menu-available-height, 70dvh) - 4px);
     overflow-y: auto;
     overscroll-behavior: contain;
   }
+  .menu-category-panel {
+    position: fixed;
+    display: block;
+    width: 256px;
+    max-width: none;
+    height: auto;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 1px solid #d6e1e8;
+    box-shadow: 0 12px 28px #102d3c24;
+  }
+  .menu-category-panel[hidden],
+  .menu-scope-panel[hidden] {
+    display: none;
+  }
+  .menu-category-heading {
+    padding: 12px 14px;
+  }
+  .menu-item-list {
+    padding: 6px;
+    border-right: 0;
+    overflow: visible;
+  }
+  .menu-scope-panel {
+    position: fixed;
+    width: 320px;
+    height: auto;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 1px solid #d6e1e8;
+    border-left: 3px solid var(--orange);
+    box-shadow: 0 12px 28px #102d3c24;
+  }
+  .menu-scope-heading {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
 }
+/* Tighten spacing instead of moving navigation to another row. */
 @media (min-width: 1001px) and (max-width: 1100px) {
+  .header .header-inner {
+    gap: 16px;
+  }
   #main-nav {
     gap: 16px;
   }
-  .menu-browser {
-    grid-template-columns: 185px minmax(0, 1fr);
+  #main-nav > .button {
+    margin-left: 20px;
   }
 }
