@@ -1,0 +1,31 @@
+---
+interface Props {
+  footer?: boolean;
+}
+const { footer = false } = Astro.props;
+---
+
+<a
+  href="/"
+  class:list={["brand", "complete-brand", { "footer-brand": footer }]}
+  aria-label="JB Advanced Engineering Limited home"
+>
+  <img
+    src="/images/jbael-brand-248.webp"
+    srcset="/images/jbael-brand-248.webp 248w, /images/jbael-brand.webp 496w"
+    sizes={
+      footer
+        ? "(max-width: 1100px) 48px, 57px"
+        : "(max-width: 600px) 42px, (max-width: 1100px) 48px, 57px"
+    }
+    width="496"
+    height="481"
+    alt=""
+    decoding="async"
+    loading={footer ? "lazy" : "eager"}
+  />
+  <span>
+    JB ADVANCED<small>ENGINEERING LIMITED</small>
+    <em>Powering precision, Engineering the future</em>
+  </span>
+</a>

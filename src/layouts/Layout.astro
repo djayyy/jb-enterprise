@@ -6,9 +6,11 @@ import "../styles/v02.css";
 import "../styles/v03.css";
 import "../styles/v05.css";
 import "../styles/v06.css";
+import "../styles/company-review.css";
 import "../styles/responsive/desktop.css";
 import "../styles/responsive/mobile.css";
 import NavigationDropdown from "../components/NavigationDropdown.astro";
+import Brand from "../components/Brand.astro";
 const {
   title = "JB Advanced Engineering Limited",
   description = "Integrated engineering, refurbishment and lifecycle support for critical power generation assets.",
@@ -50,17 +52,7 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
     </div>
     <header class="header">
       <div class="container header-inner">
-        <a
-          href="/"
-          class="brand"
-          aria-label="JB Advanced Engineering Limited home"
-        >
-          <img src="/images/jbael-logo.png" width="51" height="51" alt="" />
-          <span>
-            JB ADVANCED<small>ENGINEERING LIMITED</small>
-            <em>Powering precision, Engineering the future</em>
-          </span>
-        </a>
+        <Brand />
         <button
           class="menu-toggle"
           aria-expanded="false"
@@ -105,13 +97,7 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
       <div class="container">
         <div class="footer-top">
           <div>
-            <a href="/" class="brand footer-brand">
-              <img src="/images/jbael-logo.png" width="48" height="48" alt="" />
-              <span>
-                JB ADVANCED<small>ENGINEERING LIMITED</small>
-                <em>Powering precision, Engineering the future</em>
-              </span>
-            </a>
+            <Brand footer />
             <p>Powering precision, Engineering the future.</p>
             <SocialLinks />
             <p class="social-note">Additional social profile links pending.</p>
@@ -189,12 +175,18 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
       window.addEventListener("resize", alignNavigation);
       compact.addEventListener("change", alignNavigation);
       document.fonts.ready.then(alignNavigation);
-      const measureHeader = () =>
+      const measureHeader = () => {
+        const bounds = header.getBoundingClientRect();
+        header.style.setProperty("--header-height", `${bounds.height}px`);
         header.style.setProperty(
-          "--header-height",
-          `${header.getBoundingClientRect().height}px`,
+          "--header-bottom",
+          `${Math.max(0, bounds.bottom)}px`,
         );
+      };
       new ResizeObserver(measureHeader).observe(header);
+      window.addEventListener("scroll", measureHeader, { passive: true });
+      window.addEventListener("resize", measureHeader);
+      window.visualViewport?.addEventListener("resize", measureHeader);
       measureHeader();
       const close = () => {
         toggle?.setAttribute("aria-expanded", "false");

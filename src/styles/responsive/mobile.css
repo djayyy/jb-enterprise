@@ -245,7 +245,7 @@
   }
   #main-nav {
     top: 100%;
-    max-height: calc(100dvh - var(--header-height, 96px));
+    max-height: max(0px, calc(100dvh - var(--header-bottom, 96px)));
     overscroll-behavior: contain;
     padding-bottom: max(24px, env(safe-area-inset-bottom));
   }
@@ -471,5 +471,62 @@
   .footer-bottom {
     align-items: start;
     overflow-wrap: anywhere;
+  }
+}
+
+/* Retained Welcome/About imagery; original brand and catalogue sizing apply. */
+@media (max-width: 1000px) {
+  .welcome-content h2 {
+    letter-spacing: -0.8px;
+  }
+  .welcome-content p,
+  .welcome-content .welcome-introduction {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  .about-engineer {
+    width: 85%;
+    height: 65%;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    opacity: 0.06;
+  }
+  .home-offerings {
+    padding-block: 40px;
+  }
+  .home-offerings .offering-card p {
+    font-size: 15px;
+  }
+  .home-offerings .industry-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+}
+@media (max-width: 600px) {
+  .welcome-section {
+    padding-block: 56px;
+  }
+  .welcome-content h2 {
+    font-size: 32px;
+    line-height: 1.22;
+    margin-bottom: 24px;
+  }
+  .welcome-content p,
+  .welcome-content .welcome-introduction {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+  .welcome-why {
+    margin-top: 30px;
+  }
+  .welcome-links {
+    column-gap: 24px;
+  }
+  .home-offerings .offering-card-copy {
+    padding: 18px 20px;
+  }
+  .home-offerings .industry-cards {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

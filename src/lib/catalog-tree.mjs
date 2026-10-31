@@ -142,7 +142,7 @@ export function buildCatalog(services, equipment) {
     ],
   ];
   const serviceImages = {
-    "thermal/turbine": "catalog-turbine-assembly",
+    "thermal/turbine": "turbine-services",
     "thermal/generator": "generator-hero",
     "thermal/boiler": "thermal-plant",
     "thermal/electrical": "catalog-switchgear",
@@ -199,7 +199,10 @@ export function buildCatalog(services, equipment) {
           `${service.slug}/${fragmentSlug(title)}`,
           title,
           `${title} is part of ${service.title.toLowerCase()} within ${cat.title}.`,
-          catalogImage(title, node.image),
+          service.slug === "reverse-engineering" &&
+            title === "Critical component development"
+            ? "critical-component"
+            : catalogImage(title, node.image),
           node,
           service.source,
         );

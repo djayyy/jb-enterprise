@@ -1,6 +1,7 @@
 ---
 import images from "../data/image-metadata.json";
 interface Props {
+  home?: boolean;
   node: {
     url: string;
     title: string;
@@ -11,19 +12,25 @@ interface Props {
     categoryTitle: string;
   };
 }
-const { node } = Astro.props;
+const { node, home = false } = Astro.props;
 const size = (images as Record<string, { width: number; height: number }>)[
   node.image
 ];
 ---
 
 <a
-  class="catalog-card"
+  class:list={[
+    "catalog-card",
+    {
+      "offering-card": home,
+      "catalog-card--component": node.image === "critical-component",
+    },
+  ]}
   href={node.url}
   data-catalog-card
   data-search={`${node.title} ${node.summary} ${node.categoryTitle}`.toLowerCase()}
 >
-  <div class="catalog-card-art">
+  <div class:list={["catalog-card-art", { "offering-card-art": home }]}>
     <img
       src={`/images/${node.image}.webp`}
       width={size.width}
@@ -39,10 +46,12 @@ const size = (images as Record<string, { width: number; height: number }>)[
           : "Equipment & parts"}
     </span>
   </div>
-  <div class="catalog-card-copy">
+  <div class:list={["catalog-card-copy", { "offering-card-copy": home }]}>
     <h3>{node.title}</h3>
     <p>{node.summary}</p>
-    <span class="catalog-card-action">
+    <span
+      class:list={["catalog-card-action", { "offering-card-action": home }]}
+    >
       View {node.level === "category" ? "category" : "details"}
       <span aria-hidden="true">↗</span>
     </span>

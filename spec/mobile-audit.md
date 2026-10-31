@@ -1,5 +1,13 @@
 # Mobile presentation audit — CHG-012
 
+CHG-024 current supplement (1 November 2026): the clear photograph, readable scrim and larger copy are always visible across Home and shared service/equipment cards. Hover/focus no longer changes images or typography; outlines remain. Nine Home widths and 30 catalogue cases pass; all Home cards retain 370px height. Build/typecheck/55 tests/static links pass. See A55 in acceptance.md for evidence and limits. No deployment.
+
+Current CHG-023 supplement (1 November 2026): original responsive brand dimensions restored; homepage card grids share one column through 600px, two columns through 1100px and consistent widths/heights. Full copy stays visible without hover; all nine tested widths have no overflow/clipped copy. Compact navigation viewport repair retained and rechecked at 390×844. Thirty additional template/width checks pass. Actual physical devices/current OS motion/current 200% zoom were not rerun; earlier zoom evidence remains historical. See acceptance.md.
+
+Current supplement — CHG-022, 1 November 2026: supplied-image/brand/welcome refinement is now browser-reviewed in Chrome at 320/390/768/1000/1024/1280/1440px. Eleven additional templates pass 77 geometry combinations. Six pages pass 200% browser zoom. Both menus and selected carousel/search/form/certificate journeys are verified; see current acceptance.md for exact scope. The historical NOT RUN statements below describe earlier checkpoints, not the current Chrome checks. Physical touch, Safari and screen readers remain untested.
+
+Compact-menu regression fixed: max-height now subtracts the current header bottom, including any visible utility strip, instead of only header height. ResizeObserver, scroll/resize and visual-viewport resize keep the offset current. Verified menu bottoms stay inside 320×568, 390×844, 844×390 and 768×1024 screens. Device-specific rule stays in responsive/mobile.css; shared templates/content are retained.
+
 26 October2026 · R38/T40–T41/A34–A35 · Current local build: http://127.0.0.1:4322/.
 
 ## Presentation ownership

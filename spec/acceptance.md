@@ -1,5 +1,78 @@
 # Acceptance and verification
 
+## Planning evidence — CHG-025, 1 November 2026
+
+T65 complete: full PDF pages 10–12 freshly rendered/read, current About/Brand/company data inspected, eight embedded image candidates inspected on a contact sheet and the exact original source hash recorded in [the plan](about-reference-2026-11-01-plan.md). Application source/public assets remain CHG-024; its code checks are not invalidated by this planning-only change.
+
+A56 (R55/T66–T67), NOT RUN: thin orange rule below the company-name line/above tagline, proportional to the wordmark; current header/footer brand dimensions, header height and navigation clearance retained.
+
+A57 (R56/T66–T67), NOT RUN: /about/ follows the source page-10/11/12 compositions and background subjects, preserving all seven approach points, six capability descriptions, three value statements and five commitments. Live accessible text, circular actions, retained anchors/closing links, 320–1440px and 200% zoom/contrast/keyboard checks require actual implementation evidence. PDF typos are corrected without inventing leaders or facts.
+
+No application tests/build/browser checks rerun for this plan. Documentation link/traceability and unchanged application-file hash checks recorded in CHG-025.
+
+## Current evidence — CHG-024, 1 November 2026
+
+A55 (R54/T64): PASS for scoped Chrome review. Industry/Core Services/Equipment image cards show the former clear state at rest: brightness(1.06), 72% navy text scrim, 23px heading and 15px body. No image scale/reveal/typography change on pointer hover or keyboard focus. The keyboard outline remains. Shared catalogue cards also use permanently bright images, the same readable scrim and 15px body, preserving their existing grid/template and source content.
+
+Browser evidence: all 17 Home cards at 320/390/600/768/1000/1024/1100/1280/1440px retain 370px height and full copy, with no horizontal overflow; each reports 23/15px fonts, no transform and zero image-transition duration. Actual pointer and keyboard checks confirm identical resting/hover/focus presentation on an industry card and identical focus/hover presentation on a shared service catalogue card. Thirty service/equipment index/category/child-page and width combinations show no overflow/clipped copy, consistent brightness and 15px body with no image motion. Screenshots and measurements: .review/always-clear/{home-responsive,catalogue-responsive,interaction,catalogue-interaction}.json and saved desktop/mobile images.
+
+Checks PASS: 40-file Astro check with zero diagnostics; 55 tests; 188-page build; 49,989 local link/asset references; 562 destinations/855 navigation semantic checks. Logs in .review/always-clear/. Existing image mappings, compact responsive grids, restored brand/navigation and Welcome remain. No new assets, source copy, routes, dependencies or runtime scripts. The unchanged 72% scrim/foreground combination retains CHG-023's conservative 5.85:1 body contrast bound against a pure-white source image.
+
+The prior CHG-023 hover-dependent presentation is superseded. Physical devices/Safari/screen-reader, actual OS motion and current 200% browser zoom were not rerun in this CSS pass; browser evidence uses Chrome viewport sizing. No production deployment or live-integration change.
+
+
+## Current evidence — CHG-023, 1 November 2026
+
+A53 (R53/T62–T63): PASS for the tested local Chrome review. Complete supplied logo retained; original responsive brand sizing/type/spacing and visible footer tagline restored, added underline/oversized footer treatment removed. At 1024px, settled brand and navigation rectangles/styles match the deployed Render baseline (baseline-1024.json). Header logo is 57px on wide desktop, 48px on tablet/narrow desktop and 42px on phone; footer inherits original 57/48/43px rules. Original desktop menu declarations restored; only homepage card rules are appended. CatalogPage matches the baseline full-background hero template; contained/split treatments removed. Shared supplied-image overrides and Welcome/About imagery retained. Global palette/fonts, banner, business copy, forms and routes preserved.
+
+A54 (R53/T62–T63): PASS for measured Chrome viewports. All 17 homepage cards have matching widths across the three sections and measure 370px high at 320/390/600/768/1000/1024/1100/1280/1440px. At 1440px they are 293.5×370px. No horizontal page overflow or clipped title/body/action in those nine layouts. Industries section is about 578px high, with heading and four cards fitting below the sticky header in the tested 1440×812 view. All 17 keyboard-focus checks retain 370px height, full copy and 23px headings/15px descriptions. Actual pointer hover verified clearer image, brightness(1.06), 23/15px text, unchanged height and contained copy. Mobile needs no hover to read descriptions or activate links. Equipment retains its three categories, centred at the common card width; no source entries added.
+
+Regression checks PASS: 55 tests; 40-file Astro check with zero errors/warnings/hints; 188-page build; 49,989 local link/asset references; 562 destinations/855 navigation semantic checks. No new implementation-mirroring CSS tests. Browser reflow across six additional templates and five widths (30 combinations) found no overflow. Restored turbine/component hero images use absolute full-width cover backgrounds on desktop/mobile. Compact Equipment disclosure at 390×844 fits the viewport (menu bottom 843px); Escape dismissal works. Evidence: `.review/compact-cards/` logs, baseline-1024.json, responsive.json, focus.json, pages.json, hover.json and screenshots.
+
+Conservative source/colour contrast bound: normal body 10.84:1, hover/focus body 5.85:1 and hover/focus title 6.88:1, assuming pure-white photo pixels beneath the text scrim. Copy starts 18px below its surface, where the scrim reaches full opacity. Actual text content is not hidden/truncated. Reduced-motion CSS removes image movement/transitions; actual OS reduced-motion and current 200% browser zoom were not rerun in this pass (prior CHG-022 zoom evidence is historical). Physical devices, Safari and screen-reader checks remain outside the tested Chrome viewport scope.
+
+CHG-022's enlarged-brand, tall-card and contained-catalogue presentation evidence is superseded; its source-image provenance/mapping and unchanged Welcome remain applicable. The 480×249 turbine original now follows the explicitly requested full-background catalogue presentation, with its inherent resolution limit retained. No commit/push/deployment or live-integration change.
+
+## Current evidence — CHG-022, 1 November 2026
+
+Current state: V0.6.1 local image/layout refinement; source hashes in checkpoint.json. This supersedes affected CHG-019 visual evidence and CHG-021's planning-only status. R46,R47,R52 / T54,T60,T61 are implemented; R38,R45 compact-menu height regression also fixed.
+
+| Criterion | Current result |
+| --- | --- |
+| A47 | PASS: exact Critical Component override shared across Home/parent/detail; Reverse Engineering retained. Thermal Turbine uses supplied photo; explicit unrelated scope/part imagery preserved. Mapping regression passes. Detail photos are contained, with turbine width bounded at 480px. |
+| A52 | PASS for local Chrome review: all nine originals mapped to 20 WebP derivatives with provenance/dimensions; stacked Welcome/Why, supplied backgrounds, complete header/footer logo, four industry photos and About motif implemented. Seven-width reflow, 200% zoom and menu evidence below. |
+| A45 | PASS for this image/layout subset; other workbook CTA/top-control work remains pending. No full WCAG conformance claim. |
+| A35/A44 | PASS for measured responsive geometry and keyboard/click menus in the tested Chrome viewports. Physical touch and passive pointer traversal are not established by these measurements. |
+| A46/A48–A51 | Wider workbook work remains pending: career phone/office edits, resource gating/live mail/private delivery, revised brochure/portfolios/clients and complete feedback closure. Accepted industry destinations/context retained. |
+
+Command checks PASS: Astro check 40 files, zero errors/warnings/hints; all 55 tests; 188-page build; 49,989 local link/asset references; 562 distinct navigation destinations, 855 semantic checks and 9 CSS assets. Static verifier checks metadata, image attributes, ARIA references, catalogue consistency and disconnected-form safeguards. No dependency changes. Logs: `.review/image-feedback-final/{check,tests,build,verify}.txt`, navigation.json. Full terminal HTTP crawl NOT RUN: shell loopback access failed; actual browser journeys below used the existing local preview at http://127.0.0.1:4322/.
+
+Actual browser checks PASS (Chrome): Home measured at 320/390/768/1000/1024/1280/1440px; eleven additional templates at those widths (77 combinations), with no horizontal page overflow or loaded-image failures. Includes About, service/equipment indexes, turbine and Critical Component details, Contact, Quote, Careers, Certificates, Privacy and branded 404. Six pages reflow at actual 200% Chrome zoom (1440px physical viewport → 720 CSS px), without horizontal overflow. Brand/header and selected photo crops visually inspected. Screenshots and measurements: home-widths.json, route-widths.json, zoom-200.json, desktop-welcome.jpg, desktop-industries.jpg, mobile-welcome.jpg.
+
+Both desktop cascades at 1024/1280/1440px retain trigger alignment, rightward non-overlapping panes and viewport bounds. Enter opens and Escape closes with focus return. Compact Services/Equipment categories start collapsed, reveal only the requested branch and navigate to the canonical equipment leaf with menu dismissal. Menu scroll area fits at 320×568, 390×844, 844×390 and 768×1024. The visible utility strip previously made the menu extend 47px below the screen; current header-bottom measurement fixes it. desktop-menus.json and compact-menus.json retain measured rectangles.
+
+Browser interactions PASS: three carousel slides and wrap via Next, horizontal mouse drag in both directions at a mobile-sized viewport; catalogue no-match and clear recovery; Gas Contact Us preserves `Gas turbine support`; empty Contact preview focuses the first required input; valid fake data reports that nothing was sent/saved/uploaded; certificate viewer opens, Escape closes and focus returns. New-tab console warnings/errors: none observed. interaction-results.json records scope. Actual physical touch/pinch, Safari/iOS/Android, screen-reader testing and OS-level reduced-motion browser testing remain NOT RUN; gesture cancellation/reduced-motion logic remains covered by the passing controller tests.
+
+Contrast calculations PASS: industry title 16:1, body 13.42:1, action 11.33:1 against the opaque navy text surface. Welcome body conservative minimum 6.22:1 and introduction 8.13:1, assuming black source pixels, the lowest light-wash opacity and both decorative shapes. Browser confirms text sits in these intended treatments; these are relative-luminance/compositing bounds, not sampled glyph pixels or a full accessibility audit. contrast.json records calculation method.
+
+Release limits: live email/uploads, resource delivery, company content approval and production cutover remain separate work. No production deployment, Git commit/push, new source ZIP or copied version folder. The 480×249 turbine original remains a source-quality limit, bounded rather than upscaled to a full-screen image.
+
+## Planning follow-up — CHG-021, 31 October 2026
+
+Application remains CHG-019/V0.6.1. This documentation change does not invalidate existing application results. The earlier company-review plan reserved A45–A51; registered below as planned criteria, all **NOT RUN**:
+
+- A45: source-reference visual treatment on Home/About/header/footer, readable live text, accessible controls and responsive/zoom/reduced-motion review. Latest welcome composition and image selection follow the 31 October plan.
+- A46: career requires phone; only intended office headings change with addresses preserved; four industry actions/context remain correct.
+- A47: distinct Reverse Engineering/Critical Component images and correct shared Thermal Turbine replacement, with routes/breadcrumbs retained.
+- A48: intended document resources share a required name/phone/company/email workflow with correct resource identity, keyboard/error/focus handling and honest disconnected preview.
+- A49: live server validation/allowlist, controlled recipients, fail-closed mail/private delivery and expired/tampered-link rejection; full documents absent from public output. Actual provider/file tests required.
+- A50: approved new documents/revisions and client names only; accessible ticker pause/focus/reduced-motion; no fake actions for absent files.
+- A51: every FB01–FB22 has evidence or an explicit blocker; actual browser review and relevant regressions recorded for implemented state.
+
+A52 (R52/T60–T61): all nine feedback-folder images map to the exact sections in [image-feedback-2026-10-31-plan.md](image-feedback-2026-10-31-plan.md). Centred stacked welcome/Why uses the specified plant background/faint shapes and readable live text; shared logo retains proportions/readable name and usable header clearance; industry text meets planned contrast targets with recognisable crops; Critical Component differs from Reverse Engineering on shared surfaces; Thermal Turbine and About motif use their supplied images. Source metadata is accurate, no unrelated catalogue-image replacements, no overflow at planned widths or 200% text enlargement. Current status **NOT RUN**: no implementation in this turn.
+
+T59 planning evidence: nine originals enumerated and dimensions read using Pillow; visually inspected contact sheet at `.review/image-feedback-plan/contact-sheet.jpg`; checked current Home/About/Layout/CatalogCard/CatalogPage and shared catalogue image source. Turbine source is 480×249, Critical Component is portrait and logo is a white-background JPG. These are source-inspection findings, not browser verification. Documentation link/traceability/diff checks are recorded in CHG-021; application tests/build were not required for planning-only edits.
+
 Status: CHG-004 V0.3 has passed current checks below; CHG-003 V0.2 previously passed the recorded source-alignment review checks below; CHG-002 is historical. Full criteria remain partial or pending as specified. Preview completion is distinct from production readiness.
 
 | ID | Requirements | Test / expected result |

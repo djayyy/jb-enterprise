@@ -159,13 +159,11 @@ html {
 .category-card[aria-pressed="true"]::after {
   content: none;
 }
-.industry-card img,
 .core-card > img,
 .category-card > img {
   transition: transform 0.65s ease;
 }
 @media (hover: hover) {
-  .industry-card:hover img,
   .core-card:hover > img,
   .category-card:hover > img {
     transform: scale(1.025);
@@ -405,12 +403,10 @@ li[id^="parts-"]:target {
     filter: none;
   }
   .hero-pagination button > span,
-  .industry-card img,
   .core-card > img,
   .category-card > img {
     transition: none;
   }
-  .industry-card:hover img,
   .core-card:hover > img,
   .category-card:hover > img {
     transform: none;

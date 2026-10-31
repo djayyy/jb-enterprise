@@ -162,5 +162,85 @@
   "catalog-controls": {
     "width": 1400,
     "height": 788
+  },
+  "welcome-plant": {
+    "width": 1279,
+    "height": 851
+  },
+  "welcome-plant-640": {
+    "width": 640,
+    "height": 426
+  },
+  "jbael-brand": {
+    "width": 496,
+    "height": 481
+  },
+  "jbael-brand-248": {
+    "width": 248,
+    "height": 240
+  },
+  "industry-thermal": {
+    "width": 1279,
+    "height": 851
+  },
+  "industry-thermal-480": {
+    "width": 480,
+    "height": 319
+  },
+  "industry-thermal-800": {
+    "width": 800,
+    "height": 532
+  },
+  "industry-hydro": {
+    "width": 1280,
+    "height": 856
+  },
+  "industry-hydro-480": {
+    "width": 480,
+    "height": 321
+  },
+  "industry-hydro-800": {
+    "width": 800,
+    "height": 535
+  },
+  "industry-gas": {
+    "width": 1025,
+    "height": 864
+  },
+  "industry-gas-480": {
+    "width": 480,
+    "height": 405
+  },
+  "industry-gas-800": {
+    "width": 800,
+    "height": 674
+  },
+  "industry-nuclear": {
+    "width": 1279,
+    "height": 686
+  },
+  "industry-nuclear-480": {
+    "width": 479,
+    "height": 257
+  },
+  "industry-nuclear-800": {
+    "width": 800,
+    "height": 429
+  },
+  "critical-component": {
+    "width": 1200,
+    "height": 1607
+  },
+  "turbine-services": {
+    "width": 480,
+    "height": 249
+  },
+  "about-engineer": {
+    "width": 988,
+    "height": 882
+  },
+  "about-engineer-480": {
+    "width": 480,
+    "height": 429
   }
 }

@@ -1,7 +1,15 @@
 # Versions and change control
 
+CHG-024 current supplement (1 November 2026): the clear photograph, readable scrim and larger copy are always visible across Home and shared service/equipment cards. Hover/focus no longer changes images or typography; outlines remain. Nine Home widths and 30 catalogue cases pass; all Home cards retain 370px height. Build/typecheck/55 tests/static links pass. See A55 in acceptance.md for evidence and limits. No deployment.
+
+Latest local review — CHG-023, 1 November 2026: original brand/nav/catalogue presentation restored; supplied images/Welcome retained; compact homepage cards and accessible hover/focus implemented. 55 tests, 40-file check zero diagnostics, 188-page build, 49,989 local references and 855 semantic checks pass. Chrome geometry/interaction evidence in acceptance.md and .review/compact-cards/; source hashes in checkpoint.json. No commit/push/deployment.
+
 ## Current policy — CHG-011,26 October2026
 One working folder, Git history and one replaceable dist/ build output. The eight historical JBAEL source ZIPs were removed at the user’s request; do not create replacements. Historical entries below retain their original evidence but archive-preservation statements are superseded. GitHub origin is configured; this cleanup does not push or deploy.
+
+## Current local review — CHG-022, 1 November 2026
+
+V0.6.1 package retained; current working tree contains approved CHG-021 image/layout implementation, with final responsive verification and a mobile menu-height repair. T54,T60,T61 complete; wider workbook backlog remains. 55 tests, 40-file check with zero diagnostics, 188-page build, 49,989 references and 855 semantic checks pass. Actual Chrome responsive geometry and 200% zoom reviewed; evidence/physical-device limits in acceptance.md, source hashes in checkpoint.json. Existing preview http://127.0.0.1:4322/. No archive, commit/push or production deployment in this change.
 
 ## Release stages
 V0.1: first complete review with supplied content, shared design and form UI; disconnected services disclosed.

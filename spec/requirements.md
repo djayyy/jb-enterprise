@@ -82,3 +82,28 @@ R43 CONFIRMED (CHG-017): shift desktop Home–Contact navigation left and always
 R44 CONFIRMED (CHG-018): move Home–Contact only a small margin left within the original single-row desktop header. Do not align the links against the logo or create a second navigation row. Retain rightward-only, list-only dropdowns and mobile nesting.
 
 R45 CONFIRMED (CHG-019): align the Equipment Supply root list vertically beneath its header label, with a further modest leftward adjustment to Home–Contact. Preserve the single-row header, logo clearance, rightward child panels, list-only roots and mobile behaviour.
+
+## Company review planning — CHG-020, registered in CHG-021
+
+The existing [company review plan](company-review-2026-10-28-plan.md) reserved the following IDs. Registration records the plan, not implementation or a repeat of its historical workbook inspection.
+
+- R46 DOCUMENTED: refine welcome/brand/About/CTA graphics and top control to company feedback references; R52 supersedes earlier visual proposals where they differ.
+- R47 DOCUMENTED: improve industry imagery/readability, distinguish Critical Component from Reverse Engineering, replace thermal turbine service imagery and retain accepted industry actions.
+- R48 DOCUMENTED: require career phone and rename the two supplied office headings, preserving addresses and other form defaults.
+- R49 DOCUMENTED: require name, contact phone, company and email before certificate/brochure requests; shared UI and live delivery remain planned with actual mail/storage configuration required.
+- R50 DOCUMENTED: add approved executed-projects, supplied-spares and reverse-engineering portfolio documents when originals are supplied; do not invent files/projects.
+- R51 DOCUMENTED: add an approved client-name strip with pause/reduced-motion behaviour when approved names are supplied.
+
+## Current image/layout request — CHG-021
+
+R52 CONFIRMED: plan the six latest requests before implementation. Match the supplied centred, vertically stacked Welcome/Why composition using the specified thermal plant background and subtle shapes, retaining current theme/readable text. Use the supplied complete logo in header/footer; replace four industry images with clear text; give Critical Component its distinct supplied image; map remaining About Who We Are and Thermal Turbine images to their sections. All nine originals are under `requirement/images-feedback-311026/`. Preserve source content, navigation and unrelated image mappings. Exact assets, size limits and review criteria: [current plan](image-feedback-2026-10-31-plan.md). Implemented in CHG-022 following user approval; responsive Chrome and command verification recorded against A52. Production integrations and wider workbook scope remain separate.
+
+R53 CONFIRMED (CHG-023): restore header/footer sizing, navigation spacing and catalogue presentation from the deployed baseline/commit 5d2a450 while retaining supplied images and the agreed Welcome layout. Homepage Industries Served, Core Engineering Services and Equipment cards use similar compact proportions, readable background/text and a simple clearer-photo/slightly-larger-text hover/focus treatment. Cards must not expand or overlap on interaction. Preserve full copy, links, mobile access and reduced motion; allow natural height growth for long text or narrow/zoomed layouts. Fit the wide-desktop Industries heading and four-card row below the sticky header in a normal laptop viewport; smaller layouts may scroll.
+
+R54 CONFIRMED (CHG-024): make the clearer card photograph, lighter readable text scrim and larger copy permanently visible. Remove hover-dependent clarity, zoom and typography changes from Industries/Core Services/Equipment image cards, including shared service/equipment catalogue cards. Preserve compact homepage sizing, supplied images, content/links and restored header/footer/Welcome. Keyboard focus retains an outline without changing the card's image/text presentation. Hero/carousel and navigation behaviour are outside this change.
+
+## Company-name rule and About reference layout — CHG-025 planning
+
+R55 CONFIRMED: plan a thin orange rule below ENGINEERING LIMITED and above the tagline, matching the user screenshot while preserving current shared brand/header/footer dimensions and navigation positions.
+
+R56 CONFIRMED: plan /about/ around the composition and similar backgrounds of S1 PDF pages 10–12: full-width Who We Are/approach/objective over the red industrial silhouette; two-column What We Do with all six capabilities and circular Services/Spare Parts links over the grey engineering watermark; Vision/Mission/Goal circles beside the full Leadership Message over the pale industrial/world-map backdrop. Retain supplied business copy, live HTML, existing links/anchors and responsive readability. Exact plan: [About reference plan](about-reference-2026-11-01-plan.md). Implementation is pending.

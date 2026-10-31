@@ -13,6 +13,34 @@ const tree = buildCatalog(services, equipment);
 const resolve = (path, query = "", hash = "") =>
   legacyCatalogDestination(path, query, hash, tree.legacy);
 
+test("feedback photos distinguish critical development and only replace the intended thermal service", () => {
+  const page = (url) => tree.servicePages.find((node) => node.url === url);
+  const reverse = page("/services/reverse-engineering/");
+  const critical = page(
+    "/services/reverse-engineering/critical-component-development/",
+  );
+  assert.equal(reverse.image, "catalog-scanning");
+  assert.equal(critical.image, "critical-component");
+  assert.equal(critical.parentUrl, reverse.url);
+  assert.equal(
+    reverse.children.find((node) => node.url === critical.url),
+    critical,
+    "Indexes, child cards and the leaf page share the same node",
+  );
+  assert.equal(page("/services/thermal/turbine/").image, "turbine-services");
+  assert.equal(page("/services/thermal/").image, "thermal-plant");
+  assert.equal(page("/services/thermal/boiler/").image, "thermal-plant");
+  assert.equal(
+    catalogImage("Blade repair", "turbine-services"),
+    "catalog-blading",
+    "A named scope retains its specific photo",
+  );
+  assert.equal(
+    tree.equipmentCategories.find((node) => node.slug === "thermal").image,
+    "thermal-plant",
+  );
+});
+
 test("every supplied service scope and part has one distinct page under its parent", () => {
   assert.equal(tree.allPages.length, 178);
   assert.equal(new Set(tree.allPages.map((n) => n.url)).size, 178);

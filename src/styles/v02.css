@@ -314,7 +314,6 @@
   width: 100%;
   height: 100%;
   z-index: -2;
-  transition: transform 0.3s;
 }
 .industry-card:after {
   content: "";
@@ -354,9 +353,6 @@
 }
 .industry-card:hover {
   color: white;
-}
-.industry-card:hover img {
-  transform: scale(1.04);
 }
 .core-grid {
   display: grid;

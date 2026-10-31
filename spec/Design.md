@@ -1,5 +1,29 @@
 # Design specification
 
+## Planned company-name rule and About composition — CHG-025
+
+See [About reference plan](about-reference-2026-11-01-plan.md), R55–R56/T65–T67/A56–A57. Add only the thin orange wordmark rule within current branding metrics. Plan the page-10 wide Who We Are/approach layout, page-11 two-column capabilities/circular actions and page-12 circular values/Leadership panel with their matching supplied backgrounds. Replace the About opening control-room hero with the reference opening composition; preserve existing copy, anchors, closing links, shared brand/nav metrics and always-clear cards elsewhere. Planning only; current implementation remains CHG-024.
+
+## Always-clear image cards — CHG-024
+
+R54/T64/A55 supersedes CHG-023's hover-dependent treatment. Home's 23px headings/15px body, 72% navy text scrim and brightness(1.06) photograph are now the resting state. Remove image zoom, dimming/reveal transitions and hover/focus font changes; keep the keyboard outline. Apply the same permanently bright photograph/readable scrim/15px body approach to the shared catalogue card, preserving its existing grid/template layout. Homepage cards keep 370px minimum height and matching responsive widths. No hero, header/footer, Welcome, image-source, route or content changes.
+
+## Baseline restoration and compact homepage cards — CHG-023
+
+R53/T62–T63/A53–A54 supersede CHG-022's enlarged brands, split/contained catalogue heroes and tall industry-card treatment. Keep the supplied complete logo but inherit the baseline .brand sizing/type/spacing; restore baseline desktop menu CSS and full-background catalogue heroes/cards. Keep all nine image mappings, Welcome composition and mobile menu viewport repair.
+
+Home only: Industries/Core Services/Equipment share an offering-card treatment, 370px minimum height, consistent width/copy/action spacing and readable full source copy over a navy scrim. Above 1100px all use the same four-column card width; the three Equipment cards are centred at that width. At 601–1100px use two columns; at 600px and below use one. Industry section vertical padding is compact enough for a wide laptop viewport. Copy sits toward the bottom so photography remains visible above it. Pointer hover and keyboard focus reduce the scrim from about 90% to 72% opacity and enlarge headings 22→23px/body 14→15px; mobile body is already 15px. Pointer hover also gently brightens/scales the image. Card bounds stay unchanged and all copy remains visible. Narrow/zoomed cards can grow if required. Respect reduced motion. Nested catalogue cards retain their baseline presentation.
+
+## Image/layout implementation and responsive verification — CHG-022
+
+Implements the agreed CHG-021 plan (R46,R47,R52 / T60–T61 / A45,A47,A52), retaining the wider workbook backlog. During browser review the compact menu exceeded the viewport while the utility strip was visible. Size its scrolling region from the header's current bottom edge, remeasure on scroll/resize and preserve nested disclosure and sticky-header behaviour (R38,R45 / A35,A44). Record final evidence and limits in acceptance.md.
+
+## Planned 31 October image/layout refinement — CHG-021
+
+See [image-feedback-2026-10-31-plan.md](image-feedback-2026-10-31-plan.md) for exact image mappings and review criteria. Planning only: website implementation below is unchanged. Home Welcome/Why will become one centred stacked section over the supplied thermal plant photo with a strong light wash and faint geometric accents, replacing the separate Why side panel. Preserve business copy, navy/orange theme and readable type; scope About styling separately.
+
+Use the new complete emblem in header/footer with readable naming and a light surface where the JPG requires it. Four dedicated industry images receive readable local navy scrims. Give Critical Component an exact shared leaf override, keep Reverse Engineering's existing photo, replace Thermal Turbine imagery and add the red industrial silhouette to About Who We Are. Preserve proportions and record turbine resolution limits. Catalogue routes, sequential rightward menus, three-banner hero and form contracts retain existing behaviour.
+
 Status: V0.6.1 implemented for local review; company approval and actual browser acceptance remain pending. CHG-009 below supersedes historical in-page catalogue browsers. Hero behaviour remains V0.5.1. Historical sections retain their original version context.
 
 ## Audience and tasks

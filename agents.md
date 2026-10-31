@@ -1,6 +1,6 @@
 # JBAEL project instructions
 
-Specification baseline: 2026-10-25. Status: CHG-019 vertically aligned dropdowns with measured header spacing and rightward sequential catalogue menus and CHG-013 swipe-banner interaction implemented on V0.6.1; browser acceptance and production integrations remain pending.
+Specification baseline: 2026-10-25. Status: CHG-024 makes the clear image-card presentation permanent across Home and service/equipment catalogues, without hover image/text changes. CHG-023 compact Home dimensions and restored brand/nav/catalogue layout, supplied imagery and Welcome remain. Scoped Chrome checks pass; see spec/acceptance.md for exact evidence and limits.
 
 ## Goal and authority
 Build a fresh JB Advanced Engineering Limited (JBAEL) website from the supplied requirements. Deliver a reviewable initial version, then refine the same working folder in place. Use Git history for revisions; do not create source ZIP backups or copied version folders. No application database. Customers and staff follow up through email. Benchmark clarity, technical depth and enquiry usability against MD&A and PPS; do not claim superiority without measured evidence.

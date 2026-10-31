@@ -73,25 +73,29 @@ export const company = {
 export const industries = [
   {
     title: "Thermal Power Plants",
-    image: "thermal-plant",
+    image: "industry-thermal",
+    focus: "52% 35%",
     text: "Comprehensive engineering support for coal, lignite, and biomass-fired thermal power stations including turbine, generator, boiler, and auxiliary system services.",
     url: "/services/thermal/",
   },
   {
     title: "Hydro Power Plants",
-    image: "hydro-plant",
+    image: "industry-hydro",
+    focus: "55% 40%",
     text: "Hydraulic turbine overhauling, governor system maintenance, and generator winding services for run-of-river and reservoir-based hydro facilities.",
     url: "/services/hydro/",
   },
   {
     title: "Gas Turbine Power Plants",
-    image: "gas-plant",
+    image: "industry-gas",
+    focus: "50% 35%",
     text: "Gas turbine hot gas path inspection, combustion system refurbishment, and combined cycle plant optimization services.",
     url: "/contact/?need=Gas%20turbine%20support",
   },
   {
     title: "Nuclear Power Plants",
-    image: "nuclear-plant",
+    image: "industry-nuclear",
+    focus: "48% 40%",
     text: "Specialized non-intrusive inspection, turbine-generator maintenance, and auxiliary system support for nuclear power generation facilities.",
     url: "/contact/?need=Nuclear%20support",
   },

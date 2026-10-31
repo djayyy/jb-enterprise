@@ -72,6 +72,15 @@ for (const file of pages) {
   }
   rows.push({ route, links: count });
 }
+function hasCatalogCard(html, url) {
+  return [...html.matchAll(/<a\b[^>]*>/g)].some(([tag]) => {
+    const classes = tag.match(/\bclass="([^"]*)"/)?.[1].split(/\s+/);
+    return (
+      classes?.includes("catalog-card") &&
+      tag.match(/\bhref="([^"]*)"/)?.[1] === url
+    );
+  });
+}
 for (const node of catalog.allPages) {
   const html = read(node.url);
   assert.ok(destinations.has(node.url), `Orphan page ${node.url}`);
@@ -90,7 +99,7 @@ for (const node of catalog.allPages) {
   );
   for (const child of node.children) {
     assert.ok(
-      html.includes(`class="catalog-card" href="${child.url}"`),
+      hasCatalogCard(html, child.url),
       `Missing child card ${child.url}`,
     );
     mapped++;
@@ -103,13 +112,10 @@ for (const c of coreCapabilities) {
   const href = c.anchor
     ? catalog.legacy.detailHashes[`/services/${c.slug}/#${c.anchor}`]
     : `/services/${c.slug}/`;
-  assert.ok(
-    home.includes(`class="catalog-card" href="${href}"`),
-    `Home capability ${c.title}`,
-  );
+  assert.ok(hasCatalogCard(home, href), `Home capability ${c.title}`);
 }
 for (const c of catalog.equipmentCategories)
-  assert.ok(home.includes(`class="catalog-card" href="${c.url}"`));
+  assert.ok(hasCatalogCard(home, c.url));
 let cssAssets = 0;
 for (const file of walk("dist").filter((f) => f.endsWith(".css"))) {
   for (const m of fs

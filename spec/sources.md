@@ -1,5 +1,7 @@
 # Sources and provenance
 
+CHG-022 implementation supplement (1 November 2026): S8's nine originals are used through 20 WebP derivatives in public/images/ (1,627,454 bytes total). assets.json records provenance; image-metadata.json records derivative dimensions. No original input edited. Critical Component and Thermal Turbine mappings verified in shared catalogue regression and rendered Chrome pages; remaining S8 placements verified on Home/About/shared brand. Source image dimensions and quality limits remain as inventoried below.
+
 Baseline compiled from documents and code inspected in this conversation on 2026-10-24, and the subsequent agreed planning direction. Originals are now preserved under requirement/ at the Jb-Service project root. Paths below are relative to that root.
 
 | ID | Source | Use |
@@ -10,10 +12,18 @@ Baseline compiled from documents and code inspected in this conversation on 2026
 | S4 | requirement/picxele-jb-enterprise-main/ and requirement/D01. Docs - JBAEL Modification/Images For Website/ | Legacy code and images |
 | S5 | https://www.mdaturbines.com/ and /careers/ | Competitor content/navigation benchmark |
 | S6 | https://ppsvcs.com/ | Competitor content/navigation benchmark |
+| S7 | requirement/JBAEL- Website- Review-28.10.2026-1.xlsx | Company feedback; prior inspection record in company-review-2026-10-28-plan.md |
+| S8 | requirement/images-feedback-311026/ and user's current/desired welcome screenshots supplied 31 October 2026 | Nine exact replacement images and centred welcome composition; inspected in CHG-021 |
 
 S4 photo inventory from prior inspection: Generator 47, Turbine 23, Electrical 21, Testings 18, C&I 9, Rewamping 5, 3D Scaning 4; total 127. Recheck actual files when restored.
 S1 page references: home 1-9; about 10-12; services 13-26; equipment/specialisms 27-40; certificates 41-43; careers 44; contact 45; quote 46; image caveat 47.
 Known conflicts: Mumbai addresses and office labels differ between S2 and S3; phone numbers differ; S1 contains XX MW and spelling/copy errors. Certificate images were visible in S1; authenticity/current validity was not independently verified.
+
+## CHG-021 image-feedback inventory — 31 October 2026
+
+All nine S8 image files were enumerated, dimensions read and a contact sheet visually inspected. Exact paths/dimensions/placements are in [image-feedback-2026-10-31-plan.md](image-feedback-2026-10-31-plan.md). The logo includes internal ADVANCED ENGINEERING LTD lettering and a white JPG background; Critical Component is portrait; supplied Thermal Turbine is only480×249. The About image is a red engineer/industrial silhouette, not evidence of a named person. Originals remain unchanged; no public derivatives or rendered website changes were created in planning. Images are company-supplied visual references, not independently verified facility/ownership claims.
+
+The existing untracked CHG-020 plan's workbook inspection history is retained and registered; this turn does not claim to repeat all22 workbook rows/24 embedded-image inspections. Local S8 images resolve its listed visual-source gaps only; revised brochure, portfolios/client names and live delivery still need their separate inputs.
 
 ## Technical references reviewed during planning
 - https://docs.astro.build/en/guides/deploy/vercel/ : static deployment and previews.
@@ -63,3 +73,7 @@ Service/equipment source arrays and original requirement inputs are unchanged. L
 User feedback on26 October2026 and screenshots titled8:52:27PM,9:01:48PM and9:02:17PM inform hierarchy clarity. Text was retrieved; image materialization failed, so exact pixels/colours were not inspected. The user approved the subsequent textual/flow-diagram plan. Implementation uses original JBAEL styling and unchanged catalogue business data/images; no competitor image, copy or technical claim imported.
 
 CHG-016: visually inspected user screenshot Screenshot2026-10-26 at11.14.56PM.png in the preceding turn. It shows a large centred white Services panel with only three category rows at the far left and empty remaining width/height. No competitor/source business content or asset changes; this is user UI feedback.
+
+## CHG-025 About reference reinspection — 1 November 2026
+
+S1 pages 10–12 freshly rendered and visually inspected; full text and placed-image metadata read. Source SHA-256 a0259c5a1e60da268f8d029c56f2b4a909f3e870636aca9ae4e40196d8ef4d17. Inspected embedded xrefs 2965 (red industrial head), 3011/3014/3025 (grey/blue variants), 3038 (400×309 spares image), 3041 (circular frame), 3054 (480×360 turbine/workshop image), 5778 (1536×1024 pale industrial/world-map background). Existing S8 red Who We Are image is also suitable. Read-only extraction/render evidence: .review/about-plan/. New public assets not created. Exact planned use and source references are in about-reference-2026-11-01-plan.md.

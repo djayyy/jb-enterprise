@@ -128,3 +128,37 @@ T44–T45 implementation and command/fixture verification complete. Actual brows
 
 ## CHG-019 Vertical equipment dropdown alignment
 - [x] T50 Anchor the root beneath its label, fit navigation spacing to available logo clearance and verify rightward placement/responsive cleanup (R45; A44).
+
+## Company review backlog — CHG-020 planning, registered in CHG-021
+
+The existing company-review plan reserved T51–T58. T51 inventory is a prior planning record, not a new inspection claim. No website work in these tasks was implemented in this session.
+
+- [x] T51 Existing workbook feedback inventory/planning record; see company-review-2026-10-28-plan.md.
+- [ ] T52 Career phone, office-heading corrections and accepted industry-action checks (R47,R48; A46).
+- [ ] T53 Company visual pass: welcome/brand/industry clarity/About/CTA/top control (R46,R47; A45). Current image pass covers its named subset.
+- [x] T54 Shared Critical Component/Thermal Turbine image corrections (R47; A47; CHG-022 shared mappings, regression and browser review).
+- [ ] T55 Shared certificate/brochure/resource-request UI (R49; A48).
+- [ ] T56 Live validation/mail/private delivery after configuration (R49; A49).
+- [ ] T57 Approved revised brochure/portfolio/client content (R49–R51; A50); unavailable inputs remain blocked.
+- [ ] T58 Full workbook feedback closure with evidence/blockers (R46–R51; A51).
+
+## Image-folder refinement — CHG-021
+
+- [x] T59 Inspect all nine supplied images/dimensions and shared image sources; document welcome composition and section map (R46,R47,R52; planning evidence in image-feedback-2026-10-31-plan.md).
+- [x] T60 Implement optimised derivatives/provenance, welcome/Why, shared logo, industry cards, Critical Component/Thermal Turbine mappings and About motif (R46,R47,R52; A45,A47,A52; CHG-022).
+- [x] T61 Verify rendered crops/text/contrast/header/menu/mobile behaviour and build/typecheck/test/link checks; update evidence/limits (R46,R47,R52; A45,A47,A51,A52; CHG-022 evidence in acceptance.md). Physical-device/Safari and live-delivery limits remain explicit; A51 wider workbook closure remains pending.
+
+## Restore baseline presentation and compact homepage cards — CHG-023
+
+- [x] T62 Restore baseline brand/nav/catalogue dimensions; retain image mappings and Welcome; implement shared compact homepage offering cards and hover/focus/reduced-motion states (R53; A53,A54; CHG-023).
+- [x] T63 Verify baseline geometry, desktop section fit, card proportions/content, hover/focus and mobile reflow; rerun relevant build/typecheck/link checks and record current evidence (R53; A53,A54; acceptance.md and .review/compact-cards/).
+
+## Always-clear image cards — CHG-024
+
+- [x] T64 Promote the clear/larger-text state to default, remove image/text hover transformations across homepage and catalogue cards, and verify stable pointer/focus/mobile presentation and source/link preservation (R54; A55; CHG-024 evidence in acceptance.md and .review/always-clear/).
+
+## Company-name rule and About reference layout — CHG-025 planning
+
+- [x] T65 Inspect user underline reference, full S1 pages 10–12, source backgrounds/actions and current About/brand/data; document exact composition, responsive plan and source mapping (R55–R56; planning evidence in about-reference-2026-11-01-plan.md).
+- [ ] T66 Implement shared underline and reference-aligned About sections/background derivatives, preserving source content, existing metrics and unaffected sections (R55–R56; A56–A57).
+- [ ] T67 Verify reference alignment, source coverage, brand/menu geometry, anchors, mobile/zoom/contrast and relevant command checks; update evidence (R55–R56; A56–A57).

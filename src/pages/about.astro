@@ -30,11 +30,22 @@ import { company } from "../data/company";
       </h1>
     </div>
   </section>
-  <section class="section">
+  <section class="section about-introduction" aria-labelledby="who-title">
+    <img
+      class="about-engineer"
+      src="/images/about-engineer.webp"
+      srcset="/images/about-engineer-480.webp 480w, /images/about-engineer.webp 988w"
+      sizes="(max-width: 1000px) 80vw, 500px"
+      width="988"
+      height="882"
+      alt=""
+      loading="lazy"
+      decoding="async"
+    />
     <div class="container welcome-grid">
       <div>
         <p class="eyebrow">WHO WE ARE</p>
-        <h2>JB Advanced Engineering Limited</h2>
+        <h2 id="who-title">JB Advanced Engineering Limited</h2>
         <p class="lead">{company.who}</p>
         <p>{company.objective}</p>
         <a

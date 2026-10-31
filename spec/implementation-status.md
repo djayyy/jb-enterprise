@@ -1,5 +1,11 @@
 # V0.6.1 separate service and equipment pages
 
+CHG-024 current supplement (1 November 2026): the clear photograph, readable scrim and larger copy are always visible across Home and shared service/equipment cards. Hover/focus no longer changes images or typography; outlines remain. Nine Home widths and 30 catalogue cases pass; all Home cards retain 370px height. Build/typecheck/55 tests/static links pass. See A55 in acceptance.md for evidence and limits. No deployment.
+
+Current CHG-023 supplement (1 November 2026): baseline header/footer/navigation/catalogue presentation restored while retaining supplied images and Welcome. All 17 homepage offering cards share 370px height and matching responsive widths, with clear text and hover/focus image reveal. Nine Home widths and 30 additional template/width combinations pass; 55 tests, 40-file check, 188-page build and full static link/navigation checks pass. See current acceptance.md; older presentation results below are historical.
+
+Current refinement — CHG-022, 1 November 2026: nine supplied images integrated using 20 optimised WebP derivatives; stacked Welcome/Why, complete header/footer logo, four industry photos, distinct Critical Component, bounded turbine image and About motif implemented. Compact-menu viewport height repaired. 55 tests, 40-file typecheck, 188-page build, 49,989 link/asset references and 855 navigation semantic checks pass. Chrome responsive/200% zoom/selected journeys pass as detailed in acceptance.md; physical-device/cross-browser and production integration limits remain. Earlier browser-pending statements below are historical.
+
 CHG-010 ·26 October2026 · Website source review. Git/GitHub is now configured; CHG-011 removes obsolete ZIP snapshots and uses Git history. Historical acceptance evidence is retained; this cleanup does not deploy.
 
 ## Implemented routes

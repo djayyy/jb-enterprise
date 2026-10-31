@@ -1,6 +1,6 @@
 # JBAEL specification index
 
-Baseline: 2026-10-25 | Release: V0.6.1 local review; browser acceptance pending | Implementation: 188 static pages; live forms pending.
+Baseline: 2026-10-25 | Release: V0.6.1 / CHG-024 always-clear card review | Implementation: 188 static pages; tested Chrome desktop/mobile viewports; live forms and wider workbook backlog pending.
 
 | File | Purpose |
 | --- | --- |
@@ -24,6 +24,9 @@ Baseline: 2026-10-25 | Release: V0.6.1 local review; browser acceptance pending 
 | [checkpoint.json](checkpoint.json) | SHA-256 of tested implementation files |
 | [workflow.md](workflow.md) | Mandatory before/after code-change procedure |
 | [change-log.md](change-log.md) | Per-change traceability and verification record |
+| [company-review-2026-10-28-plan.md](company-review-2026-10-28-plan.md) | Existing company workbook feedback plan and dependencies |
+| [image-feedback-2026-10-31-plan.md](image-feedback-2026-10-31-plan.md) | Current welcome redesign and nine-image replacement plan |
+| [about-reference-2026-11-01-plan.md](about-reference-2026-11-01-plan.md) | Planned company-name rule and About layout/background alignment with S1 pages 10–12 |
 
 ## Use
 Project root is Jb-Service/. agents.md and spec/ are installed here. All original PDFs, legacy code and reference images are preserved under requirement/. Keep all future coding and project files inside Jb-Service/. Source paths in sources.md are relative to this project root.
@@ -52,3 +55,11 @@ Current correction: CHG-017 / R43 / T48 / A42 — navigation shifted left; all c
 Current header correction: CHG-018 / R44 / T49 / A43 — original single-row alignment restored with only a modest leftward margin for Home–Contact. Rightward/list-only menus retained; see acceptance.md for evidence and browser limits.
 
 Current alignment: CHG-019 / R45 / T50 / A44 — root lists remain vertically aligned beneath their triggers; measured header spacing and fitted child widths replace independent root shifting. See acceptance.md for current evidence and browser limits.
+
+Current implementation: CHG-022 / R46,R47,R52 / T54,T59–T61 / A45,A47,A52. All nine feedback-folder images integrated through optimised derivatives; centred welcome/Why and complete shared branding implemented. Chrome checks cover seven responsive widths, both menus, selected user journeys and 200% zoom; compact-menu height repaired. See acceptance.md and checkpoint.json. CHG-020's wider workbook work remains pending where explicitly recorded.
+
+Latest refinement: CHG-023 / R53 / T62–T63 / A53–A54 complete for local Chrome review. Baseline brand/nav/catalogue presentation restored; supplied images/Welcome retained; all three homepage card groups share compact dimensions and clearer-photo/larger-text hover/focus. This supersedes affected CHG-022 visual treatments, not its image mapping. See acceptance.md and checkpoint.json.
+
+Latest refinement: CHG-024 / R54 / T64 / A55 complete. Clearer photos/larger copy are permanent on Home and shared catalogue cards; image/text hover changes removed, keyboard outlines and compact grids retained. Current evidence in acceptance.md and checkpoint.json.
+
+Current planning: CHG-025 / R55–R56 / T65 complete, T66–T67 pending / A56–A57 NOT RUN. Company-name underline and About pages 10–12 composition/backgrounds inspected and planned; application remains CHG-024 with no code/public-asset change.
