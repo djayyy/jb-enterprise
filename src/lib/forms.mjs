@@ -2,10 +2,8 @@
 export function validateAttachments(files, kind) {
   const career = kind === "career";
   const limit = career ? 5_000_000 : 2_000_000_000;
-  if (career && files.length !== 1)
-    return "Choose one resume to check the application.";
-  if (!career && files.length > 10)
-    return "Choose no more than 10 files for this preview.";
+  if (career && files.length !== 1) return "Choose one resume.";
+  if (!career && files.length > 10) return "Choose no more than 10 files.";
   if (files.reduce((sum, f) => sum + f.size, 0) > limit)
     return career
       ? "Your resume must be 5 MB or smaller."
@@ -14,7 +12,7 @@ export function validateAttachments(files, kind) {
   if (files.some((f) => !allowed.test(f.name)))
     return career
       ? "Use a PDF or DOCX resume."
-      : "Use PDF, DOCX, JPG or PNG files in this preview.";
+      : "Use PDF, DOCX, JPG or PNG files.";
   if (files.some((f) => f.size === 0))
     return "One of your files is empty. Choose a different file.";
   return "";

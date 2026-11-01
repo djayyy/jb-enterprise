@@ -101,6 +101,9 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
         <div class="footer-top">
           <div>
             <Brand footer />
+            <p class="footer-tagline">
+              Powering precision, Engineering the future.
+            </p>
             <div class="footer-offices" aria-label="Company locations">
               {offices.map((office) => (
                 <address>
@@ -109,7 +112,6 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
                 </address>
               ))}
             </div>
-            <p>Powering precision, Engineering the future.</p>
             <SocialLinks />
           </div>
           <div>
@@ -150,7 +152,7 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
             >
               Reverse Engineering &amp; Manufacturing Portfolio&nbsp;↗
             </a>
-            <a href="/privacy/">Privacy information</a>
+            <a href="/privacy/">Privacy Policy</a>
           </div>
           <div>
             <h3>Let’s talk engineering</h3>

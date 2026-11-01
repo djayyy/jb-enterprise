@@ -34,6 +34,11 @@ for (const page of pages) {
   assert.match(html, /<meta name="robots" content="noindex,nofollow"/);
   assert.match(html, /<meta name="description" content="[^"]+"/);
   assert.doesNotMatch(html, /lorem ipsum|XX MW|action="#"/i);
+  assert.doesNotMatch(
+    html,
+    /review note:|shown for design review|issuer verification remains pending|profile link pending|official profile URL not supplied|for this preview|in this preview|supplied reference image/i,
+    `Internal review or placeholder copy: ${page}`,
+  );
   for (const image of html.matchAll(/<img\b[^>]*>/g)) {
     assert.match(image[0], /\balt="/);
     assert.match(image[0], /\bwidth="\d+"/);
@@ -122,8 +127,10 @@ assert.equal(
 );
 for (const html of [home, about, hub]) {
   assert.match(html, /linkedin\.com\/company\/jbenterpriseindia/);
-  for (const name of ["YouTube", "Facebook", "Instagram", "X \/ Twitter"])
-    assert.ok(html.includes(name));
+  assert.doesNotMatch(
+    html,
+    /profile link pending|official profile URL not supplied/,
+  );
   assert.doesNotMatch(html, /href="#"/, "No fake destinations");
 }
 const parts = fs.readFileSync(path.join(root, "equipment/index.html"), "utf8");

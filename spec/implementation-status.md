@@ -101,3 +101,9 @@ CHG-044: navy/orange themed resource/confirmation forms and captcha; larger clea
 CHG-045: friendly distinct Contact/Quote confirmations, cross-only close and compact spacing implemented; A80 generated-copy/build/type/link checks pass. Email integration unchanged.
 
 CHG-046: shared corrected offices data feeds Contact and all3 addresses beneath footer logo; pending-social note removed. A81 generated-content/build/type/link and scoped responsive Chrome checks pass.
+
+CHG-047: complete company-facing Privacy Policy and shared labels replace preview/development wording.13 sections, date/contact and accurate local-only form/session disclosures; A82 build/type/link/content/responsive checks pass. No email/runtime/deployment change; operational/legal approval not claimed.
+
+CHG-048: all188 rendered pages audited for internal/unfinished public copy, with0 remaining targeted findings; review notes/provenance labels/pending social controls removed, Careers/file messages polished. A83 build/type/test/link/scoped browser checks pass. Email backend and staging SEO remain unchanged; full operational readiness not claimed.
+
+CHG-049: footer tagline below logo/above3 offices;5 header/footer social icons restored without pending labels. A84 build/type/link/all-route order and desktop visual checks pass.

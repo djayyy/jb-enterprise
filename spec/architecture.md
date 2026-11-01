@@ -132,3 +132,7 @@ CHG-043: human-check generator now produces exactly4 random lowercase a–z lett
 CHG-045: enquiry-confirmations.ts centralizes approved Contact/Quote titles/messages. MockDialogs chooses quote copy by /request-a-quote route; EnquiryForm uses form kind for matching inline copy. Same native close/event handling; no delivery/runtime contract change.
 
 CHG-046: offices.ts is the shared source of3 office titles/unchanged addresses for Contact and Layout. Static semantic footer address elements only; no runtime/dependency/backend/route change.
+
+CHG-047: privacy page and link labels are presentation/content only. Document current local-only form validation/file selection, resource-access session flag, locally checked captcha, self-hosted assets/no analytics code. Hosting infrastructure logging disclosed conditionally rather than inventing provider/retention settings. No backend/cookie manager/tracker/data flow changed. Future email/form integration must update policy to its actual processing.
+
+CHG-048: visitor copy/metadata/accessible labels cleaned; SocialLinks now emits only existing LinkedIn anchor instead of disabled unknown destinations. Existing form file-validation rules stay identical, only error text changes. Site verifier guards against known internal/placeholder phrases across all188 pages. No backend/tracker/dependency/data-handling/SEO/cutover change.

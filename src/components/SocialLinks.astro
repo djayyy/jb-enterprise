@@ -1,5 +1,4 @@
 ---
-// S1 header shows these five platforms. Only LinkedIn has a URL in supplied S4.
 const channels = [
   {
     name: "LinkedIn",
@@ -14,25 +13,25 @@ const channels = [
 ---
 
 <div class="social-links" aria-label="Social media">
-  {channels.map((s) =>
-    s.url ? (
+  {channels.map((channel) =>
+    channel.url ? (
       <a
-        href={s.url}
+        href={channel.url}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`${s.name} (opens in a new tab)`}
-        title={s.name}
+        aria-label={`${channel.name} (opens in a new tab)`}
+        title={channel.name}
       >
-        {s.mark}
+        {channel.mark}
       </a>
     ) : (
       <button
         type="button"
         disabled
-        aria-label={`${s.name} — profile link pending`}
-        title={`${s.name}: official profile URL not supplied`}
+        aria-label={channel.name}
+        title={channel.name}
       >
-        {s.mark}
+        {channel.mark}
       </button>
     ),
   )}

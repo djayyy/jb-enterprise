@@ -1,5 +1,11 @@
 # JBAEL specification index
 
+Latest CHG-049: footer tagline restored beneath logo and all5 socials visible; R82/T96/A84 verified scope/limits recorded.
+
+Latest CHG-048: whole-site public-copy audit/cleanup complete across188 pages; R81/T95/A83 checks pass. Operational launch limitations remain documented.
+
+Latest CHG-047: complete company-facing Privacy Policy replaces development copy; shared labels aligned. R80/T94/A82 checked; operational/legal limits recorded.
+
 Latest CHG-046: corrected office titles and all3 addresses below footer logo; pending-social sentence removed. R79/T93/A81 build/type/link/responsive checks pass.
 
 Latest CHG-045: approved friendly Contact/Quote-specific confirmations with cross-only close; R78/T92/A80 build/type/link/copy checks pass.

@@ -215,3 +215,9 @@ CHG-026: T66–T67 complete for scoped Chrome review. A56–A57 evidence covers 
 - [x] T92 Implement approved distinct friendly confirmation copy and cross-only close; verify variants/build/close markup (R78; A80; CHG-045).
 
 - [x] T93 Share corrected office titles/addresses between Contact and footer, remove pending-social note, verify responsive/render/build consistency (R79; A81; CHG-046).
+
+- [x] T94 Review reference notices/current data flows, publish original complete Privacy Policy and align links; verify content/links/responsive presentation (R80; A82; CHG-047).
+
+- [x] T95 Audit rendered content/metadata/accessible text across188 pages, clean internal/unfinished language and dead social controls, verify copy/runtime regressions (R81; A83; CHG-048).
+
+- [x] T96 Move footer tagline beneath logo and restore5 shared social icons; verify order/count/links/responsive fit (R82; A84; CHG-049).

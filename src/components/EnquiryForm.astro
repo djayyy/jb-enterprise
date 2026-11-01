@@ -174,12 +174,11 @@ const career = kind === "career",
   </div>
   <HumanCheck id="enquiry-human-answer" />
   <p class="form-privacy">
-    * Required fields. Read our{" "}
-    <a href="/privacy/">privacy and preview information</a>.
+    * Required fields. Read our <a href="/privacy/">Privacy Policy</a>.
   </p>
   <div class="form-actions">
     <button class="button" type="submit">
-      {career ? "Review application" : "Submit enquiry"}{" "}
+      {career ? "Submit application" : "Submit enquiry"}{" "}
       <Icon name="arrow" size={17} />
     </button>
   </div>
@@ -224,7 +223,7 @@ const career = kind === "career",
     if (!filesValid() || !form.reportValidity() || !human.validate()) return;
     output.textContent =
       kind === "career"
-        ? "Your application details pass validation."
+        ? "Thank you for your interest in working with JBAEL."
         : enquiryConfirmations[kind === "quote" ? "quote" : "contact"].message;
     human.reset();
     output.hidden = false;

@@ -1,61 +1,268 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { offices } from "../data/offices";
 ---
 
 <Layout
-  title="Privacy & preview information"
-  description="How the JBAEL design preview handles form fields, file selection and external links."
+  title="Privacy Policy"
+  description="How JB Advanced Engineering Limited handles personal information, website forms, browser storage, business correspondence and privacy requests."
 >
   <section class="page-hero">
     <div class="container">
-      <p class="eyebrow">V0.6.1 DESIGN REVIEW</p>
-      <h1>Privacy & preview information</h1>
+      <p class="eyebrow">JB ADVANCED ENGINEERING LIMITED</p>
+      <h1>Privacy Policy</h1>
+      <p class="description">
+        Your privacy matters. This policy explains how information is handled
+        when you visit our website or communicate with us.
+      </p>
     </div>
   </section>
-  <section class="section">
+  <section class="section privacy-policy">
     <div class="container reading">
-      <p>
-        This version is a website design preview. It does not accept enquiries
-        or job applications.
+      <p class="privacy-date">
+        Effective and last updated:{" "}
+        <time datetime="2026-11-01">1 November 2026</time>
       </p>
-      <h2>Forms and selected files</h2>
       <p>
-        Form values stay in the current browser page. Checking a form validates
-        required fields and selected file metadata on your device. It does not
-        transmit, upload or save those values or files to JBAEL. Browser
-        autofill behaviour is controlled by your browser settings.
+        JB Advanced Engineering Limited (“JBAEL”, “we”, “us” or “our”) provides
+        engineering services, equipment and spares for the power generation
+        industry. This policy applies to our website, company-resource access
+        and business or recruitment correspondence with us. Separate contractual
+        confidentiality or data-protection terms may also apply to a particular
+        engagement.
       </p>
-      <h2>Resource request forms</h2>
+
+      <h2 id="information">1. Information you provide</h2>
       <p>
-        Brochure, portfolio and certificate actions request your name, contact
-        number, company and email before opening the resource. Submission is
-        simulated; no email is sent. Details stay in page memory and are cleared
-        on successful submission. Only a granted-access flag is stored in
-        session storage for this browser tab, so later documents do not ask
-        again. No personal details are stored in session storage. If storage is
-        unavailable, access is remembered only on the current page. Resource
-        files remain publicly accessible through their direct URLs.
+        Our contact, quotation, resource-access and careers forms may ask you to
+        enter your name, email address, telephone number, company, project
+        location, professional details, service requirements or employment
+        interests. Some fields are required for the action you select.
+        Supporting documents or a résumé may also be selected.
       </p>
-      <h2>Email and telephone links</h2>
       <p>
-        Email and phone links open your chosen email or calling application.
-        Sending an email or placing a call through that application is separate
-        from this preview.
+        Website form entries, verification answers and selected-file checks are
+        processed within your browser. These forms do not transmit the entered
+        information or selected files to JBAEL. Selecting a file does not upload
+        it. For business enquiries, quotations or applications you wish to
+        communicate directly, please use the email or telephone details on our{" "}
+        <a href="/contact/">Contact Us page</a>.
       </p>
-      <h2>Website resources</h2>
       <p>
-        Fonts, images and the brochure are served with this website. No
-        analytics, advertising trackers or application database have been added.
+        When you email, call or otherwise communicate directly with JBAEL, the
+        information you choose to share becomes part of that correspondence.
+        Please provide only information relevant to your request. Do not include
+        passwords, payment-card details, government identity documents, health
+        information or another person’s information unless necessary and you are
+        authorised to share it.
       </p>
-      <h2>Before the live website launches</h2>
+
+      <h2 id="purposes">2. How information is used</h2>
       <p>
-        Contact details, application handling, email delivery, upload security
-        and retention must be confirmed. A final privacy notice will describe
-        the actual services and data handling used by the live website.
+        Information received through direct correspondence may be used to
+        understand and respond to your enquiry, discuss technical requirements,
+        prepare or administer quotations and services, manage supplier or
+        customer relationships, and consider employment enquiries. Relevant
+        correspondence may also be used to maintain business records, resolve
+        disputes, prevent misuse and meet applicable legal obligations.
       </p>
-      <a class="button outline" href="/contact/">
-        Back to contact
-      </a>
+      <p>
+        Providing contact details for an enquiry or resource request is not a
+        subscription to a marketing mailing list. You can ask us to stop
+        optional promotional correspondence using the contact details below.
+        Necessary responses concerning an existing request or contractual matter
+        may still be required.
+      </p>
+
+      <h2 id="storage">3. Cookies, browser storage and verification</h2>
+      <p>
+        The website does not set advertising or analytics cookies or include
+        advertising pixels or third-party analytics scripts. Fonts, images and
+        downloadable company documents are served as website assets. Browser
+        storage is used for the resource-access feature as described below.
+      </p>
+      <div class="privacy-table-wrap">
+        <table class="privacy-table">
+          <caption>Information used by website features</caption>
+          <thead>
+            <tr>
+              <th scope="col">Feature</th>
+              <th scope="col">Information and purpose</th>
+              <th scope="col">Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Resource access</th>
+              <td>
+                A browser session-storage flag records that the resource form
+                has been completed, so documents do not repeatedly ask for
+                details. It contains no name, contact details or form answers.
+              </td>
+              <td>
+                For the browser-tab session; browser session-restoration
+                settings can affect its lifetime.
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Form entries and file selection</th>
+              <td>
+                Values and selected-file information remain in the current page.
+                Resource-form values are cleared after successful validation.
+              </td>
+              <td>
+                Until cleared, reset or the page is left; browser autofill and
+                restoration are controlled by your browser.
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Captcha</th>
+              <td>
+                A four-letter code and your answer are checked locally to
+                validate the form. No external captcha provider receives them.
+              </td>
+              <td>
+                Until the code is refreshed, the form resets or the page is
+                left.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        You can clear website storage or manage cookies and autofill in your
+        browser settings. Clearing session storage may cause the resource form
+        to appear again. If storage is unavailable, resource access is
+        remembered only while the current page remains open. Browser-stored
+        access does not create an account or make company documents
+        confidential.
+      </p>
+
+      <h2 id="technical-data">4. Technical information and website delivery</h2>
+      <p>
+        When you request a page, image or document, the hosting and network
+        infrastructure may process technical information such as your IP
+        address, requested URL, browser information and request time to deliver
+        the website and support security or troubleshooting. This is separate
+        from the personal information entered in forms. Infrastructure logging
+        and its retention depend on the services operating the website.
+      </p>
+
+      <h2 id="sharing">5. Sharing and disclosure</h2>
+      <p>
+        JBAEL does not sell or rent personal information provided for business
+        or recruitment correspondence. Information received by us may be shared
+        with relevant personnel and, where needed, service providers supporting
+        communications, business administration or an engagement. Disclosure
+        should be limited to what is necessary for the relevant purpose and
+        subject to appropriate confidentiality or contractual obligations.
+      </p>
+      <p>
+        Information may also be disclosed where required by applicable law, a
+        valid legal process or an authorised public authority, or where
+        reasonably necessary to establish or defend legal rights or address
+        fraud and security concerns.
+      </p>
+
+      <h2 id="retention">6. Retention</h2>
+      <p>
+        Local website-form entries are not stored in a JBAEL form-submission
+        database. Their browser lifetime is explained above. For information
+        actually received through direct correspondence, retention depends on
+        the nature of the enquiry or engagement, the need for follow-up,
+        contractual and legal record-keeping requirements, and any unresolved
+        disputes. You may contact us to request deletion of information we hold;
+        legal or legitimate record-keeping requirements may limit what can be
+        removed.
+      </p>
+
+      <h2 id="security">7. Security and confidentiality</h2>
+      <p>
+        We aim to handle personal information responsibly and limit its use and
+        disclosure to appropriate business purposes. No website, email system or
+        method of electronic storage can guarantee absolute security. Please use
+        an agreed secure communication method for confidential drawings,
+        commercially sensitive information or documents that require special
+        protection. Never share account credentials through an enquiry.
+      </p>
+
+      <h2 id="choices">8. Your choices and privacy requests</h2>
+      <p>
+        You may choose not to provide optional information, clear information
+        held by your browser, or contact us about information you have sent
+        directly to JBAEL. Depending on applicable law, you may also request
+        information about our handling of your data, access, correction or
+        deletion, withdraw consent where processing relies on it, or raise a
+        privacy concern.
+      </p>
+      <p>
+        Send requests to{" "}
+        <a href="mailto:info@jbepower.com">info@jbepower.com</a> with the
+        subject “Privacy request”. Describe the request and the correspondence
+        or interaction concerned. We may ask for information reasonably
+        necessary to verify your identity or authority before disclosing or
+        changing records. Requests will be assessed in accordance with
+        applicable law and relevant record-keeping obligations. Where
+        applicable, you may raise unresolved concerns with a competent
+        regulatory authority.
+      </p>
+
+      <h2 id="external-links">
+        9. External websites and communication services
+      </h2>
+      <p>
+        Our website may link to social networks and other third-party websites.
+        Email and telephone links open the communication application you choose.
+        Those sites and applications operate under their own privacy terms; this
+        policy does not govern their independent handling of information. Review
+        their policies before sharing personal information. A link does not mean
+        JBAEL controls that service.
+      </p>
+
+      <h2 id="international">10. Visitors outside India</h2>
+      <p>
+        JBAEL is based in India. If you communicate with us from another
+        country, your correspondence may be accessed or handled in India. Where
+        external hosting or communication services are involved, handling may
+        also occur in the locations used by those services. Any applicable
+        transfer requirements depend on the information, service and
+        jurisdiction concerned.
+      </p>
+
+      <h2 id="children">11. Children’s privacy</h2>
+      <p>
+        This website is intended for business and professional audiences, not
+        for children. We do not request children’s information for resource
+        access or business enquiries. If you believe a child has provided
+        personal information to us, please contact us so the matter can be
+        reviewed.
+      </p>
+
+      <h2 id="changes">12. Changes to this policy</h2>
+      <p>
+        We may update this policy to reflect changes to information-handling
+        practices, website features or applicable requirements. The current
+        policy and its last-updated date will be published on this page. Where
+        applicable law requires an additional notice or consent, a policy update
+        alone does not replace that requirement.
+      </p>
+
+      <h2 id="privacy-contact">13. Contact us about privacy</h2>
+      <address class="privacy-contact">
+        <strong>JB Advanced Engineering Limited</strong>
+        <br />
+        {offices[0].title}
+        <br />
+        {offices[0].address}
+        <br />
+        Email: <a href="mailto:info@jbepower.com">info@jbepower.com</a>
+        <br />
+        Telephone: <a href="tel:+919136020760">+91 91360 20760</a>
+      </address>
+      <p>
+        For other locations and general business enquiries, visit{" "}
+        <a href="/contact/">Contact Us</a>.
+      </p>
     </div>
   </section>
 </Layout>

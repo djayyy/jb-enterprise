@@ -367,3 +367,65 @@
   font-weight: 600;
   color: #fff;
 }
+
+/* CHG-047: readable company privacy notice and storage disclosure table. */
+.privacy-policy .reading {
+  max-width: 900px;
+}
+.privacy-policy .privacy-date {
+  margin-top: 0;
+  color: #4b626e;
+  font-size: 14px;
+}
+.privacy-policy .reading h2 {
+  font-size: 23px;
+  line-height: 1.35;
+  margin-top: 34px;
+  scroll-margin-top: 120px;
+}
+.privacy-policy .reading p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.privacy-table-wrap {
+  overflow-x: auto;
+  margin: 24px 0;
+}
+.privacy-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.privacy-table caption {
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: 12px;
+  color: #102d3c;
+}
+.privacy-table th,
+.privacy-table td {
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #cbd7de;
+  padding: 14px;
+}
+.privacy-table thead {
+  background: #102d3c;
+  color: #fff;
+}
+.privacy-table tbody th {
+  background: #f0f5f8;
+  min-width: 100px;
+}
+.privacy-contact {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-block: 16px;
+}
+
+/* CHG-049: keep the tagline with the footer identity, above locations. */
+.footer-top .footer-tagline {
+  margin-top: 12px;
+}
