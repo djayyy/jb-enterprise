@@ -242,5 +242,333 @@
   "about-engineer-480": {
     "width": 480,
     "height": 429
+  },
+  "about-what-background": {
+    "width": 1024,
+    "height": 1024
+  },
+  "about-what-background-480": {
+    "width": 480,
+    "height": 480
+  },
+  "about-leadership-background": {
+    "width": 1536,
+    "height": 1024
+  },
+  "about-leadership-background-768": {
+    "width": 768,
+    "height": 512
+  },
+  "about-services-link": {
+    "width": 480,
+    "height": 360
+  },
+  "about-spares-link": {
+    "width": 400,
+    "height": 309
+  },
+  "detail-turbine-tur16": {
+    "width": 1440,
+    "height": 545
+  },
+  "detail-turbine-tur11": {
+    "width": 1440,
+    "height": 730
+  },
+  "detail-turbine-tur10": {
+    "width": 1440,
+    "height": 827
+  },
+  "detail-testings-tes03": {
+    "width": 1440,
+    "height": 664
+  },
+  "detail-reference-3255": {
+    "width": 1280,
+    "height": 720
+  },
+  "detail-reference-3258": {
+    "width": 800,
+    "height": 436
+  },
+  "detail-reference-3264": {
+    "width": 768,
+    "height": 576
+  },
+  "detail-generator-g22": {
+    "width": 905,
+    "height": 639
+  },
+  "detail-generator-g40": {
+    "width": 524,
+    "height": 637
+  },
+  "detail-generator-g38": {
+    "width": 900,
+    "height": 848
+  },
+  "detail-generator-g24": {
+    "width": 521,
+    "height": 285
+  },
+  "detail-reference-3616": {
+    "width": 500,
+    "height": 500
+  },
+  "detail-testings-tes08": {
+    "width": 665,
+    "height": 1440
+  },
+  "detail-reference-3280": {
+    "width": 689,
+    "height": 722
+  },
+  "detail-reference-3283": {
+    "width": 480,
+    "height": 443
+  },
+  "detail-reference-3286": {
+    "width": 672,
+    "height": 896
+  },
+  "detail-reference-3308": {
+    "width": 765,
+    "height": 1024
+  },
+  "detail-reference-489": {
+    "width": 1440,
+    "height": 540
+  },
+  "detail-reference-3358": {
+    "width": 801,
+    "height": 451
+  },
+  "detail-reference-3289": {
+    "width": 960,
+    "height": 512
+  },
+  "detail-electrical-e07": {
+    "width": 720,
+    "height": 1280
+  },
+  "detail-electrical-e02": {
+    "width": 1440,
+    "height": 1080
+  },
+  "detail-electrical-e15": {
+    "width": 569,
+    "height": 434
+  },
+  "detail-testings-tes05": {
+    "width": 1440,
+    "height": 665
+  },
+  "detail-reference-3364": {
+    "width": 474,
+    "height": 355
+  },
+  "detail-c-i-ci06": {
+    "width": 960,
+    "height": 1280
+  },
+  "detail-reference-3361": {
+    "width": 1024,
+    "height": 575
+  },
+  "detail-testings-tes12": {
+    "width": 1440,
+    "height": 665
+  },
+  "detail-c-i-ci04": {
+    "width": 1254,
+    "height": 1254
+  },
+  "detail-turbine-tur19": {
+    "width": 1080,
+    "height": 1440
+  },
+  "detail-reference-564": {
+    "width": 480,
+    "height": 467
+  },
+  "detail-reference-566": {
+    "width": 720,
+    "height": 720
+  },
+  "detail-reference-567": {
+    "width": 717,
+    "height": 479
+  },
+  "detail-testings-tes01": {
+    "width": 900,
+    "height": 450
+  },
+  "detail-generator-g30": {
+    "width": 567,
+    "height": 959
+  },
+  "detail-testings-tes09": {
+    "width": 1440,
+    "height": 665
+  },
+  "detail-electrical-e09": {
+    "width": 1440,
+    "height": 1070
+  },
+  "detail-rewamping-rew01": {
+    "width": 344,
+    "height": 222
+  },
+  "detail-rewamping-rew03": {
+    "width": 739,
+    "height": 512
+  },
+  "detail-rewamping-rew04": {
+    "width": 333,
+    "height": 205
+  },
+  "detail-3d-scaning-3d-01": {
+    "width": 1024,
+    "height": 1024
+  },
+  "detail-3d-scaning-3d03": {
+    "width": 1414,
+    "height": 774
+  },
+  "detail-generator-g03": {
+    "width": 554,
+    "height": 752
+  },
+  "detail-3d-scaning-3d04": {
+    "width": 676,
+    "height": 1440
+  },
+  "detail-generator-g07": {
+    "width": 968,
+    "height": 540
+  },
+  "detail-reference-424": {
+    "width": 570,
+    "height": 428
+  },
+  "detail-reference-425": {
+    "width": 615,
+    "height": 541
+  },
+  "detail-reference-479": {
+    "width": 600,
+    "height": 391
+  },
+  "detail-electrical-e01": {
+    "width": 1440,
+    "height": 960
+  },
+  "detail-reference-600": {
+    "width": 768,
+    "height": 512
+  },
+  "detail-generator-g05": {
+    "width": 777,
+    "height": 503
+  },
+  "detail-reference-515": {
+    "width": 477,
+    "height": 324
+  },
+  "detail-generator-g31": {
+    "width": 1280,
+    "height": 720
+  },
+  "detail-reference-526": {
+    "width": 450,
+    "height": 337
+  },
+  "detail-reference-465": {
+    "width": 689,
+    "height": 516
+  },
+  "detail-reference-601": {
+    "width": 410,
+    "height": 727
+  },
+  "detail-reference-477": {
+    "width": 803,
+    "height": 602
+  },
+  "detail-reference-478": {
+    "width": 417,
+    "height": 341
+  },
+  "detail-reference-476": {
+    "width": 720,
+    "height": 535
+  },
+  "detail-reference-488": {
+    "width": 500,
+    "height": 500
+  },
+  "detail-reference-492": {
+    "width": 813,
+    "height": 580
+  },
+  "detail-reference-502": {
+    "width": 500,
+    "height": 500
+  },
+  "detail-reference-503": {
+    "width": 640,
+    "height": 640
+  },
+  "detail-reference-504": {
+    "width": 1024,
+    "height": 683
+  },
+  "detail-reference-517": {
+    "width": 550,
+    "height": 413
+  },
+  "detail-reference-580": {
+    "width": 630,
+    "height": 473
+  },
+  "detail-reference-589": {
+    "width": 1140,
+    "height": 856
+  },
+  "detail-reference-578": {
+    "width": 864,
+    "height": 648
+  },
+  "detail-reference-592": {
+    "width": 1020,
+    "height": 574
+  },
+  "detail-reference-602": {
+    "width": 383,
+    "height": 510
+  },
+  "detail-reference-603": {
+    "width": 500,
+    "height": 350
+  },
+  "detail-reference-612": {
+    "width": 851,
+    "height": 638
+  },
+  "detail-reference-614": {
+    "width": 461,
+    "height": 615
+  },
+  "detail-reference-3896": {
+    "width": 544,
+    "height": 408
+  },
+  "detail-reference-616": {
+    "width": 500,
+    "height": 334
+  },
+  "detail-reference-466": {
+    "width": 570,
+    "height": 400
   }
 }

@@ -1,3 +1,4 @@
+import { catalogPhotos } from "../data/catalog-photos.mjs";
 import {
   fragmentSlug,
   equipmentAnchor,
@@ -99,7 +100,7 @@ export function buildCatalog(services, equipment) {
       slug,
       title,
       summary,
-      image,
+      image: catalogPhotos[`/${kind}/${slug}/`] || image,
       source,
       url: `/${kind}/${slug}/`,
       parentUrl: parent.url,

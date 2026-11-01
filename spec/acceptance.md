@@ -1,5 +1,113 @@
 # Acceptance and verification
 
+## Consistent catalogue cards — CHG-034
+
+A67 (R65/T79), PASS for scoped Chrome review on1 November2026.
+
+- All178 detail pages and2 indexes checked at effective CSS viewport widths1440/390px:360 page/width cases,394 card instances.40 additional page/width cases at320/768/1024/1280px cover mixed photo ratios, categories, indexes and long component copy. Photo height consistently240px above1000px and220px below; images fill the complete media bounds with0 padding/cover fitting. No horizontal overflow or text outside its card.
+- Within each visual row, card heights and label/title/summary/action top positions match exactly. Titles remain23px and descriptions15px across both catalogues. Longer text wraps fully and sets the shared row height; independent rows may differ naturally. Source-photo identity/proportions preserved through cover, with edge crop as needed. No white frames or hover transform introduced.
+- Specialist screenshot visually confirms the user's mismatched examples now align. Equipment index search for turbine leaves2 results with240px images and zero overflow; clearing restores the grid. Keyboard focus retains3px outline and Enter opens /services/testing-inspection/. Home17 cards remain370px and headers83/97px at390/1440px; no overflow.
+-41-file check0 diagnostics;56 tests;188-page build and49,990 link/asset references pass. Compared with CHG-033 checkpoint, only CatalogCard.astro, v06.css and responsive/mobile.css implementation changed. Heroes, header/footer, Home/About, data/assets/photo mappings, route/content/dependency/backend contracts unchanged.
+- Evidence: .review/card-consistency/{all-pages,responsive,regression,search}.json, build/check/tests/verify.txt and specialist-desktop.png; final source/spec hashes in checkpoint.json. Browser zoom affected viewport overrides, so actual innerWidth was measured and controls compensated to reach the stated CSS widths. Physical hardware/Safari/screen-reader/legacy browsers not tested. CSS subgrid support is required for row alignment. No commit/push/deployment.
+
+
+## Edge-to-edge catalogue photographs — CHG-033
+
+A66 (R64/T78), PASS for scoped Chrome review on1 November2026.
+
+- All178 catalogue pages plus2 indexes checked at1440/390px:360 cases and750 media instances. Every media element has zero padding, transparent background, cover fitting and image bounds matching the full area within1px; no horizontal overflow or transforms.40 additional cases at320/768/1024/1280px cover categories, indexes, small/portrait/ultrawide photos and long copy; no gaps, overflow or text outside its panel/card.
+- Thermal desktop hero/cards and mobile hero visually inspected; fresh screenshots saved. Source-proportional hero area is capped at360px tall on desktop/280px narrow. Card media height adapts within180–280px and may crop image edges to fill the area; original encoded photo backgrounds remain untouched. The previous strict contain/native-size policy in A65 is historical and superseded by this requested fill treatment.
+- Actual hover uses cover, transform:none and0s transition; keyboard focus preserves3px outline. Home remains17 cards at370px, zero framed Home cards and no overflow at390/1440px; headers83/97px. About, header/footer, image assets, photo mappings and source data exactly match CHG-032 hashes. Only CatalogPage/Card and shared/mobile catalogue styles changed.
+-41-file Astro check:0 diagnostics;56 tests;188-page build;49,990 local references;562 navigation destinations/855 semantic checks. No route/content/dependency/backend changes. Existing download rollback retained.
+- Evidence: .review/image-framing/fill-{all-pages,responsive,regression,hover}.json, fill-{build,check,tests,verify}.txt, fill-navigation.json and fill-thermal-{desktop,cards,mobile}.jpg. Source/spec hashes in checkpoint.json. Physical devices, Safari, screen reader and current actual200% zoom not rerun; source resolution still limits detail. No commit/push/deployment.
+
+
+## Catalogue photo framing — CHG-032
+
+A65 (R63/T76–T77), PASS for scoped Chrome review, completed after reconnecting the workspace on1 November2026.
+
+- All178 catalogue pages and both indexes checked at1440/390px:360 page/width cases and750 hero/card image instances. All356 hero instances loaded, covering all104 catalogue photos.40 additional cases at320/768/1024/1280px cover categories, long scopes, portrait/ultrawide/small photos and both indexes. No horizontal overflow or text outside its containing panel/card.
+- Saved audit initially contained83 off-screen, unloaded or unmeasured card-image instances in23 page/width cases. On resumption, each was brought into view using keyboard focus and remeasured after loading. All83 now have positive dimensions and pass; no unresolved measurements remain. Original raw observations are preserved alongside lazy-loaded.json rather than treating missing values as passes.
+- Every measured loaded photo uses contain fitting with preserved aspect ratio, no transform and no clipping outside its padded frame. Maximum CSS enlargement factor1.0; maximum fractional aspect-ratio error0.0000703 (browser subpixel rounding). All source dimensions/metadata remain those verified in CHG-030. Off-screen lazy cards were explicitly checked after loading as above.
+- Specialist and Thermal Turbine examples visually inspected on desktop, plus mobile Turbine and mixed portrait/landscape component cards. Desktop hero places the complete photo in a bounded light frame beside navy copy; narrow screens stack photo above text. Non-Home cards similarly separate photo from readable copy; type labels no longer cover the machinery. Whole provided photos are shown, including any crop already present in the original source.
+- Requested Thermal Turbine remains480×249 and renders480×249 CSSpx on the tested desktop, instead of an estimated3× cover enlargement at1440px. Specialist715×329 is reduced into its frame. These source-size caps do not create missing detail or guarantee high-DPR/zoom sharpness from small originals.
+- Actual normal/hover/keyboard-focus checks preserve image size132×176px, contain fitting, zero transition and no transform; keyboard focus retains3px outline. Enter opens the correct Turbine erection/assembly leaf. Home remains17 cards at370px at390/1440px, with zero framed Home cards and no overflow; header remains83/97px. About What/Leadership still fit1280×720 (content bottoms658.15/646.51px).
+- Current commands rerun after reconnection:41-file Astro check0 diagnostics;56 tests;188-page build;49,990 local links/assets;562 destinations/855 semantic navigation checks. Assets, photo mappings, metadata and business data match the CHG-030 source hashes. No public-asset, canonical route, source-copy, dependency, form or backend changes in this change.
+- Evidence: .review/image-framing/{before-audit,all-pages,responsive,pending-lazy-checks,lazy-loaded,states,regression,summary}.json; command logs; Specialist/Turbine desktop/mobile/cards screenshots. Final source/spec hashes recorded in checkpoint.json. Source-resolution limits remain; physical-device/Safari/screen-reader/current actual200% zoom/full accessibility review not run.
+
+This supersedes CHG-030 catalogue background/cover framing evidence, retaining its supplied-image mappings, distinct siblings and unaffected About/Home acceptance. The earlier disconnection interrupted final documentation only; the resumed lazy-image checks required no additional code changes. Local uncommitted review; no commit/push/deployment.
+
+
+## About density and catalogue clarity — CHG-030
+A61 (R60/T72,T74), PASS for scoped Chrome review: all three complete About compositions fit the five tested desktop screens. Opening starts13–16px below header, rather than leaving a large centred top gap, while What stays below its first-screen boundary. What/Leadership use compact padding/gaps, smaller circular actions and more efficient value/message layouts;1001–1200px uses rounded value panels. All33 original strings,7 approach points,6 capabilities,3 values and5 commitments retained. No fixed-height clipping or hidden copy.
+
+| Viewport | Who / objective bottom | What content / links bottom | Leadership content bottom |
+| --- | ---: | ---: | ---: |
+|1440×812|658.53px|716.20px|652.51px|
+|1440×756|657.41px|716.20px|652.51px|
+|1280×720|645.28px|658.15px|646.51px|
+|1024×768|741.95px|723.68px|678.09px|
+|1440×650|643.88px|632.44px|646.39px|
+
+These are actual content bottoms relative to each viewport after normal opening entry or section-anchor arrival. Both circular links and the complete Leadership panel are within the screen.320/390/768/720px About checks show full copy, natural scrolling and no horizontal overflow/clipping. Actual200% browser zoom was not rerun;720px reflow checked. Very narrow/short/zoomed screens may grow naturally rather than compress text below readable sizes.
+
+A62 (R61/T73–T74), PASS: bright catalogue heroes with bounded72% text scrim on desktop; narrow screens show the full image above readable navy copy. No full-photo dark shade. Catalogue child cards use the same permanent bright-photo/bottom-scrim treatment as Home:23px title/15px body, brightness1.06, no image transform/transition. Normal/actual hover/keyboard focus measurements match; focus shows3px outline. Enter opens the correct Stator inspection leaf.60 final page/width cases (10 routes ×320/390/768/1024/1280/1440) have no horizontal overflow or text extending outside card/panel bounds. Initial heading scrollHeight rounding was checked using actual text ranges inside containing panels/cards; no actual clipping. Hero/card screenshots visually inspected. Conservative worst-white-photo contrast: card body5.82:1, hero summary5.59:1, breadcrumbs5.28:1, eyebrow4.55:1, title6.84:1, card action4.91:1. About contrast underlays remain CHG-026 values.
+
+A63 (R62/T73–T74), PASS: reviewed127 supplied-folder images and95 PDF candidates.157 explicit route mappings change131 actual node images; catalogue unique image count30→104. All31 sibling groups now use distinct images (22 previously repeated), checked by keys and actual WebP byte hashes. Requested Thermal Turbine/Critical Component photos retained.178 node titles/summaries/URLs/quote destinations/source context unchanged.76 new WebP derivatives total6,671,336bytes, no upscaling, full provenance/intrinsic dimensions; original requirement files untouched. Reuse across related pages remains intentional; reference images do not establish exact part/project identification, and small source resolution remains a limit.
+
+Final commands PASS on current source, including separate CHG-031 download rollback:41-file Astro check0 diagnostics;56 tests;188-page build;49,990 local links/assets;562 destinations/855 semantic navigation checks. New regression test protects distinct sibling photos/canonical override keys; existing requested-image assertion updated for the now-explicit Boiler replacement. Home regression at390/1440 retains17 cards at370px with no overflow; header remains97px desktop/83px mobile. No user-facing business copy, canonical route, dependency or form behaviour changed by this task.
+
+Evidence: .review/catalog-clarity/{about-final,about-narrow,catalog-layout,card-states,home-regression,photo-audit,new-assets,contrast}.json, command logs and desktop/mobile JPGs. Full-source checkpoint recorded after spec sync. Physical devices/Safari/screen reader/full accessibility audit not run; no production/commit/push change. Earlier affected About density/catalogue clarity/image-mapping results superseded. CHG-031's independently requested download rollback is preserved, not attributed to this task.
+
+
+## About landing boundary — CHG-028
+
+A59 (R58/T69), PASS for scoped Chrome review. At normal entry scrollY0, What We Do begins exactly at the bottom of the initial desktop viewport and the complete objective remains visible:
+
+| Viewport | What We Do top / opening bottom | Objective bottom |
+| --- | ---: | ---: |
+|1440×812|812px|727.15px|
+|1440×756|756px|699.15px|
+|1280×720|720px|681.15px|
+|1024×768|768px|747.29px|
+
+Existing header97px and total utility/header137px retained. Minimum-height section grows naturally if needed, with no hidden content or fixed-height clipping. Normal page scroll reveals What We Do; observed scrollY756 shows its heading at59px and body in the viewport. Opening height remains619px when scrolling at1440×756; the layout uses total chrome height, not its changing scroll position, so no boundary jump occurs.
+
+390/768px layouts and720×378 narrow reflow have no horizontal overflow/clipped copy; all objective text remains. Desktop minimum height does not apply to narrow layouts (computed0px). Mobile Menu at390×844 opens with bottom477.87px inside viewport and Escape dismisses; header remains83px. Actual200% zoom was not repeated this follow-up; CHG-027's actual200% result is historical, while its720px reflow path was checked here.
+
+PASS:40-file Astro check0 diagnostics;55 tests;188-page build;49,990 local references/source/ARIA checks; diff whitespace/Markdown links. Evidence: .review/about-compact/boundary-responsive.json, desktop-landing.jpg and boundary-*.txt logs. Source hashes in checkpoint.json. No physical-device/Safari/full accessibility review, commit/push or production deployment. CHG-027's short opening height is superseded; text sizes, compact spacing, brochure removal and other source content stay unchanged.
+
+
+## Compact About opening — CHG-027
+
+A58 (R57/T68), PASS for scoped Chrome review: full About Us/Who We Are opening, seven approach points and complete objective fit at scrollY0 below the unchanged utility/header. Desktop body remains18px, approach16px, objective17px; no text-size reduction. Brochure action beneath objective removed; footer brochure retained.
+
+| Viewport | Opening bottom | Objective bottom | Fits first screen |
+| --- | ---: | ---: | --- |
+|1440×812|674.77px|658.53px|PASS|
+|1440×756|672.53px|657.41px|PASS|
+|1280×720|671.09px|656.70px|PASS|
+|1024×768|757.30px|741.95px|PASS|
+
+No horizontal overflow or clipped paragraph/list copy in the above or320/390/768px mobile/tablet checks. All33 source strings and seven approach points retained; no company-data changes. Header remains97px desktop,83px at390/768 and87.59px at320. Actual200% Chrome zoom gives720 CSSpx at1440 physical width; natural scrolling, full copy, no clipping/overflow. Mobile font sizes and What/Leadership treatment unchanged. Only section/title/paragraph/list spacing is tightened on desktop; no fixed-height box or content hiding.
+
+PASS:40-file Astro check0 diagnostics,188-page build,49,990 local references and existing source/menu/ARIA verifier. Diff whitespace and local Markdown links checked. Prior55 unit tests and855 navigation checks belong to CHG-026 and were not rerun for this presentation/link-removal correction. Evidence: .review/about-compact/{responsive,zoom}.json and desktop-opening.jpg; command logs .review/about-implementation/compact-*.txt. No physical-device/Safari/full accessibility review or production deployment. This supersedes CHG-026 opening spacing and local brochure expectations; remaining evidence is historical.
+
+
+## About implementation evidence — CHG-026, 1 November 2026
+
+R55–R56 / T66–T67 / A56–A57: PASS for the scoped local Chrome review below. Supersedes CHG-025 pending implementation and affected earlier About layout evidence; other route acceptance remains historical unless explicitly rerun.
+
+- A56 PASS: 1px orange pseudo-rule beneath ENGINEERING LIMITED in shared header/footer. Before/after measurements at 320/390/768/1024/1280/1440px show zero delta in header height, header brand width/height, name width, nav x/width, footer brand width/height. Existing gap used; no new layout height. Header remains 97px desktop, 83px at390/768 and87.59375px at320 (same baseline).
+- A57 PASS: visually inspected three desktop sections and mobile opening/stacked values against the approved PDF composition. Who uses the supplied red head with wide three-column approach (2/2/3); What uses grey head/two text columns and permanent clear Services/Spare Parts image links; Leadership uses source industrial/world-map background, triangular gold value circles beside the light message panel. Navy text on gold replaces reference white for contrast. Through360px values become rounded natural-height panels.
+- Source integrity PASS: all33 expected company strings preserved, including7 approach points,6 capabilities,3 values and5 commitments. No company-data changes. One h1; decorative images have empty alt; retained who-title, added who-we-are, existing what-we-do/leadership/quality anchors and brochure/services/equipment/certifications/contact destinations. Generated references and source-copy assertions pass.
+- Responsive PASS: About at six widths above, no horizontal overflow, all images loaded, no clipped paragraphs/list/value content. Heading scrollHeight rounding exceeds clientHeight slightly but overflow is visible; headings visually verified, not treated as clipping. Desktop columns and mobile stacking inspected. Actual200% Chrome zoom at1440 physical pixels gives720 CSSpx/DPR2; full content fits without horizontal overflow or value clipping.
+- Keyboard/journeys PASS: circular Services activated by Enter to/services/; Spare Parts clicked to/equipment/, Back returns correctly. Focus outline3px visible with no image transform. Mobile Menu opens and Escape dismisses. Header/footer metrics preserved; Home at390/1440 retains all17 cards at370px, no transforms or horizontal overflow.
+- Conservative contrast bounds (black watermark/underlay, white photo for light labels): Who body8.04:1, What body8.20:1, gold values5.51:1, Leadership body8.97:1/title4.86:1, circular-link label13.24:1. These bound the CSS underlays rather than claim a full accessibility audit.
+- Commands PASS:40-file Astro check0 errors/warnings/hints;55/55 tests;188-page build;49,991 local references;562 destinations/855 navigation semantic checks. No dependency, route, form or deployment changes.
+- Evidence: .review/about-implementation/{baseline,geometry,responsive,zoom,home-regression,actions,source-coverage,contrast}.json and desktop/mobile/zoom JPGs. Exact source/public/config hashes in checkpoint.json. No physical devices, Safari, screen-reader or full WCAG/Lighthouse audit; OS reduced motion not rerun (new About has no animations/hover reveals). Brochure/certification/contact targets statically checked; no live delivery/integration claim. Current uncommitted local preview: http://127.0.0.1:4322/about/.
+
+
 ## Planning evidence — CHG-025, 1 November 2026
 
 T65 complete: full PDF pages 10–12 freshly rendered/read, current About/Brand/company data inspected, eight embedded image candidates inspected on a contact sheet and the exact original source hash recorded in [the plan](about-reference-2026-11-01-plan.md). Application source/public assets remain CHG-024; its code checks are not invalidated by this planning-only change.
@@ -321,3 +429,13 @@ A44: Equipment Supply root left edge matches its summary at desktop widths; open
 A44 code/fixture checks PASS:54 tests;39-file Astro check with0 diagnostics;188-page build;49987 local link/asset references;381 generated-CSS assertions. Geometry regressions now verify the root stays at a crowded trigger while panel widths adapt; header tests verify the minimum needed shift, logo-clearance cap, repeat measurement without drift, wider-screen release and mobile cleanup. Actual menu-controller regression verifies navigationlayout repositions an open Equipment dropdown and opening both descendants keeps the root fixed. Existing mobile, keyboard, hover, gesture and canonical-link regressions pass.
 CSS evidence covers single-row alignment, preferred20/56px spacing and existing mobile/root styles. Runtime spacing is separately checked in DOM/geometry fixtures, not inferred from CSS. Formatting and git diff whitespace checks pass; preview4322 returns200. Logs .review/equipment-alignment/{tests,check,build,verify}.txt and css-audit.json.
 Rendered label wrapping/legibility, exact header geometry, pointer transit, zoom and touch remain NOT RUN because no supported browser controller is exposed. At constrained widths the former200/200/260px minimum widths are deliberately superseded by proportional fitting. No browser-derived minimum readable width is claimed. Earlier CHG-018 margin and CHG-017 minimum-width/root-clamp evidence is historical. No commit/push/deployment.
+
+## A60 — CHG-029 / R59 — resource request and notification (HISTORICAL; REVERTED CHG-031)
+PASS for local implementation scope (1 November 2026):
+- `npm run check`:42 files,0 errors/warnings/hints. `npm test`:60/60, including5 new download tests. `npm run build`:188 pages. `npm run verify`:50366 local references plus shared form/download-trigger assertions. `npm run audit:navigation`:passed structural audit; its browserInteraction NOT RUN refers to that script, not scoped Chrome checks below. `git diff --check`:passed. Logs under .review/download-*.log.
+- Tests validate types/required fields/lengths/header controls/consent/honeypot/path allowlist, all4 file mappings, fixed recipient and Reply-To/context, file-read-before-email and provider-acceptance-before-return ordering, missing config/file/provider reject/timeout, burst limiting. Actual Node HTTP request handler tested without listening socket:origin/method/content-type/JSON/size,attachment headers/no-store/PDF bytes,home/About404/traversal/direct-brochure redirect. Provider is mocked; no external mail sent.
+- Chrome at existing local preview4322:brochure popup, required-field validation,valid test submission shows unavailable error and preserves details/no download; certificate enlarged-view ISO14001 download correctly opens resource form; desktop layout and390×844 one-column layout visually reviewed. Native modal close restores brochure focus; viewport override reset. Final desktop screenshot .review/download-form.png. Browser automatic success/save after real mail NOT RUN.
+BLOCKED live activation: new server socket cannot listen in this execution sandbox (EPERM on0.0.0.0:3000 and loopback), so no full-stack network smoke test here. Tests exercise the actual request handler directly. Render/mail credentials/verified sender/recipient not configured; real provider acceptance/inbox arrival and production file download remain T72. Certificate viewing remains publicly accessible by design. Earlier A07/A08 enquiry/career/upload gates stay pending and are not satisfied by this separate download feature.
+
+## A64 — CHG-031 — download rollback
+PASS scoped rollback: direct brochure/certificate links restored; no DownloadForm, download client module, download manifest, Node email server, start command or mail environment example remains. Exact HEAD comparison passes for original README/package/verifier/certificate/privacy files; targeted source assertions confirm integration removed and unrelated About header measurement preserved. Astro check41 files/0 diagnostics;188-page build;49990 local references/source checks;git diff --check pass. Logs: .review/revert-download-{check,build,verify}.log. Browser/OS download not rerun. Concurrent About/catalogue/image changes preserved; these checks do not claim full acceptance of that work. A60 describes removed code and is not current acceptance evidence.

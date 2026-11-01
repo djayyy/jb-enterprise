@@ -16,6 +16,12 @@ const { node, home = false } = Astro.props;
 const size = (images as Record<string, { width: number; height: number }>)[
   node.image
 ];
+const kindLabel =
+  node.level === "category"
+    ? "Category"
+    : node.kind === "services"
+      ? "Engineering service"
+      : "Equipment & parts";
 ---
 
 <a
@@ -23,6 +29,7 @@ const size = (images as Record<string, { width: number; height: number }>)[
     "catalog-card",
     {
       "offering-card": home,
+      "catalog-card--framed": !home,
       "catalog-card--component": node.image === "critical-component",
     },
   ]}
@@ -38,15 +45,10 @@ const size = (images as Record<string, { width: number; height: number }>)[
       alt=""
       loading="lazy"
     />
-    <span class="catalog-card-kind">
-      {node.level === "category"
-        ? "Category"
-        : node.kind === "services"
-          ? "Engineering service"
-          : "Equipment & parts"}
-    </span>
+    {home && <span class="catalog-card-kind">{kindLabel}</span>}
   </div>
   <div class:list={["catalog-card-copy", { "offering-card-copy": home }]}>
+    {!home && <span class="catalog-card-kind">{kindLabel}</span>}
     <h3>{node.title}</h3>
     <p>{node.summary}</p>
     <span

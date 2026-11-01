@@ -175,15 +175,26 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
       window.addEventListener("resize", alignNavigation);
       compact.addEventListener("change", alignNavigation);
       document.fonts.ready.then(alignNavigation);
+      const utility = document.querySelector<HTMLElement>(".utility");
       const measureHeader = () => {
         const bounds = header.getBoundingClientRect();
+        document.documentElement.style.setProperty(
+          "--site-header-height",
+          `${bounds.height}px`,
+        );
+        document.documentElement.style.setProperty(
+          "--site-chrome-height",
+          `${bounds.height + (utility?.getBoundingClientRect().height || 0)}px`,
+        );
         header.style.setProperty("--header-height", `${bounds.height}px`);
         header.style.setProperty(
           "--header-bottom",
           `${Math.max(0, bounds.bottom)}px`,
         );
       };
-      new ResizeObserver(measureHeader).observe(header);
+      const headerObserver = new ResizeObserver(measureHeader);
+      headerObserver.observe(header);
+      if (utility) headerObserver.observe(utility);
       window.addEventListener("scroll", measureHeader, { passive: true });
       window.addEventListener("resize", measureHeader);
       window.visualViewport?.addEventListener("resize", measureHeader);

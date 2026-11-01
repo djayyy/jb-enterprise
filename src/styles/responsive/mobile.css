@@ -110,7 +110,7 @@
   .catalog-hero-copy {
     padding-bottom: 32px;
   }
-  .catalog-hero-copy > p:not(.eyebrow) {
+  .catalog-hero-panel > p:not(.eyebrow) {
     font-size: 15px;
   }
   .catalog-hero .button {
@@ -484,14 +484,6 @@
     font-size: 18px;
     line-height: 1.8;
   }
-  .about-engineer {
-    width: 85%;
-    height: 65%;
-    top: 0;
-    left: 0;
-    bottom: auto;
-    opacity: 0.06;
-  }
   .home-offerings {
     padding-block: 40px;
   }
@@ -528,5 +520,107 @@
   }
   .home-offerings .industry-cards {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* About sections grow with their text; no screen-height or clipped panels. */
+@media (max-width: 1000px) {
+  .about-reference-page .about-reference-section {
+    padding-block: 40px;
+    scroll-margin-top: 100px;
+  }
+  .about-reference-page .about-approach-columns {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+  .about-reference-page .about-what-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+  .about-reference-page .about-image-links {
+    justify-content: flex-start;
+  }
+  .about-reference-page .about-values {
+    max-width: 650px;
+  }
+  .about-reference-page .about-value p {
+    font-size: 16px;
+  }
+  .about-reference-page .about-who-watermark,
+  .about-reference-page .about-what-watermark {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .about-reference-page h1 {
+    font-size: 29px;
+    margin-bottom: 30px;
+  }
+  .about-reference-page h2 {
+    font-size: 31px;
+  }
+  .about-reference-page .about-subtitle {
+    font-size: 21px;
+  }
+  .about-reference-page .about-who-copy {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  .about-reference-page .about-approach {
+    padding: 22px 18px;
+  }
+  .about-reference-page .about-image-links {
+    justify-content: center;
+    gap: 18px;
+  }
+  .about-reference-page .about-image-link {
+    width: 144px;
+    height: 144px;
+  }
+  .about-reference-page .about-values {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 310px;
+  }
+  .about-reference-page .about-value:last-child {
+    grid-column: auto;
+    width: auto;
+  }
+  .about-reference-page .about-value {
+    padding: 28px;
+  }
+  .about-reference-page .about-leadership-message {
+    padding: 24px 20px;
+  }
+}
+@media (max-width: 360px) {
+  .about-reference-page .about-value {
+    aspect-ratio: auto;
+    border-radius: 32px;
+    padding: 30px 24px;
+  }
+}
+
+/* Catalogue photo areas fill edge to edge, with bounded source proportions. */
+@media (max-width: 1000px) {
+  .catalog-hero .catalog-hero-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .catalog-hero .catalog-hero-art {
+    order: -1;
+    width: min(100%, calc(280px * var(--catalog-photo-ratio)));
+  }
+  .catalog-hero .catalog-hero-copy {
+    padding: 0;
+  }
+  .catalog-hero .catalog-hero-panel {
+    padding: 0;
+    border: 0;
+  }
+  .catalog-card--framed .catalog-card-art {
+    height: 220px;
+  }
+  .catalog-card--framed .catalog-card-copy {
+    padding: 18px 20px;
   }
 }

@@ -1,6 +1,15 @@
 # Company-name underline and About reference layout plan
 
-1 November 2026 · CHG-025 · Planning only. Application remains V0.6.1 / CHG-024; no website code or public images changed.
+CHG-030 follow-up: reduce the opening top gap; compact What/Leadership spacing and circular actions, with short-window density rules and rounded value panels at1001–1200px. All source copy remains;15 desktop section/size cases fit, narrow layouts grow naturally. A61 supersedes previous density evidence. No change to source backgrounds.
+
+
+CHG-028 follow-up: desktop Who We Are now fills the remaining landing viewport, with its complete compact content centred; What We Do is below the initial screen and remains available on normal scroll. A59 supersedes the earlier shorter opening boundary.
+
+
+CHG-027 follow-up: user removes the opening brochure action and requires opening through objective to fit the desktop landing screen. Desktop spacing compacted with unchanged text sizes; A58 records four first-screen fits, mobile and zoom checks. This overrides the brochure/spacing portions of the original plan below.
+
+
+1 November 2026 · CHG-025 approved plan, implemented and locally verified by CHG-026. Package V0.6.1 retained. Historical planning details below describe the agreed scope.
 
 ## Goal and reference
 
@@ -81,4 +90,4 @@ Before closing implementation:
 4. Verify the six capabilities, seven approach points, three values, five leadership commitments, brochure/services/equipment/certifications/contact links and retained anchors.
 5. Run relevant typecheck/build/tests/link/navigation checks, update affected specs, and record actual evidence and limits.
 
-Planning complete; T66–T67 and A56–A57 remain pending. Website implementation and production deployment are unchanged.
+Implementation complete in CHG-026: T66–T67 complete and A56–A57 pass for scoped Chrome review. Exact verification and limits are in acceptance.md. No production deployment.

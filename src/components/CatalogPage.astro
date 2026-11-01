@@ -32,34 +32,44 @@ const sectionTitle =
     data-catalog-page={node.level}
     data-catalog-kind={node.kind}
   >
-    <img
-      src={`/images/${node.image}.webp`}
-      width={size.width}
-      height={size.height}
-      alt=""
-      fetchpriority="high"
-    />
-    <div class="catalog-hero-shade"></div>
-    <div class="container catalog-hero-copy">
-      <nav class="breadcrumbs" aria-label="Breadcrumb">
-        {node.breadcrumbs.map((b) => (
-          <>
-            <a href={b.url}>{b.title}</a>
-            <span aria-hidden="true">/</span>
-          </>
-        ))}
-        <span aria-current="page">{node.title}</span>
-      </nav>
-      <p class="eyebrow">
-        {node.kind === "services" ? "ENGINEERING SERVICES" : "EQUIPMENT SUPPLY"}
-      </p>
-      <h1>{node.title}</h1>
-      <p>{node.summary}</p>
-      <a class="button" href={node.quoteUrl}>
-        Enquire about{" "}
-        {node.kind === "services" ? "this service" : "these parts"}
-        <span aria-hidden="true">↗</span>
-      </a>
+    <div class="container catalog-hero-layout">
+      <div class="catalog-hero-copy">
+        <div class="catalog-hero-panel">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            {node.breadcrumbs.map((b) => (
+              <>
+                <a href={b.url}>{b.title}</a>
+                <span aria-hidden="true">/</span>
+              </>
+            ))}
+            <span aria-current="page">{node.title}</span>
+          </nav>
+          <p class="eyebrow">
+            {node.kind === "services"
+              ? "ENGINEERING SERVICES"
+              : "EQUIPMENT SUPPLY"}
+          </p>
+          <h1>{node.title}</h1>
+          <p>{node.summary}</p>
+          <a class="button" href={node.quoteUrl}>
+            Enquire about{" "}
+            {node.kind === "services" ? "this service" : "these parts"}
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+      <div
+        class="catalog-hero-art"
+        style={`--catalog-photo-ratio: ${size.width / size.height}`}
+      >
+        <img
+          src={`/images/${node.image}.webp`}
+          width={size.width}
+          height={size.height}
+          alt=""
+          fetchpriority="high"
+        />
+      </div>
     </div>
   </section>
   <section

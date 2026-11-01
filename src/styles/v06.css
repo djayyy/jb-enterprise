@@ -139,9 +139,16 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  height: 100%;
-  padding: 135px 24px 24px;
-  background: linear-gradient(180deg, transparent, #061e2db8 110px);
+  height: auto;
+  margin-top: auto;
+  padding: 18px 20px;
+  background: linear-gradient(180deg, transparent, #061e2db8 18px);
+}
+.catalog-card:not(.offering-card) {
+  min-height: 370px;
+  padding: 0;
+  border: 0;
+  align-items: stretch;
 }
 .catalog-card h3 {
   font-size: 23px;
@@ -179,23 +186,70 @@
   background: #103c55;
   color: #fff;
 }
-.catalog-hero > img,
-.catalog-hero-shade {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-.catalog-hero > img {
-  object-fit: cover;
-}
-.catalog-hero-shade {
-  background: linear-gradient(90deg, #09283fee, #09283fc2 58%, #09283f50);
+.catalog-hero-layout {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+  padding-block: 28px;
 }
 .catalog-hero-copy {
-  padding-top: 30px;
-  padding-bottom: 48px;
+  min-width: 0;
+}
+.catalog-hero-panel {
+  padding: 18px 0 18px 24px;
+  border-left: 3px solid var(--orange);
+}
+.catalog-hero-art {
+  width: min(100%, calc(360px * var(--catalog-photo-ratio)));
+  aspect-ratio: var(--catalog-photo-ratio);
+  min-width: 0;
+  justify-self: center;
+  overflow: hidden;
+}
+.catalog-hero-art img,
+.catalog-card--framed .catalog-card-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(1.06);
+}
+/* Share content tracks within each row without clipping longer copy. */
+.catalog-card--framed {
+  display: grid;
+  grid-row: span 5;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+}
+.catalog-card--framed .catalog-card-art {
+  position: relative;
+  inset: auto;
+  z-index: auto;
+  width: 100%;
+  height: 240px;
+  min-width: 0;
+  overflow: hidden;
+}
+.catalog-card--framed .catalog-card-copy {
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+  align-items: start;
+  width: 100%;
+  margin-top: 0;
+  background: #0a2b3f;
+}
+.catalog-card--framed .catalog-card-kind {
+  position: static;
+  width: fit-content;
+  padding: 0;
+  margin: 0 0 8px;
+  background: none;
+  color: #ffd2ac;
 }
 .catalog-hero .breadcrumbs {
   color: #d7e4ed;
@@ -225,7 +279,7 @@
   margin: 18px 0;
   overflow-wrap: anywhere;
 }
-.catalog-hero-copy > p:not(.eyebrow) {
+.catalog-hero-panel > p:not(.eyebrow) {
   max-width: 780px;
   font-size: 17px;
   line-height: 1.7;

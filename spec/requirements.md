@@ -102,8 +102,28 @@ R53 CONFIRMED (CHG-023): restore header/footer sizing, navigation spacing and ca
 
 R54 CONFIRMED (CHG-024): make the clearer card photograph, lighter readable text scrim and larger copy permanently visible. Remove hover-dependent clarity, zoom and typography changes from Industries/Core Services/Equipment image cards, including shared service/equipment catalogue cards. Preserve compact homepage sizing, supplied images, content/links and restored header/footer/Welcome. Keyboard focus retains an outline without changing the card's image/text presentation. Hero/carousel and navigation behaviour are outside this change.
 
-## Company-name rule and About reference layout — CHG-025 planning
+## Company-name rule and About reference layout — CHG-025/026
 
-R55 CONFIRMED: plan a thin orange rule below ENGINEERING LIMITED and above the tagline, matching the user screenshot while preserving current shared brand/header/footer dimensions and navigation positions.
+R55 CONFIRMED: implement a thin orange rule below ENGINEERING LIMITED and above the tagline, matching the user screenshot while preserving current shared brand/header/footer dimensions and navigation positions.
 
-R56 CONFIRMED: plan /about/ around the composition and similar backgrounds of S1 PDF pages 10–12: full-width Who We Are/approach/objective over the red industrial silhouette; two-column What We Do with all six capabilities and circular Services/Spare Parts links over the grey engineering watermark; Vision/Mission/Goal circles beside the full Leadership Message over the pale industrial/world-map backdrop. Retain supplied business copy, live HTML, existing links/anchors and responsive readability. Exact plan: [About reference plan](about-reference-2026-11-01-plan.md). Implementation is pending.
+R56 CONFIRMED: implement /about/ around the composition and similar backgrounds of S1 PDF pages 10–12: full-width Who We Are/approach/objective over the red industrial silhouette; two-column What We Do with all six capabilities and circular Services/Spare Parts links over the grey engineering watermark; Vision/Mission/Goal circles beside the full Leadership Message over the pale industrial/world-map backdrop. Retain supplied business copy, live HTML, existing links/anchors and responsive readability. Exact plan: [About reference plan](about-reference-2026-11-01-plan.md). Implemented in CHG-026; scoped local verification in A56–A57.
+
+R57 CONFIRMED (CHG-027): the opening About Us/Who We Are section, through the full “Our objective is simple” statement, must fit the initial desktop screen below the unchanged utility/header. Remove the brochure action beneath it. Tighten section/title/list spacing before reducing text size; retain all source copy and matching background. Mobile, short and zoomed screens retain readable natural flow instead of clipping content.
+
+R58 CONFIRMED (CHG-028): the initial desktop About screen shows only the complete opening through the objective; What We Do must start below the viewport and appear after scrolling. Fill remaining screen height beneath the unchanged utility/header; allow natural growth on small/zoomed screens. Keep What/Leadership and their content/anchors.
+
+R59 DEFERRED (CHG-031): user requested reverting CHG-029 for now. Brochure/certificate downloads remain direct without a details form or email notification; no backend is active.
+
+## About screen density and catalogue image clarity — CHG-030
+
+R60 CONFIRMED: reduce excess opening top space and fit What We Do (including both image links) and full Leadership content within their normal desktop screen below the sticky header. Retain source copy/backgrounds, opening objective/first-screen boundary, natural mobile/zoom scrolling and readable text.
+
+R61 CONFIRMED: permanently clear photos and readable text throughout service/equipment catalogue heroes and their component cards, matching Home's clearer treatment. Localise text scrims, avoid heavy whole-photo darkening and hover-dependent clarity/zoom; retain focus outlines and links.
+
+R62 CONFIRMED: inspect supplied images and replace repeated service/component backgrounds with suitable alternatives wherever available, prioritising meaningful subject matching and distinct sibling cards. Preserve requested Thermal Turbine and Critical Component source images. Keep provenance/dimensions and route-stable explicit choices; do not invent exact equipment/project identification for representative photos.
+
+R63 CONFIRMED (CHG-032): inspect and fix zoomed/cropped/blurry service and equipment catalogue banners and child/component photos. Show the whole supplied photo in bounded media areas, preserve aspect ratio and prevent enlargement past intrinsic CSS dimensions. Keep readable text separate from machinery, maintain canonical links, requested image mappings, previous duplicate-image fixes and keyboard/mobile access. Source resolution remains the upper limit; preserve unrelated Home/About/header styling.
+
+R64 CONFIRMED (CHG-033): remove light/white padded photo containers from catalogue banners and component cards; show photographs edge to edge across their image areas. Retain original proportions and avoid the earlier extreme full-banner zoom through source-proportional bounded hero sizing and moderate adaptive card media heights. Filling card areas may crop edges; latest fill preference supersedes R63's strict contain/no-enlargement requirement for catalogue media. Keep existing photos, readable separate text, routes, focus access and Home/About/header presentation.
+
+R65 CONFIRMED (CHG-034): standardise service/equipment catalogue card images, typography and text alignment. Use one photo height per breakpoint across all cards, with equal-height cards and aligned labels, headings, summaries and actions within each row. Keep complete readable copy, edge-to-edge photos, no hover zoom and natural narrow-screen growth; preserve hero/Home/About/source content. Supersedes R64 source-dependent card heights.

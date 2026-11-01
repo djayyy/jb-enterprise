@@ -162,3 +162,228 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* About reference composition: two readable text columns and value circles. */
+@media (min-width: 1001px) {
+  .about-reference-page .about-approach-columns {
+    grid-template-columns: 1fr 1fr 1.15fr;
+  }
+  .about-reference-page .about-what-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 54px;
+  }
+}
+@media (min-width: 1201px) {
+  .about-reference-page .about-leadership-layout {
+    grid-template-columns: 1.06fr 1fr;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .about-reference-page .about-values {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: none;
+  }
+  .about-reference-page .about-value:last-child {
+    grid-column: auto;
+    width: auto;
+  }
+}
+
+/* Fit the complete opening and objective below the existing site header. */
+@media (min-width: 1001px) {
+  .about-reference-page .about-who {
+    padding-block: clamp(12px, 2svh, 22px);
+    min-height: calc(100svh - var(--site-chrome-height, 137px));
+    display: grid;
+    align-items: start;
+  }
+  .about-reference-page .about-who h1 {
+    margin-bottom: 16px;
+  }
+  .about-reference-page .about-who h2 {
+    margin-bottom: 12px;
+  }
+  .about-reference-page .about-who .about-subtitle {
+    margin-bottom: 14px;
+  }
+  .about-reference-page .about-who-copy {
+    margin-bottom: 20px;
+    line-height: 1.75;
+  }
+  .about-reference-page .about-approach {
+    padding: 16px 22px;
+  }
+  .about-reference-page .about-approach h3 {
+    margin-bottom: 10px;
+  }
+  .about-reference-page .about-approach .plain-checks li {
+    padding-block: 6px;
+    line-height: 1.6;
+  }
+  .about-reference-page .about-who .about-objective {
+    max-width: none;
+    margin: 18px auto 0;
+    line-height: 1.6;
+  }
+}
+
+/* Complete About compositions use the available screen beneath the sticky header. */
+@media (min-width: 1001px) {
+  .about-reference-page .about-what,
+  .about-reference-page .about-leadership {
+    padding-block: 20px;
+    min-height: calc(100svh - var(--site-header-height, 97px));
+    display: grid;
+    align-items: start;
+    scroll-margin-top: var(--site-header-height, 97px);
+  }
+  .about-reference-page .about-what h2 {
+    margin-bottom: 20px;
+    font-size: 34px;
+  }
+  .about-reference-page .about-what-layout {
+    gap: 40px;
+  }
+  .about-reference-page .about-capability-column {
+    gap: 18px;
+  }
+  .about-reference-page .about-capability-column p {
+    line-height: 1.65;
+  }
+  .about-reference-page .about-capability-overview h3 {
+    font-size: 22px;
+  }
+  .about-reference-page .about-image-links {
+    gap: 22px;
+    padding-top: 0;
+  }
+  .about-reference-page .about-image-link {
+    width: 120px;
+    height: 120px;
+  }
+  .about-reference-page .about-image-link span {
+    font-size: 15px;
+    padding-bottom: 18px;
+    gap: 3px;
+  }
+  .about-reference-page .about-leadership-layout {
+    grid-template-columns: 1fr 1.13fr;
+    gap: 28px;
+  }
+  .about-reference-page .about-values {
+    max-width: 510px;
+    gap: 12px;
+  }
+  .about-reference-page .about-value {
+    padding: 20px;
+  }
+  .about-reference-page .about-value:last-child {
+    width: calc((100% - 12px) / 2);
+    grid-column: 1 / -1;
+  }
+  .about-reference-page .about-value svg {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 6px;
+  }
+  .about-reference-page .about-value h3 {
+    font-size: 22px;
+    margin-top: 8px;
+  }
+  .about-reference-page .about-value p {
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+  .about-reference-page .about-leadership-message {
+    padding: 22px;
+  }
+  .about-reference-page .about-leadership-message h2 {
+    font-size: 31px;
+    margin-bottom: 14px;
+  }
+  .about-reference-page .about-leadership-message > p {
+    font-size: 17px;
+    line-height: 1.65;
+    margin-bottom: 14px;
+  }
+  .about-reference-page .about-leadership-message .plain-checks {
+    gap: 8px;
+  }
+  .about-reference-page .about-leadership-message li {
+    padding-block: 6px;
+    line-height: 1.6;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .about-reference-page .about-what h3 {
+    font-size: 19px;
+  }
+  .about-reference-page .about-capability-column p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .about-reference-page .about-capability-column {
+    gap: 16px;
+  }
+  .about-reference-page .about-image-link {
+    width: 110px;
+    height: 110px;
+  }
+  .about-reference-page .about-values {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+  .about-reference-page .about-value,
+  .about-reference-page .about-value:last-child {
+    grid-column: auto;
+    width: auto;
+    aspect-ratio: auto;
+    border-radius: 28px;
+    padding: 14px 20px;
+  }
+  .about-reference-page .about-value h3 {
+    margin-top: 6px;
+  }
+}
+
+/* Short laptop windows retain full About content with comfortable bottom clearance. */
+@media (min-width: 1201px) and (max-height: 740px) {
+  .about-reference-page .about-who h1 {
+    margin-bottom: 12px;
+  }
+  .about-reference-page .about-who h2 {
+    margin-bottom: 10px;
+  }
+  .about-reference-page .about-who-copy {
+    line-height: 1.65;
+  }
+  .about-reference-page .about-what,
+  .about-reference-page .about-leadership {
+    padding-block: 14px;
+  }
+  .about-reference-page .about-what h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .about-reference-page .about-what h3 {
+    font-size: 20px;
+  }
+  .about-reference-page .about-capability-column {
+    gap: 14px;
+  }
+  .about-reference-page .about-capability-column p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .about-reference-page .about-image-link {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+/* Separate machinery photos from hero text; never stretch them across the banner. */
+@media (min-width: 1001px) {
+  .catalog-hero .catalog-hero-layout {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  }
+}

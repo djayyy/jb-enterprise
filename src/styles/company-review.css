@@ -107,31 +107,18 @@
 .complete-brand img {
   background: #fff;
 }
-.about-introduction {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  background: #fffafa;
-}
-.about-introduction .welcome-grid {
+/* Decorative rule uses the existing name/tagline gap without changing sizing. */
+.complete-brand small {
   position: relative;
 }
-.about-engineer {
+.complete-brand small::after {
+  content: "";
   position: absolute;
-  z-index: -1;
-  width: min(47%, 540px);
-  height: 90%;
-  left: max(0px, calc((100vw - 1200px) / 2));
-  bottom: 0;
-  object-fit: contain;
-  opacity: 0.075;
-  mix-blend-mode: multiply;
-  pointer-events: none;
-}
-.about-introduction .why-panel {
-  background: #fffffff2;
-  border: 1px solid #e3e9eb;
-  border-top: 3px solid var(--orange);
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 1px;
+  background: var(--orange);
 }
 /* Preserve the supplied portrait focal point without changing catalogue layout. */
 .catalog-card--component .catalog-card-art img {

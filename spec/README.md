@@ -1,6 +1,24 @@
 # JBAEL specification index
 
-Baseline: 2026-10-25 | Release: V0.6.1 / CHG-024 always-clear card review | Implementation: 188 static pages; tested Chrome desktop/mobile viewports; live forms and wider workbook backlog pending.
+CHG-034 current review: service/equipment cards use common240px desktop/220px narrow photos,23px titles/15px descriptions and per-row aligned text/action tracks. Full copy retained without clipping.360 all-page cases/394 card instances plus40 responsive cases pass;56 tests,41-file check,188-page build and49,990 link/asset checks pass. A67 records browser evidence/limits. Local uncommitted review; no deployment.
+
+
+CHG-033 current review: removed added light photo frames/padding from catalogue heroes and non-Home cards. Photos fill their media areas edge to edge; source-proportional bounded heroes and adaptive180–280px card areas use cover fitting without hover zoom. All178 detail pages plus2 indexes pass1440/390px checks (360 cases/750 media instances), plus40 responsive cases.56 tests,41-file check,188-page build and link/navigation checks pass. A66 records evidence/limits; local uncommitted review, no deployment.
+
+
+CHG-032 current review: catalogue heroes and non-Home cards now show complete bounded photos without cover cropping or enlargement past intrinsic CSS dimensions. All178 catalogue pages plus2 indexes pass desktop/mobile checks, with40 extra responsive cases and83 formerly unloaded images rechecked after loading.56 tests,41-file check,188-page build and link/navigation checks pass. A65 records evidence/source-resolution limits; checkpoint refreshed after reconnecting. Local uncommitted review; no deployment.
+
+
+CHG-030 current review: all three About compositions fit five tested desktop screen sizes, with reduced opening top space and full circular actions/Leadership. Service/equipment heroes and component cards are permanently clearer.157 explicit photo mappings change131 nodes;31 sibling groups have zero repeated images.56 tests,41-file check,188-page build and link/navigation checks pass; evidence/limits in A61–A63. Separate CHG-031 download rollback retained. Local uncommitted review; no deployment.
+
+
+CHG-028 current correction: desktop About opening fills the remaining first screen beneath the unchanged header; What We Do starts exactly at the viewport bottom at four tested sizes and appears on scroll. Full objective remains visible. A59 records responsive/menu/command evidence and limits; no deployment.
+
+
+CHG-027 current correction: opening About section through the full objective now fits normal desktop landing screens at1024×768,1280×720 and1440×756/812 without reducing text size. Opening brochure removed; footer link retained. Mobile/200% zoom keep natural readable flow. A58 records evidence/limits; build/typecheck/link checks pass, no deployment.
+
+
+Baseline: 2026-10-25 | Release: V0.6.1 / CHG-034 consistent catalogue cards | Implementation: 188 static pages; tested Chrome desktop/mobile viewports; live forms and wider workbook backlog pending.
 
 | File | Purpose |
 | --- | --- |
@@ -26,7 +44,7 @@ Baseline: 2026-10-25 | Release: V0.6.1 / CHG-024 always-clear card review | Impl
 | [change-log.md](change-log.md) | Per-change traceability and verification record |
 | [company-review-2026-10-28-plan.md](company-review-2026-10-28-plan.md) | Existing company workbook feedback plan and dependencies |
 | [image-feedback-2026-10-31-plan.md](image-feedback-2026-10-31-plan.md) | Current welcome redesign and nine-image replacement plan |
-| [about-reference-2026-11-01-plan.md](about-reference-2026-11-01-plan.md) | Planned company-name rule and About layout/background alignment with S1 pages 10–12 |
+| [about-reference-2026-11-01-plan.md](about-reference-2026-11-01-plan.md) | Implemented company-name rule and About layout/background alignment with S1 pages 10–12 |
 
 ## Use
 Project root is Jb-Service/. agents.md and spec/ are installed here. All original PDFs, legacy code and reference images are preserved under requirement/. Keep all future coding and project files inside Jb-Service/. Source paths in sources.md are relative to this project root.
@@ -63,3 +81,8 @@ Latest refinement: CHG-023 / R53 / T62–T63 / A53–A54 complete for local Chro
 Latest refinement: CHG-024 / R54 / T64 / A55 complete. Clearer photos/larger copy are permanent on Home and shared catalogue cards; image/text hover changes removed, keyboard outlines and compact grids retained. Current evidence in acceptance.md and checkpoint.json.
 
 Current planning: CHG-025 / R55–R56 / T65 complete, T66–T67 pending / A56–A57 NOT RUN. Company-name underline and About pages 10–12 composition/backgrounds inspected and planned; application remains CHG-024 with no code/public-asset change.
+
+Current implementation: CHG-026 / R55–R56 / T66–T67 complete / A56–A57 PASS for scoped Chrome desktop/mobile/200% zoom review. About reference composition and underline implemented with unchanged shared metrics; evidence/limits in acceptance.md. Earlier CHG-025 pending statements describe the planning checkpoint.
+
+
+CHG-031: user reverted CHG-029. Brochure/certificate download links are direct again; no download form or email backend remains. Other website work is preserved. See acceptance.md for scoped rollback checks.

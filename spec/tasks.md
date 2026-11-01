@@ -157,8 +157,34 @@ The existing company-review plan reserved T51–T58. T51 inventory is a prior pl
 
 - [x] T64 Promote the clear/larger-text state to default, remove image/text hover transformations across homepage and catalogue cards, and verify stable pointer/focus/mobile presentation and source/link preservation (R54; A55; CHG-024 evidence in acceptance.md and .review/always-clear/).
 
-## Company-name rule and About reference layout — CHG-025 planning
+## Company-name rule and About reference layout — CHG-025/026
 
 - [x] T65 Inspect user underline reference, full S1 pages 10–12, source backgrounds/actions and current About/brand/data; document exact composition, responsive plan and source mapping (R55–R56; planning evidence in about-reference-2026-11-01-plan.md).
-- [ ] T66 Implement shared underline and reference-aligned About sections/background derivatives, preserving source content, existing metrics and unaffected sections (R55–R56; A56–A57).
-- [ ] T67 Verify reference alignment, source coverage, brand/menu geometry, anchors, mobile/zoom/contrast and relevant command checks; update evidence (R55–R56; A56–A57).
+- [x] T66 Implement shared underline and reference-aligned About sections/background derivatives, preserving source content, existing metrics and unaffected sections (R55–R56; A56–A57).
+- [x] T67 Verify reference alignment, source coverage, brand/menu geometry, anchors, mobile/zoom/contrast and relevant command checks; update evidence (R55–R56; A56–A57).
+
+CHG-026: T66–T67 complete for scoped Chrome review. A56–A57 evidence covers six widths, unchanged shared geometry, source-copy coverage, links/focus and actual 200% zoom; physical-device/cross-browser/full accessibility review remains outside this check.
+
+- [x] T68 Compact the About opening, remove its brochure action, verify initial-viewport objective fit at normal desktop sizes and readable mobile/zoom reflow, and synchronise evidence (R57; A58; CHG-027).
+
+- [x] T69 Fill the desktop About landing height, keep What We Do below the fold, and verify objective fit, scroll access, resizing/mobile/zoom and unchanged shared header (R58; A59; CHG-028).
+
+## Download request forms — CHG-029, reverted by CHG-031
+- T70–T71 REVERTED: download modal/backend/associated tests removed at user request; future implementation is deferred (R59; historical A60).
+- Live Render/mail activation task from CHG-029 cancelled; no settings were provisioned.
+
+## About screen density and catalogue imagery — CHG-030
+- [x] T72 Compact all three About sections and verify desktop screen fit with full copy/photos and mobile natural reflow (R60; A61).
+- [x] T73 Audit supplied catalogue images, implement explicit relevant replacements and permanently clear hero/card presentation (R61–R62; A62–A63).
+- [x] T74 Verify source counts, image provenance/metadata, sibling duplicates, routes, hover/focus, desktop/mobile overflow and regression checks; synchronise evidence (R60–R62; A61–A63).
+
+## Download rollback — CHG-031
+- [x] T75 Restore direct downloads, remove CHG-029-only backend/form/config/tests and verify scoped rollback while preserving other changes (R59 deferred; A64).
+
+## Catalogue photo framing — CHG-032
+- [x] T76 Inspect all catalogue image dimensions/cropping and implement bounded, uncropped native-size hero/card media with responsive layouts (R63; A65).
+- [x] T77 Verify every catalogue hero and child card image fit, native-size cap, full text/routes, responsive/keyboard behaviour and unaffected pages; update specs/evidence (R63; A65).
+
+- [x] T78 Remove catalogue light photo frames, implement edge-to-edge responsive image fill with restrained cropping, and verify all shared layouts/content plus regression/spec/checkpoint checks (R64; A66; CHG-033).
+
+- [x] T79 Standardise catalogue card image/text tracks and responsive sizing; verify short/long content, service/equipment grids, focus and unchanged shared pages; synchronise specs/checkpoint (R65; A67; CHG-034).

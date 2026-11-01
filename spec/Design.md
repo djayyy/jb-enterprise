@@ -1,8 +1,25 @@
 # Design specification
 
-## Planned company-name rule and About composition — CHG-025
+CHG-034 / R65: catalogue card images use240px desktop/220px narrow heights independent of source ratio. Nested CSS subgrids align kind, title, summary and action tracks within each visual row while preserving full copy and natural row height. Text styles stay23px title/15px body, shared padding18px20px and consistent gaps; fill photos edge to edge without hover zoom. Home and catalogue hero styling unchanged. Supersedes CHG-033 source-dependent card heights.
 
-See [About reference plan](about-reference-2026-11-01-plan.md), R55–R56/T65–T67/A56–A57. Add only the thin orange wordmark rule within current branding metrics. Plan the page-10 wide Who We Are/approach layout, page-11 two-column capabilities/circular actions and page-12 circular values/Leadership panel with their matching supplied backgrounds. Replace the About opening control-room hero with the reference opening composition; preserve existing copy, anchors, closing links, shared brand/nav metrics and always-clear cards elsewhere. Planning only; current implementation remains CHG-024.
+CHG-033 / R64: remove CSS light padding/background from catalogue media. Hero image area hugs the source aspect ratio with a360px desktop/280px narrow height limit, filling its own area without bars. Card areas use the source ratio with180–280px height bounds and cover fitting; this trades some edge crop for the user's requested edge-to-edge fill. Images stay beside/above separate readable copy, with no hover scale. Home/About/header unaffected. This supersedes CHG-032's strict contain/native-size cap.
+
+
+CHG-032 / R63 supersedes catalogue full-background cover framing: desktop hero is a readable navy text column beside a light bounded photo frame; narrow screens stack photo above text. Images use intrinsic automatic dimensions with maximum frame bounds and contain fitting, without enlarging small originals. Non-Home catalogue cards similarly separate uncropped photo from navy copy, so machinery is not covered by headings. Home image cards and About remain unchanged. Type labels move into catalogue copy rather than covering photos.
+
+
+CHG-030: desktop About uses compact consistent section padding/gaps, top-aligns opening content while retaining its first-screen minimum height, reduces action-circle diameter and value-panel/message spacing. All source text stays live; medium screens may use rounded value panels to fit rather than shrink/crop text. Catalogue heroes keep a bright full background with a bounded readable text scrim; catalogue child cards adopt Home's bottom text scrim/clear photo at rest, no hover image changes. Explicit route-specific supplied photo mappings override the broad keyword fallback; no route/copy changes.
+
+
+CHG-028 / R58: desktop About opening uses minimum height equal to the viewport minus measured utility/header height, with content vertically centred. What We Do starts after the first screen; keep normal document scrolling and existing anchors. No fixed-height clipping, scroll snapping or hidden sections. Narrow layouts retain natural flow.
+
+
+CHG-027 / R57: compact the desktop opening through the objective by tightening section padding, heading/paragraph gaps and approach-list rows. Remove the local brochure action and its unused styles; keep the footer brochure link. Opening content has natural height, with no clipping or fixed-height text box. Mobile text sizes and subsequent What/Leadership sections are preserved.
+
+
+## Company-name rule and About composition — CHG-026
+
+See [About reference plan](about-reference-2026-11-01-plan.md), R55–R56/T65–T67/A56–A57. Add only the thin orange wordmark rule within current branding metrics. Use the page-10 wide Who We Are/approach layout, page-11 two-column capabilities/circular actions and page-12 circular values/Leadership panel with their matching supplied backgrounds. Replace the About opening control-room hero with the reference opening composition; preserve existing copy, anchors, closing links, shared brand/nav metrics and always-clear cards elsewhere. Implemented: about-reference.css owns shared About treatment; responsive/desktop.css and mobile.css own device layouts. Leadership uses navy copy over gold for contrast; values stack on phones and become rounded, naturally sized panels through 360px. The 1px wordmark pseudo-rule occupies the existing gap and adds no layout height. Current evidence: A56–A57.
 
 ## Always-clear image cards — CHG-024
 

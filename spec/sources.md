@@ -77,3 +77,15 @@ CHG-016: visually inspected user screenshot Screenshot2026-10-26 at11.14.56PM.pn
 ## CHG-025 About reference reinspection — 1 November 2026
 
 S1 pages 10–12 freshly rendered and visually inspected; full text and placed-image metadata read. Source SHA-256 a0259c5a1e60da268f8d029c56f2b4a909f3e870636aca9ae4e40196d8ef4d17. Inspected embedded xrefs 2965 (red industrial head), 3011/3014/3025 (grey/blue variants), 3038 (400×309 spares image), 3041 (circular frame), 3054 (480×360 turbine/workshop image), 5778 (1536×1024 pale industrial/world-map background). Existing S8 red Who We Are image is also suitable. Read-only extraction/render evidence: .review/about-plan/. New public assets not created. Exact planned use and source references are in about-reference-2026-11-01-plan.md.
+
+## CHG-026 About asset implementation — 1 November 2026
+
+Reused S8 about-engineer (988/480 variants) for Who. From preserved S1 PDF: page11 xref3011 -> about-what-background.webp1024² and -480.webp480²; xref3054 -> about-services-link.webp480×360; xref3038 -> about-spares-link.webp400×309. Page12 xref5778 -> about-leadership-background.webp1536×1024 and -768.webp768×512. Six resized WebP derivatives total344,330bytes, quality85/method6; no generated imagery or changes to original requirement files. Decorative backgrounds and photos have live HTML text/actions overlaid. Exact provenance/dimensions in assets.json/image-metadata.json. Source business data remains unchanged; full33-string coverage assertion passed.
+
+## CHG-030 catalogue photo review — 1 November2026
+
+Reviewed127 images under S4 requirement/D01. Docs - JBAEL Modification/Images For Website (Generator47, Turbine23, Electrical21, Testings18, C&I9, Rewamping5,3D Scaning4) plus95 non-logo/non-frame image candidates extracted from S1 pp15–40. Contact sheets/source metadata retained in ignored.review/catalog-clarity/. Used relevant company inspection/winding/machining/testing photos and supplied PDF boiler/hydro/valve/seal/fastener references; no external/generated imagery.
+
+76 new detail-*.webp derivatives: maximum1440px per edge, EXIF orientation respected, white compositing for alpha, quality86/method6, no upscaling;6,671,336bytes total, largest375,658bytes. New derivative names and exact source paths/PDF pages/xrefs are recorded in src/data/assets.json; exact dimensions in image-metadata.json. Source SHA-256s and derivative sizes in ignored new-assets.json. Original requirement files untouched.
+
+Explicit choices: [catalog-photos.mjs](../src/data/catalog-photos.mjs),157 route keys;131 actual node images changed. Unique catalogue image keys rise30→104; duplicate sibling groups fall22→0 across31 groups, with a persistent exact-byte regression check. All178 node title/summary/destination/source facts unchanged. Required turbine-services and critical-component assets retained. Some images remain representative/reference and small originals limit zoomed banner resolution; cross-page reuse for related equipment is intentional. No exact part or completed-company-project claims were added.

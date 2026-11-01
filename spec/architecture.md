@@ -1,5 +1,21 @@
 # Architecture and form contract
 
+CHG-034: CatalogCard no longer emits source-ratio styling. A five-track card subgrid and nested four-track copy subgrid share natural text row sizes within each catalogue grid row; media uses240px desktop/220px narrow height. This is CSS layout only, retaining markup semantics, image dimensions, content, lazy loading, routes and runtime contracts. Home is excluded through catalog-card--framed scope; heroes retain CHG-033 source-proportional framing.
+
+CHG-033 presentation supplement: both catalogue templates emit --catalog-photo-ratio from existing image metadata. Shared CSS uses that ratio for bounded hero frames and adaptive card media, with full-area cover fitting and no light padding/background. Mobile caps hero height at280px; shared desktop bound360px. No JavaScript, data, mapping, dependency, route or backend changes. This supersedes CHG-032 intrinsic-size/contain presentation only.
+
+
+CHG-032 presentation supplement: CatalogPage uses one responsive text/photo grid with a dedicated photo frame; CatalogCard adds catalog-card--framed only when home=false. Shared CSS bounds intrinsic media dimensions; desktop/mobile files control columns/stacking. No new runtime script, asset, mapping, route, dependency or form/backend contract. CHG-031 direct downloads remain unchanged.
+
+
+CHG-030 presentation/data supplement: catalog-photos.mjs maps157 canonical routes to reviewed photos before the existing keyword fallback; shared nodes keep all route/content contracts.76 new WebPs and metadata/provenance only, no dependencies. CatalogPage adds a text-panel wrapper; mobile/desktop styles own screen density and image presentation. Existing header measurement exposes --site-header-height for subsequent About sections in addition to total chrome height. Separate CHG-031 direct-download rollback is retained; this task changes no backend/form behaviour.
+
+
+CHG-028: existing shared header measurement now exposes total utility/header height as root CSS property --site-chrome-height and observes both elements. Desktop About subtracts this from100svh for minimum landing height; existing menu-height variables/logic remain. No dependency, route, server or form contract change.
+
+
+CHG-026 presentation supplement: /about/ imports scoped about-reference.css; shared content stays in company.ts. Six supplied-image WebP derivatives total344,330bytes, with dimensions/provenance in existing manifests. Device rules remain in responsive/desktop.css and mobile.css. Shared wordmark decoration is CSS only; stack, routes, client scripts, dependencies and data/form/deployment contracts are unchanged.
+
 Status: static review implemented in Astro 7.4.2; live form/storage contracts below remain proposed. No external infrastructure provisioned.
 
 ## Components

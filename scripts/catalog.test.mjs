@@ -1,6 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import { createHash } from "node:crypto";
+import { catalogPhotos } from "../src/data/catalog-photos.mjs";
 import {
   buildCatalog,
   catalogImage,
@@ -13,7 +15,7 @@ const tree = buildCatalog(services, equipment);
 const resolve = (path, query = "", hash = "") =>
   legacyCatalogDestination(path, query, hash, tree.legacy);
 
-test("feedback photos distinguish critical development and only replace the intended thermal service", () => {
+test("requested turbine and critical-component photos survive reviewed catalogue replacements", () => {
   const page = (url) => tree.servicePages.find((node) => node.url === url);
   const reverse = page("/services/reverse-engineering/");
   const critical = page(
@@ -29,7 +31,10 @@ test("feedback photos distinguish critical development and only replace the inte
   );
   assert.equal(page("/services/thermal/turbine/").image, "turbine-services");
   assert.equal(page("/services/thermal/").image, "thermal-plant");
-  assert.equal(page("/services/thermal/boiler/").image, "thermal-plant");
+  assert.equal(
+    page("/services/thermal/boiler/").image,
+    "detail-reference-3286",
+  );
   assert.equal(
     catalogImage("Blade repair", "turbine-services"),
     "catalog-blading",
@@ -154,4 +159,22 @@ test("photo matching does not confuse boiler with oil equipment", () => {
     catalogImage("Generator spares & components", "thermal-plant"),
     "generator-hero",
   );
+});
+
+test("catalogue siblings have distinct supplied photos and explicit choices target real routes", () => {
+  const urls = new Set(tree.allPages.map((node) => node.url));
+  for (const url of Object.keys(catalogPhotos))
+    assert.ok(urls.has(url), `Stale photo override: ${url}`);
+  for (const node of tree.allPages.filter((node) => node.children.length > 1)) {
+    const photos = node.children.map((child) =>
+      createHash("sha256")
+        .update(fs.readFileSync(`public/images/${child.image}.webp`))
+        .digest("hex"),
+    );
+    assert.equal(
+      new Set(photos).size,
+      photos.length,
+      `Repeated sibling photo: ${node.url}`,
+    );
+  }
 });
