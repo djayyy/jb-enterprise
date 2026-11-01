@@ -107,3 +107,7 @@ CHG-047: complete company-facing Privacy Policy and shared labels replace previe
 CHG-048: all188 rendered pages audited for internal/unfinished public copy, with0 remaining targeted findings; review notes/provenance labels/pending social controls removed, Careers/file messages polished. A83 build/type/test/link/scoped browser checks pass. Email backend and staging SEO remain unchanged; full operational readiness not claimed.
 
 CHG-049: footer tagline below logo/above3 offices;5 header/footer social icons restored without pending labels. A84 build/type/link/all-route order and desktop visual checks pass.
+
+CHG-050: header uses existing emblem without embedded company text; footer complete logo unchanged. A85 build/type/link/all188 route assertions and desktop visual pass; mobile not rerun.
+
+CHG-051: duplicate footer company-name wordmark removed; complete footer logo, tagline/offices and header preserved. A86 build/type/link/all188 markup checks pass; browser visual checks not rerun.

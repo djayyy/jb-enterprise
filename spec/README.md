@@ -1,5 +1,9 @@
 # JBAEL specification index
 
+Latest CHG-051: duplicate company-name text beside footer logo removed; header unchanged. R84/T98/A86 checks/limits recorded.
+
+Latest CHG-050: text-free header emblem and unchanged complete footer logo; R83/T97/A85 verified.
+
 Latest CHG-049: footer tagline restored beneath logo and all5 socials visible; R82/T96/A84 verified scope/limits recorded.
 
 Latest CHG-048: whole-site public-copy audit/cleanup complete across188 pages; R81/T95/A83 checks pass. Operational launch limitations remain documented.

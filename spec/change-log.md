@@ -365,3 +365,13 @@ Commit preparation for CHG-035–CHG-046: final combined worktree regression PAS
 - R82 / T96 / A84. Move tagline immediately below footer Brand before locations,12px top gap. Restore all5 original platform marks in shared header/footer; LinkedIn retains real URL and4 others remain native-disabled, plain platform labels/tooltips with no pending notes or fake links. Supersedes CHG-048 social omission only; other copy cleanup preserved.
 - Files: Layout.astro, SocialLinks.astro, company-review.css. Specs: requirements/design/tasks/acceptance/index/status/checkpoint updated. Architecture/sources/decisions/versions/workflow/agents/older audits unchanged: existing social assets/link and static order/style correction, no new runtime/content fact/release/backend.
 - PASS:50-file check0 diagnostics;188-page build;50,974 reference/source checks;all188 footer-order/social-count assertions;IAB desktop visual/geometry;git diff --check. A84 mobile limit. No commit/push/deployment.
+
+## CHG-050 —1 November2026 — distinct header and footer emblems
+- R83 / T97 / A85. Header uses existing text-free jbael-logo.png; footer retains complete artwork/srcset. Adjacent company name/tagline and all CSS sizing retained.
+- Files: Brand.astro. Specs: requirements/design/architecture/sources/tasks/acceptance/index/status/checkpoint updated. Decisions/versions/workflow/agents and older audits unchanged: bounded asset selection without new source fact/runtime/backend/release contract.
+- PASS:50-file check0 diagnostics;188-page build;50,974 reference/source checks;all188 header/footer source/srcset/dimension assertions;IAB desktop visual;git diff --check. A85 records mobile limit. No commit/push/deployment.
+
+## CHG-051 —1 November2026 — remove duplicate footer company name
+- R84 / T98 / A86. Brand renders adjacent company-name span only for header. Footer retains complete supplied logo, accessible home link, separate tagline and offices.
+- Files: Brand.astro. Specs: requirements/design/tasks/acceptance/index/status/checkpoint updated. Architecture/sources/decisions/versions/workflow/agents and previous plans unchanged: conditional static markup removal using existing assets, no source fact/runtime/contract/release change. Prior header-logo work preserved.
+- PASS:50-file check0 diagnostics;188-page build;50,974 reference/source checks;all188 header/footer assertions;git diff --check. Browser visual/mobile checks not rerun; no CSS changes. No commit/push/deployment.

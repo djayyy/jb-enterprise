@@ -160,3 +160,7 @@ R80 CONFIRMED (CHG-047): replace Privacy & preview information with complete com
 R81 CONFIRMED (CHG-048): audit all188 rendered pages/shared components for visitor-facing internal review/development/placeholder wording. Remove Contact/certificate review notes, provenance qualifiers in display/alt/meta text and unfinished Careers/form error text; omit social controls with no real destination. Retain truthful privacy disclosures, meaningful engineering terms and source-backed company facts. No automatic deployment/real-email change.
 
 R82 CONFIRMED (CHG-049): footer tagline immediately below logo, before all3 office addresses. Restore all5 social icons in shared header/footer; LinkedIn keeps real link, unknown profiles stay disabled without pending/unfinished labels or fake URLs. Supersedes R81 social omission only.
+
+R83 CONFIRMED (CHG-050): header emblem uses existing jbael-logo.png without embedded Advanced Engineering Ltd text; footer keeps existing complete jbael-brand artwork. Preserve company wordmark/tagline/layout beside both emblems.
+
+R84 CONFIRMED (CHG-051): remove the separate company-name wordmark beside the footer logo because the complete artwork already includes the name. Keep footer artwork, tagline below logo, offices and header unchanged. Supersedes R83 only for footer adjacent name markup.

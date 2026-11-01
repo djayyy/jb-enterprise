@@ -221,3 +221,7 @@ CHG-026: T66–T67 complete for scoped Chrome review. A56–A57 evidence covers 
 - [x] T95 Audit rendered content/metadata/accessible text across188 pages, clean internal/unfinished language and dead social controls, verify copy/runtime regressions (R81; A83; CHG-048).
 
 - [x] T96 Move footer tagline beneath logo and restore5 shared social icons; verify order/count/links/responsive fit (R82; A84; CHG-049).
+
+- [x] T97 Split header/footer emblem selection in shared Brand and verify all188 routes and asset metadata (R83; A85; CHG-050).
+
+- [x] T98 Remove duplicate footer wordmark and verify header preservation across all routes (R84; A86; CHG-051).

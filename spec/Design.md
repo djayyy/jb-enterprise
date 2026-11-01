@@ -195,3 +195,7 @@ CHG-047 / R80: /privacy/ retains canonical route, now Privacy Policy with effect
 CHG-048 / R81: visitor-facing copy uses direct business language, no internal document/reference/verification-pending notes. Careers uses professional expressions-of-interest wording without invented vacancies. Certificate metadata/alt text describe documents directly. Header/footer show only verified LinkedIn destination; unavailable social buttons omitted. File errors omit preview terminology; careers action Submit application with neutral interest acknowledgment.
 
 CHG-049 / R82: footer order logo→tagline→3 addresses→social icons. Tagline has12px top gap. Shared SocialLinks restores LinkedIn/X/YouTube/Facebook/Instagram; only LinkedIn navigates, others native-disabled with plain platform names/tooltips. No pending sentence restored.
+
+CHG-050 / R83: Brand footer prop selects current496×481 complete artwork/srcset for footer; header selects existing321×324 emblem-only PNG without footer srcset. Existing CSS display sizing and adjacent name/tagline remain.
+
+CHG-051 / R84: Brand renders its adjacent name/tagline span only in the header. Footer retains the linked complete emblem with accessible home label and the existing separate footer-tagline paragraph. No display-size changes.

@@ -136,3 +136,5 @@ CHG-046: offices.ts is the shared source of3 office titles/unchanged addresses f
 CHG-047: privacy page and link labels are presentation/content only. Document current local-only form validation/file selection, resource-access session flag, locally checked captcha, self-hosted assets/no analytics code. Hosting infrastructure logging disclosed conditionally rather than inventing provider/retention settings. No backend/cookie manager/tracker/data flow changed. Future email/form integration must update policy to its actual processing.
 
 CHG-048: visitor copy/metadata/accessible labels cleaned; SocialLinks now emits only existing LinkedIn anchor instead of disabled unknown destinations. Existing form file-validation rules stay identical, only error text changes. Site verifier guards against known internal/placeholder phrases across all188 pages. No backend/tracker/dependency/data-handling/SEO/cutover change.
+
+CHG-050: shared Brand footer prop selects emblem source, optional responsive srcset and intrinsic dimensions. Header uses text-free PNG; footer preserves complete-logo WebP variants. No dependency, route, runtime or backend change.
