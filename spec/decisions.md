@@ -123,3 +123,11 @@ D64 — CHG-033,1 November2026: latest user rejects the added light/white frames
 
 
 D65 — CHG-034,1 November2026: source-specific photo aspect ratios caused mismatched text-panel starts. Replace adaptive card heights with240px desktop/220px narrow media and subgrid text tracks aligned within each row. Keep23px headings/15px descriptions; do not truncate text or impose a rigid total height on long copy. Row heights grow together to accommodate their longest content. Latest consistency request supersedes D64 source-dependent card media heights, while retaining edge-to-edge cover and unchanged hero/Home/About.
+
+D63 — CHG-035, 1 November 2026: use individual embedded S9 logos rather than the complete PDF sheet or old composite testimonial image, preserving all 20 source logos in row order. Place client strip after Welcome to mirror legacy placement. Quote heading/document form one visible accessible link, matching supplied screenshot without an extra action box. Custom About/contact and catalogue quote contexts remain. No new email/form/backend work.
+
+D64 — CHG-036: user explicitly requests always-running normal client scroll, removing control and hover/focus stop. Reduced-motion fallback retained. Footer text becomes upward SVG in44px outlined circular anchor; same #main target and accessible name.
+
+D66 — CHG-041,1 November2026: implement the accepted mock plan with details once per browser tab session (sessionStorage grant only). Keep demo/no-email notice visible beside both mock confirmation and resource form; do not claim actual email delivery. Personal details are never persisted; storage denial falls back to memory. User-visible document actions are gated, while direct static URLs/no-JS access stay public. No backend integration until separately requested.
+
+D67 — CHG-042: remove demo/implementation notices from active form UI and footer; replace contact promise with neutral interest acknowledgment and direct team email, avoiding an email-sent/delivered claim while backend is absent. Retain truthful data-handling/privacy documentation. Add accessible arithmetic human check without a third-party provider/key; label it Human verification and document browser-only scope. Session flagv2 requires new details/check for old grants.

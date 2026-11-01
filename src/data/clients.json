@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Adani Power",
+    "image": "/images/clients/adani-power.webp",
+    "width": 281,
+    "height": 166
+  },
+  {
+    "name": "JSW Energy",
+    "image": "/images/clients/jsw-energy.webp",
+    "width": 365,
+    "height": 112
+  },
+  {
+    "name": "Jindal Steel & Power",
+    "image": "/images/clients/jindal-steel-power.webp",
+    "width": 322,
+    "height": 147
+  },
+  {
+    "name": "Nuvoco",
+    "image": "/images/clients/nuvoco.webp",
+    "width": 289,
+    "height": 195
+  },
+  {
+    "name": "Tata",
+    "image": "/images/clients/tata.webp",
+    "width": 232,
+    "height": 190
+  },
+  {
+    "name": "Vedanta",
+    "image": "/images/clients/vedanta.webp",
+    "width": 365,
+    "height": 91
+  },
+  {
+    "name": "SEIL",
+    "image": "/images/clients/seil.webp",
+    "width": 143,
+    "height": 147
+  },
+  {
+    "name": "E²C — Énergie Électrique du Congo",
+    "image": "/images/clients/e2c.webp",
+    "width": 301,
+    "height": 200
+  },
+  {
+    "name": "ACB (India) Limited",
+    "image": "/images/clients/acb-india.webp",
+    "width": 355,
+    "height": 200
+  },
+  {
+    "name": "GMR",
+    "image": "/images/clients/gmr.webp",
+    "width": 314,
+    "height": 112
+  },
+  {
+    "name": "Sembcorp",
+    "image": "/images/clients/sembcorp.webp",
+    "width": 249,
+    "height": 78
+  },
+  {
+    "name": "SPGCL",
+    "image": "/images/clients/spgcl.webp",
+    "width": 168,
+    "height": 200
+  },
+  {
+    "name": "Nirma Limited",
+    "image": "/images/clients/nirma.webp",
+    "width": 289,
+    "height": 198
+  },
+  {
+    "name": "TSGENCO",
+    "image": "/images/clients/tsgenco.webp",
+    "width": 202,
+    "height": 200
+  },
+  {
+    "name": "Ceylon Electricity Board",
+    "image": "/images/clients/ceylon-electricity-board.webp",
+    "width": 189,
+    "height": 200
+  },
+  {
+    "name": "National Power Supply",
+    "image": "/images/clients/national-power-supply.webp",
+    "width": 299,
+    "height": 200
+  },
+  {
+    "name": "Inland Power",
+    "image": "/images/clients/inland-power.webp",
+    "width": 200,
+    "height": 200
+  },
+  {
+    "name": "R.K.M. PowerGen",
+    "image": "/images/clients/rkm-powergen.webp",
+    "width": 338,
+    "height": 104
+  },
+  {
+    "name": "Sarda Energy & Minerals",
+    "image": "/images/clients/sarda.webp",
+    "width": 375,
+    "height": 155
+  },
+  {
+    "name": "PLN",
+    "image": "/images/clients/pln.webp",
+    "width": 200,
+    "height": 200
+  }
+]

@@ -100,3 +100,11 @@ CHG-017 —26 October2026: rightward-only/list-only menu refinement in the same 
 CHG-018 —27 October2026: modest header-margin correction in the same V0.6.1 folder.51 tests,188-page build and381 static CSS checks pass; browser verification pending. No archive, commit, push or deployment.
 
 CHG-019 —28 October2026: vertical Equipment dropdown alignment in the same V0.6.1 working folder;54 tests,39-file check0 diagnostics,188-page build and381 static CSS checks pass. Browser acceptance pending. No archive, commit, push or deployment.
+
+CHG-035 — 1 November 2026: same V0.6.1 checkout, reference-style shared quote banner and source-backed 20-client homepage marquee. Local review; no deployment/commit/push. A68–A69 record checks and limits.
+
+CHG-036 — 1 November 2026: continuous client scroll and icon-only footer return; same V0.6.1 local checkout, no deployment. A70 evidence/limits.
+
+CHG-037 —1 November2026: supplied updated brochure replaces canonical download; same V0.6.1 local checkout. A71 checks pass; no deployment.
+
+CHG-041 —1 November2026: same V0.6.1 local checkout; mocked Contact/Quote confirmation and once-per-tab document-details form. A75–A76 verified scope/limits. No deployment/commit/push.

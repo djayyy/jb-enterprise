@@ -11,6 +11,9 @@ import "../styles/responsive/desktop.css";
 import "../styles/responsive/mobile.css";
 import NavigationDropdown from "../components/NavigationDropdown.astro";
 import Brand from "../components/Brand.astro";
+import MockDialogs from "../components/MockDialogs.astro";
+import "../styles/mock-forms.css";
+import { offices } from "../data/offices";
 const {
   title = "JB Advanced Engineering Limited",
   description = "Integrated engineering, refurbishment and lifecycle support for critical power generation assets.",
@@ -98,9 +101,16 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
         <div class="footer-top">
           <div>
             <Brand footer />
+            <div class="footer-offices" aria-label="Company locations">
+              {offices.map((office) => (
+                <address>
+                  <strong>{office.title}</strong>
+                  <span>{office.address}</span>
+                </address>
+              ))}
+            </div>
             <p>Powering precision, Engineering the future.</p>
             <SocialLinks />
-            <p class="social-note">Additional social profile links pending.</p>
           </div>
           <div>
             <h3>Explore</h3>
@@ -109,7 +119,7 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
             <a href="/about/">About JBAEL</a>
             <a href="/careers/">Careers</a>
           </div>
-          <div>
+          <div class="footer-resources">
             <h3>Resources</h3>
             <a href="/certifications/">Industry Certifications</a>
             <a
@@ -119,7 +129,28 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
             >
               Company brochure ↗
             </a>
-            <a href="/privacy/">Privacy & preview information</a>
+            <a
+              href="/downloads/executed-projects.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Executed Projects ↗
+            </a>
+            <a
+              href="/downloads/spares-supply.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Spares supply ↗
+            </a>
+            <a
+              href="/downloads/reverse-engineering-manufacturing-portfolio.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Reverse Engineering &amp; Manufacturing Portfolio&nbsp;↗
+            </a>
+            <a href="/privacy/">Privacy information</a>
           </div>
           <div>
             <h3>Let’s talk engineering</h3>
@@ -134,11 +165,19 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
           <span>
             © {new Date().getFullYear()} JB Advanced Engineering Limited
           </span>
-          <span>V0.6.1 · Design review · Enquiries not connected</span>
-          <a href="#main">Back to top ↑</a>
+          <span>Powering precision. Engineering the future.</span>
+          <a
+            href="#main"
+            class="back-to-top"
+            aria-label="Back to top"
+            title="Back to top"
+          >
+            <Icon name="up" size={22} />
+          </a>
         </div>
       </div>
     </footer>
+    <MockDialogs />
     <script>
       import { settleTarget } from "../lib/scroll-target";
       import { alignHeaderNavigation } from "../lib/menu-position.mjs";

@@ -1,18 +1,14 @@
 ---
 import Icon from "./Icon.astro";
+import HumanCheck from "./HumanCheck.astro";
 const { kind = "contact" } = Astro.props;
 const career = kind === "career",
   quote = kind === "quote";
 ---
 
-<div class="preview-note" id="preview-note">
-  <strong>Interactive preview.</strong> You can check the fields and select
-  files on your device. Nothing is sent, uploaded or saved by this form.
-</div>
+<p id="preview-note">Please complete the required fields below.</p>
 <noscript>
-  <p class="preview-note">
-    Enable JavaScript to check this form. It will not submit an enquiry.
-  </p>
+  <p class="preview-note">Enable JavaScript to complete this form.</p>
 </noscript>
 <form
   class="enquiry-form"
@@ -53,14 +49,13 @@ const career = kind === "career",
       />
     </div>
     <div class="field">
-      <label for="phone">
-        Phone <span>(optional)</span>
-      </label>
+      <label for="phone">Phone {career ? "*" : "(optional)"}</label>
       <input
         id="phone"
         name="phone"
         type="tel"
         autocomplete="tel"
+        required={career}
         maxlength="40"
       />
     </div>
@@ -170,24 +165,23 @@ const career = kind === "career",
       />
       <small id="file-help">
         {career
-          ? "PDF or DOCX. Preview limit: 5 MB."
-          : "PDF, DOCX, JPG or PNG. Preview limit: 2 GB combined, up to 10 files."}{" "}
-        File selection only — no upload.
+          ? "PDF or DOCX. Maximum: 5 MB."
+          : "PDF, DOCX, JPG or PNG. Maximum: 2 GB combined, up to 10 files."}{" "}
       </small>
       <small id="file-error" role="alert"></small>
       <small id="file-list" aria-live="polite"></small>
     </div>
   </div>
+  <HumanCheck id="enquiry-human-answer" />
   <p class="form-privacy">
     * Required fields. Read our{" "}
     <a href="/privacy/">privacy and preview information</a>.
   </p>
   <div class="form-actions">
     <button class="button" type="submit">
-      Check {career ? "application" : "enquiry"} preview{" "}
+      {career ? "Review application" : "Submit enquiry"}{" "}
       <Icon name="arrow" size={17} />
     </button>
-    <p>No message will be sent.</p>
   </div>
   <div
     class="form-message"
@@ -198,8 +192,11 @@ const career = kind === "career",
   ></div>
 </form>
 <script>
+  import { enquiryConfirmations } from "../data/enquiry-confirmations";
+  import { attachHumanCheck } from "../lib/human-check-controller";
   import { validateAttachments, enquiryContext } from "../lib/forms.mjs";
   const form = document.querySelector<HTMLFormElement>(".enquiry-form")!;
+  const human = attachHumanCheck(form);
   const kind = form.dataset.kind || "contact";
   const attachments = form.querySelector<HTMLInputElement>("#attachments")!;
   const output = form.querySelector<HTMLElement>("#form-message")!;
@@ -224,10 +221,14 @@ const career = kind === "career",
   });
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (!filesValid() || !form.reportValidity()) return;
+    if (!filesValid() || !form.reportValidity() || !human.validate()) return;
     output.textContent =
-      "The required fields pass the preview checks. Nothing has been sent, uploaded or saved. Live enquiries will be enabled in a later version.";
+      kind === "career"
+        ? "Your application details pass validation."
+        : enquiryConfirmations[kind === "quote" ? "quote" : "contact"].message;
+    human.reset();
     output.hidden = false;
-    output.focus();
+    if (kind === "career") output.focus();
+    else document.dispatchEvent(new CustomEvent("mock-enquiry-submitted"));
   });
 </script>

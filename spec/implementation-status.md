@@ -77,3 +77,27 @@ CHG-017: rightward-only flyouts, left-aligned desktop navigation and list-only d
 CHG-018: restored the original centred, single-row desktop header with right-aligned navigation and only a12–28px margin before Quote. Retains rightward/list-only menus.51 tests,188-page build,49799 references and381 static CSS checks pass; rendered browser acceptance remains pending.
 
 CHG-019: root dropdowns stay beneath their header labels; measured header spacing moves Home–Contact farther left only within logo clearance, while child widths adapt to remaining space.54 tests,39-file check0 diagnostics,188-page build,49987 local references and381 static CSS checks pass. Rendered browser fit/legibility remains pending.
+
+CHG-035: blue quote-reference banner and 20-logo CSS client marquee implemented; existing static forms/direct downloads preserved.42-file check/56 tests/188-page build/50,030 local references pass. Scoped Chrome desktop/mobile/narrow review and pause/resume/navigation pass; reduced-motion verified in CSS only, full-cycle/OS-motion checks not run. See A68–A69.
+
+CHG-036: normal client animation always running, no pause UI or hover/focus stop. Footer upward icon replaces visible text. A70 scoped checks pass; reduced-motion unchanged.
+
+CHG-037: canonical brochure download updated to24-page1st November revision on all188 pages; exact source/output bytes and links verified (A71). Local build only.
+
+CHG-038: Careers phone mandatory with Phone * label/native required validation; other form kinds unchanged. A72 generated-form/build/type/link checks pass; browser validation interaction not rerun.
+
+CHG-039: shared footer Resources exposes Executed Projects, Spares supply, Reverse Engineering & Manufacturing Portfolio PDF links after brochure. All188 pages verified with exact source/public/build equality; A73 checks pass.
+
+CHG-040: footer Resources width now keeps full portfolio label/arrow horizontal on desktop/tablet, with natural phone wrapping. A74 scoped Chrome/build/link checks pass.
+
+CHG-041: mock Contact/Quote thank-you modal and shared resource-details gate implemented on188 routes. Four required client fields; session grant only, no stored personal details/mail/backend. Certificate viewer/download and PDF new-tab actions resume after mock; later documents bypass in same tab.45-file check/60 tests/188-page build/50,782 references and scoped Chrome desktop/mobile flows pass; A75–A76 limits.
+
+CHG-042: demo form labels removed; neutral thanks/contact text and required arithmetic human verification on every form. Browser-only validation, no real email/backend.48-file check/62 tests/188-page build/50,973 references plus scoped Chrome blank/refresh/mobile checks pass. A77 success-path browser limitation applies.
+
+CHG-043: captcha now compact4-letter lowercase code with icon refresh; arithmetic removed. A78 build/test/type/link and desktop/mobile visual checks pass; browser-only limitation unchanged.
+
+CHG-044: navy/orange themed resource/confirmation forms and captcha; larger clearer refresh icon. A79 scoped Chrome/build/link checks pass.
+
+CHG-045: friendly distinct Contact/Quote confirmations, cross-only close and compact spacing implemented; A80 generated-copy/build/type/link checks pass. Email integration unchanged.
+
+CHG-046: shared corrected offices data feeds Contact and all3 addresses beneath footer logo; pending-social note removed. A81 generated-content/build/type/link and scoped responsive Chrome checks pass.

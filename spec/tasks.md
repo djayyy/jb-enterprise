@@ -188,3 +188,30 @@ CHG-026: T66–T67 complete for scoped Chrome review. A56–A57 evidence covers 
 - [x] T78 Remove catalogue light photo frames, implement edge-to-edge responsive image fill with restrained cropping, and verify all shared layouts/content plus regression/spec/checkpoint checks (R64; A66; CHG-033).
 
 - [x] T79 Standardise catalogue card image/text tracks and responsive sizing; verify short/long content, service/equipment grids, focus and unchanged shared pages; synchronise specs/checkpoint (R65; A67; CHG-034).
+
+## Quote banner and supplied clients — CHG-035
+- [x] T80 Implement reference-style shared quote banner and source-backed homepage client marquee (R66–R67; A68–A69).
+- [x] T81 Verify responsive layout, logo coverage, animation/pause/reduced motion, quote navigation and existing regressions; synchronise evidence (R66–R67; A68–A69).
+
+- [x] T82 Remove marquee pause UI/stop rules and replace footer text with accessible upward icon; verify and sync specs (CHG-036; R68; A70).
+
+- [x] T83 Replace canonical brochure with supplied1st November revision and verify all generated pages and exact output bytes (CHG-037; R69; A71).
+
+- [x] T84 Make Careers phone mandatory, verify generated form variants and update specs (CHG-038; R70; A72).
+
+- [x] T85 Add three supplied portfolio PDF footer links and verify source equality, generated links and build (CHG-039; R71; A73).
+
+- [x] T86 Fix portfolio link horizontal layout and footer responsive fit; verify render/build/links and sync specs (CHG-040; R72; A74).
+
+- [x] T87 Implement mock Contact/Quote confirmation and session-based details gate for all document actions (R73–R74; A75–A76; CHG-041).
+- [x] T88 Verify validation/cancel/session/certificate/PDF/download/mobile flows and existing regressions; update specs (R73–R74; A75–A76; CHG-041).
+
+- [x] T89 Remove demo labels, add shared required human check and verify empty/wrong/reset behavior plus source/build regressions (R75; A77; CHG-042).
+
+- [x] T90 Replace arithmetic with four lowercase letters and compact styling; verify generation/validation and responsive UI (R76; A78; CHG-043).
+
+- [x] T91 Improve refresh icon clarity and theme form/captcha; verify responsive render and build (R77; A79; CHG-044).
+
+- [x] T92 Implement approved distinct friendly confirmation copy and cross-only close; verify variants/build/close markup (R78; A80; CHG-045).
+
+- [x] T93 Share corrected office titles/addresses between Contact and footer, remove pending-social note, verify responsive/render/build consistency (R79; A81; CHG-046).

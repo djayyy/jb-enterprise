@@ -114,3 +114,21 @@ CHG-022: shared Brand.astro owns header/footer identity; company-review.css owns
 CHG-023: Brand inherits original sizing/styles; Layout restores the original visible footer tagline. CatalogCard accepts optional home presentation (false by default), adding offering-card classes only to the two homepage catalogue grids; Industries uses those same shared classes. Normal catalogue/index templates and full-background heroes retain baseline layout. Card interaction is CSS-only with focus-visible and hover/pointer media gating; responsive grid rules stay in the existing device files. Header-bottom viewport repair remains. No runtime dependency, business data, URL or integration contract changes.
 
 CHG-024: CSS-only refinement in company-review.css, v02.css, v05.css and v06.css. Remove active industry/catalogue hover zoom and industry transition rules, promote clear styles to base rules and retain focus outlines. Shared catalogue copy gets the same readable scrim/15px type without changing component data, DOM, links or scripts. No dependency/server/form/storage/deployment change.
+
+CHG-035: ClientMarquee.astro reads versioned clients.json and emits two identical 20-logo lists, second aria-hidden. CSS-only seamless translateX loop and checkbox pause require no JS/service/dependency. First list remains horizontally browsable for reduced motion; device sizes belong to desktop.css/mobile.css. Shared CTA retains its props and destinations, using an inline decorative document SVG and corner triangles. Existing static hosting/forms/download contracts remain unchanged.
+
+CHG-036: remove marquee checkbox/label and CSS pause selectors; animation remains CSS-only with reduced-motion override. Layout uses shared Icon up path inside existing #main footer anchor; no JS, route or backend changes.
+
+CHG-038: shared EnquiryForm sets required={career} on phone. Future career email contract now requires phone; contact/quote still optional. No backend activated. Supersedes the career optional-phone default.
+
+CHG-039: three additional static PDFs in public/downloads served by shared footer anchors; no runtime, database, form-gating, email or new service. Existing brochure retained.
+
+CHG-041: new shared MockDialogs in Layout plus browser resource-access controller captures same-origin PDF/download/certificate clicks. Session stores only a versioned granted flag; input values remain page memory, no API/network for submission, no server/mail/storage provisioned. Shared mock adapter validates bounded resource details and returns simulated result/context for later integration. Static PDF/image URLs remain public; this is a UX gate, not access security. Contact/Quote dispatch confirmation event after existing native/file validation; Careers retains original flow. Session-storage denial falls back to in-memory grant.
+
+CHG-042: reusable HumanCheck component and human-check.mjs/controller.ts provide browser-only arithmetic challenge. Both enquiry/resource handlers validate before mocked action and regenerate after success/reset. No external provider/key/network. This is a local form-validation step, not server-verified anti-bot protection; real protection remains part of backend integration. Mock submission/storage contracts unchanged; privacy page retains truthful data-handling details.
+
+CHG-043: human-check generator now produces exactly4 random lowercase a–z letters and validates exact lowercase string equality after trimming. Shared controller/required-gate/reset contracts unchanged; no provider/backend added.
+
+CHG-045: enquiry-confirmations.ts centralizes approved Contact/Quote titles/messages. MockDialogs chooses quote copy by /request-a-quote route; EnquiryForm uses form kind for matching inline copy. Same native close/event handling; no delivery/runtime contract change.
+
+CHG-046: offices.ts is the shared source of3 office titles/unchanged addresses for Contact and Layout. Static semantic footer address elements only; no runtime/dependency/backend/route change.

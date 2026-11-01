@@ -127,3 +127,30 @@ R63 CONFIRMED (CHG-032): inspect and fix zoomed/cropped/blurry service and equip
 R64 CONFIRMED (CHG-033): remove light/white padded photo containers from catalogue banners and component cards; show photographs edge to edge across their image areas. Retain original proportions and avoid the earlier extreme full-banner zoom through source-proportional bounded hero sizing and moderate adaptive card media heights. Filling card areas may crop edges; latest fill preference supersedes R63's strict contain/no-enlargement requirement for catalogue media. Keep existing photos, readable separate text, routes, focus access and Home/About/header presentation.
 
 R65 CONFIRMED (CHG-034): standardise service/equipment catalogue card images, typography and text alignment. Use one photo height per breakpoint across all cards, with equal-height cards and aligned labels, headings, summaries and actions within each row. Keep complete readable copy, edge-to-edge photos, no hover zoom and natural narrow-screen growth; preserve hero/Home/About/source content. Supersedes R64 source-dependent card heights.
+
+R66 CONFIRMED (CHG-035): match the supplied quote-banner reference with a full-width blue surface, centered white heading/copy, document icon and orange border/triangle accents. Retain a discoverable keyboard-accessible quote destination and existing contextual links.
+
+R67 CONFIRMED (CHG-035): add a seamless continuously scrolling homepage client-logo strip, similar to the existing website, using all 20 logos from the supplied Trusted By Industry Leaders PDF. Preserve proportions, provide pause/resume and hover/focus pause, respect reduced motion and expose each client only once to assistive technology.
+
+R68 CONFIRMED (CHG-036): remove client pause/resume UI and hover/focus pausing; keep normal client animation continuously running. Retain reduced-motion preference handling. Replace footer Back to top text with an upward icon, keeping accessible name, keyboard focus and same destination. Supersedes R67 pause requirements.
+
+R69 CONFIRMED (CHG-037): use supplied requirement/JBAEL -BROCHURE- 1st Nov(1).pdf for every company brochure link, superseding the old32-page downloadable brochure. Keep the canonical download URL.
+
+R70 CONFIRMED (CHG-038): Careers phone is mandatory, visibly marked Phone *, and empty phone blocks native form validation. Contact/quote phone remain optional.
+
+R71 CONFIRMED (CHG-039): add Executed Projects, Spares supply, and Reverse Engineering & Manufacturing Portfolio PDF links under shared footer Resources, using supplied matching PDFs and the same new-tab behavior as Company brochure.
+
+R72 CONFIRMED (CHG-040): keep the complete Reverse Engineering & Manufacturing Portfolio link and arrow on one horizontal line where screen space permits; allocate footer Resources width accordingly. Narrow phones retain readable wrapping without an orphan arrow or page overflow.
+
+R73 CONFIRMED (CHG-041): Contact/Quote use Submit enquiry and mock thank-you popup with reach-out-shortly wording plus explicit demo/no-email notice. Retain native required/file checks; Careers stays preview-only.
+R74 CONFIRMED (CHG-041): gate all brochure/resource PDF and certificate view/download actions behind shared required Name, Contact number, Company name, Email popup. Mock submission then completes originally requested action. Once-per-tab browser-session grant; no personal details persisted/transmitted. Keep direct static assets public (UI gate only); email integration deferred. Supersedes R59 direct-UI-download default.
+
+R75 CONFIRMED (CHG-042): remove demo-mode banners from form flows; use neutral thank-you/resource-ready text without asserting email delivery. Add required accessible human-verification question with refresh, empty/incorrect rejection and reset after successful submission to resource/contact/quote/career forms. Browser-only challenge in current static phase; server-verified CAPTCHA deferred to email integration.
+
+R76 CONFIRMED (CHG-043): replace arithmetic human check with a compact four-letter lowercase text code, required matching input and icon-only refresh. No numbers/arithmetic question. Existing validation/reset/session behavior retained.
+
+R77 CONFIRMED (CHG-044): make captcha refresh icon clearly recognisable and add website navy/orange theme accents to resource forms without changing validation behavior.
+
+R78 CONFIRMED (CHG-045): use approved friendly, distinct Contact/Quote confirmation headings/messages with reach-out-shortly wording; remove Done, keep only top-right close cross and Escape/focus recovery. Keep navy/orange style with compact spacing. Mock-only/email integration unchanged. Supersedes R75 neutral-copy wording.
+
+R79 CONFIRMED (CHG-046): rename Mumbai Office to Administrative Office and current Administrative Office to Manufacturing Facility, preserving address details. Add all3 addresses under footer logo (Central Office, Administrative Office, Manufacturing Facility), compact readable text allowed. Remove Additional social profile links pending.

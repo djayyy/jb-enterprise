@@ -4,6 +4,7 @@ import HeroSlider from "../components/HeroSlider.astro";
 import CertificateGallery from "../components/CertificateGallery.astro";
 import Icon from "../components/Icon.astro";
 import CTA from "../components/CTA.astro";
+import ClientMarquee from "../components/ClientMarquee.astro";
 import CatalogCard from "../components/CatalogCard.astro";
 import { catalog } from "../data/catalog";
 import { company, industries, coreCapabilities } from "../data/company";
@@ -48,6 +49,7 @@ const dimensions = images as Record<string, { width: number; height: number }>;
       </div>
     </div>
   </section>
+  <ClientMarquee />
   <section class="section pale home-offerings" id="industries">
     <div class="container">
       <div class="section-heading">

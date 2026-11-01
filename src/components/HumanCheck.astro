@@ -1,0 +1,65 @@
+---
+const { id } = Astro.props;
+---
+
+<fieldset class="human-check" data-human-check>
+  <legend>Captcha</legend>
+  <label class="captcha-label" for={id}>
+    Enter the 4 lowercase letters *
+  </label>
+  <div class="human-check-controls">
+    <p
+      class="captcha-code"
+      id={`${id}-question`}
+      data-human-question
+      aria-live="polite"
+    >
+      ····
+    </p>
+    <button
+      class="captcha-refresh"
+      type="button"
+      data-refresh-human
+      aria-label="Refresh captcha"
+      title="Refresh captcha"
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M20 4v6h-6" />
+        <path d="M20 10a8 8 0 1 0 .2 5M20 10l-3-4" />
+      </svg>
+    </button>
+    <div class="field">
+      <input
+        id={id}
+        name="humanAnswer"
+        type="text"
+        inputmode="text"
+        autocomplete="off"
+        autocapitalize="none"
+        spellcheck="false"
+        pattern="[a-z]{4}"
+        minlength="4"
+        maxlength="4"
+        placeholder="Enter code"
+        required
+        aria-describedby={`${id}-question ${id}-error`}
+      />
+    </div>
+  </div>
+  <p
+    id={`${id}-error`}
+    data-human-error
+    role="alert"
+    class="resource-error"
+  ></p>
+</fieldset>

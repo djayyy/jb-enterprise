@@ -63,7 +63,9 @@ for (const page of pages) {
   }
   if (/<form\b/.test(html)) {
     assert.match(html, /<form[^>]*method="dialog"/);
-    assert.match(html, /Nothing is sent, uploaded or saved/);
+    assert.match(html, /data-human-check/);
+    assert.match(html, /name="humanAnswer"[^>]*required/);
+    assert.match(html, /id="resource-dialog"/);
   }
 }
 assert.equal(pages.length, 188, "Expected review routes");

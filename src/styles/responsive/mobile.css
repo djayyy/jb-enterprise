@@ -624,3 +624,75 @@
     padding: 18px 20px;
   }
 }
+
+/* CHG-035 */
+@media (max-width: 1000px) {
+  .quote-banner.cta-section {
+    padding: 32px 0;
+  }
+  .quote-banner .quote-banner-copy h2 {
+    font-size: clamp(26px, 5vw, 38px);
+  }
+  .quote-banner .quote-banner-copy p {
+    font-size: 18px;
+  }
+  .quote-banner .cta-inner {
+    width: calc(100% - 48px);
+  }
+  .quote-banner h2 a {
+    gap: 8px;
+  }
+  .quote-document {
+    width: 46px;
+    height: 54px;
+  }
+  .quote-corner {
+    width: 42px;
+    height: 38px;
+  }
+  .client-logo {
+    width: 160px;
+    height: 100px;
+    padding: 14px 20px;
+  }
+}
+
+/* CHG-040: give Resources a full row where four columns cannot fit. */
+@media (min-width: 701px) and (max-width: 1199px) {
+  .footer-top {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .footer-resources {
+    grid-column: 1 / -1;
+  }
+  .footer-resources > a {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .mock-dialog {
+    padding: 22px 18px;
+  }
+  .mock-dialog .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .mock-dialog-heading h2 {
+    font-size: 23px;
+  }
+  .mock-dialog-actions {
+    flex-direction: column-reverse;
+  }
+  .mock-dialog-actions .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .human-check-controls {
+    grid-template-columns: minmax(0, 1fr) 44px;
+  }
+  .human-check-controls .field {
+    grid-column: 1 / -1;
+  }
+}

@@ -570,5 +570,85 @@
   "detail-reference-466": {
     "width": 570,
     "height": 400
+  },
+  "clients/adani-power": {
+    "width": 281,
+    "height": 166
+  },
+  "clients/jsw-energy": {
+    "width": 365,
+    "height": 112
+  },
+  "clients/jindal-steel-power": {
+    "width": 322,
+    "height": 147
+  },
+  "clients/nuvoco": {
+    "width": 289,
+    "height": 195
+  },
+  "clients/tata": {
+    "width": 232,
+    "height": 190
+  },
+  "clients/vedanta": {
+    "width": 365,
+    "height": 91
+  },
+  "clients/seil": {
+    "width": 143,
+    "height": 147
+  },
+  "clients/e2c": {
+    "width": 301,
+    "height": 200
+  },
+  "clients/acb-india": {
+    "width": 355,
+    "height": 200
+  },
+  "clients/gmr": {
+    "width": 314,
+    "height": 112
+  },
+  "clients/sembcorp": {
+    "width": 249,
+    "height": 78
+  },
+  "clients/spgcl": {
+    "width": 168,
+    "height": 200
+  },
+  "clients/nirma": {
+    "width": 289,
+    "height": 198
+  },
+  "clients/tsgenco": {
+    "width": 202,
+    "height": 200
+  },
+  "clients/ceylon-electricity-board": {
+    "width": 189,
+    "height": 200
+  },
+  "clients/national-power-supply": {
+    "width": 299,
+    "height": 200
+  },
+  "clients/inland-power": {
+    "width": 200,
+    "height": 200
+  },
+  "clients/rkm-powergen": {
+    "width": 338,
+    "height": 104
+  },
+  "clients/sarda": {
+    "width": 375,
+    "height": 155
+  },
+  "clients/pln": {
+    "width": 200,
+    "height": 200
   }
 }

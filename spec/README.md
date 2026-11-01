@@ -1,5 +1,29 @@
 # JBAEL specification index
 
+Latest CHG-046: corrected office titles and all3 addresses below footer logo; pending-social sentence removed. R79/T93/A81 build/type/link/responsive checks pass.
+
+Latest CHG-045: approved friendly Contact/Quote-specific confirmations with cross-only close; R78/T92/A80 build/type/link/copy checks pass.
+
+Latest CHG-044: clearer refresh icon and navy/orange form accents; R77/T91/A79 scoped render/build/link checks pass.
+
+Latest CHG-043: compact4-letter lowercase captcha replaces arithmetic. R76/T90/A78 verified scope/limits recorded.
+
+Latest CHG-042: demo form labels removed; required arithmetic human verification added. R75/T89/A77 checks/limits recorded. No live email.
+
+Latest CHG-041: mock enquiry confirmations and shared document-details form implemented; R73–R74/T87–T88/A75–A76 scoped checks pass. No live email; local review.
+
+Latest CHG-040: horizontal portfolio label/arrow fixed; R72/T86/A74 responsive Chrome/build/link checks pass.
+
+Latest CHG-039:3 supplied portfolio PDFs added under shared footer Resources; R71/T85/A73 checks pass across188 pages. Local only.
+
+Latest CHG-038: Careers phone mandatory; R70/T84/A72 generated-form/build/type/link checks pass. Local only.
+
+Latest CHG-037:1st November brochure replaces canonical download across188 pages; R69/T83/A71 checks pass. No deployment.
+
+Latest CHG-036: removed client pause UI/stop rules and replaced footer text with an upward icon. R68/T82/A70; scoped local checks pass.
+
+Current CHG-035: reference-style blue quote banner and 20 supplied client logos in accessible CSS marquee. R66–R67/T80–T81/A68–A69; checks pass for scoped local review, limits in acceptance.md. No deployment.
+
 CHG-034 current review: service/equipment cards use common240px desktop/220px narrow photos,23px titles/15px descriptions and per-row aligned text/action tracks. Full copy retained without clipping.360 all-page cases/394 card instances plus40 responsive cases pass;56 tests,41-file check,188-page build and49,990 link/asset checks pass. A67 records browser evidence/limits. Local uncommitted review; no deployment.
 
 

@@ -1,0 +1,110 @@
+---
+import HumanCheck from "./HumanCheck.astro";
+import { enquiryConfirmations } from "../data/enquiry-confirmations";
+const confirmation =
+  enquiryConfirmations[
+    Astro.url.pathname.startsWith("/request-a-quote") ? "quote" : "contact"
+  ];
+---
+
+<dialog
+  class="mock-dialog"
+  id="resource-dialog"
+  aria-labelledby="resource-title"
+  aria-describedby="resource-instructions"
+>
+  <div class="mock-dialog-heading">
+    <h2 id="resource-title">Access company resources</h2>
+    <button type="button" data-close-resource aria-label="Close resource form">
+      ×
+    </button>
+  </div>
+  <p class="resource-request" id="resource-name"></p>
+  <p id="resource-instructions">
+    Please share your details to access this resource.
+  </p>
+  <form id="resource-form" method="dialog">
+    <div class="form-grid">
+      <div class="field">
+        <label for="resource-client-name">Name *</label>
+        <input
+          id="resource-client-name"
+          name="name"
+          autocomplete="name"
+          maxlength="160"
+          required
+        />
+      </div>
+      <div class="field">
+        <label for="resource-phone">Contact number *</label>
+        <input
+          id="resource-phone"
+          name="phone"
+          type="tel"
+          autocomplete="tel"
+          maxlength="40"
+          required
+        />
+      </div>
+      <div class="field">
+        <label for="resource-company">Company name *</label>
+        <input
+          id="resource-company"
+          name="company"
+          autocomplete="organization"
+          maxlength="160"
+          required
+        />
+      </div>
+      <div class="field">
+        <label for="resource-email">Email *</label>
+        <input
+          id="resource-email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          maxlength="254"
+          required
+        />
+      </div>
+    </div>
+    <HumanCheck id="resource-human-answer" />
+    <p class="resource-error" id="resource-error" role="alert"></p>
+    <p class="form-privacy">
+      * Required fields. Read our{" "}
+      <a href="/privacy/">privacy and preview information</a>.
+    </p>
+    <div class="mock-dialog-actions">
+      <button class="button outline" type="button" data-close-resource>
+        Cancel
+      </button>
+      <button class="button" type="submit" id="resource-submit">
+        Submit &amp; view
+      </button>
+    </div>
+  </form>
+</dialog>
+
+<dialog
+  class="mock-dialog"
+  id="enquiry-confirmation"
+  aria-labelledby="enquiry-confirmation-title"
+  aria-describedby="enquiry-confirmation-copy"
+>
+  <div class="mock-dialog-heading">
+    <h2 id="enquiry-confirmation-title">{confirmation.title}</h2>
+    <button
+      type="button"
+      data-close-confirmation
+      aria-label="Close confirmation"
+    >
+      ×
+    </button>
+  </div>
+  <p id="enquiry-confirmation-copy">{confirmation.message}</p>
+</dialog>
+<p class="resource-status" id="resource-status" role="status" hidden></p>
+
+<script>
+  import "../lib/resource-access";
+</script>

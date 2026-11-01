@@ -164,3 +164,28 @@ Supersedes CHG-017 header placement only. Restore the shared centred header cont
 
 ## Vertically anchored equipment menu — CHG-019
 The CHG-018 margin alone could not align the root because placement independently shifted it left to reserve660px. Keep root alignment at the trigger. Measure available header space at initial load, font readiness and resize; increase the quote gap only enough to reserve the branch, capped to preserve32px between Home and the logo. Preferred gap56px (20px on narrow desktops). Quote and logo retain their positions. When this clearance prevents reserving660px, proportionally reduce panel widths to the available right-hand space; wrap labels and retain44px disclosure buttons. No separate row, leftward children or root movement on branch expansion. Mobile clears the measured gap.
+
+## Quote banner and client strip — CHG-035
+R66–R67: shared CTA becomes the reference blue banner with white centered copy and linked title/document illustration; no separate orange action box or contact eyebrow. Orange outlined triangles straddle opposite corners inside reserved space. Custom About/catalogue title, copy and destinations remain. Home adds Trusted By Industry Leaders after Welcome, before Industries; 20 individual supplied logos in even contain-fit cells. Two identical groups create a leftward seamless CSS loop; only first is accessible. Pause checkbox works without JS, hover/focus pauses, reduced motion shows one horizontally scrollable group. Device dimensions live in desktop.css/mobile.css.
+
+CHG-036 / R68: client strip has no pause control or reserved control spacing, and no hover/focus stop; keep reduced-motion fallback. Footer uses a 44px circular outlined up-arrow link with accessible Back to top name, replacing visible text.
+
+CHG-037 / R69: all Company brochure actions continue to use /downloads/jbael-brochure.pdf; this asset now contains the supplied24-page1st November revision. Website layout/copy is unchanged.
+
+CHG-038 / R70: career phone label is Phone * and input has required; other form kinds retain Phone (optional). Existing native reportValidity flow handles missing phone.
+
+CHG-039 / R71: shared footer Resources adds three named PDF links directly after Company brochure and before Privacy. All open in a new tab with rel=noopener, matching brochure; long portfolio label wraps naturally.
+
+CHG-040 / R72 supersedes CHG-039 desktop natural wrapping: >=1200px footer reserves max-content Resources column with24px gaps.701–1199px Resources spans a full two-column row; links remain single-line. Phone flow retained with nonbreaking space joining Portfolio and arrow.
+
+CHG-041 / R73–R74: Contact/Quote show Submit enquiry, demo notice and shared thank-you modal. Document actions show Details to access resource modal naming selected document, four required labelled inputs, Cancel/close and Submit & view/download. Submit synchronously completes action, with accessible confirmation; subsequent documents bypass details for this tab session. Certificate enlargement retains its existing viewer/focus behavior. Native dialogs support Escape/focus recovery and mobile scrolling. No fake email-sent claim; mock notice visible throughout.
+
+CHG-042 / R75: replace implementation/demo notices with concise form instructions. Contact/Quote confirmation thanks visitor for interest and offers team email, without asserting delivery or future contact. Resource success says resource ready. Human verification displays random addition question, labelled required numeric answer and Another question button, refreshed with aria-live and wrong-answer validity. No image-only puzzle.
+
+CHG-043 / R76: compact Captcha block with four lowercase letters in a light patterned monospace code tile, icon-only Refresh captcha control and Enter code field. Required label explains4 lowercase letters; phone layouts place input below code/refresh. Preserve visible focus, accessible prompt and error.
+
+CHG-044 / R77: resource/confirmation dialogs use pale body, navy heading panel with white title/orange edge, warm document-name accent. Captcha code uses navy patterned tile/white lowercase letters; refresh is a high-contrast orange44px button with larger24px bold circular arrow and navy outline. Preserve input readability, mobile scrolling and focus access.
+
+CHG-045 / R78: Contact title Thank you for getting in touch! / We appreciate your interest in JBAEL. Our team will reach out to you shortly to discuss how we can help. Quote title Thank you for your interest! / Our team will review your requirements and reach out to you shortly to discuss your project and quotation. Shared copy map feeds route-specific dialog and inline confirmation. No Done/footer actions; top-right44px close cross, native Escape and focus recovery retained. Compact natural-height modal.
+
+CHG-046 / R79: Contact and shared footer use one offices data source with corrected titles and unchanged street details. Footer logo is followed by3 compact semantic addresses, then existing tagline/social icons. Addresses use12px readable body/13px white labels and compact10px gaps, natural wrapping on phones. Remove only visible pending-social sentence.

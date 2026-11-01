@@ -387,3 +387,35 @@
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
   }
 }
+
+/* CHG-035 */
+@media (min-width: 1001px) {
+  .quote-banner .quote-banner-copy h2 {
+    font-size: clamp(38px, 3.3vw, 60px);
+  }
+  .quote-banner .quote-banner-copy p {
+    font-size: clamp(20px, 1.7vw, 30px);
+  }
+  .quote-banner .cta-inner {
+    width: calc(100% - 140px);
+    max-width: 1800px;
+  }
+  .client-logo {
+    width: 210px;
+    height: 120px;
+  }
+}
+
+/* CHG-040: reserve the full portfolio label width in the footer. */
+@media (min-width: 1200px) {
+  .footer-top {
+    grid-template-columns: minmax(0, 1.15fr) minmax(
+        0,
+        0.7fr
+      ) max-content minmax(0, 1fr);
+    gap: 24px;
+  }
+  .footer-resources > a {
+    white-space: nowrap;
+  }
+}

@@ -91,3 +91,6 @@ CHG-017: desktop navigation shifts left and child dropdowns always open right. D
 CHG-018 restores a balanced single-row desktop header with only a small leftward navigation margin. Rightward/list-only dropdowns remain. See spec/acceptance.md for current checks and pending browser verification.
 
 CHG-019 keeps Equipment Supply’s root list directly beneath its label, using measured header spacing and rightward panel fitting. Browser visual acceptance remains pending; evidence is recorded in spec/acceptance.md.
+
+## Form submissions and resource access (CHG-041/042)
+Contact/Quote use neutral thank-you confirmation. All brochure/portfolio/certificate view/download actions ask for name, contact number, company and email once per browser tab session. All forms require a browser-side four-letter lowercase text captcha with refresh. No email/backend is integrated; no personal details are persisted, only a versioned access flag. This check is client-side form validation, not server-verified CAPTCHA; add server verification with the future email API. Direct asset URLs stay public. Privacy documentation records actual data handling.
