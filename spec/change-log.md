@@ -395,3 +395,13 @@ Commit preparation for CHG-035–CHG-046: final combined worktree regression PAS
 - R88 / T102 / A90. Footer image grows57→120px desktop and48→104px compact, auto height preserving ratio, centre unchanged. Footer srcset sizes aligned. Header unaffected.
 - Files: company-review.css, responsive/mobile.css, Brand.astro. Specs: requirements/design/tasks/acceptance/index/status/checkpoint updated. Architecture/sources/decisions/versions/workflow/agents and earlier plans unchanged: visual sizing correction, existing assets/contracts/runtime/release. Prior work preserved.
 - PASS:188-page build;50,974 references/source checks;188 sizes assertions;IAB desktop/mobile dimensions/centres/no-overflow;desktop screenshot;git diff --check. A90 test/type/mobile visual limits. No commit/push/deployment.
+
+## CHG-056 —1 November2026 — official YouTube channel destination
+- R89 / T103 / A91. Replace generic YouTube homepage with exact user-supplied https://youtube.com/@jbael.official in shared SocialLinks for header/footer.
+- Files: SocialLinks.astro. Specs: requirements/design/sources/decisions/tasks/acceptance/index/status/checkpoint updated. Architecture/versions/workflow/agents/earlier plans unchanged: static URL-only edit without runtime/layout/release/contract changes.
+- PASS:188-page build;50,974 reference/source checks;all188 exact dual-anchor/safety-attribute assertions;git diff --check. Browser/external channel audit/tests/typecheck not rerun for URL-only edit. No commit/push/deployment.
+
+## CHG-057 —1 November2026 — activate X / Twitter links
+- R90 / T104 / A92. Shared X / Twitter icon becomes active link at exact user-supplied http://x.com/jbael.official in header/footer with existing new-tab safeguards. Other social URLs/layout unchanged; prior YouTube update preserved.
+- Files: SocialLinks.astro. Specs: requirements/design/sources/tasks/acceptance/index/status/checkpoint updated. Architecture/decisions/versions/workflow/agents/earlier plans unchanged: explicit static destination update without new assumption/runtime/layout/contract/release.
+- PASS:188-page build;50,974 reference/source checks;188 dual-X-anchor and5-active-links-per-group assertions;git diff --check. Browser/external validation/tests/typecheck not rerun for URL-only edit. No commit/push/deployment.

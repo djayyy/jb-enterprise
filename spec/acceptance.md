@@ -535,3 +535,11 @@ A89 PASS: all188 generated footer sources/srcsets use final supplied artwork and
 A90 — CHG-055: footer logo120px desktop/104px compact, proportional height and aligned tagline centres; header sizing preserved; no overflow. Build/link/browser verification pending.
 
 A90 PASS:188-page build/50,974 reference-source checks, all188 footer sizes-attribute assertions and git diff --check pass. IAB1280px viewport footer width120px/height120.96px versus header57px;390px viewport footer104px/height104.84px versus header42px. Logo/tagline centres identical at175.46875px desktop/147.46875px mobile; no page overflow. Desktop footer screenshot visually reviewed (.review/quote-clients/footer-large.png); mobile geometry checked, footer screenshot not captured. Typecheck/tests not rerun for CSS/sizes-only change. No commit/push/deployment.
+
+A91 — CHG-056: both header/footer YouTube anchors use exact company-channel URL with existing new-tab safety attributes; verification pending.
+
+A91 PASS: all188 generated routes contain exactly2 company-channel anchors (header/footer), target=_blank and rel=noopener noreferrer preserved; old homepage anchor absent.188-page build/50,974 local reference-source checks and git diff --check pass. Browser/external channel ownership not verified; no layout change, no tests/typecheck rerun for URL-only edit. No commit/push/deployment.
+
+A92 — CHG-057: all188 routes have header/footer X / Twitter anchors at supplied URL with safe new-tab attributes; no disabled social controls. Verification pending.
+
+A92 PASS: all188 generated routes contain2 X / Twitter anchors at exact supplied URL with target=_blank/rel=noopener noreferrer; both groups contain5 links and no disabled controls.188-page build;50,974 reference/source checks;git diff --check pass. Browser/external redirect/ownership not verified; no tests/typecheck rerun for static destination update. No commit/push/deployment.

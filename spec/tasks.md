@@ -233,3 +233,7 @@ CHG-026: T66–T67 complete for scoped Chrome review. A56–A57 evidence covers 
 - [x] T101 Replace footer artwork with final supplied logo preserving transparency/centre alignment and header (R87; A89; CHG-054).
 
 - [x] T102 Enlarge footer logo and verify desktop/mobile proportions/centering (R88; A90; CHG-055).
+
+- [x] T103 Update YouTube destination and verify both groups across generated routes (R89; A91; CHG-056).
+
+- [x] T104 Activate X / Twitter destination and verify both groups across generated routes (R90; A92; CHG-057).

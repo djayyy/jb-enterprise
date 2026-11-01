@@ -108,3 +108,7 @@ CHG-050: existing public/images/jbael-logo.png (321×324) visually confirmed as 
 CHG-052: requirement/JB Advanced Engineering - Website Review -1-11.2026.pdf,1page,review date30October2026, rows1–4 inspected including hyperlink annotations. Supplied Facebook https://www.facebook.com/jbael.official, Instagram https://www.instagram.com/jbael.official/, YouTube https://www.youtube.com/. Local image_1_01-11-2026 resolves row1: Critical Studs, Cap Nuts and Washers.png1254×1254; IPCV Bonnet Studs and Nuts.png1672×941; Turbine and Pump Coupling Bolts.png1743×902. Originals inspected/preserved;3 optimised WebP copies with provenance/dimensions in assets.json/image-metadata.json. Last2 depict assemblies, accepted as representative imagery. No independent ownership or channel certification.
 
 CHG-054: visually inspected requirement/Final-Log-at-Bottom-1-11-26.png1072×1080 RGBA, complete emblem with internal company lettering and transparent exterior. Original preserved; lossless proportional248/496-width WebP derivatives recorded in assets/image-metadata JSON.
+
+CHG-056: user supplied https://youtube.com/@jbael.official directly as replacement YouTube destination; supersedes review PDF generic homepage. Channel ownership/content not independently audited.
+
+CHG-057: user directly supplied http://x.com/jbael.official as X / Twitter destination. Exact URL retained; channel ownership and external redirects not independently verified.

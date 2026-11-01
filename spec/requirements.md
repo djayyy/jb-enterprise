@@ -172,3 +172,7 @@ R86 CONFIRMED (CHG-053): centre footer emblem above Powering precision tagline; 
 R87 CONFIRMED (CHG-054): footer uses supplied Final-Log-at-Bottom-1-11-26.png artwork with transparent exterior, remains centred above tagline; header unchanged.
 
 R88 CONFIRMED (CHG-055): enlarge final footer logo for stronger visual presence while preserving centre above tagline and header sizing.
+
+R89 CONFIRMED (CHG-056): replace shared header/footer YouTube homepage link with user-supplied https://youtube.com/@jbael.official. Supersedes R85 homepage destination only.
+
+R90 CONFIRMED (CHG-057): activate shared header/footer X / Twitter icons with exact user-supplied http://x.com/jbael.official destination, replacing disabled controls.

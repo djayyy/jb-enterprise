@@ -1,5 +1,9 @@
 # JBAEL specification index
 
+Latest CHG-057: X / Twitter activated in shared header/footer; R90/T104/A92 build/link/all-route checks pass.
+
+Latest CHG-056: company YouTube channel linked in header/footer; R89/T103/A91 build/link/all-route checks pass.
+
 Latest CHG-055: footer logo enlarged responsively; R88/T102/A90 build/link/desktop-mobile geometry verified.
 
 Latest CHG-054: final supplied transparent footer logo installed; R87/T101/A89 verified, header unchanged.

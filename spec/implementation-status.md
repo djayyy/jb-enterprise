@@ -119,3 +119,7 @@ CHG-053: footer logo centred over intrinsic tagline width; offices/socials left-
 CHG-054: final supplied transparent footer logo replaces previous artwork, centred above tagline. A89 build/type/link/all-route/alpha and desktop visual pass; mobile not rerun.
 
 CHG-055: footer logo enlarged to120px desktop/104px compact, proportional and centred; header unchanged. A90 build/link/desktop visual/mobile geometry checks pass.
+
+CHG-056: header/footer YouTube now links supplied company channel; previous homepage follow-up resolved. A91 build/link/all188 destination assertions pass.
+
+CHG-057: X / Twitter activated in header/footer at supplied URL; all5 social icons now links. A92 build/link/all188 route checks pass.
