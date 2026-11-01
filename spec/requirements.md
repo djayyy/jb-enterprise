@@ -164,3 +164,11 @@ R82 CONFIRMED (CHG-049): footer tagline immediately below logo, before all3 offi
 R83 CONFIRMED (CHG-050): header emblem uses existing jbael-logo.png without embedded Advanced Engineering Ltd text; footer keeps existing complete jbael-brand artwork. Preserve company wordmark/tagline/layout beside both emblems.
 
 R84 CONFIRMED (CHG-051): remove the separate company-name wordmark beside the footer logo because the complete artwork already includes the name. Keep footer artwork, tagline below logo, offices and header unchanged. Supersedes R83 only for footer adjacent name markup.
+
+R85 CONFIRMED (CHG-052): implement review PDF rows1–4 using three image_1_01-11-2026 files at matching component routes/cards (IPCV in both groups), plus supplied Facebook, Instagram and YouTube URLs in header/footer. YouTube uses supplied homepage pending actual channel; LinkedIn and disabled X retained.
+
+R86 CONFIRMED (CHG-053): centre footer emblem above Powering precision tagline; preserve left-aligned addresses/socials and header.
+
+R87 CONFIRMED (CHG-054): footer uses supplied Final-Log-at-Bottom-1-11-26.png artwork with transparent exterior, remains centred above tagline; header unchanged.
+
+R88 CONFIRMED (CHG-055): enlarge final footer logo for stronger visual presence while preserving centre above tagline and header sizing.

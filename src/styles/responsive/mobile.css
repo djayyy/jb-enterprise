@@ -710,3 +710,9 @@
     font-size: 13px;
   }
 }
+
+@media (max-width: 1100px) {
+  .footer-top .footer-brand img {
+    width: 104px;
+  }
+}

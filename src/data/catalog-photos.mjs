@@ -80,11 +80,11 @@ export const catalogPhotos = {
   "/equipment/thermal/cooling-fans-blowers/turbine-fast-quick-cooling-devices/":
     "detail-reference-502",
   "/equipment/thermal/critical-fasteners/critical-studs-cap-nuts-and-washers/":
-    "detail-reference-517",
+    "critical-studs-nuts-washers",
   "/equipment/thermal/critical-fasteners/ipcv-bonnet-studs-and-nuts/":
-    "catalog-fastener",
+    "ipcv-bonnet-studs-nuts",
   "/equipment/thermal/critical-fasteners/turbine-and-pump-coupling-bolts/":
-    "detail-reference-515",
+    "turbine-pump-coupling-bolts",
   "/equipment/thermal/generator-spares-components/bus-duct-rigid-spacers/":
     "catalog-busduct",
   "/equipment/thermal/generator-spares-components/generator-components-and-spares/":
@@ -96,7 +96,7 @@ export const catalogPhotos = {
   "/equipment/thermal/turbine-spares-components/diaphragm-seals/":
     "catalog-diaphragm",
   "/equipment/thermal/turbine-spares-components/ipcv-bonnet-studs-and-nuts/":
-    "detail-reference-515",
+    "ipcv-bonnet-studs-nuts",
   "/equipment/thermal/turbine-spares-components/throttle-steam-dump-and-qnrv-valves/":
     "detail-reference-601",
   "/equipment/thermal/turbine-spares-components/turbine-blades-and-seal-segments/":

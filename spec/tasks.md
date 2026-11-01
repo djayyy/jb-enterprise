@@ -225,3 +225,11 @@ CHG-026: T66–T67 complete for scoped Chrome review. A56–A57 evidence covers 
 - [x] T97 Split header/footer emblem selection in shared Brand and verify all188 routes and asset metadata (R83; A85; CHG-050).
 
 - [x] T98 Remove duplicate footer wordmark and verify header preservation across all routes (R84; A86; CHG-051).
+
+- [x] T99 Apply review rows1–4 image/social mappings; verify routes, metadata and links (R85; A87; CHG-052).
+
+- [x] T100 Centre footer emblem over tagline and verify desktop/mobile alignment (R86; A88; CHG-053).
+
+- [x] T101 Replace footer artwork with final supplied logo preserving transparency/centre alignment and header (R87; A89; CHG-054).
+
+- [x] T102 Enlarge footer logo and verify desktop/mobile proportions/centering (R88; A90; CHG-055).

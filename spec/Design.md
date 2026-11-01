@@ -199,3 +199,11 @@ CHG-049 / R82: footer order logo→tagline→3 addresses→social icons. Tagline
 CHG-050 / R83: Brand footer prop selects current496×481 complete artwork/srcset for footer; header selects existing321×324 emblem-only PNG without footer srcset. Existing CSS display sizing and adjacent name/tagline remain.
 
 CHG-051 / R84: Brand renders its adjacent name/tagline span only in the header. Footer retains the linked complete emblem with accessible home label and the existing separate footer-tagline paragraph. No display-size changes.
+
+CHG-052 / R85: canonical catalogue image overrides select3 supplied WebP derivatives for4 component routes and their listing cards. Preserve image proportions/current layout. Shared SocialLinks activates Facebook/Instagram/YouTube with existing new-tab labels and noopener noreferrer. No layout or logo change.
+
+CHG-053 / R86: footer-identity wraps Brand/footer tagline only. Grid justify-items:center with max-content width/max-width100% centres emblem over intrinsic tagline width and allows narrow-screen text wrapping. Addresses/socials stay outside wrapper.
+
+CHG-054 / R87: footer Brand uses248/496-width lossless transparent WebP derivatives of supplied1072×1080 PNG, intrinsic original ratio, existing display sizes and centred wrapper. Footer-only transparent background overrides shared white background; header unchanged.
+
+CHG-055 / R88: footer-only image120px wide above1100px,104px at/below1100px, auto height preserving artwork ratio. Footer srcset sizes tracks display widths; higher-specificity footer selector avoids shared brand responsive overrides. Existing tagline gap/addresses unchanged.

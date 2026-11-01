@@ -375,3 +375,23 @@ Commit preparation for CHG-035–CHG-046: final combined worktree regression PAS
 - R84 / T98 / A86. Brand renders adjacent company-name span only for header. Footer retains complete supplied logo, accessible home link, separate tagline and offices.
 - Files: Brand.astro. Specs: requirements/design/tasks/acceptance/index/status/checkpoint updated. Architecture/sources/decisions/versions/workflow/agents and previous plans unchanged: conditional static markup removal using existing assets, no source fact/runtime/contract/release change. Prior header-logo work preserved.
 - PASS:50-file check0 diagnostics;188-page build;50,974 reference/source checks;all188 header/footer assertions;git diff --check. Browser visual/mobile checks not rerun; no CSS changes. No commit/push/deployment.
+
+## CHG-052 —1 November2026 — review rows1–4 images and social links
+- R85 / T99 / A87. Optimise3 supplied PNGs into proportional WebP derivatives; update4 canonical catalogue overrides including IPCV in both groups. Activate supplied Facebook/Instagram/YouTube destinations in shared SocialLinks; retain LinkedIn/disabled X and existing layout. YouTube homepage and representative assembly-photo limitations disclosed and accepted.
+- Files:3 public images, catalog-photos.mjs, assets.json, image-metadata.json, SocialLinks.astro. Specs: requirements/design/decisions/sources/tasks/acceptance/index/status/checkpoint updated. Architecture/versions/workflow/agents and earlier plans unchanged: existing static asset/link paths only, no dependency/runtime/backend/contract/release change. Original requirement assets preserved.
+- PASS:50-file check0 diagnostics;62 tests;188-page build;50,974 references/source checks;4 route/card mapping and188-page social assertions;IAB desktop390px mobile cards/loading/no-overflow;git diff --check. A87 exact visual/external-verification limits; no commit/push/deployment.
+
+## CHG-053 —1 November2026 — centre footer logo over tagline
+- R86 / T100 / A88. Add footer-identity grid around logo/tagline, max-content width capped100%, centre items/text. Addresses/socials stay outside wrapper and left-aligned. Header unchanged.
+- Files: Layout.astro, company-review.css. Specs: requirements/design/tasks/acceptance/index/status/checkpoint updated. Architecture/sources/decisions/versions/workflow/agents and earlier plans unchanged: presentation-only correction, existing assets/contracts/runtime/release. Prior CHG-052 work preserved.
+- PASS:188-page build;50,974 reference/source checks;188 wrapper assertions;IAB desktop/mobile exact centre geometry/no mobile overflow;desktop screenshot;git diff --check. No tests/typecheck rerun for static markup/CSS. No commit/push/deployment.
+
+## CHG-054 —1 November2026 — final supplied footer logo
+- R87 / T101 / A89. Replace footer-only sources with2 lossless transparent WebP derivatives of supplied final PNG; update intrinsic dimensions and footer-only transparent background. Preserve centred wrapper/header/display sizes.
+- Files: Brand.astro, company-review.css,2 public images, assets/image-metadata JSON. Specs: requirements/design/sources/tasks/acceptance/index/status/checkpoint updated. Architecture/decisions/versions/workflow/agents/earlier plans unchanged: existing asset pipeline, no new contract/runtime/release or assumptions. Prior work preserved.
+- PASS:50-file check0 diagnostics;188-page build;50,974 reference/source checks;188 footer/header assertions;alpha inspection;IAB desktop loaded/transparent visual;git diff --check. A89 mobile/test limits. No commit/push/deployment.
+
+## CHG-055 —1 November2026 — larger responsive footer logo
+- R88 / T102 / A90. Footer image grows57→120px desktop and48→104px compact, auto height preserving ratio, centre unchanged. Footer srcset sizes aligned. Header unaffected.
+- Files: company-review.css, responsive/mobile.css, Brand.astro. Specs: requirements/design/tasks/acceptance/index/status/checkpoint updated. Architecture/sources/decisions/versions/workflow/agents and earlier plans unchanged: visual sizing correction, existing assets/contracts/runtime/release. Prior work preserved.
+- PASS:188-page build;50,974 references/source checks;188 sizes assertions;IAB desktop/mobile dimensions/centres/no-overflow;desktop screenshot;git diff --check. A90 test/type/mobile visual limits. No commit/push/deployment.

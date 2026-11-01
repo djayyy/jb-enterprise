@@ -11,19 +11,21 @@ const { footer = false } = Astro.props;
   aria-label="JB Advanced Engineering Limited home"
 >
   <img
-    src={footer ? "/images/jbael-brand-248.webp" : "/images/jbael-logo.png"}
+    src={
+      footer ? "/images/jbael-footer-final-248.webp" : "/images/jbael-logo.png"
+    }
     srcset={
       footer
-        ? "/images/jbael-brand-248.webp 248w, /images/jbael-brand.webp 496w"
+        ? "/images/jbael-footer-final-248.webp 248w, /images/jbael-footer-final-496.webp 496w"
         : undefined
     }
     sizes={
       footer
-        ? "(max-width: 1100px) 48px, 57px"
+        ? "(max-width: 1100px) 104px, 120px"
         : "(max-width: 600px) 42px, (max-width: 1100px) 48px, 57px"
     }
-    width={footer ? 496 : 321}
-    height={footer ? 481 : 324}
+    width={footer ? 1072 : 321}
+    height={footer ? 1080 : 324}
     alt=""
     decoding="async"
     loading={footer ? "lazy" : "eager"}

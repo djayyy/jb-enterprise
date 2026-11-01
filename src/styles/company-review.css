@@ -429,3 +429,18 @@
 .footer-top .footer-tagline {
   margin-top: 12px;
 }
+
+/* Centre the emblem over its tagline, independently of the office column. */
+.footer-identity {
+  display: grid;
+  justify-items: center;
+  width: max-content;
+  max-width: 100%;
+  text-align: center;
+}
+
+.footer-top .footer-brand img {
+  width: 120px;
+  height: auto;
+  background: transparent;
+}

@@ -650,5 +650,25 @@
   "clients/pln": {
     "width": 200,
     "height": 200
+  },
+  "critical-studs-nuts-washers": {
+    "width": 1254,
+    "height": 1254
+  },
+  "ipcv-bonnet-studs-nuts": {
+    "width": 1600,
+    "height": 900
+  },
+  "turbine-pump-coupling-bolts": {
+    "width": 1600,
+    "height": 828
+  },
+  "jbael-footer-final-248": {
+    "width": 248,
+    "height": 250
+  },
+  "jbael-footer-final-496": {
+    "width": 496,
+    "height": 500
   }
 }

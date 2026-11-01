@@ -111,3 +111,11 @@ CHG-049: footer tagline below logo/above3 offices;5 header/footer social icons r
 CHG-050: header uses existing emblem without embedded company text; footer complete logo unchanged. A85 build/type/link/all188 route assertions and desktop visual pass; mobile not rerun.
 
 CHG-051: duplicate footer company-name wordmark removed; complete footer logo, tagline/offices and header preserved. A86 build/type/link/all188 markup checks pass; browser visual checks not rerun.
+
+CHG-052: review rows1–4 implemented using3 local supplied images across4 component routes/cards and activating Facebook/Instagram/supplied YouTube homepage in shared header/footer. A87 build/type/test/link/all-route and scoped desktop/mobile checks pass. Actual company YouTube channel remains follow-up; no deployment.
+
+CHG-053: footer logo centred over intrinsic tagline width; offices/socials left-aligned. A88 desktop/mobile geometry,188 route wrapper/build/link checks pass.
+
+CHG-054: final supplied transparent footer logo replaces previous artwork, centred above tagline. A89 build/type/link/all-route/alpha and desktop visual pass; mobile not rerun.
+
+CHG-055: footer logo enlarged to120px desktop/104px compact, proportional and centred; header unchanged. A90 build/link/desktop visual/mobile geometry checks pass.

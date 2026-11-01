@@ -1,5 +1,13 @@
 # JBAEL specification index
 
+Latest CHG-055: footer logo enlarged responsively; R88/T102/A90 build/link/desktop-mobile geometry verified.
+
+Latest CHG-054: final supplied transparent footer logo installed; R87/T101/A89 verified, header unchanged.
+
+Latest CHG-053: footer logo centred above tagline; R86/T100/A88 desktop/mobile geometry and build/link checks pass.
+
+Latest CHG-052: review rows1–4 supplied image replacements and Facebook/Instagram/YouTube destinations implemented; R85/T99/A87 verified, YouTube homepage limitation recorded.
+
 Latest CHG-051: duplicate company-name text beside footer logo removed; header unchanged. R84/T98/A86 checks/limits recorded.
 
 Latest CHG-050: text-free header emblem and unchanged complete footer logo; R83/T97/A85 verified.

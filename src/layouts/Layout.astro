@@ -100,10 +100,12 @@ const path = Astro.url.pathname.replace(/\/?$/, "/");
       <div class="container">
         <div class="footer-top">
           <div>
-            <Brand footer />
-            <p class="footer-tagline">
-              Powering precision, Engineering the future.
-            </p>
+            <div class="footer-identity">
+              <Brand footer />
+              <p class="footer-tagline">
+                Powering precision, Engineering the future.
+              </p>
+            </div>
             <div class="footer-offices" aria-label="Company locations">
               {offices.map((office) => (
                 <address>
