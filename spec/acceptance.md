@@ -543,3 +543,7 @@ A91 PASS: all188 generated routes contain exactly2 company-channel anchors (head
 A92 — CHG-057: all188 routes have header/footer X / Twitter anchors at supplied URL with safe new-tab attributes; no disabled social controls. Verification pending.
 
 A92 PASS: all188 generated routes contain2 X / Twitter anchors at exact supplied URL with target=_blank/rel=noopener noreferrer; both groups contain5 links and no disabled controls.188-page build;50,974 reference/source checks;git diff --check pass. Browser/external redirect/ownership not verified; no tests/typecheck rerun for static destination update. No commit/push/deployment.
+
+A93 — CHG-058: all188 routes use corrected HTTPS X handle in header/footer with existing safe new-tab attributes; old URL absent. Verification pending.
+
+A93 PASS: all188 routes contain exactly2 corrected X anchors with target=_blank/rel=noopener noreferrer and no prior URL.188-page build;50,974 local reference/source checks;git diff --check pass. Browser/external profile validation/tests/typecheck not rerun for URL-only edit. User requested commit; no push/deployment requested.

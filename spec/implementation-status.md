@@ -123,3 +123,5 @@ CHG-055: footer logo enlarged to120px desktop/104px compact, proportional and ce
 CHG-056: header/footer YouTube now links supplied company channel; previous homepage follow-up resolved. A91 build/link/all188 destination assertions pass.
 
 CHG-057: X / Twitter activated in header/footer at supplied URL; all5 social icons now links. A92 build/link/all188 route checks pass.
+
+CHG-058: corrected X company handle/HTTPS URL in header/footer; A93 build/link/all188 destination checks pass. Committing as requested; no push/deployment.

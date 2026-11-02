@@ -405,3 +405,8 @@ Commit preparation for CHG-035–CHG-046: final combined worktree regression PAS
 - R90 / T104 / A92. Shared X / Twitter icon becomes active link at exact user-supplied http://x.com/jbael.official in header/footer with existing new-tab safeguards. Other social URLs/layout unchanged; prior YouTube update preserved.
 - Files: SocialLinks.astro. Specs: requirements/design/sources/tasks/acceptance/index/status/checkpoint updated. Architecture/decisions/versions/workflow/agents/earlier plans unchanged: explicit static destination update without new assumption/runtime/layout/contract/release.
 - PASS:188-page build;50,974 reference/source checks;188 dual-X-anchor and5-active-links-per-group assertions;git diff --check. Browser/external validation/tests/typecheck not rerun for URL-only edit. No commit/push/deployment.
+
+## CHG-058 —2 November2026 — correct X company handle
+- R91 / T105 / A93. Replace old dotted HTTP X URL with exact supplied https://x.com/jbaelofficial in shared header/footer SocialLinks; preserve other links and presentation.
+- Files: SocialLinks.astro. Specs: requirements/design/sources/tasks/acceptance/index/status/checkpoint updated. Architecture/decisions/versions/workflow/agents and earlier plans unchanged: explicit URL correction without new assumption/runtime/layout/contract/release.
+- PASS:188-page build;50,974 reference/source checks;all188 exact dual-anchor/safety assertions;git diff --check. Browser/external profile audit/tests/typecheck not rerun for URL-only edit. User-authorized commit; no push/deployment.

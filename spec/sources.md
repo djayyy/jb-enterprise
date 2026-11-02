@@ -112,3 +112,5 @@ CHG-054: visually inspected requirement/Final-Log-at-Bottom-1-11-26.png1072×108
 CHG-056: user supplied https://youtube.com/@jbael.official directly as replacement YouTube destination; supersedes review PDF generic homepage. Channel ownership/content not independently audited.
 
 CHG-057: user directly supplied http://x.com/jbael.official as X / Twitter destination. Exact URL retained; channel ownership and external redirects not independently verified.
+
+CHG-058: user directly supplied https://x.com/jbaelofficial on2November2026, superseding prior dotted handle/HTTP URL. External ownership/content not independently verified.

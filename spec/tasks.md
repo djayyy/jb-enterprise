@@ -237,3 +237,5 @@ CHG-026: T66–T67 complete for scoped Chrome review. A56–A57 evidence covers 
 - [x] T103 Update YouTube destination and verify both groups across generated routes (R89; A91; CHG-056).
 
 - [x] T104 Activate X / Twitter destination and verify both groups across generated routes (R90; A92; CHG-057).
+
+- [x] T105 Correct X URL, verify all generated header/footer anchors and commit (R91; A93; CHG-058).

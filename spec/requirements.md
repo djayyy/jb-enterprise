@@ -176,3 +176,5 @@ R88 CONFIRMED (CHG-055): enlarge final footer logo for stronger visual presence 
 R89 CONFIRMED (CHG-056): replace shared header/footer YouTube homepage link with user-supplied https://youtube.com/@jbael.official. Supersedes R85 homepage destination only.
 
 R90 CONFIRMED (CHG-057): activate shared header/footer X / Twitter icons with exact user-supplied http://x.com/jbael.official destination, replacing disabled controls.
+
+R91 CONFIRMED (CHG-058): correct shared header/footer X destination to user-supplied https://x.com/jbaelofficial, superseding R90 URL.

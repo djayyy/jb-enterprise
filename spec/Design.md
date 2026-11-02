@@ -211,3 +211,5 @@ CHG-055 / R88: footer-only image120px wide above1100px,104px at/below1100px, aut
 CHG-056 / R89: existing YouTube icon links to supplied company-channel URL in both shared social groups; presentation/new-tab safeguards unchanged.
 
 CHG-057 / R90: X / Twitter uses existing active-anchor rendering, accessible new-tab label and noopener noreferrer in both social groups; all5 icons now links. Layout/other URLs unchanged.
+
+CHG-058 / R91: X anchors use corrected HTTPS company handle; existing icon, new-tab attributes and layout retained.

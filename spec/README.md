@@ -1,5 +1,7 @@
 # JBAEL specification index
 
+Latest CHG-058: corrected HTTPS X company handle; R91/T105/A93 build/link/all-route checks pass.
+
 Latest CHG-057: X / Twitter activated in shared header/footer; R90/T104/A92 build/link/all-route checks pass.
 
 Latest CHG-056: company YouTube channel linked in header/footer; R89/T103/A91 build/link/all-route checks pass.
