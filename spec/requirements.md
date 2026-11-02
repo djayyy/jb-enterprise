@@ -198,3 +198,5 @@ R99 CONFIRMED (CHG-066): Material science and testing under Reverse engineering 
 R100 CONFIRMED (CHG-067): Hydro generator Stator core, winding and bar inspection/repair uses supplied stator core.jpeg on detail hero and listing card. Preserve other mappings/layout.
 
 R101 CONFIRMED (CHG-068): Hydro generator Rotor pole, spider and rim inspection uses supplied rim inspection.jpeg on detail hero and listing card. Preserve other mappings/layout; commit requested.
+
+R102 CONFIRMED (CHG-069): Remove Air cooler and excitation-system inspection from Hydro generator services, including its child page, cards and shared navigation. Retain all other Hydro generator scopes and equipment offerings. Supersedes original supplied scope list for this item.

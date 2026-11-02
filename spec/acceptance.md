@@ -587,3 +587,9 @@ A102 PASS: 188-page build, 50,974 local reference/asset checks, generated detail
 A103 — CHG-068: rotor/rim service detail hero and Hydro generator parent card use supplied image with valid dimensions; unrelated mappings preserved. Verification pending.
 
 A103 PASS: 188-page build, 50,974 local reference/asset checks, generated detail hero and Hydro generator parent-card assertions for supplied 1536×1024 image. Comparison against HEAD confirms unrelated mappings preserved. Source visually inspected; browser/mobile crop checks and tests/typecheck not rerun for asset-only edit. User-authorized commit; no push/deployment.
+
+A104 — CHG-069: removed service title/slug absent throughout generated site, canonical leaf not generated, Hydro generator retains five other services; 177 catalogue/187 total pages. Verification pending.
+
+A104 PASS: 187-page build, 50,516 reference/asset checks and all 62 existing tests. Generated output scan confirms removed service title/slug absent on every page, removed leaf directory absent, and all five remaining Hydro generator child services linked. Existing route-count tests updated to 177 catalogue/187 total routes. Browser visual/typecheck not rerun for catalogue scope deletion; no layout/runtime change. No commit/push/deployment.
+
+CHG-069 follow-up / A104: navigation audit PASS (187 pages, 562 unique destinations, 850 semantic checks, all 99 remaining service scopes and 59 equipment part targets). Astro check PASS: 50 files, zero errors/warnings/hints. Current internal navigation, breadcrumb targets, service/part enquiry contexts and remaining catalogue routes validated. Search filters existing rendered cards; removed title/slug absent from all generated HTML including searchable data. Browser interactions not exercised. Removed canonical URL intentionally has no replacement and will return 404 after deployment; old bookmarks to that removed page are not preserved.

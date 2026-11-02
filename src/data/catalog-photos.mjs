@@ -116,8 +116,6 @@ export const catalogPhotos = {
     "detail-reference-3358",
   "/services/hydro/electrical-controls/vibration-and-speed-measurement/":
     "detail-testings-tes12",
-  "/services/hydro/generator/air-cooler-and-excitation-system-inspection/":
-    "detail-reference-3616",
   "/services/hydro/generator/bearing-repair-and-white-metal-re-metalling/":
     "catalog-bearing",
   "/services/hydro/generator/electrical-mechanical-testing-and-commissioning-support/":

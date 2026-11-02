@@ -73,7 +73,7 @@ for (const page of pages) {
     assert.match(html, /id="resource-dialog"/);
   }
 }
-assert.equal(pages.length, 188, "Expected review routes");
+assert.equal(pages.length, 187, "Expected review routes");
 assert.ok(
   !files.some((f) => /\/requirement\/|\/spec\//.test(f)),
   "Private source documents must not be deployed",

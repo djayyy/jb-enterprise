@@ -137,7 +137,6 @@ export const services: Service[] = [
       "Rotor pole, spider and rim inspection",
       "Shaft and journal repair",
       "Bearing repair and white-metal re-metalling",
-      "Air cooler and excitation-system inspection",
       "Electrical/mechanical testing and commissioning support",
     ],
     source: "S2 p.9",

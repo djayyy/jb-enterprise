@@ -145,3 +145,5 @@ CHG-066: Material science and testing uses supplied material science.jpeg on det
 CHG-067: Hydro generator stator service uses supplied stator core.jpeg on detail hero and parent card; A102 build/link/mapping checks pass. Browser crop not rerun.
 
 CHG-068: Rotor pole, spider and rim inspection uses supplied rim inspection.jpeg on detail hero and parent card; A103 build/link/mapping checks pass. Committing as requested; no push/deployment.
+
+CHG-069: Hydro generator air-cooler/excitation inspection removed from source, cards/navigation and generated routes. Current total187 pages/177 catalogue pages. A104 build/link/62 tests and site-wide removal checks pass.

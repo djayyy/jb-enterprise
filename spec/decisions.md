@@ -139,3 +139,5 @@ D69 — CHG-048: show only the supplied working LinkedIn destination; remove unk
 D70 — CHG-052: user approved all4 review rows after concerns disclosed. Use explicit supplied filenames to map representative turbine/valve assembly photographs without claiming they are close-up fastener photos. Use PDF YouTube homepage as explicitly supplied destination rather than invent company channel; actual channel remains owner follow-up. Facebook/Instagram ownership not independently verified (automated access blocked).
 
 D71 — CHG-056: supplied company-channel URL resolves D70 YouTube-homepage follow-up. Use exact user URL in shared SocialLinks; no inferred channel destination.
+
+CHG-069: Explicit user removal overrides original S2 Hydro generator scope. Remove canonical leaf entirely without redirect; no replacement destination was requested. Equipment air-cooler/excitation components remain in scope.

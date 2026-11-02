@@ -233,3 +233,5 @@ CHG-066 / R99: /services/reverse-engineering/material-science-and-testing/ selec
 CHG-067 / R100: /services/hydro/generator/stator-core-winding-and-bar-inspection-repair/ selects hydro-stator-core-nov2 for shared hero/cards; current presentation retained.
 
 CHG-068 / R101: /services/hydro/generator/rotor-pole-spider-and-rim-inspection/ selects hydro-rim-inspection-nov2 for shared hero/cards; existing presentation retained.
+
+CHG-069 / R102: Hydro generator services has five child services. Removed air-cooler/excitation inspection leaf is no longer generated or linked. All other hierarchy/presentation retained.

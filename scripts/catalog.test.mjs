@@ -47,8 +47,8 @@ test("requested turbine and critical-component photos survive reviewed catalogue
 });
 
 test("every supplied service scope and part has one distinct page under its parent", () => {
-  assert.equal(tree.allPages.length, 178);
-  assert.equal(new Set(tree.allPages.map((n) => n.url)).size, 178);
+  assert.equal(tree.allPages.length, 177);
+  assert.equal(new Set(tree.allPages.map((n) => n.url)).size, 177);
   for (const service of services) {
     const page = tree.servicePages.find(
       (n) => n.url === `/services/${service.slug}/`,

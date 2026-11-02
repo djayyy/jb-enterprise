@@ -1,5 +1,7 @@
 # JBAEL specification index
 
+Latest CHG-069: Hydro generator air-cooler/excitation inspection removed; R102/T116/A104 build/link/62 tests and removal checks pass. Current total:187 pages.
+
 Latest CHG-068: Hydro rotor and rim photo replaced with supplied image; R101/T115/A103 build/link/mapping checks pass.
 
 Latest CHG-067: Hydro stator core photo replaced with supplied image; R100/T114/A102 build/link/mapping checks pass.
