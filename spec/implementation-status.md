@@ -143,3 +143,5 @@ CHG-065: Design validation uses supplied November 2 image; A100 build/link/mappi
 CHG-066: Material science and testing uses supplied material science.jpeg on detail hero and parent card; A101 build/link/mapping checks pass. Browser crop not rerun.
 
 CHG-067: Hydro generator stator service uses supplied stator core.jpeg on detail hero and parent card; A102 build/link/mapping checks pass. Browser crop not rerun.
+
+CHG-068: Rotor pole, spider and rim inspection uses supplied rim inspection.jpeg on detail hero and parent card; A103 build/link/mapping checks pass. Committing as requested; no push/deployment.

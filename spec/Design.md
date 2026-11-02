@@ -231,3 +231,5 @@ CHG-065 / R98: /services/reverse-engineering/design-validation/ selects design-v
 CHG-066 / R99: /services/reverse-engineering/material-science-and-testing/ selects material-science-nov2 for shared hero/cards; existing presentation retained.
 
 CHG-067 / R100: /services/hydro/generator/stator-core-winding-and-bar-inspection-repair/ selects hydro-stator-core-nov2 for shared hero/cards; current presentation retained.
+
+CHG-068 / R101: /services/hydro/generator/rotor-pole-spider-and-rim-inspection/ selects hydro-rim-inspection-nov2 for shared hero/cards; existing presentation retained.

@@ -583,3 +583,7 @@ A101 PASS: 188-page build, 50,974 reference/asset checks, detail-hero and parent
 A102 — CHG-067: stator service detail hero and Hydro generator parent card use supplied image with valid dimensions; unrelated mappings and pending material-science change preserved. Verification pending.
 
 A102 PASS: 188-page build, 50,974 local reference/asset checks, generated detail hero and Hydro generator parent-card assertions for supplied 1556×1011 image; comparison with pre-edit map confirms other mappings and pending material-science replacement preserved. Source visually inspected. Browser/mobile crops and tests/typecheck not rerun for asset-only edit. No commit/push/deployment.
+
+A103 — CHG-068: rotor/rim service detail hero and Hydro generator parent card use supplied image with valid dimensions; unrelated mappings preserved. Verification pending.
+
+A103 PASS: 188-page build, 50,974 local reference/asset checks, generated detail hero and Hydro generator parent-card assertions for supplied 1536×1024 image. Comparison against HEAD confirms unrelated mappings preserved. Source visually inspected; browser/mobile crop checks and tests/typecheck not rerun for asset-only edit. User-authorized commit; no push/deployment.

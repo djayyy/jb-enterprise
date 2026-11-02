@@ -196,3 +196,5 @@ R98 CONFIRMED (CHG-065): Design validation under Reverse engineering uses suppli
 R99 CONFIRMED (CHG-066): Material science and testing under Reverse engineering uses supplied material science.jpeg on detail hero and listing card; other mappings/layout unchanged.
 
 R100 CONFIRMED (CHG-067): Hydro generator Stator core, winding and bar inspection/repair uses supplied stator core.jpeg on detail hero and listing card. Preserve other mappings/layout.
+
+R101 CONFIRMED (CHG-068): Hydro generator Rotor pole, spider and rim inspection uses supplied rim inspection.jpeg on detail hero and listing card. Preserve other mappings/layout; commit requested.

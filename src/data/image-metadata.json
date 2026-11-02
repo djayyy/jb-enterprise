@@ -706,5 +706,9 @@
   "hydro-stator-core-nov2": {
     "width": 1556,
     "height": 1011
+  },
+  "hydro-rim-inspection-nov2": {
+    "width": 1536,
+    "height": 1024
   }
 }

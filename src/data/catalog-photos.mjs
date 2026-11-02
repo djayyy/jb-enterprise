@@ -123,7 +123,7 @@ export const catalogPhotos = {
   "/services/hydro/generator/electrical-mechanical-testing-and-commissioning-support/":
     "detail-testings-tes09",
   "/services/hydro/generator/rotor-pole-spider-and-rim-inspection/":
-    "detail-generator-g30",
+    "hydro-rim-inspection-nov2",
   "/services/hydro/generator/shaft-and-journal-repair/": "detail-generator-g40",
   "/services/hydro/generator/stator-core-winding-and-bar-inspection-repair/":
     "hydro-stator-core-nov2",

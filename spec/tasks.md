@@ -257,3 +257,5 @@ T112 — CHG-065 / R98 / A100: replace Design validation image and commit all fo
 T113 — CHG-066 / R99 / A101: replace Material science and testing photo; complete, build/link/mapping checks pass.
 
 T114 — CHG-067 / R100 / A102: replace hydro stator service photo; complete, build/link/mapping checks pass.
+
+T115 — CHG-068 / R101 / A103: replace Rotor pole, spider and rim inspection photo; build/link/mapping checks complete; committing as requested.

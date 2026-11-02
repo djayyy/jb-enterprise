@@ -132,3 +132,5 @@ CHG-065: requirement/design validation 2 nov.jpeg (1600×900) visually inspected
 CHG-066: requirement/material science.jpeg (1448×1086) visually inspected: material composition testing using handheld analyser on machined metal component. Original preserved; proportional WebP derivative with metadata/provenance registered. No ownership/facility claim inferred.
 
 CHG-067: requirement/stator core.jpeg (1556×1011) visually inspected: large hydro generator assembly with surrounding stator windings. Original preserved; proportional WebP derivative, provenance and metadata registered. No facility ownership claim inferred.
+
+CHG-068: requirement/rim inspection.jpeg (1536×1024) visually inspected: suspended hydro generator rotor assembly above stator. Original preserved; proportional WebP derivative and metadata/provenance registered. No facility ownership claim inferred.
