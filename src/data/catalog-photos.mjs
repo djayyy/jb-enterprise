@@ -1,6 +1,7 @@
 // Inspected supplied photos: explicit canonical-route choices override keyword fallbacks.
 // Provenance and intrinsic dimensions are in assets.json and image-metadata.json.
 export const catalogPhotos = {
+  "/services/hydro/generator/": "hydro-generator-services-nov2",
   "/equipment/hydro/hydro-generator-components/":
     "hydro-generator-components-nov2",
   "/equipment/hydro/hydro-generator-components/excitation-components-and-slip-rings/":

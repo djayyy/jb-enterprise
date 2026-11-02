@@ -127,3 +127,5 @@ CHG-057: X / Twitter activated in header/footer at supplied URL; all5 social ico
 CHG-058: corrected X company handle/HTTPS URL in header/footer; A93 build/link/all188 destination checks pass. Committing as requested; no push/deployment.
 
 CHG-059: Hydro generator components uses supplied2November image on group detail and listing cards; child photos unchanged. A94 build/link/mapping checks pass; browser crop not rerun.
+
+CHG-060: Hydro generator services uses supplied November2 image on group detail/listing cards; equipment and child images unchanged. A95 build/link/mapping checks pass; committing as requested.

@@ -551,3 +551,7 @@ A93 PASS: all188 routes contain exactly2 corrected X anchors with target=_blank/
 A94 — CHG-059: Hydro generator components detail hero and hydro/all-equipment listing cards use new supplied image, valid dimensions; child image mappings preserved. Verification pending.
 
 A94 PASS: generated group detail hero and hydro/all-equipment listing cards reference supplied1600×900 derivative. Existing catalogue map unchanged except new group override, preserving child mappings.188-page build;50,974 reference/source checks;git diff --check pass. Source image visually inspected; browser crop/mobile visual not rerun for asset-only mapping. No tests/typecheck rerun; no commit/push/deployment.
+
+A95 — CHG-060: Hydro generator services detail hero and hydro/all-services cards use supplied image; other image mappings unchanged. Verification pending.
+
+A95 PASS: generated Hydro generator services hero and hydro/all-services listing cards use supplied1571×1001 derivative; catalogue map comparison confirms only requested group added.188-page build;50,974 reference/source checks;git diff --check pass. Supplied source visually inspected. Browser crop/mobile/tests/typecheck not rerun for asset-only mapping. User requested commit; no push/deployment.

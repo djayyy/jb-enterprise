@@ -180,3 +180,5 @@ R90 CONFIRMED (CHG-057): activate shared header/footer X / Twitter icons with ex
 R91 CONFIRMED (CHG-058): correct shared header/footer X destination to user-supplied https://x.com/jbaelofficial, superseding R90 URL.
 
 R92 CONFIRMED (CHG-059): replace Hydro generator components group image under Equipment Supply/Hydro with supplied img feedback 2 nov.jpeg, consistent on group detail and listing cards. Preserve child component images.
+
+R93 CONFIRMED (CHG-060): Hydro generator services under Hydro power plant services uses supplied hydro image 2 nov.jpeg on group detail and listing cards. Child service photos/equipment imagery unchanged; commit requested.

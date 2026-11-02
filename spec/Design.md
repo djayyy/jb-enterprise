@@ -215,3 +215,5 @@ CHG-057 / R90: X / Twitter uses existing active-anchor rendering, accessible new
 CHG-058 / R91: X anchors use corrected HTTPS company handle; existing icon, new-tab attributes and layout retained.
 
 CHG-059 / R92: canonical /equipment/hydro/hydro-generator-components/ override uses hydro-generator-components-nov2; shared catalogue hero/card rendering and existing crop/layout retained. Explicit child image overrides unchanged.
+
+CHG-060 / R93: canonical /services/hydro/generator/ image override selects hydro-generator-services-nov2 in shared hero/cards; existing layout/cropping unchanged.
