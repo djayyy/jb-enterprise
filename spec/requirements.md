@@ -192,3 +192,7 @@ R96 CONFIRMED (CHG-063): 3D models and engineering drawings under Reverse engine
 R97 CONFIRMED (CHG-064): Simulation and engineering analysis under Reverse engineering uses supplied design simulation 2 nov.jpeg on detail hero and listing card; other images/layout preserved.
 
 R98 CONFIRMED (CHG-065): Design validation under Reverse engineering uses supplied design validation 2 nov.jpeg on detail hero and listing card. Preserve other images/layout; commit pending replacements as requested.
+
+R99 CONFIRMED (CHG-066): Material science and testing under Reverse engineering uses supplied material science.jpeg on detail hero and listing card; other mappings/layout unchanged.
+
+R100 CONFIRMED (CHG-067): Hydro generator Stator core, winding and bar inspection/repair uses supplied stator core.jpeg on detail hero and listing card. Preserve other mappings/layout.

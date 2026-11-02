@@ -227,3 +227,7 @@ CHG-063 / R96: /services/reverse-engineering/3d-models-and-engineering-drawings/
 CHG-064 / R97: /services/reverse-engineering/simulation-and-engineering-analysis/ selects design-simulation-nov2 for shared hero/cards, retaining current crop/layout.
 
 CHG-065 / R98: /services/reverse-engineering/design-validation/ selects design-validation-nov2 for shared hero/cards, retaining existing presentation.
+
+CHG-066 / R99: /services/reverse-engineering/material-science-and-testing/ selects material-science-nov2 for shared hero/cards; existing presentation retained.
+
+CHG-067 / R100: /services/hydro/generator/stator-core-winding-and-bar-inspection-repair/ selects hydro-stator-core-nov2 for shared hero/cards; current presentation retained.

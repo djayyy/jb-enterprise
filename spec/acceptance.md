@@ -575,3 +575,11 @@ A99 PASS: 188-page build, 50,974 local reference/asset checks, generated detail 
 A100 — CHG-065: Design validation hero and parent card use supplied image with valid dimensions; other mappings and three pending replacements preserved. Verification pending.
 
 A100 PASS: 188-page build and 50,974 reference/asset checks. All four CHG-062–065 detail heroes and parent cards reference requested derivatives. Comparison against HEAD confirms exactly four requested mappings changed. Design validation source visually inspected (1600×900). Browser/mobile crop checks and tests/typecheck not rerun for asset-only edits. User-authorized commit; no push/deployment.
+
+A101 — CHG-066: Material science and testing detail hero and Reverse engineering parent card use supplied image with correct dimensions; unrelated mappings preserved. Verification pending.
+
+A101 PASS: 188-page build, 50,974 reference/asset checks, detail-hero and parent-card assertions for supplied 1448×1086 image; comparison against HEAD confirms unrelated mappings preserved. Source visually inspected. Browser/mobile crops and tests/typecheck not rerun for asset-only edit. No commit/push/deployment.
+
+A102 — CHG-067: stator service detail hero and Hydro generator parent card use supplied image with valid dimensions; unrelated mappings and pending material-science change preserved. Verification pending.
+
+A102 PASS: 188-page build, 50,974 local reference/asset checks, generated detail hero and Hydro generator parent-card assertions for supplied 1556×1011 image; comparison with pre-edit map confirms other mappings and pending material-science replacement preserved. Source visually inspected. Browser/mobile crops and tests/typecheck not rerun for asset-only edit. No commit/push/deployment.

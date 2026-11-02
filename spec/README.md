@@ -1,5 +1,9 @@
 # JBAEL specification index
 
+Latest CHG-067: Hydro stator core photo replaced with supplied image; R100/T114/A102 build/link/mapping checks pass.
+
+Latest CHG-066: Material science photo replaced with supplied image; R99/T113/A101 build/link/mapping checks pass.
+
 Latest CHG-065: Design validation photo replaced with supplied November 2 image; R98/T112/A100 build/link/mapping checks pass.
 
 Latest CHG-064: Design simulation photo replaced with supplied November 2 image; R97/T111/A99 build/link/mapping checks pass.

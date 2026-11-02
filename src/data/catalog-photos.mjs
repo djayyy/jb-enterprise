@@ -126,7 +126,7 @@ export const catalogPhotos = {
     "detail-generator-g30",
   "/services/hydro/generator/shaft-and-journal-repair/": "detail-generator-g40",
   "/services/hydro/generator/stator-core-winding-and-bar-inspection-repair/":
-    "stator",
+    "hydro-stator-core-nov2",
   "/services/hydro/turbine/": "detail-reference-564",
   "/services/hydro/turbine/balancing-machining-welding-and-commissioning/":
     "catalog-welding",
@@ -194,7 +194,7 @@ export const catalogPhotos = {
   "/services/reverse-engineering/manufacturing-and-quality-validation/":
     "detail-generator-g07",
   "/services/reverse-engineering/material-science-and-testing/":
-    "detail-generator-g03",
+    "material-science-nov2",
   "/services/reverse-engineering/simulation-and-engineering-analysis/":
     "design-simulation-nov2",
   "/services/reverse-engineering/technical-visit-and-pre-inspection/":

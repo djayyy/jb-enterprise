@@ -139,3 +139,7 @@ CHG-063: 3D models and engineering drawings uses supplied November 2 image on de
 CHG-064: Simulation and engineering analysis uses supplied November 2 image on detail hero and parent card; A99 build/link/mapping checks pass. Browser crop not rerun.
 
 CHG-065: Design validation uses supplied November 2 image; A100 build/link/mapping checks pass for all four pending replacements. Committing CHG-062–065 as requested; no push/deployment.
+
+CHG-066: Material science and testing uses supplied material science.jpeg on detail hero and parent card; A101 build/link/mapping checks pass. Browser crop not rerun.
+
+CHG-067: Hydro generator stator service uses supplied stator core.jpeg on detail hero and parent card; A102 build/link/mapping checks pass. Browser crop not rerun.

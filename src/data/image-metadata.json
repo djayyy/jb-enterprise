@@ -698,5 +698,13 @@
   "design-validation-nov2": {
     "width": 1600,
     "height": 900
+  },
+  "material-science-nov2": {
+    "width": 1448,
+    "height": 1086
+  },
+  "hydro-stator-core-nov2": {
+    "width": 1556,
+    "height": 1011
   }
 }
