@@ -114,3 +114,5 @@ CHG-056: user supplied https://youtube.com/@jbael.official directly as replaceme
 CHG-057: user directly supplied http://x.com/jbael.official as X / Twitter destination. Exact URL retained; channel ownership and external redirects not independently verified.
 
 CHG-058: user directly supplied https://x.com/jbaelofficial on2November2026, superseding prior dotted handle/HTTP URL. External ownership/content not independently verified.
+
+CHG-059: requirement/img feedback 2 nov.jpeg1600×900 visually inspected: vertical-shaft generator rotor/stator assembly workshop scene. Original preserved; optimised WebP derivative with matching dimensions/provenance added. Company-supplied representative image, no facility/ownership inference.

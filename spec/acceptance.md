@@ -547,3 +547,7 @@ A92 PASS: all188 generated routes contain2 X / Twitter anchors at exact supplied
 A93 — CHG-058: all188 routes use corrected HTTPS X handle in header/footer with existing safe new-tab attributes; old URL absent. Verification pending.
 
 A93 PASS: all188 routes contain exactly2 corrected X anchors with target=_blank/rel=noopener noreferrer and no prior URL.188-page build;50,974 local reference/source checks;git diff --check pass. Browser/external profile validation/tests/typecheck not rerun for URL-only edit. User requested commit; no push/deployment requested.
+
+A94 — CHG-059: Hydro generator components detail hero and hydro/all-equipment listing cards use new supplied image, valid dimensions; child image mappings preserved. Verification pending.
+
+A94 PASS: generated group detail hero and hydro/all-equipment listing cards reference supplied1600×900 derivative. Existing catalogue map unchanged except new group override, preserving child mappings.188-page build;50,974 reference/source checks;git diff --check pass. Source image visually inspected; browser crop/mobile visual not rerun for asset-only mapping. No tests/typecheck rerun; no commit/push/deployment.

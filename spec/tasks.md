@@ -239,3 +239,5 @@ CHG-026: T66–T67 complete for scoped Chrome review. A56–A57 evidence covers 
 - [x] T104 Activate X / Twitter destination and verify both groups across generated routes (R90; A92; CHG-057).
 
 - [x] T105 Correct X URL, verify all generated header/footer anchors and commit (R91; A93; CHG-058).
+
+- [x] T106 Replace Hydro generator components group image and verify shared hero/cards (R92; A94; CHG-059).

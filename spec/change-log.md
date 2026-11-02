@@ -410,3 +410,8 @@ Commit preparation for CHG-035–CHG-046: final combined worktree regression PAS
 - R91 / T105 / A93. Replace old dotted HTTP X URL with exact supplied https://x.com/jbaelofficial in shared header/footer SocialLinks; preserve other links and presentation.
 - Files: SocialLinks.astro. Specs: requirements/design/sources/tasks/acceptance/index/status/checkpoint updated. Architecture/decisions/versions/workflow/agents and earlier plans unchanged: explicit URL correction without new assumption/runtime/layout/contract/release.
 - PASS:188-page build;50,974 reference/source checks;all188 exact dual-anchor/safety assertions;git diff --check. Browser/external profile audit/tests/typecheck not rerun for URL-only edit. User-authorized commit; no push/deployment.
+
+## CHG-059 —2 November2026 — Hydro generator components image
+- R92 / T106 / A94. Optimise supplied img feedback 2 nov.jpeg into1600×900 WebP and map Hydro generator components group to it for detail hero and cards; child mappings preserved.
+- Files:1 public image, catalog-photos.mjs, assets/image-metadata JSON. Specs: requirements/design/sources/tasks/acceptance/index/status/checkpoint updated. Architecture/decisions/versions/workflow/agents/earlier plans unchanged: explicit existing-pipeline asset replacement, no runtime/contract/layout/release/new factual claim.
+- PASS:188-page build;50,974 reference/source checks;detail and2 listing-card assertions;unchanged child-map assertion;source visual inspection;git diff --check. Initial unchanged-map comparison was whitespace-sensitive; corrected comparison passes. Browser/mobile visual/tests/typecheck not rerun for asset-only mapping. No commit/push/deployment.

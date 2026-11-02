@@ -178,3 +178,5 @@ R89 CONFIRMED (CHG-056): replace shared header/footer YouTube homepage link with
 R90 CONFIRMED (CHG-057): activate shared header/footer X / Twitter icons with exact user-supplied http://x.com/jbael.official destination, replacing disabled controls.
 
 R91 CONFIRMED (CHG-058): correct shared header/footer X destination to user-supplied https://x.com/jbaelofficial, superseding R90 URL.
+
+R92 CONFIRMED (CHG-059): replace Hydro generator components group image under Equipment Supply/Hydro with supplied img feedback 2 nov.jpeg, consistent on group detail and listing cards. Preserve child component images.

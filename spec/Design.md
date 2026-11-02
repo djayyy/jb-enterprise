@@ -213,3 +213,5 @@ CHG-056 / R89: existing YouTube icon links to supplied company-channel URL in bo
 CHG-057 / R90: X / Twitter uses existing active-anchor rendering, accessible new-tab label and noopener noreferrer in both social groups; all5 icons now links. Layout/other URLs unchanged.
 
 CHG-058 / R91: X anchors use corrected HTTPS company handle; existing icon, new-tab attributes and layout retained.
+
+CHG-059 / R92: canonical /equipment/hydro/hydro-generator-components/ override uses hydro-generator-components-nov2; shared catalogue hero/card rendering and existing crop/layout retained. Explicit child image overrides unchanged.
