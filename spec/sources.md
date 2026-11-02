@@ -134,3 +134,5 @@ CHG-066: requirement/material science.jpeg (1448×1086) visually inspected: mate
 CHG-067: requirement/stator core.jpeg (1556×1011) visually inspected: large hydro generator assembly with surrounding stator windings. Original preserved; proportional WebP derivative, provenance and metadata registered. No facility ownership claim inferred.
 
 CHG-068: requirement/rim inspection.jpeg (1536×1024) visually inspected: suspended hydro generator rotor assembly above stator. Original preserved; proportional WebP derivative and metadata/provenance registered. No facility ownership claim inferred.
+
+CHG-071: requirement/tribiology.jpeg (1600×900) visually inspected: bearing lubrication, sample bottles and contamination measurement equipment. Original preserved; proportional WebP derivative and provenance/metadata registered. No facility ownership claim inferred.

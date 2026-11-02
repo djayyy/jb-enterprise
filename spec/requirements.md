@@ -202,3 +202,5 @@ R101 CONFIRMED (CHG-068): Hydro generator Rotor pole, spider and rim inspection 
 R102 CONFIRMED (CHG-069): Remove Air cooler and excitation-system inspection from Hydro generator services, including its child page, cards and shared navigation. Retain all other Hydro generator scopes and equipment offerings. Supersedes original supplied scope list for this item.
 
 R103 CONFIRMED (CHG-070): Hydro generator equipment rotor/rim and stator parts reuse the supplied rim inspection and stator core images already used by services. Remove Generator bearings and air cooler components section and leaf page. Preserve Excitation components and slip rings and all service changes.
+
+R104 CONFIRMED (CHG-071): Tribology training, SOPs and contamination control under Lubrication reliability uses supplied tribiology.jpeg on detail hero and parent card. Other mappings, titles and routes unchanged.

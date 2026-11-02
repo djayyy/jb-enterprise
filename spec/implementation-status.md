@@ -149,3 +149,5 @@ CHG-068: Rotor pole, spider and rim inspection uses supplied rim inspection.jpeg
 CHG-069: Hydro generator air-cooler/excitation inspection removed from source, cards/navigation and generated routes. Current total187 pages/177 catalogue pages. A104 build/link/62 tests and site-wide removal checks pass.
 
 CHG-070: Hydro generator equipment rotor/rim and stator photos aligned with services; Generator bearings and air cooler components removed, excitation retained. Current186 pages/176 catalogue. A105 build/link/navigation/62 tests pass.
+
+CHG-071: Tribology service uses supplied tribiology.jpeg on detail hero and Lubrication reliability card; A106 build/link/mapping checks pass. Browser crop not rerun.

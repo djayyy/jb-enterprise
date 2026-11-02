@@ -149,7 +149,7 @@ export const catalogPhotos = {
   "/services/lubrication-reliability/tan-mpc-viscosity-cleanliness-and-particle-testing/":
     "catalog-test-instruments",
   "/services/lubrication-reliability/tribology-training-sops-and-contamination-control/":
-    "inspection",
+    "tribology-nov2",
   "/services/lubrication-reliability/vacuum-dehydration-filtration-and-desiccant-breathers/":
     "catalog-cooling",
   "/services/oem-sourcing/bearings-seals-pumps-and-mechanical-drives/":

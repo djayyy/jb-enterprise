@@ -597,3 +597,7 @@ CHG-069 follow-up / A104: navigation audit PASS (187 pages, 562 unique destinati
 A105 — CHG-070: equipment rotor/rim and stator detail heroes/parent cards use existing supplied images; third title/slug absent across generated site, remaining excitation leaf retained. Current 176 catalogue/186 total pages; verify links/navigation/tests.
 
 A105 PASS: 186-page build, 50,060 reference/asset checks, all62 tests; navigation audit186 pages/559 destinations/845 semantic checks. Generated assertions confirm rotor/rim and stator detail heroes/parent cards reuse requested images, excitation leaf retained, removed title/slug absent site-wide and removed leaf directory absent. Existing service mappings retained. Browser/mobile visual and typecheck not rerun for data-only changes; no layout/runtime edits. Removed direct URL has no redirect. No commit/push/deployment.
+
+A106 — CHG-071: tribology service detail hero and Lubrication reliability parent card use supplied image with valid dimensions; unrelated mappings unchanged. Verification pending.
+
+A106 PASS: 186-page build, 50,060 local reference/asset checks; generated tribology hero and Lubrication reliability card use supplied 1600×900 image. Comparison against HEAD confirms other mappings unchanged. Source visually inspected. Browser/mobile crops and tests/typecheck not rerun for asset-only edit. No commit/push/deployment.

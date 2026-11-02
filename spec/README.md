@@ -1,5 +1,7 @@
 # JBAEL specification index
 
+Latest CHG-071: Tribology service photo replaced with supplied image; R104/T118/A106 build/link/mapping checks pass.
+
 Latest CHG-070: Hydro generator equipment images aligned with services and air-cooler section removed; R103/T117/A105 build/link/navigation/62 tests pass. Current total:186 pages.
 
 Latest CHG-069: Hydro generator air-cooler/excitation inspection removed; R102/T116/A104 build/link/62 tests and removal checks pass. Current total:187 pages.

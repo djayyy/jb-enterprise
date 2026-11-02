@@ -710,5 +710,9 @@
   "hydro-rim-inspection-nov2": {
     "width": 1536,
     "height": 1024
+  },
+  "tribology-nov2": {
+    "width": 1600,
+    "height": 900
   }
 }

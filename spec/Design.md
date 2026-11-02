@@ -237,3 +237,5 @@ CHG-068 / R101: /services/hydro/generator/rotor-pole-spider-and-rim-inspection/ 
 CHG-069 / R102: Hydro generator services has five child services. Removed air-cooler/excitation inspection leaf is no longer generated or linked. All other hierarchy/presentation retained.
 
 CHG-070 / R103: Hydro generator components has three children: rotor/rim, stator, excitation/slip rings. First two share hydro-rim-inspection-nov2 and hydro-stator-core-nov2 with services for both cards and detail heroes. Removed third section has no generated page or navigation link.
+
+CHG-071 / R104: /services/lubrication-reliability/tribology-training-sops-and-contamination-control/ selects tribology-nov2 for shared hero/cards; current presentation retained.
