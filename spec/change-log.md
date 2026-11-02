@@ -420,3 +420,8 @@ Commit preparation for CHG-035–CHG-046: final combined worktree regression PAS
 - R93 / T107 / A95. Optimise supplied hydro image 2 nov.jpeg and override Hydro generator services group image for detail hero and shared listing cards. Other mappings including equipment unchanged.
 - Files:1 public image, catalog-photos.mjs, assets/image-metadata JSON. Specs: requirements/design/sources/tasks/acceptance/index/status/checkpoint updated. Architecture/decisions/versions/workflow/agents and earlier plans unchanged: asset-only replacement in existing pipeline without runtime/layout/contract/release or new factual claim.
 - PASS:188-page build;50,974 reference/source checks;hero/2-card mapping assertions;other mappings preserved;source visual inspection;git diff --check. Browser crop/mobile/tests/typecheck not rerun. User-authorized commit; no push/deployment.
+
+## CHG-061 — 2 November 2026 — Hydro turbine shaft photo
+- R94 / T108 / A96. Replace Shaft inspection and alignment image with supplied shaft image 2 nov.jpeg through existing shared mapping; original preserved.
+- Files: one public WebP, catalog-photos.mjs, image-metadata/assets JSON. Specs: requirements/design/sources/tasks/acceptance/index/status/checkpoint. Architecture/decisions/versions/workflow/agents/earlier plans unchanged: asset-only substitution, existing pipeline and presentation, no new runtime/contract/release or factual assumptions.
+- PASS: 188-page build, 50,974 reference/asset checks, shaft hero/parent-card mapping assertions, unchanged-other-mappings comparison. A96 records browser/mobile and initial assertion limits. No commit/push/deployment requested.

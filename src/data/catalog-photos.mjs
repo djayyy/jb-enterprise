@@ -137,7 +137,7 @@ export const catalogPhotos = {
   "/services/hydro/turbine/runner-runner-blade-and-guide-vane-repair/":
     "detail-reference-564",
   "/services/hydro/turbine/shaft-inspection-and-alignment/":
-    "detail-testings-tes01",
+    "hydro-turbine-shaft-nov2",
   "/services/hydro/turbine/spiral-casing-stay-ring-and-cover-refurbishment/":
     "detail-reference-567",
   "/services/hydro/turbine/wicket-gate-mechanism-inspection/":

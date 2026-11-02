@@ -118,3 +118,5 @@ CHG-058: user directly supplied https://x.com/jbaelofficial on2November2026, sup
 CHG-059: requirement/img feedback 2 nov.jpeg1600×900 visually inspected: vertical-shaft generator rotor/stator assembly workshop scene. Original preserved; optimised WebP derivative with matching dimensions/provenance added. Company-supplied representative image, no facility/ownership inference.
 
 CHG-060: requirement/hydro image 2 nov.jpeg1571×1001 visually inspected, generator stator winding/inspection interior. Original preserved; proportional WebP derivative and source/dimensions registered. No facility/ownership claim inferred.
+
+CHG-061: requirement/shaft image 2 nov.jpeg (1466×1073) visually inspected: vertical hydro turbine shaft and surrounding assembly. Original preserved; proportional WebP derivative and metadata/provenance registered. No facility ownership claim inferred.

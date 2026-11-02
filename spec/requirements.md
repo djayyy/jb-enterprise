@@ -182,3 +182,5 @@ R91 CONFIRMED (CHG-058): correct shared header/footer X destination to user-supp
 R92 CONFIRMED (CHG-059): replace Hydro generator components group image under Equipment Supply/Hydro with supplied img feedback 2 nov.jpeg, consistent on group detail and listing cards. Preserve child component images.
 
 R93 CONFIRMED (CHG-060): Hydro generator services under Hydro power plant services uses supplied hydro image 2 nov.jpeg on group detail and listing cards. Child service photos/equipment imagery unchanged; commit requested.
+
+R94 CONFIRMED (CHG-061): Hydro turbine Shaft inspection and alignment uses supplied shaft image 2 nov.jpeg on its detail hero and shared service listing cards. Other mappings/layout unchanged.

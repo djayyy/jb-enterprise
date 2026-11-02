@@ -243,3 +243,5 @@ CHG-026: T66–T67 complete for scoped Chrome review. A56–A57 evidence covers 
 - [x] T106 Replace Hydro generator components group image and verify shared hero/cards (R92; A94; CHG-059).
 
 - [x] T107 Replace Hydro generator services image, verify hero/listing cards and commit (R93; A95; CHG-060).
+
+T108 — CHG-061 / R94 / A96: replace hydro turbine shaft image and verify shared detail/card references. Complete; A96 build/link/generated mapping checks pass.

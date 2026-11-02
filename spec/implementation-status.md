@@ -129,3 +129,5 @@ CHG-058: corrected X company handle/HTTPS URL in header/footer; A93 build/link/a
 CHG-059: Hydro generator components uses supplied2November image on group detail and listing cards; child photos unchanged. A94 build/link/mapping checks pass; browser crop not rerun.
 
 CHG-060: Hydro generator services uses supplied November2 image on group detail/listing cards; equipment and child images unchanged. A95 build/link/mapping checks pass; committing as requested.
+
+CHG-061: supplied shaft image used on Hydro turbine Shaft inspection and alignment detail and parent card; A96 build/link/mapping checks pass. Browser crop not rerun.

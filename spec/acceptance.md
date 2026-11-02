@@ -555,3 +555,7 @@ A94 PASS: generated group detail hero and hydro/all-equipment listing cards refe
 A95 — CHG-060: Hydro generator services detail hero and hydro/all-services cards use supplied image; other image mappings unchanged. Verification pending.
 
 A95 PASS: generated Hydro generator services hero and hydro/all-services listing cards use supplied1571×1001 derivative; catalogue map comparison confirms only requested group added.188-page build;50,974 reference/source checks;git diff --check pass. Supplied source visually inspected. Browser crop/mobile/tests/typecheck not rerun for asset-only mapping. User requested commit; no push/deployment.
+
+A96 — CHG-061: Shaft inspection and alignment detail hero and parent listing cards use supplied 1466×1073 shaft image; unrelated mappings unchanged. Verification pending.
+
+A96 PASS: 188-page build and 50,974 local reference/asset checks pass. Generated shaft detail hero and Hydro turbine parent card reference supplied 1466×1073 derivative; unrelated mappings preserved by comparison with HEAD. Source visually inspected; browser/mobile crop checks and tests/typecheck not rerun for asset-only edit. Initial assertion incorrectly expected a child image on the top-level services index; actual child listing is the Hydro turbine page and passes. No commit/push/deployment.

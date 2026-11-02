@@ -1,5 +1,7 @@
 # JBAEL specification index
 
+Latest CHG-061: Hydro turbine shaft photo replaced with supplied November 2 image; R94/T108/A96 build/link/mapping checks pass.
+
 Latest CHG-060: Hydro generator services image replaced with supplied November2 file; R93/T107/A95 mapping/build/link checks pass.
 
 Latest CHG-059: Hydro generator components image replaced from supplied November2 file; R92/T106/A94 mapping/build/link checks pass.
