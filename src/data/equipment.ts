@@ -69,7 +69,6 @@ export const equipment = [
         parts: [
           "Rotor poles, spider and rim components",
           "Stator components and bars",
-          "Generator bearings and air cooler components",
           "Excitation components and slip rings",
         ],
       },

@@ -147,3 +147,5 @@ CHG-067: Hydro generator stator service uses supplied stator core.jpeg on detail
 CHG-068: Rotor pole, spider and rim inspection uses supplied rim inspection.jpeg on detail hero and parent card; A103 build/link/mapping checks pass. Committing as requested; no push/deployment.
 
 CHG-069: Hydro generator air-cooler/excitation inspection removed from source, cards/navigation and generated routes. Current total187 pages/177 catalogue pages. A104 build/link/62 tests and site-wide removal checks pass.
+
+CHG-070: Hydro generator equipment rotor/rim and stator photos aligned with services; Generator bearings and air cooler components removed, excitation retained. Current186 pages/176 catalogue. A105 build/link/navigation/62 tests pass.

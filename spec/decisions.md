@@ -141,3 +141,5 @@ D70 — CHG-052: user approved all4 review rows after concerns disclosed. Use ex
 D71 — CHG-056: supplied company-channel URL resolves D70 YouTube-homepage follow-up. Use exact user URL in shared SocialLinks; no inferred channel destination.
 
 CHG-069: Explicit user removal overrides original S2 Hydro generator scope. Remove canonical leaf entirely without redirect; no replacement destination was requested. Equipment air-cooler/excitation components remain in scope.
+
+CHG-070: User explicitly removes entire third equipment section Generator bearings and air cooler components. Excitation components and slip rings remains. Removed canonical URL has no redirect; old direct bookmarks return 404 after deployment.

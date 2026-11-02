@@ -6,12 +6,10 @@ export const catalogPhotos = {
     "hydro-generator-components-nov2",
   "/equipment/hydro/hydro-generator-components/excitation-components-and-slip-rings/":
     "detail-electrical-e09",
-  "/equipment/hydro/hydro-generator-components/generator-bearings-and-air-cooler-components/":
-    "detail-reference-3616",
   "/equipment/hydro/hydro-generator-components/rotor-poles-spider-and-rim-components/":
-    "detail-generator-g30",
+    "hydro-rim-inspection-nov2",
   "/equipment/hydro/hydro-generator-components/stator-components-and-bars/":
-    "stator",
+    "hydro-stator-core-nov2",
   "/equipment/hydro/hydro-mechanical-components/": "detail-reference-589",
   "/equipment/hydro/hydro-mechanical-components/critical-fasteners/":
     "detail-reference-517",
