@@ -184,3 +184,11 @@ R92 CONFIRMED (CHG-059): replace Hydro generator components group image under Eq
 R93 CONFIRMED (CHG-060): Hydro generator services under Hydro power plant services uses supplied hydro image 2 nov.jpeg on group detail and listing cards. Child service photos/equipment imagery unchanged; commit requested.
 
 R94 CONFIRMED (CHG-061): Hydro turbine Shaft inspection and alignment uses supplied shaft image 2 nov.jpeg on its detail hero and shared service listing cards. Other mappings/layout unchanged.
+
+R95 CONFIRMED (CHG-062): Technical visit and pre-inspection under Reverse engineering uses supplied technical visit 2 nov.jpeg on its detail hero and listing card. Preserve other mappings/layout.
+
+R96 CONFIRMED (CHG-063): 3D models and engineering drawings under Reverse engineering uses supplied 3d model 2 nov .jpeg on detail hero and listing card. Other images/layout unchanged.
+
+R97 CONFIRMED (CHG-064): Simulation and engineering analysis under Reverse engineering uses supplied design simulation 2 nov.jpeg on detail hero and listing card; other images/layout preserved.
+
+R98 CONFIRMED (CHG-065): Design validation under Reverse engineering uses supplied design validation 2 nov.jpeg on detail hero and listing card. Preserve other images/layout; commit pending replacements as requested.

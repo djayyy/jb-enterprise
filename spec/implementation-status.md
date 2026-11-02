@@ -131,3 +131,11 @@ CHG-059: Hydro generator components uses supplied2November image on group detail
 CHG-060: Hydro generator services uses supplied November2 image on group detail/listing cards; equipment and child images unchanged. A95 build/link/mapping checks pass; committing as requested.
 
 CHG-061: supplied shaft image used on Hydro turbine Shaft inspection and alignment detail and parent card; A96 build/link/mapping checks pass. Browser crop not rerun.
+
+CHG-062: Technical visit and pre-inspection uses supplied November 2 image on detail hero and Reverse engineering card. A97 build/link/mapping checks pass; browser crop not rerun.
+
+CHG-063: 3D models and engineering drawings uses supplied November 2 image on detail hero and parent card; A98 build/link/mapping checks pass. Browser crop not rerun.
+
+CHG-064: Simulation and engineering analysis uses supplied November 2 image on detail hero and parent card; A99 build/link/mapping checks pass. Browser crop not rerun.
+
+CHG-065: Design validation uses supplied November 2 image; A100 build/link/mapping checks pass for all four pending replacements. Committing CHG-062–065 as requested; no push/deployment.

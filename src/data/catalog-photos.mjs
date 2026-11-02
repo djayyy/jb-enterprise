@@ -185,10 +185,10 @@ export const catalogPhotos = {
   "/services/refurbishment/turbine-generator-refurbishment/":
     "detail-rewamping-rew03",
   "/services/reverse-engineering/3d-models-and-engineering-drawings/":
-    "catalog-scanning",
+    "3d-model-nov2",
   "/services/reverse-engineering/critical-component-development/":
     "critical-component",
-  "/services/reverse-engineering/design-validation/": "detail-3d-scaning-3d04",
+  "/services/reverse-engineering/design-validation/": "design-validation-nov2",
   "/services/reverse-engineering/dimensional-measurement-and-3d-scanning/":
     "detail-3d-scaning-3d-01",
   "/services/reverse-engineering/manufacturing-and-quality-validation/":
@@ -196,9 +196,9 @@ export const catalogPhotos = {
   "/services/reverse-engineering/material-science-and-testing/":
     "detail-generator-g03",
   "/services/reverse-engineering/simulation-and-engineering-analysis/":
-    "detail-3d-scaning-3d03",
+    "design-simulation-nov2",
   "/services/reverse-engineering/technical-visit-and-pre-inspection/":
-    "inspection",
+    "technical-visit-nov2",
   "/services/testing-inspection/bearing-shaft-and-journal-inspections/":
     "detail-reference-3289",
   "/services/testing-inspection/bump-tests-horn-drop-tests-and-condition-assessment/":

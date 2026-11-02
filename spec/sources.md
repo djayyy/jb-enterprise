@@ -120,3 +120,11 @@ CHG-059: requirement/img feedback 2 nov.jpeg1600×900 visually inspected: vertic
 CHG-060: requirement/hydro image 2 nov.jpeg1571×1001 visually inspected, generator stator winding/inspection interior. Original preserved; proportional WebP derivative and source/dimensions registered. No facility/ownership claim inferred.
 
 CHG-061: requirement/shaft image 2 nov.jpeg (1466×1073) visually inspected: vertical hydro turbine shaft and surrounding assembly. Original preserved; proportional WebP derivative and metadata/provenance registered. No facility ownership claim inferred.
+
+CHG-062: requirement/technical visit 2 nov.jpeg (1600×900) visually inspected: technician inspecting industrial equipment. Original preserved; proportional WebP derivative and provenance/dimensions registered. No facility ownership claim inferred.
+
+CHG-063: requirement/3d model 2 nov .jpeg (1600×900) visually inspected: engineer using 3D CAD model and technical drawings. Original preserved; proportional WebP derivative and metadata/provenance registered. No ownership/facility claim inferred.
+
+CHG-064: requirement/design simulation 2 nov.jpeg (1600×900) visually inspected: engineer reviewing a stress simulation model. Original preserved; proportional WebP derivative and metadata/provenance registered. No facility ownership claim inferred.
+
+CHG-065: requirement/design validation 2 nov.jpeg (1600×900) visually inspected: dimensional validation of machined component with measurement probe. Original preserved; proportional WebP derivative and metadata/provenance registered. No facility ownership claim inferred.

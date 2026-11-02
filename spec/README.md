@@ -1,5 +1,13 @@
 # JBAEL specification index
 
+Latest CHG-065: Design validation photo replaced with supplied November 2 image; R98/T112/A100 build/link/mapping checks pass.
+
+Latest CHG-064: Design simulation photo replaced with supplied November 2 image; R97/T111/A99 build/link/mapping checks pass.
+
+Latest CHG-063: 3D model photo replaced with supplied November 2 image; R96/T110/A98 build/link/mapping checks pass.
+
+Latest CHG-062: Technical visit photo replaced with supplied November 2 image; R95/T109/A97 build/link/mapping checks pass.
+
 Latest CHG-061: Hydro turbine shaft photo replaced with supplied November 2 image; R94/T108/A96 build/link/mapping checks pass.
 
 Latest CHG-060: Hydro generator services image replaced with supplied November2 file; R93/T107/A95 mapping/build/link checks pass.

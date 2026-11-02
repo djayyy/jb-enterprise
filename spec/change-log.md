@@ -425,3 +425,23 @@ Commit preparation for CHG-035–CHG-046: final combined worktree regression PAS
 - R94 / T108 / A96. Replace Shaft inspection and alignment image with supplied shaft image 2 nov.jpeg through existing shared mapping; original preserved.
 - Files: one public WebP, catalog-photos.mjs, image-metadata/assets JSON. Specs: requirements/design/sources/tasks/acceptance/index/status/checkpoint. Architecture/decisions/versions/workflow/agents/earlier plans unchanged: asset-only substitution, existing pipeline and presentation, no new runtime/contract/release or factual assumptions.
 - PASS: 188-page build, 50,974 reference/asset checks, shaft hero/parent-card mapping assertions, unchanged-other-mappings comparison. A96 records browser/mobile and initial assertion limits. No commit/push/deployment requested.
+
+## CHG-062 — 2 November 2026 — Technical visit photo
+- R95 / T109 / A97. Use supplied technical visit 2 nov.jpeg through shared mapping, preserving original.
+- Files: one public WebP, catalog-photos.mjs, assets/image-metadata JSON. Specs: requirements/design/sources/tasks/acceptance/index/status/checkpoint. Architecture/decisions/versions/workflow/agents/earlier plans unchanged: existing asset pipeline, no runtime/layout/contract/release or factual assumptions changed.
+- PASS: 188-page build, 50,974 local reference/asset checks, generated detail hero and Reverse engineering card image assertions, and unchanged-other-mappings comparison. Supplied source visually inspected. Browser/mobile crop checks and tests/typecheck not rerun for asset-only mapping. No commit/push/deployment.
+
+## CHG-063 — 2 November 2026 — 3D model photo
+- R96 / T110 / A98. Replace 3D models and engineering drawings image with supplied 3d model 2 nov .jpeg using shared mapping; preserve prior pending technical-visit work.
+- Files: one public WebP, catalog-photos.mjs, assets/image-metadata JSON. Specs: requirements/design/sources/tasks/acceptance/index/status/checkpoint. Architecture/decisions/versions/workflow/agents/earlier plans unchanged: asset-only edit in existing pipeline; no new runtime/layout/contract/release or factual assumptions.
+- PASS: 188-page build and 50,974 local reference/asset checks; generated detail hero and Reverse engineering card reference supplied 1600×900 image. Comparison with pre-edit mapping confirms only requested 3D photo changed; prior technical-visit image retained. Source visually inspected. Browser/mobile crops and tests/typecheck not rerun for asset-only edit. No commit/push/deployment.
+
+## CHG-064 — 2 November 2026 — Design simulation photo
+- R97 / T111 / A99. Replace Simulation and engineering analysis image with supplied design simulation 2 nov.jpeg through shared mapping. Preserve pending technical-visit and 3D-model replacements.
+- Files: one public WebP, catalog-photos.mjs, assets/image-metadata JSON. Specs: requirements/design/sources/tasks/acceptance/index/status/checkpoint. Architecture/decisions/versions/workflow/agents/earlier plans unchanged: asset-only edit in existing pipeline, no runtime/layout/contract/release or factual assumption changes.
+- PASS: 188-page build, 50,974 local reference/asset checks, generated detail hero and parent-card assertions for supplied 1600×900 image. Comparison to pre-edit mapping confirms unrelated mappings and pending technical-visit/3D-model replacements preserved. Source visually inspected; browser/mobile crops and tests/typecheck not rerun for asset-only edit. No commit/push/deployment.
+
+## CHG-065 — 2 November 2026 — Design validation photo
+- R98 / T112 / A100. Supplied design validation 2 nov.jpeg now available; replace Design validation image through shared mapping and commit CHG-062–065 as requested. Preserve all prior pending work.
+- Files: one public WebP, catalog-photos.mjs, assets/image-metadata JSON. Specs: requirements/design/sources/tasks/acceptance/index/status/checkpoint. Architecture/decisions/versions/workflow/agents/earlier plans unchanged: asset-only edit in existing pipeline, no runtime/layout/contract/release or factual assumption changes.
+- PASS: 188-page build and 50,974 reference/asset checks. All four CHG-062–065 detail heroes and parent cards reference requested derivatives. Comparison against HEAD confirms exactly four requested mappings changed. Design validation source visually inspected (1600×900). Browser/mobile crop checks and tests/typecheck not rerun for asset-only edits. User-authorized commit; no push/deployment.

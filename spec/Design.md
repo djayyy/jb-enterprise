@@ -219,3 +219,11 @@ CHG-059 / R92: canonical /equipment/hydro/hydro-generator-components/ override u
 CHG-060 / R93: canonical /services/hydro/generator/ image override selects hydro-generator-services-nov2 in shared hero/cards; existing layout/cropping unchanged.
 
 CHG-061 / R94: canonical /services/hydro/turbine/shaft-inspection-and-alignment/ selects hydro-turbine-shaft-nov2 for shared hero/cards, preserving current layout and crop rules.
+
+CHG-062 / R95: /services/reverse-engineering/technical-visit-and-pre-inspection/ selects technical-visit-nov2 for shared hero/cards; existing presentation retained.
+
+CHG-063 / R96: /services/reverse-engineering/3d-models-and-engineering-drawings/ selects 3d-model-nov2 for shared hero/cards; existing crop/layout retained.
+
+CHG-064 / R97: /services/reverse-engineering/simulation-and-engineering-analysis/ selects design-simulation-nov2 for shared hero/cards, retaining current crop/layout.
+
+CHG-065 / R98: /services/reverse-engineering/design-validation/ selects design-validation-nov2 for shared hero/cards, retaining existing presentation.

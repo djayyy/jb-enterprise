@@ -559,3 +559,19 @@ A95 PASS: generated Hydro generator services hero and hydro/all-services listing
 A96 — CHG-061: Shaft inspection and alignment detail hero and parent listing cards use supplied 1466×1073 shaft image; unrelated mappings unchanged. Verification pending.
 
 A96 PASS: 188-page build and 50,974 local reference/asset checks pass. Generated shaft detail hero and Hydro turbine parent card reference supplied 1466×1073 derivative; unrelated mappings preserved by comparison with HEAD. Source visually inspected; browser/mobile crop checks and tests/typecheck not rerun for asset-only edit. Initial assertion incorrectly expected a child image on the top-level services index; actual child listing is the Hydro turbine page and passes. No commit/push/deployment.
+
+A97 — CHG-062: detail hero and Reverse engineering parent card use supplied technical visit image with valid dimensions; unrelated mappings preserved. Verification pending.
+
+A97 PASS: 188-page build, 50,974 local reference/asset checks, generated detail hero and Reverse engineering card image assertions, and unchanged-other-mappings comparison. Supplied source visually inspected. Browser/mobile crop checks and tests/typecheck not rerun for asset-only mapping. No commit/push/deployment.
+
+A98 — CHG-063: detail hero and Reverse engineering parent card use supplied 3D model image with correct dimensions; prior technical-visit change and all other mappings preserved. Verification pending.
+
+A98 PASS: 188-page build and 50,974 local reference/asset checks; generated detail hero and Reverse engineering card reference supplied 1600×900 image. Comparison with pre-edit mapping confirms only requested 3D photo changed; prior technical-visit image retained. Source visually inspected. Browser/mobile crops and tests/typecheck not rerun for asset-only edit. No commit/push/deployment.
+
+A99 — CHG-064: detail hero and Reverse engineering parent card use supplied design simulation image with valid dimensions; prior pending image replacements and other mappings preserved. Verification pending.
+
+A99 PASS: 188-page build, 50,974 local reference/asset checks, generated detail hero and parent-card assertions for supplied 1600×900 image. Comparison to pre-edit mapping confirms unrelated mappings and pending technical-visit/3D-model replacements preserved. Source visually inspected; browser/mobile crops and tests/typecheck not rerun for asset-only edit. No commit/push/deployment.
+
+A100 — CHG-065: Design validation hero and parent card use supplied image with valid dimensions; other mappings and three pending replacements preserved. Verification pending.
+
+A100 PASS: 188-page build and 50,974 reference/asset checks. All four CHG-062–065 detail heroes and parent cards reference requested derivatives. Comparison against HEAD confirms exactly four requested mappings changed. Design validation source visually inspected (1600×900). Browser/mobile crop checks and tests/typecheck not rerun for asset-only edits. User-authorized commit; no push/deployment.
